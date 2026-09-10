@@ -16,12 +16,7 @@ The targeted run completed successfully on 9 September at 23:56:16 Europe/Rome, 
 
 The increase from the earlier 196-test baseline to 197 is the native Engineering layout rendering test added before this final-validation continuation. No tests were added, removed, weakened, or converted into skips during final validation.
 
-Evidence:
-
-- [Recovered targeted log](Validation/V06Final-20260910/FinalTargetedRecovered.log), [result bundle](Validation/V06Final-20260910/FinalTargetedRecovered.xcresult), [machine-readable summary](Validation/V06Final-20260910/FinalTargetedRecovered.summary.json).
-- [Full suite #1 log](Validation/V06Final-20260910/FullSuiteRun1.log), [result bundle](Validation/V06Final-20260910/FullSuiteRun1.xcresult), [summary](Validation/V06Final-20260910/FullSuiteRun1.summary.json).
-- [Full suite #2 log](Validation/V06Final-20260910/FullSuiteRun2.log), [result bundle](Validation/V06Final-20260910/FullSuiteRun2.xcresult), [summary](Validation/V06Final-20260910/FullSuiteRun2.summary.json).
-- [Native Engineering layout](Validation/V06Final-20260910/EngineeringLayout.png). The page header, workspace action, inference selection, and complete disclosure are visible at the tested minimum detail width; the rest of the page is vertically scrollable.
+Evidence is archived locally under `/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V06Final-20260910/` with logs, `xcresult` bundles, summaries, the native layout image, and binary checksums. Those generated bundles and compiled apps are intentionally excluded from the GitHub source copy, so this report does not contain links that would be broken after a Windows clone.
 
 ## App builds
 
