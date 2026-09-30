@@ -1,0 +1,3 @@
+Freeze candidate UTC: 2026-09-11T21:06:37Z
+Source manifest entries:      108
+ff5bda9d89c17de511886760945b91ffcb7bcebce71dcc7f21643fe78627d95e  Validation/V061BenchmarkHarness-20260911/SourceManifest-freeze-final.sha256

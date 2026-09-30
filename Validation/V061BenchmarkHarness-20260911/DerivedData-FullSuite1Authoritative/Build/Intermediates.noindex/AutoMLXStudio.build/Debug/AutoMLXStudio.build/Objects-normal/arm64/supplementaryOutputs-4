@@ -1,0 +1,58 @@
+{
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/Engineering/EngineeringModels.swift" : {
+    "const-values" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-FullSuite1Authoritative/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/EngineeringModels.swiftconstvalues",
+    "dependencies" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-FullSuite1Authoritative/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/EngineeringModels.d",
+    "diagnostics" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-FullSuite1Authoritative/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/EngineeringModels.dia",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-FullSuite1Authoritative/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/EngineeringModels.o",
+    "swift-dependencies" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-FullSuite1Authoritative/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/EngineeringModels.swiftdeps"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/EngineeringAgent/EngineeringAgentModels.swift" : {
+    "const-values" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-FullSuite1Authoritative/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/EngineeringAgentModels.swiftconstvalues",
+    "dependencies" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-FullSuite1Authoritative/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/EngineeringAgentModels.d",
+    "diagnostics" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-FullSuite1Authoritative/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/EngineeringAgentModels.dia",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-FullSuite1Authoritative/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/EngineeringAgentModels.o",
+    "swift-dependencies" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-FullSuite1Authoritative/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/EngineeringAgentModels.swiftdeps"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/EngineeringAgentModelBackendAdapter.swift" : {
+    "const-values" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-FullSuite1Authoritative/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/EngineeringAgentModelBackendAdapter.swiftconstvalues",
+    "dependencies" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-FullSuite1Authoritative/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/EngineeringAgentModelBackendAdapter.d",
+    "diagnostics" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-FullSuite1Authoritative/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/EngineeringAgentModelBackendAdapter.dia",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-FullSuite1Authoritative/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/EngineeringAgentModelBackendAdapter.o",
+    "swift-dependencies" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-FullSuite1Authoritative/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/EngineeringAgentModelBackendAdapter.swiftdeps"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/EngineeringAgentToolRuntimeAdapter.swift" : {
+    "const-values" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-FullSuite1Authoritative/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/EngineeringAgentToolRuntimeAdapter.swiftconstvalues",
+    "dependencies" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-FullSuite1Authoritative/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/EngineeringAgentToolRuntimeAdapter.d",
+    "diagnostics" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-FullSuite1Authoritative/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/EngineeringAgentToolRuntimeAdapter.dia",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-FullSuite1Authoritative/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/EngineeringAgentToolRuntimeAdapter.o",
+    "swift-dependencies" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-FullSuite1Authoritative/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/EngineeringAgentToolRuntimeAdapter.swiftdeps"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/EngineeringApprovalBroker.swift" : {
+    "const-values" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-FullSuite1Authoritative/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/EngineeringApprovalBroker.swiftconstvalues",
+    "dependencies" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-FullSuite1Authoritative/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/EngineeringApprovalBroker.d",
+    "diagnostics" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-FullSuite1Authoritative/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/EngineeringApprovalBroker.dia",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-FullSuite1Authoritative/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/EngineeringApprovalBroker.o",
+    "swift-dependencies" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-FullSuite1Authoritative/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/EngineeringApprovalBroker.swiftdeps"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/EngineeringController.swift" : {
+    "const-values" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-FullSuite1Authoritative/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/EngineeringController.swiftconstvalues",
+    "dependencies" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-FullSuite1Authoritative/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/EngineeringController.d",
+    "diagnostics" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-FullSuite1Authoritative/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/EngineeringController.dia",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-FullSuite1Authoritative/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/EngineeringController.o",
+    "swift-dependencies" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-FullSuite1Authoritative/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/EngineeringController.swiftdeps"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/EngineeringProcessRunner.swift" : {
+    "const-values" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-FullSuite1Authoritative/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/EngineeringProcessRunner.swiftconstvalues",
+    "dependencies" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-FullSuite1Authoritative/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/EngineeringProcessRunner.d",
+    "diagnostics" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-FullSuite1Authoritative/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/EngineeringProcessRunner.dia",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-FullSuite1Authoritative/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/EngineeringProcessRunner.o",
+    "swift-dependencies" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-FullSuite1Authoritative/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/EngineeringProcessRunner.swiftdeps"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/EngineeringSessionBuilder.swift" : {
+    "const-values" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-FullSuite1Authoritative/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/EngineeringSessionBuilder.swiftconstvalues",
+    "dependencies" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-FullSuite1Authoritative/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/EngineeringSessionBuilder.d",
+    "diagnostics" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-FullSuite1Authoritative/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/EngineeringSessionBuilder.dia",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-FullSuite1Authoritative/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/EngineeringSessionBuilder.o",
+    "swift-dependencies" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-FullSuite1Authoritative/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/EngineeringSessionBuilder.swiftdeps"
+  }
+}

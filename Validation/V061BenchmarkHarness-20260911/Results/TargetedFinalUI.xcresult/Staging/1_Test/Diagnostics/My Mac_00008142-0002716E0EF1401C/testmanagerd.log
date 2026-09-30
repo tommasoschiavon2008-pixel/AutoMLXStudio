@@ -1,0 +1,21 @@
+16:27:50.601 xcodebuild[15685:425701] Requesting a socket for communication with testmanagerd.
+16:27:50.602 xcodebuild[15685:425701] Got socket for DTX-layer communication.
+16:27:50.602 xcodebuild[15685:425701] Initiating control session with IDE capabilities: <XCTCapabilities: 0x8fb8e7fa0>: {
+}
+16:27:50.602 xcodebuild[15685:425701] XPC connection for control was invalidated.
+16:27:50.602 xcodebuild[15685:425026] Got reply to control session initiation request (result:error): <XCTCapabilities: 0x8fb8e7e70>: {
+    "authorize test session capability" = 1;
+    "automation mode" = 1;
+    "daemon container sandbox extension" = 1;
+    "initiate daemon control session capability" = 4;
+    "initiate test runner session capability" = 2;
+    "record UI interaction capability" = 2;
+    "report crashes capability" = 1;
+    "request log archive capability" = 1;
+    "request spindump capability" = 2;
+    "request tailspin capability" = 1;
+    "supports delayed attachment transfers" = 1;
+}: (null)
+16:27:50.603 xcodebuild[15685:425029] Got reply to daemon container sandbox extension request (result:error): e38a603118e8d4a11b0c68216eeb8dc10026136852a6cd5a1fca02fee25f3ae2;00;00000000;00000000;00000000;000000000000001a;com.apple.app-sandbox.read;01;0100000e;0000000000e935d2;3f;/users/tommasoschiavon/library/daemon containers/a7a79717-3429-4b1b-bd72-2e0aee1e55dc/data: (null)
+16:27:50.617 xcodebuild[15685:425026] Requesting crash report collection for process names: debugserver, AutoMLXStudio, xctest, WindowServer, AutoMLXStudioTests, testmanagerd, DTServiceHub
+16:27:50.644 xcodebuild[15685:425029] Got reply to crash report collection request (error: (null))

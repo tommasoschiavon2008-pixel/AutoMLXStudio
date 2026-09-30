@@ -1,0 +1,58 @@
+{
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/Conversations/ConversationModels.swift" : {
+    "const-values" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/ConversationModels.swiftconstvalues",
+    "dependencies" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/ConversationModels.d",
+    "diagnostics" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/ConversationModels.dia",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/ConversationModels.o",
+    "swift-dependencies" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/ConversationModels.swiftdeps"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/EngineeringAgent/EngineeringAgentFallbackParser.swift" : {
+    "const-values" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/EngineeringAgentFallbackParser.swiftconstvalues",
+    "dependencies" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/EngineeringAgentFallbackParser.d",
+    "diagnostics" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/EngineeringAgentFallbackParser.dia",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/EngineeringAgentFallbackParser.o",
+    "swift-dependencies" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/EngineeringAgentFallbackParser.swiftdeps"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/Routing/Director.swift" : {
+    "const-values" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/Director.swiftconstvalues",
+    "dependencies" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/Director.d",
+    "diagnostics" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/Director.dia",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/Director.o",
+    "swift-dependencies" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/Director.swiftdeps"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/ChatGenerationSession.swift" : {
+    "const-values" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/ChatGenerationSession.swiftconstvalues",
+    "dependencies" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/ChatGenerationSession.d",
+    "diagnostics" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/ChatGenerationSession.dia",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/ChatGenerationSession.o",
+    "swift-dependencies" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/ChatGenerationSession.swiftdeps"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/ConversationStore.swift" : {
+    "const-values" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/ConversationStore.swiftconstvalues",
+    "dependencies" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/ConversationStore.d",
+    "diagnostics" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/ConversationStore.dia",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/ConversationStore.o",
+    "swift-dependencies" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/ConversationStore.swiftdeps"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/EngineeringAgentEngine.swift" : {
+    "const-values" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/EngineeringAgentEngine.swiftconstvalues",
+    "dependencies" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/EngineeringAgentEngine.d",
+    "diagnostics" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/EngineeringAgentEngine.dia",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/EngineeringAgentEngine.o",
+    "swift-dependencies" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/EngineeringAgentEngine.swiftdeps"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Views/ChatView.swift" : {
+    "const-values" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/ChatView.swiftconstvalues",
+    "dependencies" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/ChatView.d",
+    "diagnostics" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/ChatView.dia",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/ChatView.o",
+    "swift-dependencies" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/ChatView.swiftdeps"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Views/DashboardView.swift" : {
+    "const-values" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/DashboardView.swiftconstvalues",
+    "dependencies" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/DashboardView.d",
+    "diagnostics" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/DashboardView.dia",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/DashboardView.o",
+    "swift-dependencies" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/DashboardView.swiftdeps"
+  }
+}

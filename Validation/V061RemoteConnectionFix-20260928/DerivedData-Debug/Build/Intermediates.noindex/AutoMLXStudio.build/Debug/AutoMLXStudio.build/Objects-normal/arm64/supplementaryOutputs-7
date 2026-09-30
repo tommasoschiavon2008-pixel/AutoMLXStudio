@@ -1,0 +1,58 @@
+{
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/Models/ModelProfile.swift" : {
+    "const-values" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061RemoteConnectionFix-20260928/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/ModelProfile.swiftconstvalues",
+    "dependencies" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061RemoteConnectionFix-20260928/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/ModelProfile.d",
+    "diagnostics" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061RemoteConnectionFix-20260928/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/ModelProfile.dia",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061RemoteConnectionFix-20260928/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/ModelProfile.o",
+    "swift-dependencies" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061RemoteConnectionFix-20260928/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/ModelProfile.swiftdeps"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/Registry/ModelRegistry.swift" : {
+    "const-values" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061RemoteConnectionFix-20260928/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/ModelRegistry.swiftconstvalues",
+    "dependencies" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061RemoteConnectionFix-20260928/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/ModelRegistry.d",
+    "diagnostics" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061RemoteConnectionFix-20260928/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/ModelRegistry.dia",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061RemoteConnectionFix-20260928/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/ModelRegistry.o",
+    "swift-dependencies" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061RemoteConnectionFix-20260928/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/ModelRegistry.swiftdeps"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/Routing/ModelRouter.swift" : {
+    "const-values" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061RemoteConnectionFix-20260928/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/ModelRouter.swiftconstvalues",
+    "dependencies" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061RemoteConnectionFix-20260928/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/ModelRouter.d",
+    "diagnostics" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061RemoteConnectionFix-20260928/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/ModelRouter.dia",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061RemoteConnectionFix-20260928/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/ModelRouter.o",
+    "swift-dependencies" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061RemoteConnectionFix-20260928/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/ModelRouter.swiftdeps"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/ModelInstallationInspector.swift" : {
+    "const-values" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061RemoteConnectionFix-20260928/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/ModelInstallationInspector.swiftconstvalues",
+    "dependencies" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061RemoteConnectionFix-20260928/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/ModelInstallationInspector.d",
+    "diagnostics" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061RemoteConnectionFix-20260928/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/ModelInstallationInspector.dia",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061RemoteConnectionFix-20260928/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/ModelInstallationInspector.o",
+    "swift-dependencies" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061RemoteConnectionFix-20260928/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/ModelInstallationInspector.swiftdeps"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/ModelMemorySampler.swift" : {
+    "const-values" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061RemoteConnectionFix-20260928/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/ModelMemorySampler.swiftconstvalues",
+    "dependencies" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061RemoteConnectionFix-20260928/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/ModelMemorySampler.d",
+    "diagnostics" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061RemoteConnectionFix-20260928/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/ModelMemorySampler.dia",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061RemoteConnectionFix-20260928/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/ModelMemorySampler.o",
+    "swift-dependencies" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061RemoteConnectionFix-20260928/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/ModelMemorySampler.swiftdeps"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/ModelResourceManager.swift" : {
+    "const-values" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061RemoteConnectionFix-20260928/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/ModelResourceManager.swiftconstvalues",
+    "dependencies" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061RemoteConnectionFix-20260928/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/ModelResourceManager.d",
+    "diagnostics" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061RemoteConnectionFix-20260928/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/ModelResourceManager.dia",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061RemoteConnectionFix-20260928/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/ModelResourceManager.o",
+    "swift-dependencies" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061RemoteConnectionFix-20260928/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/ModelResourceManager.swiftdeps"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/RuntimeAdapters/ModelRuntimeAdapter.swift" : {
+    "const-values" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061RemoteConnectionFix-20260928/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/ModelRuntimeAdapter.swiftconstvalues",
+    "dependencies" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061RemoteConnectionFix-20260928/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/ModelRuntimeAdapter.d",
+    "diagnostics" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061RemoteConnectionFix-20260928/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/ModelRuntimeAdapter.dia",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061RemoteConnectionFix-20260928/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/ModelRuntimeAdapter.o",
+    "swift-dependencies" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061RemoteConnectionFix-20260928/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/ModelRuntimeAdapter.swiftdeps"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Views/ModelsView.swift" : {
+    "const-values" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061RemoteConnectionFix-20260928/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/ModelsView.swiftconstvalues",
+    "dependencies" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061RemoteConnectionFix-20260928/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/ModelsView.d",
+    "diagnostics" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061RemoteConnectionFix-20260928/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/ModelsView.dia",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061RemoteConnectionFix-20260928/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/ModelsView.o",
+    "swift-dependencies" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061RemoteConnectionFix-20260928/DerivedData-Debug/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/ModelsView.swiftdeps"
+  }
+}

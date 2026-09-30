@@ -1,0 +1,1 @@
+Validation/V0601RemoteChatIntegration-20260911/Apps/DebugArm64/AutoMLXStudio.app/Contents/MacOS/AutoMLXStudio: Mach-O 64-bit executable arm64

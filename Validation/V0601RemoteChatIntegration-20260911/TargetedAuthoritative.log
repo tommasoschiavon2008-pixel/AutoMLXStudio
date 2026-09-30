@@ -1,0 +1,153 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -project AutoMLXStudio.xcodeproj -scheme AutoMLXStudio -configuration Debug -destination platform=macOS,arch=arm64 "-only-testing:AutoMLXStudioTests/ChatGenerationSessionTests" "-only-testing:AutoMLXStudioTests/ConversationStorePersistenceTests" "-only-testing:AutoMLXStudioTests/ConversationStoreMutationTests" "-only-testing:AutoMLXStudioTests/ConversationStoreCorruptionTests" "-only-testing:AutoMLXStudioTests/RemoteInferenceBackendTests" "-only-testing:AutoMLXStudioTests/RemoteModelsControllerTests" -resultBundlePath Validation/V0601RemoteChatIntegration-20260911/TargetedAuthoritative.xcresult test
+
+Writing result bundle at path:
+	/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/TargetedAuthoritative.xcresult
+
+ComputePackagePrebuildTargetDependencyGraph
+
+Prepare packages
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (2 targets)
+    Target 'AutoMLXStudioTests' in project 'AutoMLXStudio'
+        ➜ Explicit dependency on target 'AutoMLXStudio' in project 'AutoMLXStudio'
+    Target 'AutoMLXStudio' in project 'AutoMLXStudio' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ClangStatCache /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/macosx26.5-25F70-e082c4a02f00227109f4ed75e425c832.sdkstatcache
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio.xcodeproj
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk -o /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/macosx26.5-25F70-e082c4a02f00227109f4ed75e425c832.sdkstatcache
+
+2026-09-11 07:37:26.054929+0200 AutoMLXStudio[5244:86894] [Connection] Unable to get synchronousRemoteObjectProxy, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-09-11 07:37:26.055059+0200 AutoMLXStudio[5244:86894] [Application] Error registering app with intents framework: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-09-11 07:37:26.055659+0200 AutoMLXStudio[5244:86895] [Connection] Unable to get synchronousRemoteObjectProxy, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-09-11 07:37:26.055668+0200 AutoMLXStudio[5244:86895] [Connection] Unable to re-register with Process Instance Registry, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-09-11 07:37:26.056375+0200 AutoMLXStudio[5244:86952] [Connection] Unable to get synchronousRemoteObjectProxy, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-09-11 07:37:26.056383+0200 AutoMLXStudio[5244:86952] [Connection] Unable to re-register with Process Instance Registry, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-09-11 07:37:26.057086+0200 AutoMLXStudio[5244:86952] [Connection] Will NOT re-try to establish the connection
+2026-09-11 07:37:26.057111+0200 AutoMLXStudio[5244:86894] [Connection] Unable to get synchronousRemoteObjectProxy, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-09-11 07:37:26.057122+0200 AutoMLXStudio[5244:86894] [Connection] Unable to re-register with Process Instance Registry, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-09-11 07:37:26.093518+0200 AutoMLXStudio[5244:86868] ApplePersistenceIgnoreState: Existing state will not be touched. New state will be written to /var/folders/2g/q2qk1gk540d5ygkzr28n20ym0000gn/T/com.tommaso.AutoMLXStudio.savedState
+Test Suite 'Selected tests' started at 2026-09-11 07:37:26.254.
+Test Suite 'AutoMLXStudioTests.xctest' started at 2026-09-11 07:37:26.254.
+Test Suite 'ChatGenerationSessionTests' started at 2026-09-11 07:37:26.254.
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testCancellationStopsRemoteSession]' started.
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testCancellationStopsRemoteSession]' passed (0.008 seconds).
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testCatalogKeepsCollidingRemoteModelNamesDistinctAndPreservesSavedUnknownTarget]' started.
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testCatalogKeepsCollidingRemoteModelNamesDistinctAndPreservesSavedUnknownTarget]' passed (0.000 seconds).
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testCatalogRetainsDisabledSelectionButRejectsRemovedOrMissingDiscoveredModel]' started.
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testCatalogRetainsDisabledSelectionButRejectsRemovedOrMissingDiscoveredModel]' passed (0.000 seconds).
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testChatNativeLayoutRendersAtNormalAndMinimumDetailSizesWithLongState]' started.
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testChatNativeLayoutRendersAtNormalAndMinimumDetailSizesWithLongState]' passed (0.257 seconds).
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testChatNativeLayoutRendersRemoteEmptyErrorAndGeneratingStates]' started.
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testChatNativeLayoutRendersRemoteEmptyErrorAndGeneratingStates]' passed (0.376 seconds).
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testClassifiedBackendFailureKeepsSafeOperationalSummary]' started.
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testClassifiedBackendFailureKeepsSafeOperationalSummary]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testEngineeringPromptRequiresSmallestObservableVerifiedChange]' started.
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testEngineeringPromptRequiresSmallestObservableVerifiedChange]' passed (0.000 seconds).
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testLocalTextUsesSameDispatcherContract]' started.
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testLocalTextUsesSameDispatcherContract]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testNormalChatRejectsToolCallsWithoutExecution]' started.
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testNormalChatRejectsToolCallsWithoutExecution]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testRemoteTextUsesDispatcherAndPreservesExactMultiTurnOrderAndMetadata]' started.
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testRemoteTextUsesDispatcherAndPreservesExactMultiTurnOrderAndMetadata]' passed (0.012 seconds).
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testSelectionPersistsAcrossStoreRestartAndIdentitySafeAppendDoesNotChangeVisibleConversation]' started.
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testSelectionPersistsAcrossStoreRestartAndIdentitySafeAppendDoesNotChangeVisibleConversation]' passed (0.002 seconds).
+Test Suite 'ChatGenerationSessionTests' passed at 2026-09-11 07:37:26.914.
+	 Executed 11 tests, with 0 failures (0 unexpected) in 0.658 (0.659) seconds
+Test Suite 'ConversationStoreCorruptionTests' started at 2026-09-11 07:37:26.914.
+Test Case '-[AutoMLXStudioTests.ConversationStoreCorruptionTests testMalformedSnapshotReportsTypedBoundedCorruption]' started.
+Test Case '-[AutoMLXStudioTests.ConversationStoreCorruptionTests testMalformedSnapshotReportsTypedBoundedCorruption]' passed (0.001 seconds).
+Test Suite 'ConversationStoreCorruptionTests' passed at 2026-09-11 07:37:26.915.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.001 (0.001) seconds
+Test Suite 'ConversationStoreMutationTests' started at 2026-09-11 07:37:26.951.
+Test Case '-[AutoMLXStudioTests.ConversationStoreMutationTests testHiddenMessageRolesAreRejectedWithoutChangingDurableHistory]' started.
+Test Case '-[AutoMLXStudioTests.ConversationStoreMutationTests testHiddenMessageRolesAreRejectedWithoutChangingDurableHistory]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.ConversationStoreMutationTests testProjectFilteringAndDeletionRemainStrictlyIsolated]' started.
+Test Case '-[AutoMLXStudioTests.ConversationStoreMutationTests testProjectFilteringAndDeletionRemainStrictlyIsolated]' passed (0.003 seconds).
+Test Case '-[AutoMLXStudioTests.ConversationStoreMutationTests testRenameAndFullUpdatePreserveStableIdentityAndCreationMetadata]' started.
+Test Case '-[AutoMLXStudioTests.ConversationStoreMutationTests testRenameAndFullUpdatePreserveStableIdentityAndCreationMetadata]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.ConversationStoreMutationTests testTitleDerivationIsBoundedEditableAndValidated]' started.
+Test Case '-[AutoMLXStudioTests.ConversationStoreMutationTests testTitleDerivationIsBoundedEditableAndValidated]' passed (0.002 seconds).
+Test Suite 'ConversationStoreMutationTests' passed at 2026-09-11 07:37:26.975.
+	 Executed 4 tests, with 0 failures (0 unexpected) in 0.007 (0.024) seconds
+Test Suite 'ConversationStorePersistenceTests' started at 2026-09-11 07:37:26.975.
+Test Case '-[AutoMLXStudioTests.ConversationStorePersistenceTests testConversationAndPreferencesSurviveFreshStoreRestart]' started.
+Test Case '-[AutoMLXStudioTests.ConversationStorePersistenceTests testConversationAndPreferencesSurviveFreshStoreRestart]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.ConversationStorePersistenceTests testLegacyUnwrappedRecordMigratesMissingPreferencesSafely]' started.
+Test Case '-[AutoMLXStudioTests.ConversationStorePersistenceTests testLegacyUnwrappedRecordMigratesMissingPreferencesSafely]' passed (0.002 seconds).
+Test Case '-[AutoMLXStudioTests.ConversationStorePersistenceTests testMemoryAndQualityDefaultsDependOnlyOnProjectAssociation]' started.
+Test Case '-[AutoMLXStudioTests.ConversationStorePersistenceTests testMemoryAndQualityDefaultsDependOnlyOnProjectAssociation]' passed (0.001 seconds).
+Test Suite 'ConversationStorePersistenceTests' passed at 2026-09-11 07:37:26.980.
+	 Executed 3 tests, with 0 failures (0 unexpected) in 0.005 (0.005) seconds
+Test Suite 'RemoteInferenceBackendTests' started at 2026-09-11 07:37:26.996.
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testDiscoveryMapsOnlyTrustworthyMetadataAndCachesPerServer]' started.
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testDiscoveryMapsOnlyTrustworthyMetadataAndCachesPerServer]' passed (0.004 seconds).
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testHealthRejectsUnrelatedHTMLServiceEvenWhenHTTPReturnsSuccess]' started.
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testHealthRejectsUnrelatedHTMLServiceEvenWhenHTTPReturnsSuccess]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testHealthRequiresCompatibleModelsAPIAndReportsSelectedModelAbsenceAsDegraded]' started.
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testHealthRequiresCompatibleModelsAPIAndReportsSelectedModelAbsenceAsDegraded]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testHTTPAuthenticationFailureRedactsExactAndCredentialShapedSecrets]' started.
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testHTTPAuthenticationFailureRedactsExactAndCredentialShapedSecrets]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testMalformedGenerationResponseIsBoundedAndFallbackReady]' started.
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testMalformedGenerationResponseIsBoundedAndFallbackReady]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testMalformedToolArgumentsAreRejectedWithoutNaturalLanguageParsing]' started.
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testMalformedToolArgumentsAreRejectedWithoutNaturalLanguageParsing]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testNativeToolCallIsStrictlyDecodedWithoutExecutingIt]' started.
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testNativeToolCallIsStrictlyDecodedWithoutExecutingIt]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testPriorAssistantToolCallAndToolResultRoundTripAsNativeMessages]' started.
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testPriorAssistantToolCallAndToolResultRoundTripAsNativeMessages]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testProfileBuildsCredentialFreeURLAndWarnsOnlyForRemoteCleartext]' started.
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testProfileBuildsCredentialFreeURLAndWarnsOnlyForRemoteCleartext]' passed (0.014 seconds).
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testStorePersistsMultipleProfilesWithoutPersistingTokenAndRemovesKeychainEntry]' started.
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testStorePersistsMultipleProfilesWithoutPersistingTokenAndRemovesKeychainEntry]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testTaskCancellationStopsPendingInferenceWithoutFallback]' started.
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testTaskCancellationStopsPendingInferenceWithoutFallback]' passed (0.034 seconds).
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testTextGenerationBuildsAuthOnlyAtNetworkBoundaryAndNormalizesUsage]' started.
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testTextGenerationBuildsAuthOnlyAtNetworkBoundaryAndNormalizesUsage]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testTimeoutAndConnectionLossMapToDistinctFallbackReadyErrors]' started.
+2026-09-11 07:37:27.069210+0200 AutoMLXStudio[5244:86894] [Default] Task <34DFC6C6-00E8-4040-BE21-74C10FBB31DE>.<1> finished with error [-1001] Error Domain=NSURLErrorDomain Code=-1001 "(null)" UserInfo={_NSURLErrorRelatedURLSessionTaskErrorKey=(
+    "LocalDataTask <34DFC6C6-00E8-4040-BE21-74C10FBB31DE>.<1>"
+), _NSURLErrorFailingURLSessionTaskErrorKey=LocalDataTask <34DFC6C6-00E8-4040-BE21-74C10FBB31DE>.<1>}
+2026-09-11 07:37:27.069399+0200 AutoMLXStudio[5244:86952] [Default] Task <F998ACD3-C32C-40E4-B6B3-A52B3F9F14CB>.<2> finished with error [-1005] Error Domain=NSURLErrorDomain Code=-1005 "(null)" UserInfo={_NSURLErrorRelatedURLSessionTaskErrorKey=(
+    "LocalDataTask <F998ACD3-C32C-40E4-B6B3-A52B3F9F14CB>.<2>"
+), _NSURLErrorFailingURLSessionTaskErrorKey=LocalDataTask <F998ACD3-C32C-40E4-B6B3-A52B3F9F14CB>.<2>}
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testTimeoutAndConnectionLossMapToDistinctFallbackReadyErrors]' passed (0.001 seconds).
+Test Suite 'RemoteInferenceBackendTests' passed at 2026-09-11 07:37:27.072.
+	 Executed 13 tests, with 0 failures (0 unexpected) in 0.065 (0.076) seconds
+Test Suite 'RemoteModelsControllerTests' started at 2026-09-11 07:37:27.072.
+Test Case '-[AutoMLXStudioTests.RemoteModelsControllerTests testConnectionPublishesRemoteHealthModelsAndUsesFreshCacheWithoutSecondLiveRefresh]' started.
+Test Case '-[AutoMLXStudioTests.RemoteModelsControllerTests testConnectionPublishesRemoteHealthModelsAndUsesFreshCacheWithoutSecondLiveRefresh]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.RemoteModelsControllerTests testLoadPublishesStableMultipleProfiles]' started.
+Test Case '-[AutoMLXStudioTests.RemoteModelsControllerTests testLoadPublishesStableMultipleProfiles]' passed (0.000 seconds).
+Test Case '-[AutoMLXStudioTests.RemoteModelsControllerTests testNewBearerProfileRequiresExplicitTokenBeforePersistence]' started.
+Test Case '-[AutoMLXStudioTests.RemoteModelsControllerTests testNewBearerProfileRequiresExplicitTokenBeforePersistence]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.RemoteModelsControllerTests testTokenFailureRestoresPreviousProfileWithoutReadingExistingSecret]' started.
+Test Case '-[AutoMLXStudioTests.RemoteModelsControllerTests testTokenFailureRestoresPreviousProfileWithoutReadingExistingSecret]' passed (0.001 seconds).
+Test Suite 'RemoteModelsControllerTests' passed at 2026-09-11 07:37:27.079.
+	 Executed 4 tests, with 0 failures (0 unexpected) in 0.002 (0.006) seconds
+Test Suite 'AutoMLXStudioTests.xctest' passed at 2026-09-11 07:37:27.079.
+	 Executed 36 tests, with 0 failures (0 unexpected) in 0.737 (0.824) seconds
+Test Suite 'Selected tests' passed at 2026-09-11 07:37:27.079.
+	 Executed 36 tests, with 0 failures (0 unexpected) in 0.737 (0.825) seconds
+2026-09-11 07:37:27.394 xcodebuild[5236:86727] [MT] IDETestOperationsObserverDebug: 1.659 elapsed -- Testing started completed.
+2026-09-11 07:37:27.394 xcodebuild[5236:86727] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-09-11 07:37:27.394 xcodebuild[5236:86727] [MT] IDETestOperationsObserverDebug: 1.659 sec, +1.659 sec -- end
+
+Test session results, code coverage, and logs:
+	/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/TargetedAuthoritative.xcresult
+
+** TEST SUCCEEDED **
+
+Testing started

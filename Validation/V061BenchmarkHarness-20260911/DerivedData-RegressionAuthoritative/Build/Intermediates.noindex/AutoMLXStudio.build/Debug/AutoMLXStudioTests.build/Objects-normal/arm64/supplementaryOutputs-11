@@ -1,0 +1,23 @@
+{
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/BenchmarkHarnessTests.swift" : {
+    "const-values" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-RegressionAuthoritative/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/BenchmarkHarnessTests.swiftconstvalues",
+    "dependencies" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-RegressionAuthoritative/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/BenchmarkHarnessTests.d",
+    "diagnostics" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-RegressionAuthoritative/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/BenchmarkHarnessTests.dia",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-RegressionAuthoritative/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/BenchmarkHarnessTests.o",
+    "swift-dependencies" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-RegressionAuthoritative/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/BenchmarkHarnessTests.swiftdeps"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/ChatGenerationSessionTests.swift" : {
+    "const-values" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-RegressionAuthoritative/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/ChatGenerationSessionTests.swiftconstvalues",
+    "dependencies" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-RegressionAuthoritative/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/ChatGenerationSessionTests.d",
+    "diagnostics" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-RegressionAuthoritative/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/ChatGenerationSessionTests.dia",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-RegressionAuthoritative/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/ChatGenerationSessionTests.o",
+    "swift-dependencies" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-RegressionAuthoritative/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/ChatGenerationSessionTests.swiftdeps"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/ConversationStoreTests.swift" : {
+    "const-values" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-RegressionAuthoritative/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/ConversationStoreTests.swiftconstvalues",
+    "dependencies" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-RegressionAuthoritative/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/ConversationStoreTests.d",
+    "diagnostics" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-RegressionAuthoritative/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/ConversationStoreTests.dia",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-RegressionAuthoritative/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/ConversationStoreTests.o",
+    "swift-dependencies" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-RegressionAuthoritative/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/ConversationStoreTests.swiftdeps"
+  }
+}

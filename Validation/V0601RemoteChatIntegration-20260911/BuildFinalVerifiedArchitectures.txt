@@ -1,0 +1,6 @@
+Validation/V0601RemoteChatIntegration-20260911/Apps/DebugFinalVerified/AutoMLXStudio.app/Contents/MacOS/AutoMLXStudio:     Mach-O 64-bit executable arm64
+Validation/V0601RemoteChatIntegration-20260911/Apps/ReleaseFinalVerified/AutoMLXStudio.app/Contents/MacOS/AutoMLXStudio:   Mach-O 64-bit executable arm64
+Validation/V0601RemoteChatIntegration-20260911/Apps/UniversalFinalVerified/AutoMLXStudio.app/Contents/MacOS/AutoMLXStudio: Mach-O universal binary with 2 architectures: [x86_64:Mach-O 64-bit executable x86_64] [arm64]
+Validation/V0601RemoteChatIntegration-20260911/Apps/UniversalFinalVerified/AutoMLXStudio.app/Contents/MacOS/AutoMLXStudio (for architecture x86_64):	Mach-O 64-bit executable x86_64
+Validation/V0601RemoteChatIntegration-20260911/Apps/UniversalFinalVerified/AutoMLXStudio.app/Contents/MacOS/AutoMLXStudio (for architecture arm64):	Mach-O 64-bit executable arm64
+x86_64 arm64

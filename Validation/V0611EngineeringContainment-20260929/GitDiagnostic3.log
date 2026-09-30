@@ -1,0 +1,95 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -project AutoMLXStudio.xcodeproj -scheme AutoMLXStudio -configuration Debug -destination platform=macOS,arch=arm64 -derivedDataPath /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-V0611Containment-20260929 -resultBundlePath /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-V0611Containment-20260929/Logs/Test/ContainmentGitDiagnostic3-20260929.xcresult "-only-testing:AutoMLXStudioTests/EngineeringToolRuntimeTests/testTypedGitStatusRunsOnlyInsideTemporaryRepository" CODE_SIGN_STYLE=Automatic DEVELOPMENT_TEAM=3MKXA7AA48 test
+
+Build settings from command line:
+    CODE_SIGN_STYLE = Automatic
+    DEVELOPMENT_TEAM = 3MKXA7AA48
+
+Writing result bundle at path:
+	/Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-V0611Containment-20260929/Logs/Test/ContainmentGitDiagnostic3-20260929.xcresult
+
+ComputePackagePrebuildTargetDependencyGraph
+
+Prepare packages
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (2 targets)
+    Target 'AutoMLXStudioTests' in project 'AutoMLXStudio'
+        ➜ Explicit dependency on target 'AutoMLXStudio' in project 'AutoMLXStudio'
+    Target 'AutoMLXStudio' in project 'AutoMLXStudio' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ClangStatCache /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-V0611Containment-20260929/SDKStatCaches.noindex/macosx27.0-26A425-7231f6df4def33e022ae2eb8f782df1a.sdkstatcache
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio.xcodeproj
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk -o /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-V0611Containment-20260929/SDKStatCaches.noindex/macosx27.0-26A425-7231f6df4def33e022ae2eb8f782df1a.sdkstatcache
+
+CodeSign /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-V0611Containment-20260929/Build/Products/Debug/AutoMLXStudio.app/Contents/MacOS/AutoMLXStudio.debug.dylib (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+    Signing Identity:     "Apple Development: schiavon.tommaso@icloud.com (D7UB8ZG7D3)"
+    
+    /usr/bin/codesign --force --sign B41D3A86A557DD6A9B62E9DF0BD7A295B2E41153 --timestamp\=none --generate-entitlement-der /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-V0611Containment-20260929/Build/Products/Debug/AutoMLXStudio.app/Contents/MacOS/AutoMLXStudio.debug.dylib
+/Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-V0611Containment-20260929/Build/Products/Debug/AutoMLXStudio.app/Contents/MacOS/AutoMLXStudio.debug.dylib: replacing existing signature
+
+CodeSign /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-V0611Containment-20260929/Build/Products/Debug/AutoMLXStudio.app/Contents/MacOS/__preview.dylib (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+    Signing Identity:     "Apple Development: schiavon.tommaso@icloud.com (D7UB8ZG7D3)"
+    
+    /usr/bin/codesign --force --sign B41D3A86A557DD6A9B62E9DF0BD7A295B2E41153 --timestamp\=none --generate-entitlement-der /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-V0611Containment-20260929/Build/Products/Debug/AutoMLXStudio.app/Contents/MacOS/__preview.dylib
+/Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-V0611Containment-20260929/Build/Products/Debug/AutoMLXStudio.app/Contents/MacOS/__preview.dylib: replacing existing signature
+
+CodeSign /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-V0611Containment-20260929/Build/Products/Debug/AutoMLXStudio.app (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+    Signing Identity:     "Apple Development: schiavon.tommaso@icloud.com (D7UB8ZG7D3)"
+    
+    /usr/bin/codesign --force --sign B41D3A86A557DD6A9B62E9DF0BD7A295B2E41153 --entitlements /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-V0611Containment-20260929/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/AutoMLXStudio.app.xcent --timestamp\=none --generate-entitlement-der /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-V0611Containment-20260929/Build/Products/Debug/AutoMLXStudio.app
+/Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-V0611Containment-20260929/Build/Products/Debug/AutoMLXStudio.app: replacing existing signature
+
+Validate /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-V0611Containment-20260929/Build/Products/Debug/AutoMLXStudio.app (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    builtin-validationUtility /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-V0611Containment-20260929/Build/Products/Debug/AutoMLXStudio.app -no-validate-extension -infoplist-subpath Contents/Info.plist
+
+RegisterWithLaunchServices /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-V0611Containment-20260929/Build/Products/Debug/AutoMLXStudio.app (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    builtin-lsregisterurl --record-path /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-V0611Containment-20260929/Build/Intermediates.noindex/XCBuildData/registered-launchservices.txt -- /System/Library/Frameworks/CoreServices.framework/Versions/Current/Frameworks/LaunchServices.framework/Versions/Current/Support/lsregister -f -R -trusted /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-V0611Containment-20260929/Build/Products/Debug/AutoMLXStudio.app
+
+PruneExplicitPrecompiledModules /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-V0611Containment-20260929/SDKExplicitPrecompiledModules
+
+PruneExplicitPrecompiledModules /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-V0611Containment-20260929/Build/Intermediates.noindex/ExplicitPrecompiledModules
+
+PruneExplicitPrecompiledModules /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-V0611Containment-20260929/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules
+
+2026-09-29 17:52:22.324990+0200 AutoMLXStudio[7019:259885] ApplePersistenceIgnoreState: Existing state will not be touched. New state will be written to /var/folders/2g/q2qk1gk540d5ygkzr28n20ym0000gn/T/com.tommaso.AutoMLXStudio.savedState
+Test Suite 'Selected tests' started at 2026-09-29 17:52:22.568.
+Test Suite 'AutoMLXStudioTests.xctest' started at 2026-09-29 17:52:22.568.
+Test Suite 'EngineeringToolRuntimeTests' started at 2026-09-29 17:52:22.568.
+Test Case '-[AutoMLXStudioTests.EngineeringToolRuntimeTests testTypedGitStatusRunsOnlyInsideTemporaryRepository]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringToolRuntimeTests testTypedGitStatusRunsOnlyInsideTemporaryRepository]' passed (0.035 seconds).
+Test Suite 'EngineeringToolRuntimeTests' passed at 2026-09-29 17:52:22.604.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.035 (0.036) seconds
+Test Suite 'AutoMLXStudioTests.xctest' passed at 2026-09-29 17:52:22.604.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.035 (0.036) seconds
+Test Suite 'Selected tests' passed at 2026-09-29 17:52:22.604.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.035 (0.037) seconds
+2026-09-29 17:52:22.879 xcodebuild[7009:259723] [MT] IDETestOperationsObserverDebug: 0.951 elapsed -- Testing started completed.
+2026-09-29 17:52:22.880 xcodebuild[7009:259723] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-09-29 17:52:22.880 xcodebuild[7009:259723] [MT] IDETestOperationsObserverDebug: 0.951 sec, +0.951 sec -- end
+
+Test session results, code coverage, and logs:
+	/Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-V0611Containment-20260929/Logs/Test/ContainmentGitDiagnostic3-20260929.xcresult
+
+** TEST SUCCEEDED **
+
+Testing started

@@ -1,0 +1,23 @@
+[Debug arm64]
+/tmp/AutoMLXStudio-V061-DebugFreezeFinal/Build/Products/Debug/AutoMLXStudio.app/Contents/MacOS/AutoMLXStudio: Mach-O 64-bit executable arm64
+Non-fat file: /tmp/AutoMLXStudio-V061-DebugFreezeFinal/Build/Products/Debug/AutoMLXStudio.app/Contents/MacOS/AutoMLXStudio is architecture: arm64
+--prepared:/private/tmp/AutoMLXStudio-V061-DebugFreezeFinal/Build/Products/Debug/AutoMLXStudio.app/Contents/MacOS/__preview.dylib
+--validated:/private/tmp/AutoMLXStudio-V061-DebugFreezeFinal/Build/Products/Debug/AutoMLXStudio.app/Contents/MacOS/__preview.dylib
+--prepared:/private/tmp/AutoMLXStudio-V061-DebugFreezeFinal/Build/Products/Debug/AutoMLXStudio.app/Contents/MacOS/AutoMLXStudio.debug.dylib
+--validated:/private/tmp/AutoMLXStudio-V061-DebugFreezeFinal/Build/Products/Debug/AutoMLXStudio.app/Contents/MacOS/AutoMLXStudio.debug.dylib
+/tmp/AutoMLXStudio-V061-DebugFreezeFinal/Build/Products/Debug/AutoMLXStudio.app: valid on disk
+/tmp/AutoMLXStudio-V061-DebugFreezeFinal/Build/Products/Debug/AutoMLXStudio.app: satisfies its Designated Requirement
+
+[Release arm64]
+/tmp/AutoMLXStudio-V061-ReleaseFreezeFinal/Build/Products/Release/AutoMLXStudio.app/Contents/MacOS/AutoMLXStudio: Mach-O 64-bit executable arm64
+Non-fat file: /tmp/AutoMLXStudio-V061-ReleaseFreezeFinal/Build/Products/Release/AutoMLXStudio.app/Contents/MacOS/AutoMLXStudio is architecture: arm64
+/tmp/AutoMLXStudio-V061-ReleaseFreezeFinal/Build/Products/Release/AutoMLXStudio.app: valid on disk
+/tmp/AutoMLXStudio-V061-ReleaseFreezeFinal/Build/Products/Release/AutoMLXStudio.app: satisfies its Designated Requirement
+
+[Universal Release]
+/tmp/AutoMLXStudio-V061-UniversalFreezeFinal/Build/Products/Release/AutoMLXStudio.app/Contents/MacOS/AutoMLXStudio: Mach-O universal binary with 2 architectures: [x86_64:Mach-O 64-bit executable x86_64] [arm64]
+/tmp/AutoMLXStudio-V061-UniversalFreezeFinal/Build/Products/Release/AutoMLXStudio.app/Contents/MacOS/AutoMLXStudio (for architecture x86_64):	Mach-O 64-bit executable x86_64
+/tmp/AutoMLXStudio-V061-UniversalFreezeFinal/Build/Products/Release/AutoMLXStudio.app/Contents/MacOS/AutoMLXStudio (for architecture arm64):	Mach-O 64-bit executable arm64
+Architectures in the fat file: /tmp/AutoMLXStudio-V061-UniversalFreezeFinal/Build/Products/Release/AutoMLXStudio.app/Contents/MacOS/AutoMLXStudio are: x86_64 arm64 
+/tmp/AutoMLXStudio-V061-UniversalFreezeFinal/Build/Products/Release/AutoMLXStudio.app: valid on disk
+/tmp/AutoMLXStudio-V061-UniversalFreezeFinal/Build/Products/Release/AutoMLXStudio.app: satisfies its Designated Requirement

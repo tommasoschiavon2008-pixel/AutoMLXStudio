@@ -19,6 +19,7 @@ targets:
         INFOPLIST_KEY_CFBundleDisplayName: "AutoMLX Studio"
         INFOPLIST_KEY_LSApplicationCategoryType: "public.app-category.developer-tools"
         INFOPLIST_KEY_NSMicrophoneUsageDescription: "AutoMLX Studio records audio only when you press the microphone button to create a local transcription."
+        INFOPLIST_KEY_NSLocalNetworkUsageDescription: "Connects to inference servers you configure on your local network to discover models and run chats, engineering tasks, and benchmarks." # Explains user-initiated private LAN inference in the macOS permission prompt.
         GENERATE_INFOPLIST_FILE: YES
         CODE_SIGN_STYLE: Automatic
         ENABLE_APP_SANDBOX: NO
@@ -67,6 +68,7 @@ schemes: # Declares reproducible normal and opt-in hardware validation entry poi
         RUN_MLX_MULTI_MODEL_TESTS: "1" # Enables only the guarded Coder → Reasoner → General test when selected.
         RUN_MLX_VISION_HARDWARE_TESTS: "1" # Enables generated-image Qwen3-VL inference when the external download is complete.
         RUN_MLX_AUDIO_HARDWARE_TESTS: "1" # Enables deterministic ASR and silent TTS inference against installed local models.
+        RUN_AUTOMLX_PHYSICAL_BOUNDARY: "1" # Replays the preserved pre-fix Makefile against the signed post-fix app only in the opt-in hardware scheme.
     management: # Keeps the specialized scheme available but secondary in Xcode.
       shared: true # Makes physical validation reproducible for local command-line runs.
       orderHint: 100 # Places the specialized scheme after the normal app scheme.

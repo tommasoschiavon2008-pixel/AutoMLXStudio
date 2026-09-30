@@ -1,0 +1,9 @@
+UTC 2026-09-20T20:03:24Z
+Configured target local network evidence: 192.168.1.22
+? (192.168.1.22) at 50:eb:f6:7c:18:6a on en0 ifscope [ethernet]
+   route to: 192.168.1.22
+destination: 192.168.1.22
+  interface: en0
+      flags: <UP,HOST,DONE,LLINFO,WASCLONED,IFSCOPE,IFREF>
+ recvpipe  sendpipe  ssthresh  rtt,msec    rttvar  hopcount      mtu     expire
+       0         0         0         0         0         0      1500      1162 

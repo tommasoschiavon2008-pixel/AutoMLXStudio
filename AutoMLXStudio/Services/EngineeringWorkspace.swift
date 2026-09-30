@@ -147,8 +147,8 @@ actor EngineeringWorkspace { // Centralizes every live filesystem mutation and i
     func readFile(relativePath: String, startLine: Int? = nil, endLine: Int? = nil) throws -> EngineeringFileRead { // Reads one bounded regular UTF-8 file with optional line selection.
         let resolved = try resolve(relativePath, allowRoot: false, requiresExisting: true, enforceSensitivePolicy: true) // Canonicalizes and contains the target.
         let metadata = try regularFileMetadata(for: resolved) // Requires a safe regular file and retrieves its size.
-        let read = try Self.readBoundedText(from: resolved.canonicalURL, maximumBytes: limits.maximumReadBytes) // Reads only the configured leading byte window.
-        let exactHash = try Self.sha256(ofFileAt: resolved.canonicalURL) // Fingerprints the complete source state for safe later writes.
+        let read = try readBoundedText(from: resolved.canonicalURL, maximumBytes: limits.maximumReadBytes) // Reads only the configured byte window through anchored no-follow descriptors.
+        let exactHash = try sha256(ofFileAt: resolved.canonicalURL) // Fingerprints source bytes without following racing path-component links.
         var selectedText = read.text // Starts with the decoded bounded file prefix.
         var lineWasTruncated = false // Tracks omission caused by an explicit line selection.
         if startLine != nil || endLine != nil { // Applies an inclusive one-based line range only when requested.
@@ -170,7 +170,7 @@ actor EngineeringWorkspace { // Centralizes every live filesystem mutation and i
         let lexicalValues = try resolved.lexicalURL.resourceValues(forKeys: keys) // Reads link identity at the lexical target.
         let canonicalValues = try resolved.canonicalURL.resourceValues(forKeys: keys) // Reads contained target type and size.
         var hash: String? // Holds a full content fingerprint only for bounded regular files.
-        if canonicalValues.isRegularFile == true, (canonicalValues.fileSize ?? 0) <= limits.maximumWriteBytes { hash = try Self.sha256(ofFileAt: resolved.canonicalURL) } // Avoids hashing unexpectedly large content during metadata inspection.
+        if canonicalValues.isRegularFile == true, (canonicalValues.fileSize ?? 0) <= limits.maximumWriteBytes { hash = try sha256(ofFileAt: resolved.canonicalURL) } // Opens bounded regular source through anchored no-follow descriptors.
         return EngineeringFileInfo(relativePath: resolved.relativePath, isDirectory: canonicalValues.isDirectory == true, isSymbolicLink: lexicalValues.isSymbolicLink == true, byteCount: canonicalValues.fileSize, modificationDate: canonicalValues.contentModificationDate, sha256: hash) // Returns contained metadata.
     } // Ends file_info behavior.
 
@@ -193,7 +193,7 @@ actor EngineeringWorkspace { // Centralizes every live filesystem mutation and i
         var matches: [EngineeringTextMatch] = [] // Accumulates bounded content evidence.
         for candidate in candidates { // Visits deterministic candidate order.
             guard matches.count < limits.maximumSearchMatches else { break } // Stops globally at the configured context bound.
-            guard let read = try? Self.readBoundedText(from: candidate.canonicalURL, maximumBytes: limits.maximumReadBytes) else { continue } // Skips binary, undecodable, or transiently unreadable files.
+            guard let read = try? readBoundedText(from: candidate.canonicalURL, maximumBytes: limits.maximumReadBytes) else { continue } // Skips binary, undecodable, racing, or transiently unreadable files.
             let lines = read.text.split(separator: "\n", omittingEmptySubsequences: false) // Preserves one-based line positions including blanks.
             for (index, line) in lines.enumerated() where line.localizedCaseInsensitiveContains(query) { // Performs literal case-insensitive matching with no command interpretation.
                 let excerpt = EngineeringSecretRedactor.redact(String(line.prefix(500))) // Bounds and redacts every returned line independently.
@@ -212,12 +212,11 @@ actor EngineeringWorkspace { // Centralizes every live filesystem mutation and i
         let parentURL = resolved.canonicalURL.deletingLastPathComponent() // Identifies the exact contained parent directory.
         if createParentDirectories { // Creates missing parents only when the typed request explicitly permits it.
             _ = try resolveParentForCreation(relativePath: resolved.relativePath) // Proves every existing ancestor and symlink remains contained.
-            try fileManager.createDirectory(at: parentURL, withIntermediateDirectories: true) // Creates only the validated contained hierarchy.
         } // Ends optional parent creation.
         var parentIsDirectory: ObjCBool = false // Receives parent availability metadata.
-        guard fileManager.fileExists(atPath: parentURL.path, isDirectory: &parentIsDirectory), parentIsDirectory.boolValue else { throw EngineeringRuntimeError.notADirectory(parentURL.path) } // Requires an existing valid parent after optional creation.
+        guard createParentDirectories || (fileManager.fileExists(atPath: parentURL.path, isDirectory: &parentIsDirectory) && parentIsDirectory.boolValue) else { throw EngineeringRuntimeError.notADirectory(parentURL.path) } // Requires existing parents unless descriptor-relative creation was explicitly requested.
         let record = EngineeringChangeRecord(id: UUID(), workspaceID: descriptor.id, relativePath: resolved.relativePath, kind: .create, createdAt: now, beforeData: nil, afterData: data, beforeSHA256: nil, afterSHA256: Self.sha256(data), parentChangeID: nil) // Captures exact bounded before/after state before mutation.
-        try persistAndApply(record: record) { try Self.writeNewFileAtomically(data, to: resolved.canonicalURL, fileManager: self.fileManager) } // Persists rollback evidence and publishes a complete file without overwriting a racing target.
+        try persistAndApply(record: record) { try EngineeringSecureFileAccess(rootURL: rootURL).write(data, to: resolved.canonicalURL, createOnly: true, createParents: createParentDirectories) } // Publishes through an anchored parent and never overwrites a racing target.
         return record // Returns exact transaction evidence.
     } // Ends create_file behavior.
 
@@ -227,12 +226,12 @@ actor EngineeringWorkspace { // Centralizes every live filesystem mutation and i
         let resolved = try resolve(relativePath, allowRoot: false, requiresExisting: true, enforceSensitivePolicy: true) // Canonicalizes and contains the existing target.
         let metadata = try regularFileMetadata(for: resolved) // Rejects directories, binaries, and oversized rollback states.
         guard metadata.byteCount <= limits.maximumWriteBytes else { throw EngineeringRuntimeError.outputLimitExceeded(limits.maximumWriteBytes) } // Requires exact bounded rollback bytes.
-        let original = try Data(contentsOf: resolved.canonicalURL) // Captures the exact current state before optimistic concurrency validation.
+        let original = try EngineeringSecureFileAccess(rootURL: rootURL).read(resolved.canonicalURL, maximumBytes: limits.maximumWriteBytes) // Captures bounded bytes without following racing parent or file symlinks.
         try ensureTextData(original, relativePath: resolved.relativePath) // Refuses binary overwrite through text tools.
         let actualHash = Self.sha256(original) // Fingerprints the captured bytes rather than racing a second read.
         guard actualHash.caseInsensitiveCompare(expectedSHA256) == .orderedSame else { throw EngineeringRuntimeError.expectedHashConflict(expected: expectedSHA256, actual: actualHash) } // Preserves external edits made since read_file.
         let record = EngineeringChangeRecord(id: UUID(), workspaceID: descriptor.id, relativePath: resolved.relativePath, kind: .write, createdAt: now, beforeData: original, afterData: data, beforeSHA256: actualHash, afterSHA256: Self.sha256(data), parentChangeID: nil) // Captures exact reversible state.
-        try persistAndApply(record: record) { try data.write(to: resolved.canonicalURL, options: .atomic) } // Commits history before an atomic target replacement.
+        try persistAndApply(record: record) { try EngineeringSecureFileAccess(rootURL: rootURL).write(data, to: resolved.canonicalURL, createOnly: false) } // Atomically replaces only an entry in the descriptor-anchored workspace parent.
         return record // Returns transaction identity and hashes.
     } // Ends write_file behavior.
 
@@ -241,7 +240,7 @@ actor EngineeringWorkspace { // Centralizes every live filesystem mutation and i
         let resolved = try resolve(relativePath, allowRoot: false, requiresExisting: true, enforceSensitivePolicy: true) // Canonicalizes and contains the existing target.
         let metadata = try regularFileMetadata(for: resolved) // Requires a bounded regular file.
         guard metadata.byteCount <= limits.maximumWriteBytes else { throw EngineeringRuntimeError.outputLimitExceeded(limits.maximumWriteBytes) } // Ensures exact rollback state fits the transaction budget.
-        let originalData = try Data(contentsOf: resolved.canonicalURL) // Captures current bytes once for conflict-safe replacement.
+        let originalData = try EngineeringSecureFileAccess(rootURL: rootURL).read(resolved.canonicalURL, maximumBytes: limits.maximumWriteBytes) // Captures bounded bytes without a mutable pathname read.
         try ensureTextData(originalData, relativePath: resolved.relativePath) // Refuses binary replacement through a text tool.
         let actualHash = Self.sha256(originalData) // Fingerprints the exact captured state.
         guard actualHash.caseInsensitiveCompare(expectedSHA256) == .orderedSame else { throw EngineeringRuntimeError.expectedHashConflict(expected: expectedSHA256, actual: actualHash) } // Preserves edits made after model inspection.
@@ -252,7 +251,7 @@ actor EngineeringWorkspace { // Centralizes every live filesystem mutation and i
         let replacementData = Data(replacementText.utf8) // Encodes the deterministic result.
         try validateMutationSize(replacementData) // Refuses replacement expansion beyond rollback bounds.
         let record = EngineeringChangeRecord(id: UUID(), workspaceID: descriptor.id, relativePath: resolved.relativePath, kind: .replace, createdAt: now, beforeData: originalData, afterData: replacementData, beforeSHA256: actualHash, afterSHA256: Self.sha256(replacementData), parentChangeID: nil) // Captures exact reversible before/after state.
-        try persistAndApply(record: record) { try replacementData.write(to: resolved.canonicalURL, options: .atomic) } // Persists history before atomic replacement.
+        try persistAndApply(record: record) { try EngineeringSecureFileAccess(rootURL: rootURL).write(replacementData, to: resolved.canonicalURL, createOnly: false) } // Persists history before descriptor-relative atomic replacement.
         return record // Returns the exact transaction for diff or rollback.
     } // Ends replace_in_file behavior.
 
@@ -277,16 +276,16 @@ actor EngineeringWorkspace { // Centralizes every live filesystem mutation and i
         guard let originalRecord = records[changeID] else { throw EngineeringRuntimeError.changeNotFound(changeID) } // Requires exact durable transaction ownership.
         guard originalRecord.workspaceID == descriptor.id else { throw EngineeringRuntimeError.changeBelongsToAnotherWorkspace(changeID) } // Prevents cross-workspace rollback.
         let resolved = try resolve(originalRecord.relativePath, allowRoot: false, requiresExisting: originalRecord.afterData != nil, enforceSensitivePolicy: true) // Revalidates current containment instead of trusting stored paths.
-        let currentData = fileManager.fileExists(atPath: resolved.canonicalURL.path) ? try Data(contentsOf: resolved.canonicalURL) : nil // Captures the current state exactly once.
+        let currentData = fileManager.fileExists(atPath: resolved.canonicalURL.path) ? try EngineeringSecureFileAccess(rootURL: rootURL).read(resolved.canonicalURL, maximumBytes: limits.maximumWriteBytes) : nil // Captures bounded rollback state without following racing links.
         let currentHash = currentData.map(Self.sha256) // Fingerprints current bytes or represents absence.
         guard currentHash == originalRecord.afterSHA256 else { throw EngineeringRuntimeError.rollbackConflict(expected: originalRecord.afterSHA256, actual: currentHash) } // Preserves every unrelated external edit after the agent change.
         let rollbackRecord = EngineeringChangeRecord(id: UUID(), workspaceID: descriptor.id, relativePath: originalRecord.relativePath, kind: .rollback, createdAt: now, beforeData: currentData, afterData: originalRecord.beforeData, beforeSHA256: currentHash, afterSHA256: originalRecord.beforeSHA256, parentChangeID: originalRecord.id) // Records rollback itself as another exact auditable transaction.
         try persistAndApply(record: rollbackRecord) { // Persists rollback evidence before changing the target.
             if let restored = originalRecord.beforeData { // Restores an overwritten file exactly.
-                try restored.write(to: resolved.canonicalURL, options: .atomic) // Uses atomic replacement for bounded restoration.
+                try EngineeringSecureFileAccess(rootURL: rootURL).write(restored, to: resolved.canonicalURL, createOnly: false) // Restores bytes through an anchored parent without following a racing outside link.
             } else { // Reverses a file that this session originally created.
                 guard self.fileManager.fileExists(atPath: resolved.canonicalURL.path) else { throw EngineeringRuntimeError.rollbackConflict(expected: originalRecord.afterSHA256, actual: nil) } // Rechecks exact target existence immediately before deletion.
-                try self.fileManager.removeItem(at: resolved.canonicalURL) // Removes only the exact file created by the selected transaction.
+                try EngineeringSecureFileAccess(rootURL: rootURL).remove(resolved.canonicalURL) // Unlinks only a single entry in the anchored contained parent.
             } // Ends rollback state selection.
         } // Ends persisted rollback application.
         return rollbackRecord // Returns exact audit evidence for the reversal.
@@ -399,8 +398,8 @@ actor EngineeringWorkspace { // Centralizes every live filesystem mutation and i
         return loaded // Returns all healthy matching history.
     } // Ends durable transaction loading.
 
-    private static func readBoundedText(from url: URL, maximumBytes: Int) throws -> (text: String, wasTruncated: Bool) { // Reads a leading byte window while safely distinguishing text from binary.
-        let handle = try FileHandle(forReadingFrom: url) // Opens only the already contained regular file.
+    private func readBoundedText(from url: URL, maximumBytes: Int) throws -> (text: String, wasTruncated: Bool) { // Reads a leading byte window without following racing outside symlinks.
+        let handle = try EngineeringSecureFileAccess(rootURL: rootURL).openFile(url) // Pins every path component and the actual regular file before reading.
         defer { try? handle.close() } // Releases the exact descriptor after the bounded read.
         let data = try handle.read(upToCount: max(1, maximumBytes) + 4) ?? Data() // Reads a small UTF-8 boundary cushion beyond the returned limit.
         let wasTruncated = data.count > maximumBytes || ((try? url.resourceValues(forKeys: [.fileSizeKey]).fileSize) ?? data.count) > maximumBytes // Reports omitted trailing source bytes.
@@ -419,24 +418,13 @@ actor EngineeringWorkspace { // Centralizes every live filesystem mutation and i
         SHA256.hash(data: data).map { String(format: "%02x", $0) }.joined() // Returns canonical lowercase hexadecimal SHA-256.
     } // Ends in-memory hashing.
 
-    private static func sha256(ofFileAt url: URL) throws -> String { // Streams a complete file fingerprint without loading large content into memory.
-        let handle = try FileHandle(forReadingFrom: url) // Opens the already contained regular file.
+    private func sha256(ofFileAt url: URL) throws -> String { // Streams a complete fingerprint from an anchored contained file.
+        let handle = try EngineeringSecureFileAccess(rootURL: rootURL).openFile(url) // Rejects a racing symlink in any path component.
         defer { try? handle.close() } // Releases the exact descriptor after hashing.
         var hasher = SHA256() // Creates incremental SHA-256 state.
         while let chunk = try handle.read(upToCount: 65_536), !chunk.isEmpty { hasher.update(data: chunk) } // Processes bounded chunks until EOF.
         return hasher.finalize().map { String(format: "%02x", $0) }.joined() // Returns canonical lowercase hexadecimal evidence.
     } // Ends streaming file hashing.
-
-    private static func writeNewFileAtomically(_ data: Data, to destinationURL: URL, fileManager: FileManager) throws { // Publishes complete new bytes atomically while refusing a racing overwrite.
-        let temporaryURL = destinationURL.deletingLastPathComponent().appendingPathComponent(".automlx-create-\(UUID().uuidString).tmp", isDirectory: false) // Creates an unguessable sibling staging identity on the same filesystem.
-        defer { try? fileManager.removeItem(at: temporaryURL) } // Removes only the exact app-owned staging file after success or failure.
-        try data.write(to: temporaryURL, options: .atomic) // Fully writes the bounded payload before publishing its final path.
-        let linkStatus = temporaryURL.path.withCString { sourcePath in destinationURL.path.withCString { destinationPath in Darwin.link(sourcePath, destinationPath) } } // Atomically publishes a hard link only when the destination is still absent.
-        guard linkStatus == 0 else { // Converts exact POSIX collision and filesystem limitations into safe Swift errors.
-            if errno == EEXIST { throw EngineeringRuntimeError.fileAlreadyExists(destinationURL.lastPathComponent) } // Preserves a target created concurrently after validation.
-            throw POSIXError(POSIXErrorCode(rawValue: errno) ?? .EIO) // Reports the exact bounded publication failure without partial destination bytes.
-        } // Ends atomic publication failure handling.
-    } // Ends race-safe new-file creation.
 
     private static func nonoverlappingOccurrenceCount(of needle: String, in haystack: String) -> Int { // Counts the exact replacement semantics used by String replacement.
         var count = 0 // Accumulates non-overlapping matches.

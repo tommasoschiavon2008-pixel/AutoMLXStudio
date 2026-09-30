@@ -1,0 +1,1134 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -project AutoMLXStudio.xcodeproj -scheme AutoMLXStudio -configuration Debug -destination platform=macOS,arch=arm64 -derivedDataPath Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete -resultBundlePath Validation/V0601RemoteChatIntegration-20260911/TargetedComplete.xcresult CODE_SIGNING_ALLOWED=NO "-only-testing:AutoMLXStudioTests/ChatGenerationSessionTests" "-only-testing:AutoMLXStudioTests/ConversationStorePersistenceTests" "-only-testing:AutoMLXStudioTests/ConversationStoreMutationTests" "-only-testing:AutoMLXStudioTests/ConversationStoreCorruptionTests" "-only-testing:AutoMLXStudioTests/RemoteInferenceBackendTests" "-only-testing:AutoMLXStudioTests/RemoteModelsControllerTests" test
+
+Build settings from command line:
+    CODE_SIGNING_ALLOWED = NO
+
+Writing result bundle at path:
+	/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/TargetedComplete.xcresult
+
+ComputePackagePrebuildTargetDependencyGraph
+
+Prepare packages
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (2 targets)
+    Target 'AutoMLXStudioTests' in project 'AutoMLXStudio'
+        ➜ Explicit dependency on target 'AutoMLXStudio' in project 'AutoMLXStudio'
+    Target 'AutoMLXStudio' in project 'AutoMLXStudio' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk -x c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc --version
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld -version_details
+
+Build description signature: e7b2c1be457ca23d1c5b8e140bafb36e
+Build description path: /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/XCBuildData/e7b2c1be457ca23d1c5b8e140bafb36e.xcbuilddata
+CreateBuildDirectory /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio.xcodeproj
+    builtin-create-build-directory /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex
+
+CreateBuildDirectory /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio.xcodeproj
+    builtin-create-build-directory /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products
+
+ClangStatCache /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/SDKStatCaches.noindex/macosx26.5-25F70-e082c4a02f00227109f4ed75e425c832.sdkstatcache
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio.xcodeproj
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk -o /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/SDKStatCaches.noindex/macosx26.5-25F70-e082c4a02f00227109f4ed75e425c832.sdkstatcache
+
+CreateBuildDirectory /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio.xcodeproj
+    builtin-create-build-directory /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug
+
+CreateBuildDirectory /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio.xcodeproj
+    builtin-create-build-directory /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules
+
+CreateBuildDirectory /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/ExplicitPrecompiledModules
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio.xcodeproj
+    builtin-create-build-directory /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/ExplicitPrecompiledModules
+
+CreateBuildDirectory /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/EagerLinkingTBDs/Debug
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio.xcodeproj
+    builtin-create-build-directory /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/EagerLinkingTBDs/Debug
+
+WriteAuxiliaryFile /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/AutoMLXStudioTests.hmap (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    write-file /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/AutoMLXStudioTests.hmap
+
+WriteAuxiliaryFile /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/AutoMLXStudioTests.DependencyStaticMetadataFileList (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    write-file /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/AutoMLXStudioTests.DependencyStaticMetadataFileList
+
+WriteAuxiliaryFile /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio-0d9e4fabb6e10e24cb11f2a281e8470f-VFS/all-product-headers.yaml
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio.xcodeproj
+    write-file /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio-0d9e4fabb6e10e24cb11f2a281e8470f-VFS/all-product-headers.yaml
+
+WriteAuxiliaryFile /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/AutoMLXStudioTests.SwiftConstValuesFileList (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    write-file /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/AutoMLXStudioTests.SwiftConstValuesFileList
+
+WriteAuxiliaryFile /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/AutoMLXStudioTests.SwiftFileList (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    write-file /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/AutoMLXStudioTests.SwiftFileList
+
+WriteAuxiliaryFile /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/AutoMLXStudioTests.LinkFileList (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    write-file /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/AutoMLXStudioTests.LinkFileList
+
+WriteAuxiliaryFile /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/empty-AutoMLXStudioTests.plist (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    write-file /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/empty-AutoMLXStudioTests.plist
+
+WriteAuxiliaryFile /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/AutoMLXStudioTests-OutputFileMap.json (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    write-file /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/AutoMLXStudioTests-OutputFileMap.json
+
+WriteAuxiliaryFile /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/AutoMLXStudioTests.DependencyMetadataFileList (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    write-file /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/AutoMLXStudioTests.DependencyMetadataFileList
+
+WriteAuxiliaryFile /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/AutoMLXStudioTests-project-headers.hmap (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    write-file /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/AutoMLXStudioTests-project-headers.hmap
+
+WriteAuxiliaryFile /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/AutoMLXStudioTests_const_extract_protocols.json (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    write-file /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/AutoMLXStudioTests_const_extract_protocols.json
+
+WriteAuxiliaryFile /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/AutoMLXStudioTests-own-target-headers.hmap (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    write-file /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/AutoMLXStudioTests-own-target-headers.hmap
+
+WriteAuxiliaryFile /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/AutoMLXStudioTests-generated-files.hmap (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    write-file /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/AutoMLXStudioTests-generated-files.hmap
+
+WriteAuxiliaryFile /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/AutoMLXStudioTests-all-target-headers.hmap (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    write-file /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/AutoMLXStudioTests-all-target-headers.hmap
+
+WriteAuxiliaryFile /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/AutoMLXStudioTests-all-non-framework-target-headers.hmap (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    write-file /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/AutoMLXStudioTests-all-non-framework-target-headers.hmap
+
+WriteAuxiliaryFile /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/empty-AutoMLXStudio.plist (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    write-file /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/empty-AutoMLXStudio.plist
+
+WriteAuxiliaryFile /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio.SwiftFileList (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    write-file /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio.SwiftFileList
+
+WriteAuxiliaryFile /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/AutoMLXStudio.hmap (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    write-file /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/AutoMLXStudio.hmap
+
+WriteAuxiliaryFile /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio.LinkFileList (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    write-file /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio.LinkFileList
+
+WriteAuxiliaryFile /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio-OutputFileMap.json (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    write-file /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio-OutputFileMap.json
+
+WriteAuxiliaryFile /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/AutoMLXStudio.DependencyStaticMetadataFileList (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    write-file /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/AutoMLXStudio.DependencyStaticMetadataFileList
+
+WriteAuxiliaryFile /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio_const_extract_protocols.json (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    write-file /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio_const_extract_protocols.json
+
+WriteAuxiliaryFile /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio.SwiftConstValuesFileList (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    write-file /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio.SwiftConstValuesFileList
+
+WriteAuxiliaryFile /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/AutoMLXStudio.DependencyMetadataFileList (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    write-file /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/AutoMLXStudio.DependencyMetadataFileList
+
+WriteAuxiliaryFile /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/AutoMLXStudio-project-headers.hmap (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    write-file /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/AutoMLXStudio-project-headers.hmap
+
+WriteAuxiliaryFile /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/AutoMLXStudio-own-target-headers.hmap (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    write-file /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/AutoMLXStudio-own-target-headers.hmap
+
+WriteAuxiliaryFile /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/AutoMLXStudio-generated-files.hmap (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    write-file /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/AutoMLXStudio-generated-files.hmap
+
+WriteAuxiliaryFile /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/AutoMLXStudio-all-non-framework-target-headers.hmap (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    write-file /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/AutoMLXStudio-all-non-framework-target-headers.hmap
+
+WriteAuxiliaryFile /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/AutoMLXStudio-all-target-headers.hmap (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    write-file /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/AutoMLXStudio-all-target-headers.hmap
+
+WriteAuxiliaryFile /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/AutoMLXStudio-DebugDylibPath-normal-arm64.txt (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    write-file /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/AutoMLXStudio-DebugDylibPath-normal-arm64.txt
+
+WriteAuxiliaryFile /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/AutoMLXStudio-DebugDylibInstallName-normal-arm64.txt (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    write-file /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/AutoMLXStudio-DebugDylibInstallName-normal-arm64.txt
+
+MkDir /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/PlugIns (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    /bin/mkdir -p /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/PlugIns
+
+MkDir /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/MacOS (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    /bin/mkdir -p /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/MacOS
+
+MkDir /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/Frameworks (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    /bin/mkdir -p /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/Frameworks
+
+MkDir /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/PlugIns/AutoMLXStudioTests.xctest (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    /bin/mkdir -p /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/PlugIns/AutoMLXStudioTests.xctest
+
+MkDir /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    /bin/mkdir -p /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents
+
+MkDir /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    /bin/mkdir -p /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app
+
+MkDir /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/PlugIns/AutoMLXStudioTests.xctest/Contents (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    /bin/mkdir -p /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/PlugIns/AutoMLXStudioTests.xctest/Contents
+
+MkDir /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/PlugIns/AutoMLXStudioTests.xctest/Contents/MacOS (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    /bin/mkdir -p /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/PlugIns/AutoMLXStudioTests.xctest/Contents/MacOS
+
+ProcessInfoPlistFile /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/Info.plist /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/empty-AutoMLXStudio.plist (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    builtin-infoPlistUtility /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/empty-AutoMLXStudio.plist -producttype com.apple.product-type.application -genpkginfo /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/PkgInfo -expandbuildsettings -platform macosx -o /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/Info.plist
+
+Ld /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/MacOS/__preview.dylib normal (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-macos14.0 -dynamiclib -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk -O0 -L/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug -F/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug -install_name @rpath/AutoMLXStudio.debug.dylib -rdynamic -Xlinker -no_deduplicate -Xlinker -dependency_info -Xlinker /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio_dependency_info.dat -o /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/MacOS/__preview.dylib
+
+Copy /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/Frameworks/libXCTestSwiftSupport.dylib /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib/libXCTestSwiftSupport.dylib (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -exclude Headers -exclude PrivateHeaders -exclude Modules -exclude \*.tbd -resolve-src-symlinks /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib/libXCTestSwiftSupport.dylib /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/Frameworks
+
+Copy /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/Frameworks/libXCTestBundleInject.dylib /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib/libXCTestBundleInject.dylib (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -exclude Headers -exclude PrivateHeaders -exclude Modules -exclude \*.tbd -resolve-src-symlinks /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib/libXCTestBundleInject.dylib /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/Frameworks
+
+Copy /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/Frameworks/XCUnit.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks/XCUnit.framework (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -exclude Headers -exclude PrivateHeaders -exclude Modules -exclude \*.tbd -resolve-src-symlinks /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks/XCUnit.framework /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/Frameworks
+
+Copy /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/Frameworks/XCUIAutomation.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCUIAutomation.framework (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -exclude Headers -exclude PrivateHeaders -exclude Modules -exclude \*.tbd -resolve-src-symlinks /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCUIAutomation.framework /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/Frameworks
+
+Copy /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/Frameworks/XCTestSupport.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks/XCTestSupport.framework (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -exclude Headers -exclude PrivateHeaders -exclude Modules -exclude \*.tbd -resolve-src-symlinks /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks/XCTestSupport.framework /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/Frameworks
+
+Copy /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/Frameworks/XCTestCore.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks/XCTestCore.framework (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -exclude Headers -exclude PrivateHeaders -exclude Modules -exclude \*.tbd -resolve-src-symlinks /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks/XCTestCore.framework /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/Frameworks
+
+Copy /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/Frameworks/XCTest.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -exclude Headers -exclude PrivateHeaders -exclude Modules -exclude \*.tbd -resolve-src-symlinks /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/Frameworks
+
+Copy /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/Frameworks/XCTAutomationSupport.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks/XCTAutomationSupport.framework (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -exclude Headers -exclude PrivateHeaders -exclude Modules -exclude \*.tbd -resolve-src-symlinks /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks/XCTAutomationSupport.framework /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/Frameworks
+
+Copy /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/Frameworks/Testing.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/Testing.framework (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -exclude Headers -exclude PrivateHeaders -exclude Modules -exclude \*.tbd -resolve-src-symlinks /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/Testing.framework /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/Frameworks
+
+SwiftDriver AutoMLXStudio normal arm64 com.apple.xcode.tools.swift.compiler (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    builtin-SwiftDriver -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name AutoMLXStudio -Onone @/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio.SwiftFileList -DDEBUG -enable-bare-slash-regex -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk -target arm64-apple-macos14.0 -g -module-cache-path /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 5 -I /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug -F /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug -c -j10 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/SDKStatCaches.noindex/macosx26.5-25F70-e082c4a02f00227109f4ed75e425c832.sdkstatcache -output-file-map /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex -sdk-module-cache-path /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio.swiftmodule -validate-clang-modules-once -clang-build-session-file /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio_const_extract_protocols.json -Xcc -iquote -Xcc /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/AutoMLXStudio-generated-files.hmap -Xcc -I/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/AutoMLXStudio-own-target-headers.hmap -Xcc -I/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/AutoMLXStudio-all-target-headers.hmap -Xcc -iquote -Xcc /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/AutoMLXStudio-project-headers.hmap -Xcc -I/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/include -Xcc -I/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/DerivedSources-normal/arm64 -Xcc -I/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/DerivedSources/arm64 -Xcc -I/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/DerivedSources -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio-Swift.h -working-directory /Volumes/AutoMLXShrd/AutoMLXStudioV1_3 -experimental-emit-module-separately -disable-cmo
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/ptrauth-CNWBRZMNPVSRAW0RGDE4TGKEP.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/_SwiftConcurrencyShims-46WJI8U03876H8FHGK5YDQPYZ.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/_Builtin_stdbool-3WG640E2R0Y7A2HDMXACBFB5X.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/_Builtin_float-DJ5PQIGMXGFLHVSRK3F3FJJJ4.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/_Builtin_stddef-63JVV9UI0JMLC9M8ACT6HAIKX.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/DeveloperToolsSupport-BMZ0A2TLRFYJOMP5J2OHDXUBA.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/ptrcheck-7DY6UK0KEF6RRP4U69VHNXAR.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/_AvailabilityInternal-EJWM8UDTAM40NG5OZ5956MQ70.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/_Builtin_stdarg-3KGXHL69QZ02YEWO90AFXZW8O.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/SwiftShims-BHY81ZGGH5RU3B3TJ89UNNNCD.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/_DarwinFoundation1-DI2PSPSDSPYNO66DRMUM1I44E.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/_DarwinFoundation2-E2ZVF99LIEJBDKXCYZ3502E3H.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/_Builtin_limits-APHF3B8H7B4L5U1IX93OV5R39.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/sys_types-BVXS1ZNF7X1RKX4TMER4LVLAI.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/_Builtin_stdint-1P0294MGGZQ2RQ8F9AS9N17SZ.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/_Builtin_tgmath-D3UQ5PZ460TTOUTKX03EYIB96.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/_Builtin_stdatomic-A64X5XRPJP0U7OSD7OXJ9AAWV.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/_Builtin_intrinsics-6SY2R8JPMZ5SU32BHRDMP9M9N.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/OpenGL-1MSDSXCGF7OKKWW5TJIJ19UX1.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/_DarwinFoundation3-7VLCRJYJ8SKKKUW8JGMA9MM4S.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/libDER-8ZVGLBPOVB9I7B3SCFDDUSVKA.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/_Builtin_inttypes-1FNBR91RKA48S3X3RX1IZFUCF.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/Darwin-78MQOYEFZG4TNMCOQI9SW7897.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/simd-5ZWKSCI8V212337TYVP7C2Y9R.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/CUPS-8E700AD0DQ19TB1271MBOR7XX.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/launch-9B6PRCLGGMRBYP1Z8A98K8D8R.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/libkern-26LC2MJUGGKS2YEXIVX49CZNK.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/MachO-6J4GIM2GZK4S9MJYJZRRP8RR.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/Spatial-G8HRXMNXLKV6AAS1KA213QCW.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/ObjectiveC-EABN99ZMBDFJXAABHRU4TECSD.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/os_object-C2LHSEZRY57A1V2WLR7Z81B5G.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/os_workgroup-DEXJJ18C9R8SXSP3B5KW3LB81.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/Dispatch-A28OFLA5ITT39HOS8AYQIBRQP.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/CoreFoundation-60U6R175SVKWZENMGJ02ZD0DI.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/XPC-6UXPL93JGRNS8V5Q16L0IJPNL.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/os-XNJSV2W62QVRXGJFIMN26NRT.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/CoreAudioTypes-A7U5TKD182E3WXYW6Q39XO0E6.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/IOKit-RNAHY64903AW13N3MBBNBHBO.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/ColorSync-DXY8SSJAKWWJK0OS2XXL2H0D4.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/CFNetwork-2C7CAFTQV33HN5IBS1VA66WYR.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/Security-8SP5GN8GYA2UA6UP6Q0TZ8F72.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/CoreGraphics-BR9NBE1IHVGGBZ6YBPC000E32.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/DiskArbitration-EJUOESTQFRRMW2IW7SRMJUK98.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/CoreServices-C9WV16CTHN638LFVDJW6KNOKA.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/CoreText-BIKNJQ80LI24DDR86XZLIY30P.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/ImageIO-89UX4DSXXGD21D643YLUAAKON.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/Foundation-9RQ6N3WBK3I51YZMVIM0XIQ53.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/UniformTypeIdentifiers-BOF8CIGSJ9RW8EFJJGHIZEUYX.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/IOSurface-DO94422554HV5ME866IB9FMTC.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/CoreData-7IE7TO9FE5CE38KAEXCCT28HJ.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/CoreMIDI-BC89BP93KSQWAW6NI28DWFMC6.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/LocalAuthentication-3TSTQEW9K5SSBPA84R47YE0AQ.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/CoreAudio-8BS2PM6VQHBJZ3E4NSPGNXMHK.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/DataDetection-CWFDLW12EMW12YFW2X822W2UD.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/Symbols-6XEEMXFH9US8DRTBZOF8FXQAE.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/CoreTransferable-EKEZUJE5Q6ZV2STCMDRB7CZI9.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/OSLog-6K8M74FXP0ZLKVUXW93KPFQ6W.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/Accessibility-EG3Z08MPLT1SEIB7HNTOX26N1.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/ApplicationServices-9YGOUP6GN7105IEK2NNKZX989.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/Metal-DYY874KEM3ZGV1JOM4EUTB9EG.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/Carbon-4KCP5UUM1KGLYUVHSQNVR6ROC.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/CoreVideo-68W4XQDM55DDCI6C72854DFG3.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/QuartzCore-8SUZXG1CED32WHB9M0ENZ6BSV.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/CoreMedia-4XX38X5V5A50339B9ZK99R8RO.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/CoreImage-C2NPHEBXOF90OGL0LRT91J4ZG.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/AudioToolbox-B02F9IMTXR4I99HOPLM67LQJW.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/SwiftUICore-1NC8AKJL1VEM8LBABHQEAYH7Y.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/AppKit-60XHZLJRFSLYGIFFWGBK3XNDR.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/AVFAudio-8SSVEPBQH6I7MV3J8HZB1EY6A.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/MediaToolbox-14MOFQVZUPLFWH9TP9QCYYXQB.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/AVFoundation-DB3NXF2CKSLKHFSIBXJDSYZTI.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/SwiftUI-30HJ4069DA5SDE3LIUP0BDUB.pcm
+
+SwiftCompile normal arm64 Compiling\ ModelProfile.swift,\ ModelRegistry.swift,\ ModelResourceManager.swift,\ ModelRouter.swift,\ ModelRuntimeAdapter.swift,\ ModelsView.swift,\ OptimizeView.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/Models/ModelProfile.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/Registry/ModelRegistry.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/ModelResourceManager.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/Routing/ModelRouter.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/RuntimeAdapters/ModelRuntimeAdapter.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Views/ModelsView.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Views/OptimizeView.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/Models/ModelProfile.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/Registry/ModelRegistry.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/ModelResourceManager.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/Routing/ModelRouter.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/RuntimeAdapters/ModelRuntimeAdapter.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Views/ModelsView.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Views/OptimizeView.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 Compiling\ VoiceFoundationServices.swift,\ VoiceModels.swift,\ WorkflowEngine.swift,\ WorkflowModels.swift,\ WorkflowTraceComponents.swift,\ WorkspaceController.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/VoiceFoundationServices.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/Voice/VoiceModels.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/WorkflowEngine.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/Workflow/WorkflowModels.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Views/WorkflowTraceComponents.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/WorkspaceController.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/VoiceFoundationServices.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/Voice/VoiceModels.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/WorkflowEngine.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/Workflow/WorkflowModels.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Views/WorkflowTraceComponents.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/WorkspaceController.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 Compiling\ ProjectContextAssembler.swift,\ ProjectMemoryModels.swift,\ ProjectMemoryRetrieval.swift,\ ProjectMemoryStore.swift,\ ProjectsView.swift,\ RemoteInferenceBackend.swift,\ RemoteModelsController.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/ProjectContextAssembler.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/Memory/ProjectMemoryModels.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/ProjectMemoryRetrieval.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/ProjectMemoryStore.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Views/ProjectsView.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/RemoteInferenceBackend.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/RemoteModelsController.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/ProjectContextAssembler.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/Memory/ProjectMemoryModels.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/ProjectMemoryRetrieval.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/ProjectMemoryStore.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Views/ProjectsView.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/RemoteInferenceBackend.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/RemoteModelsController.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftEmitModule normal arm64 Emitting\ module\ for\ AutoMLXStudio (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+
+EmitSwiftModule normal arm64 (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 Compiling\ HardwareService.swift,\ LLMCompletionClient.swift,\ LLMModel.swift,\ LocalMLXBackend.swift,\ MLXAudioRuntimeServices.swift,\ MLXService.swift,\ MLXVLMVisionService.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/HardwareService.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/LLMCompletionClient.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/Models/LLMModel.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/LocalMLXBackend.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/MLXAudioRuntimeServices.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/MLXService.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/MLXVLMVisionService.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/HardwareService.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/LLMCompletionClient.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/Models/LLMModel.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/LocalMLXBackend.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/MLXAudioRuntimeServices.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/MLXService.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/MLXVLMVisionService.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 Compiling\ EngineeringModels.swift,\ EngineeringProcessRunner.swift,\ EngineeringSessionBuilder.swift,\ EngineeringToolRuntime.swift,\ EngineeringView.swift,\ EngineeringWorkspace.swift,\ FastRouter.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/Engineering/EngineeringModels.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/EngineeringProcessRunner.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/EngineeringSessionBuilder.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/EngineeringToolRuntime.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Views/EngineeringView.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/EngineeringWorkspace.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/Routing/FastRouter.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/Engineering/EngineeringModels.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/EngineeringProcessRunner.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/EngineeringSessionBuilder.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/EngineeringToolRuntime.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Views/EngineeringView.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/EngineeringWorkspace.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/Routing/FastRouter.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 Compiling\ RemoteModelsView.swift,\ RemoteServerStore.swift,\ RemoteServerTokenVault.swift,\ ResourceBudget.swift,\ RootView.swift,\ SettingsView.swift,\ UserRequest.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Views/RemoteModelsView.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/RemoteServerStore.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/RemoteServerTokenVault.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/ResourceBudget.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Views/RootView.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Views/SettingsView.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/Requests/UserRequest.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Views/RemoteModelsView.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/RemoteServerStore.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/RemoteServerTokenVault.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/ResourceBudget.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Views/RootView.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Views/SettingsView.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/Requests/UserRequest.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 Compiling\ AutoMLXStudioApp.swift,\ BenchmarkView.swift,\ ChatView.swift,\ ConversationModels.swift,\ ConversationStore.swift,\ DashboardView.swift,\ Director.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/AutoMLXStudioApp.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Views/BenchmarkView.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Views/ChatView.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/Conversations/ConversationModels.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/ConversationStore.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Views/DashboardView.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/Routing/Director.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/AutoMLXStudioApp.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Views/BenchmarkView.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Views/ChatView.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/Conversations/ConversationModels.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/ConversationStore.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Views/DashboardView.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/Routing/Director.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 Compiling\ ChatGenerationSession.swift,\ AgentModels.swift,\ AgentRegistry.swift,\ AgentsView.swift,\ AppModels.swift,\ AppState.swift,\ AttachmentValidationService.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/ChatGenerationSession.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/Agents/AgentModels.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/Registry/AgentRegistry.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Views/AgentsView.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Models/AppModels.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/AppState.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/AttachmentValidationService.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/ChatGenerationSession.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/Agents/AgentModels.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/Registry/AgentRegistry.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Views/AgentsView.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Models/AppModels.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/AppState.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/AttachmentValidationService.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 Compiling\ ManagedPythonProcess.swift,\ ModelAssignment.swift,\ ModelBackendDispatcher.swift,\ ModelBackendModels.swift,\ ModelGenerationRouting.swift,\ ModelInstallationInspector.swift,\ ModelMemorySampler.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/ManagedPythonProcess.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/Models/ModelAssignment.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/ModelBackendDispatcher.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/Backends/ModelBackendModels.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/Routing/ModelGenerationRouting.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/ModelInstallationInspector.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/ModelMemorySampler.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/ManagedPythonProcess.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/Models/ModelAssignment.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/ModelBackendDispatcher.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/Backends/ModelBackendModels.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/Routing/ModelGenerationRouting.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/ModelInstallationInspector.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/ModelMemorySampler.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 Compiling\ EngineeringAgentEngine.swift,\ EngineeringAgentFallbackParser.swift,\ EngineeringAgentModelBackendAdapter.swift,\ EngineeringAgentModels.swift,\ EngineeringAgentToolRuntimeAdapter.swift,\ EngineeringApprovalBroker.swift,\ EngineeringController.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/EngineeringAgentEngine.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/EngineeringAgent/EngineeringAgentFallbackParser.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/EngineeringAgentModelBackendAdapter.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/EngineeringAgent/EngineeringAgentModels.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/EngineeringAgentToolRuntimeAdapter.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/EngineeringApprovalBroker.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/EngineeringController.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/EngineeringAgentEngine.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/EngineeringAgent/EngineeringAgentFallbackParser.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/EngineeringAgentModelBackendAdapter.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/EngineeringAgent/EngineeringAgentModels.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/EngineeringAgentToolRuntimeAdapter.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/EngineeringApprovalBroker.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/EngineeringController.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftDriverJobDiscovery normal arm64 Emitting module for AutoMLXStudio (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+
+SwiftDriverJobDiscovery normal arm64 Compiling ManagedPythonProcess.swift, ModelAssignment.swift, ModelBackendDispatcher.swift, ModelBackendModels.swift, ModelGenerationRouting.swift, ModelInstallationInspector.swift, ModelMemorySampler.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+
+SwiftDriver\ Compilation\ Requirements AutoMLXStudio normal arm64 com.apple.xcode.tools.swift.compiler (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    builtin-Swift-Compilation-Requirements -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name AutoMLXStudio -Onone @/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio.SwiftFileList -DDEBUG -enable-bare-slash-regex -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk -target arm64-apple-macos14.0 -g -module-cache-path /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 5 -I /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug -F /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug -c -j10 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/SDKStatCaches.noindex/macosx26.5-25F70-e082c4a02f00227109f4ed75e425c832.sdkstatcache -output-file-map /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex -sdk-module-cache-path /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio.swiftmodule -validate-clang-modules-once -clang-build-session-file /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio_const_extract_protocols.json -Xcc -iquote -Xcc /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/AutoMLXStudio-generated-files.hmap -Xcc -I/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/AutoMLXStudio-own-target-headers.hmap -Xcc -I/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/AutoMLXStudio-all-target-headers.hmap -Xcc -iquote -Xcc /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/AutoMLXStudio-project-headers.hmap -Xcc -I/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/include -Xcc -I/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/DerivedSources-normal/arm64 -Xcc -I/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/DerivedSources/arm64 -Xcc -I/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/DerivedSources -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio-Swift.h -working-directory /Volumes/AutoMLXShrd/AutoMLXStudioV1_3 -experimental-emit-module-separately -disable-cmo
+
+SwiftDriverJobDiscovery normal arm64 Compiling EngineeringAgentEngine.swift, EngineeringAgentFallbackParser.swift, EngineeringAgentModelBackendAdapter.swift, EngineeringAgentModels.swift, EngineeringAgentToolRuntimeAdapter.swift, EngineeringApprovalBroker.swift, EngineeringController.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+
+SwiftMergeGeneratedHeaders /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/DerivedSources/AutoMLXStudio-Swift.h /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio-Swift.h (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    builtin-swiftHeaderTool -arch arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio-Swift.h -o /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/DerivedSources/AutoMLXStudio-Swift.h
+
+Copy /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.swiftmodule/arm64-apple-macos.swiftmodule /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio.swiftmodule (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio.swiftmodule /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.swiftmodule/arm64-apple-macos.swiftmodule
+
+Copy /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.swiftmodule/arm64-apple-macos.swiftdoc /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio.swiftdoc (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio.swiftdoc /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.swiftmodule/arm64-apple-macos.swiftdoc
+
+Copy /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.swiftmodule/arm64-apple-macos.abi.json /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio.abi.json (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio.abi.json /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.swiftmodule/arm64-apple-macos.abi.json
+
+Copy /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.swiftmodule/Project/arm64-apple-macos.swiftsourceinfo /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio.swiftsourceinfo (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio.swiftsourceinfo /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.swiftmodule/Project/arm64-apple-macos.swiftsourceinfo
+
+SwiftDriver AutoMLXStudioTests normal arm64 com.apple.xcode.tools.swift.compiler (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    builtin-SwiftDriver -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name AutoMLXStudioTests -Onone @/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/AutoMLXStudioTests.SwiftFileList -DDEBUG -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-bare-slash-regex -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk -target arm64-apple-macos14.0 -g -module-cache-path /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 5 -I /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib -F /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug -F /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks -c -j10 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/SDKStatCaches.noindex/macosx26.5-25F70-e082c4a02f00227109f4ed75e425c832.sdkstatcache -output-file-map /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/AutoMLXStudioTests-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex -sdk-module-cache-path /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/AutoMLXStudioTests.swiftmodule -validate-clang-modules-once -clang-build-session-file /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/AutoMLXStudioTests_const_extract_protocols.json -Xcc -iquote -Xcc /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/AutoMLXStudioTests-generated-files.hmap -Xcc -I/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/AutoMLXStudioTests-own-target-headers.hmap -Xcc -I/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/AutoMLXStudioTests-all-target-headers.hmap -Xcc -iquote -Xcc /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/AutoMLXStudioTests-project-headers.hmap -Xcc -I/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/include -Xcc -I/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/DerivedSources-normal/arm64 -Xcc -I/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/DerivedSources/arm64 -Xcc -I/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/DerivedSources -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/AutoMLXStudioTests-Swift.h -working-directory /Volumes/AutoMLXShrd/AutoMLXStudioV1_3 -experimental-emit-module-separately -disable-cmo
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules/XCUIAutomation-ETJ96D069TD2T9BBFK9DBPAM1.pcm
+
+SwiftExplicitDependencyCompileModuleFromInterface arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules/XCUIAutomation-XVAF96BAB9OR.swiftmodule
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules/XCTest-EQBSI8G6H7XA5KKYVOCYBVP3T.pcm
+
+SwiftExplicitDependencyCompileModuleFromInterface arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules/XCTest-1PVQ1A9NRH827.swiftmodule
+
+SwiftEmitModule normal arm64 Emitting\ module\ for\ AutoMLXStudioTests (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+
+EmitSwiftModule normal arm64 (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 Compiling\ V05RoutingTests.swift,\ VisionAssistedWorkflowTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/V05RoutingTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/VisionAssistedWorkflowTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/V05RoutingTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/VisionAssistedWorkflowTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 Compiling\ ChatGenerationSessionTests.swift,\ ConversationStoreTests.swift,\ EngineeringAgentEngineTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/ChatGenerationSessionTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/ConversationStoreTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/EngineeringAgentEngineTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/ChatGenerationSessionTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/ConversationStoreTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/EngineeringAgentEngineTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftDriverJobDiscovery normal arm64 Emitting module for AutoMLXStudioTests (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+
+SwiftDriverJobDiscovery normal arm64 Compiling V05RoutingTests.swift, VisionAssistedWorkflowTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+
+SwiftDriver\ Compilation\ Requirements AutoMLXStudioTests normal arm64 com.apple.xcode.tools.swift.compiler (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    builtin-Swift-Compilation-Requirements -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name AutoMLXStudioTests -Onone @/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/AutoMLXStudioTests.SwiftFileList -DDEBUG -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-bare-slash-regex -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk -target arm64-apple-macos14.0 -g -module-cache-path /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 5 -I /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib -F /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug -F /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks -c -j10 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/SDKStatCaches.noindex/macosx26.5-25F70-e082c4a02f00227109f4ed75e425c832.sdkstatcache -output-file-map /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/AutoMLXStudioTests-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex -sdk-module-cache-path /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/AutoMLXStudioTests.swiftmodule -validate-clang-modules-once -clang-build-session-file /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/AutoMLXStudioTests_const_extract_protocols.json -Xcc -iquote -Xcc /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/AutoMLXStudioTests-generated-files.hmap -Xcc -I/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/AutoMLXStudioTests-own-target-headers.hmap -Xcc -I/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/AutoMLXStudioTests-all-target-headers.hmap -Xcc -iquote -Xcc /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/AutoMLXStudioTests-project-headers.hmap -Xcc -I/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/include -Xcc -I/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/DerivedSources-normal/arm64 -Xcc -I/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/DerivedSources/arm64 -Xcc -I/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/DerivedSources -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/AutoMLXStudioTests-Swift.h -working-directory /Volumes/AutoMLXShrd/AutoMLXStudioV1_3 -experimental-emit-module-separately -disable-cmo
+
+SwiftCompile normal arm64 Compiling\ VisionVoiceFoundationTests.swift,\ VisionVoiceHardwareTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/VisionVoiceFoundationTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/VisionVoiceHardwareTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/VisionVoiceFoundationTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/VisionVoiceHardwareTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftDriverJobDiscovery normal arm64 Compiling EngineeringModels.swift, EngineeringProcessRunner.swift, EngineeringSessionBuilder.swift, EngineeringToolRuntime.swift, EngineeringView.swift, EngineeringWorkspace.swift, FastRouter.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+
+SwiftMergeGeneratedHeaders /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/DerivedSources/AutoMLXStudioTests-Swift.h /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/AutoMLXStudioTests-Swift.h (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    builtin-swiftHeaderTool -arch arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/AutoMLXStudioTests-Swift.h -o /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/DerivedSources/AutoMLXStudioTests-Swift.h
+
+Copy /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudioTests.swiftmodule/arm64-apple-macos.swiftmodule /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/AutoMLXStudioTests.swiftmodule (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/AutoMLXStudioTests.swiftmodule /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudioTests.swiftmodule/arm64-apple-macos.swiftmodule
+
+Copy /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudioTests.swiftmodule/arm64-apple-macos.swiftdoc /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/AutoMLXStudioTests.swiftdoc (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/AutoMLXStudioTests.swiftdoc /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudioTests.swiftmodule/arm64-apple-macos.swiftdoc
+
+Copy /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudioTests.swiftmodule/arm64-apple-macos.abi.json /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/AutoMLXStudioTests.abi.json (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/AutoMLXStudioTests.abi.json /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudioTests.swiftmodule/arm64-apple-macos.abi.json
+
+SwiftDriverJobDiscovery normal arm64 Compiling ModelProfile.swift, ModelRegistry.swift, ModelResourceManager.swift, ModelRouter.swift, ModelRuntimeAdapter.swift, ModelsView.swift, OptimizeView.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+
+SwiftCompile normal arm64 Compiling\ ModelArchitectureTests.swift,\ ModelBackendRoutingTests.swift,\ MultiModelIntegrationTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/ModelArchitectureTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/ModelBackendRoutingTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/MultiModelIntegrationTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/ModelArchitectureTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/ModelBackendRoutingTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/MultiModelIntegrationTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+Copy /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudioTests.swiftmodule/Project/arm64-apple-macos.swiftsourceinfo /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/AutoMLXStudioTests.swiftsourceinfo (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/AutoMLXStudioTests.swiftsourceinfo /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudioTests.swiftmodule/Project/arm64-apple-macos.swiftsourceinfo
+
+SwiftCompile normal arm64 Compiling\ MultiModelWorkflowTests.swift,\ ProjectContextAssemblerTests.swift,\ ProjectMemoryLifecycleTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/MultiModelWorkflowTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/ProjectContextAssemblerTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/ProjectMemoryLifecycleTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/MultiModelWorkflowTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/ProjectContextAssemblerTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/ProjectMemoryLifecycleTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 Compiling\ EngineeringAgentToolRuntimeAdapterTests.swift,\ EngineeringIntegrationTests.swift,\ EngineeringToolRuntimeTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/EngineeringAgentToolRuntimeAdapterTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/EngineeringIntegrationTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/EngineeringToolRuntimeTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/EngineeringAgentToolRuntimeAdapterTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/EngineeringIntegrationTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/EngineeringToolRuntimeTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 Compiling\ WorkflowMemoryIntegrationTests.swift,\ WorkflowRoutingTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/WorkflowMemoryIntegrationTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/WorkflowRoutingTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/WorkflowMemoryIntegrationTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/WorkflowRoutingTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 Compiling\ ProjectMemoryTests.swift,\ RemoteInferenceBackendTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/ProjectMemoryTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/RemoteInferenceBackendTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/ProjectMemoryTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/RemoteInferenceBackendTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftDriverJobDiscovery normal arm64 Compiling ChatGenerationSessionTests.swift, ConversationStoreTests.swift, EngineeringAgentEngineTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+
+SwiftDriverJobDiscovery normal arm64 Compiling ProjectContextAssembler.swift, ProjectMemoryModels.swift, ProjectMemoryRetrieval.swift, ProjectMemoryStore.swift, ProjectsView.swift, RemoteInferenceBackend.swift, RemoteModelsController.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+
+SwiftCompile normal arm64 Compiling\ EngineeringWorkspaceTests.swift,\ MLXIntegrationTests.swift,\ MLXServiceOfflineEnvironmentTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/EngineeringWorkspaceTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/MLXIntegrationTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/MLXServiceOfflineEnvironmentTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/EngineeringWorkspaceTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/MLXIntegrationTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/MLXServiceOfflineEnvironmentTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 Compiling\ RemoteModelsControllerTests.swift,\ ResourceSafetyTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/RemoteModelsControllerTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/ResourceSafetyTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/RemoteModelsControllerTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/ResourceSafetyTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftDriverJobDiscovery normal arm64 Compiling ChatGenerationSession.swift, AgentModels.swift, AgentRegistry.swift, AgentsView.swift, AppModels.swift, AppState.swift, AttachmentValidationService.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+
+SwiftDriverJobDiscovery normal arm64 Compiling AutoMLXStudioApp.swift, BenchmarkView.swift, ChatView.swift, ConversationModels.swift, ConversationStore.swift, DashboardView.swift, Director.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+
+SwiftDriverJobDiscovery normal arm64 Compiling RemoteModelsView.swift, RemoteServerStore.swift, RemoteServerTokenVault.swift, ResourceBudget.swift, RootView.swift, SettingsView.swift, UserRequest.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+
+SwiftDriverJobDiscovery normal arm64 Compiling HardwareService.swift, LLMCompletionClient.swift, LLMModel.swift, LocalMLXBackend.swift, MLXAudioRuntimeServices.swift, MLXService.swift, MLXVLMVisionService.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+
+SwiftDriverJobDiscovery normal arm64 Compiling VoiceFoundationServices.swift, VoiceModels.swift, WorkflowEngine.swift, WorkflowModels.swift, WorkflowTraceComponents.swift, WorkspaceController.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+
+SwiftDriver\ Compilation AutoMLXStudio normal arm64 com.apple.xcode.tools.swift.compiler (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    builtin-Swift-Compilation -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name AutoMLXStudio -Onone @/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio.SwiftFileList -DDEBUG -enable-bare-slash-regex -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk -target arm64-apple-macos14.0 -g -module-cache-path /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 5 -I /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug -F /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug -c -j10 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/SDKStatCaches.noindex/macosx26.5-25F70-e082c4a02f00227109f4ed75e425c832.sdkstatcache -output-file-map /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex -sdk-module-cache-path /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio.swiftmodule -validate-clang-modules-once -clang-build-session-file /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio_const_extract_protocols.json -Xcc -iquote -Xcc /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/AutoMLXStudio-generated-files.hmap -Xcc -I/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/AutoMLXStudio-own-target-headers.hmap -Xcc -I/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/AutoMLXStudio-all-target-headers.hmap -Xcc -iquote -Xcc /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/AutoMLXStudio-project-headers.hmap -Xcc -I/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/include -Xcc -I/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/DerivedSources-normal/arm64 -Xcc -I/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/DerivedSources/arm64 -Xcc -I/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/DerivedSources -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio-Swift.h -working-directory /Volumes/AutoMLXShrd/AutoMLXStudioV1_3 -experimental-emit-module-separately -disable-cmo
+
+Ld /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/MacOS/AutoMLXStudio.debug.dylib normal (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-macos14.0 -dynamiclib -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk -O0 -L/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/EagerLinkingTBDs/Debug -L/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug -F/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/EagerLinkingTBDs/Debug -F/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug -filelist /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio.LinkFileList -install_name @rpath/AutoMLXStudio.debug.dylib -Xlinker -rpath -Xlinker /usr/lib/swift -Xlinker -rpath -Xlinker @executable_path/../Frameworks -Xlinker -object_path_lto -Xlinker /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio_lto.o -rdynamic -Xlinker -no_deduplicate -Xlinker -dependency_info -Xlinker /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio_dependency_info.dat -fobjc-link-runtime -L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx -L/usr/lib/swift -Xlinker -add_ast_path -Xlinker /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio.swiftmodule @/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio-linker-args.resp -Xlinker -alias -Xlinker _main -Xlinker ___debug_main_executable_dylib_entry_point -o /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/MacOS/AutoMLXStudio.debug.dylib
+
+SwiftDriverJobDiscovery normal arm64 Compiling WorkflowMemoryIntegrationTests.swift, WorkflowRoutingTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+
+SwiftDriverJobDiscovery normal arm64 Compiling RemoteModelsControllerTests.swift, ResourceSafetyTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+
+SwiftDriverJobDiscovery normal arm64 Compiling VisionVoiceFoundationTests.swift, VisionVoiceHardwareTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+
+ConstructStubExecutorLinkFileList /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/AutoMLXStudio-ExecutorLinkFileList-normal-arm64.txt (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    construct-stub-executor-link-file-list /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/MacOS/AutoMLXStudio.debug.dylib /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib/libPreviewsJITStubExecutor_no_swift_entry_point.a /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib/libPreviewsJITStubExecutor.a --output /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/AutoMLXStudio-ExecutorLinkFileList-normal-arm64.txt
+note: Using stub executor library with Swift entry point. (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+
+Ld /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/MacOS/AutoMLXStudio normal (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-macos14.0 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk -O0 -L/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug -F/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug -Xlinker -rpath -Xlinker @executable_path -Xlinker -rpath -Xlinker @executable_path/../Frameworks -rdynamic -Xlinker -no_deduplicate -e ___debug_blank_executor_main -Xlinker -sectcreate -Xlinker __TEXT -Xlinker __debug_dylib -Xlinker /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/AutoMLXStudio-DebugDylibPath-normal-arm64.txt -Xlinker -sectcreate -Xlinker __TEXT -Xlinker __debug_instlnm -Xlinker /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/AutoMLXStudio-DebugDylibInstallName-normal-arm64.txt -Xlinker -filelist -Xlinker /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/AutoMLXStudio-ExecutorLinkFileList-normal-arm64.txt /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/MacOS/AutoMLXStudio.debug.dylib -o /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/MacOS/AutoMLXStudio
+
+CopySwiftLibs /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    builtin-swiftStdLibTool --copy --verbose --scan-executable /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/MacOS/AutoMLXStudio.debug.dylib --scan-folder /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/Frameworks --scan-folder /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/PlugIns --scan-folder /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/Library/SystemExtensions --scan-folder /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/Extensions --platform macosx --toolchain /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --destination /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/Frameworks --strip-bitcode --strip-bitcode-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip --emit-dependency-info /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/SwiftStdLibToolInputDependencies.dep --filter-for-swift-os --back-deploy-swift-span
+Ignoring --strip-bitcode because --sign was not passed
+
+ExtractAppIntentsMetadata (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsmetadataprocessor --toolchain-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --module-name AutoMLXStudio --sdk-root /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk --xcode-version 17F113 --platform-family macOS --deployment-target 14.0 --bundle-identifier com.tommaso.AutoMLXStudio --output /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/Resources --target-triple arm64-apple-macos14.0 --binary-file /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/MacOS/AutoMLXStudio --dependency-file /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio_dependency_info.dat --stringsdata-file /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/ExtractedAppShortcutsMetadata.stringsdata --source-file-list /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio.SwiftFileList --metadata-file-list /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/AutoMLXStudio.DependencyMetadataFileList --static-metadata-file-list /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/AutoMLXStudio.DependencyStaticMetadataFileList --swift-const-vals-list /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio.SwiftConstValuesFileList --compile-time-extraction --deployment-aware-processing --validate-assistant-intents --no-app-shortcuts-localization
+2026-09-11 07:24:29.225 appintentsmetadataprocessor[3410:53424] Starting appintentsmetadataprocessor export
+2026-09-11 07:24:29.226 appintentsmetadataprocessor[3410:53424] warning: Metadata extraction skipped. No AppIntents.framework dependency found.
+
+SwiftDriverJobDiscovery normal arm64 Compiling EngineeringWorkspaceTests.swift, MLXIntegrationTests.swift, MLXServiceOfflineEnvironmentTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+
+ProcessInfoPlistFile /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/PlugIns/AutoMLXStudioTests.xctest/Contents/Info.plist /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/empty-AutoMLXStudioTests.plist (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    builtin-infoPlistUtility /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/empty-AutoMLXStudioTests.plist -producttype com.apple.product-type.bundle.unit-test -expandbuildsettings -platform macosx -o /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/PlugIns/AutoMLXStudioTests.xctest/Contents/Info.plist
+
+SwiftDriverJobDiscovery normal arm64 Compiling ProjectMemoryTests.swift, RemoteInferenceBackendTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+
+SwiftDriverJobDiscovery normal arm64 Compiling ModelArchitectureTests.swift, ModelBackendRoutingTests.swift, MultiModelIntegrationTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+
+SwiftDriverJobDiscovery normal arm64 Compiling MultiModelWorkflowTests.swift, ProjectContextAssemblerTests.swift, ProjectMemoryLifecycleTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+
+SwiftDriverJobDiscovery normal arm64 Compiling EngineeringAgentToolRuntimeAdapterTests.swift, EngineeringIntegrationTests.swift, EngineeringToolRuntimeTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+
+SwiftDriver\ Compilation AutoMLXStudioTests normal arm64 com.apple.xcode.tools.swift.compiler (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    builtin-Swift-Compilation -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name AutoMLXStudioTests -Onone @/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/AutoMLXStudioTests.SwiftFileList -DDEBUG -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-bare-slash-regex -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk -target arm64-apple-macos14.0 -g -module-cache-path /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 5 -I /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib -F /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug -F /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks -c -j10 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/SDKStatCaches.noindex/macosx26.5-25F70-e082c4a02f00227109f4ed75e425c832.sdkstatcache -output-file-map /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/AutoMLXStudioTests-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex -sdk-module-cache-path /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/AutoMLXStudioTests.swiftmodule -validate-clang-modules-once -clang-build-session-file /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/AutoMLXStudioTests_const_extract_protocols.json -Xcc -iquote -Xcc /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/AutoMLXStudioTests-generated-files.hmap -Xcc -I/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/AutoMLXStudioTests-own-target-headers.hmap -Xcc -I/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/AutoMLXStudioTests-all-target-headers.hmap -Xcc -iquote -Xcc /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/AutoMLXStudioTests-project-headers.hmap -Xcc -I/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/include -Xcc -I/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/DerivedSources-normal/arm64 -Xcc -I/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/DerivedSources/arm64 -Xcc -I/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/DerivedSources -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/AutoMLXStudioTests-Swift.h -working-directory /Volumes/AutoMLXShrd/AutoMLXStudioV1_3 -experimental-emit-module-separately -disable-cmo
+
+Ld /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/PlugIns/AutoMLXStudioTests.xctest/Contents/MacOS/AutoMLXStudioTests normal (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-macos14.0 -bundle -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk -O0 -L/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/EagerLinkingTBDs/Debug -L/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug -L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib -F/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/EagerLinkingTBDs/Debug -F/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks -filelist /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/AutoMLXStudioTests.LinkFileList -Xlinker -rpath -Xlinker /usr/lib/swift -Xlinker -rpath -Xlinker @loader_path/../Frameworks -Xlinker -rpath -Xlinker @executable_path/../Frameworks -bundle_loader /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/MacOS/AutoMLXStudio -Xlinker -object_path_lto -Xlinker /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/AutoMLXStudioTests_lto.o -rdynamic -Xlinker -no_deduplicate -Xlinker -dependency_info -Xlinker /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/AutoMLXStudioTests_dependency_info.dat -fobjc-link-runtime -L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx -L/usr/lib/swift -Xlinker -add_ast_path -Xlinker /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/AutoMLXStudioTests.swiftmodule @/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/AutoMLXStudioTests-linker-args.resp -Xlinker -needed_framework -Xlinker XCTest -framework XCTest -Xlinker -needed-lXCTestSwiftSupport -lXCTestSwiftSupport /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/MacOS/AutoMLXStudio.debug.dylib -o /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/PlugIns/AutoMLXStudioTests.xctest/Contents/MacOS/AutoMLXStudioTests
+
+CopySwiftLibs /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/PlugIns/AutoMLXStudioTests.xctest (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    builtin-swiftStdLibTool --copy --verbose --scan-executable /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/PlugIns/AutoMLXStudioTests.xctest/Contents/MacOS/AutoMLXStudioTests --scan-folder /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/PlugIns/AutoMLXStudioTests.xctest/Contents/Frameworks --scan-folder /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/PlugIns/AutoMLXStudioTests.xctest/Contents/PlugIns --scan-folder /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/PlugIns/AutoMLXStudioTests.xctest/Contents/Library/SystemExtensions --scan-folder /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/PlugIns/AutoMLXStudioTests.xctest/Contents/Extensions --platform macosx --toolchain /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --destination /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/PlugIns/AutoMLXStudioTests.xctest/Contents/Frameworks --strip-bitcode --scan-executable /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib/libXCTestSwiftSupport.dylib --strip-bitcode-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip --emit-dependency-info /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/SwiftStdLibToolInputDependencies.dep --filter-for-swift-os --back-deploy-swift-span
+Ignoring --strip-bitcode because --sign was not passed
+
+ExtractAppIntentsMetadata (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsmetadataprocessor --toolchain-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --module-name AutoMLXStudioTests --sdk-root /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk --xcode-version 17F113 --platform-family macOS --deployment-target 14.0 --bundle-identifier com.tommaso.AutoMLXStudioTests --output /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/PlugIns/AutoMLXStudioTests.xctest/Contents/Resources --target-triple arm64-apple-macos14.0 --binary-file /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/PlugIns/AutoMLXStudioTests.xctest/Contents/MacOS/AutoMLXStudioTests --dependency-file /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/AutoMLXStudioTests_dependency_info.dat --stringsdata-file /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/ExtractedAppShortcutsMetadata.stringsdata --source-file-list /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/AutoMLXStudioTests.SwiftFileList --metadata-file-list /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/AutoMLXStudioTests.DependencyMetadataFileList --static-metadata-file-list /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/AutoMLXStudioTests.DependencyStaticMetadataFileList --swift-const-vals-list /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/AutoMLXStudioTests.SwiftConstValuesFileList --compile-time-extraction --deployment-aware-processing --validate-assistant-intents --no-app-shortcuts-localization
+2026-09-11 07:24:30.031 appintentsmetadataprocessor[3413:53447] Starting appintentsmetadataprocessor export
+2026-09-11 07:24:30.032 appintentsmetadataprocessor[3413:53447] warning: Metadata extraction skipped. No AppIntents.framework dependency found.
+
+RegisterExecutionPolicyException /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/PlugIns/AutoMLXStudioTests.xctest (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    builtin-RegisterExecutionPolicyException /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/PlugIns/AutoMLXStudioTests.xctest
+
+Touch /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/PlugIns/AutoMLXStudioTests.xctest (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    /usr/bin/touch -c /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app/Contents/PlugIns/AutoMLXStudioTests.xctest
+
+RegisterExecutionPolicyException /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    builtin-RegisterExecutionPolicyException /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app
+
+Validate /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    builtin-validationUtility /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app -no-validate-extension -infoplist-subpath Contents/Info.plist
+
+Touch /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    /usr/bin/touch -c /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app
+
+RegisterWithLaunchServices /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    /System/Library/Frameworks/CoreServices.framework/Versions/Current/Frameworks/LaunchServices.framework/Versions/Current/Support/lsregister -f -R -trusted /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/DerivedData-TargetedComplete/Build/Products/Debug/AutoMLXStudio.app
+
+2026-09-11 07:24:31.621535+0200 AutoMLXStudio[3417:53563] [Connection] Unable to get synchronousRemoteObjectProxy, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-09-11 07:24:31.621673+0200 AutoMLXStudio[3417:53563] [Application] Error registering app with intents framework: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-09-11 07:24:31.622122+0200 AutoMLXStudio[3417:53564] [Connection] Unable to get synchronousRemoteObjectProxy, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-09-11 07:24:31.622136+0200 AutoMLXStudio[3417:53564] [Connection] Unable to re-register with Process Instance Registry, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-09-11 07:24:31.622650+0200 AutoMLXStudio[3417:53597] [Connection] Unable to get synchronousRemoteObjectProxy, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-09-11 07:24:31.622662+0200 AutoMLXStudio[3417:53597] [Connection] Unable to re-register with Process Instance Registry, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-09-11 07:24:31.623198+0200 AutoMLXStudio[3417:53597] [Connection] Will NOT re-try to establish the connection
+2026-09-11 07:24:31.623223+0200 AutoMLXStudio[3417:53563] [Connection] Unable to get synchronousRemoteObjectProxy, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-09-11 07:24:31.623236+0200 AutoMLXStudio[3417:53563] [Connection] Unable to re-register with Process Instance Registry, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-09-11 07:24:31.711225+0200 AutoMLXStudio[3417:53503] ApplePersistenceIgnoreState: Existing state will not be touched. New state will be written to /var/folders/2g/q2qk1gk540d5ygkzr28n20ym0000gn/T/com.tommaso.AutoMLXStudio.savedState
+Test Suite 'Selected tests' started at 2026-09-11 07:24:31.890.
+Test Suite 'AutoMLXStudioTests.xctest' started at 2026-09-11 07:24:31.890.
+Test Suite 'ChatGenerationSessionTests' started at 2026-09-11 07:24:31.890.
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testCancellationStopsRemoteSession]' started.
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testCancellationStopsRemoteSession]' passed (0.003 seconds).
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testCatalogKeepsCollidingRemoteModelNamesDistinctAndPreservesSavedUnknownTarget]' started.
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testCatalogKeepsCollidingRemoteModelNamesDistinctAndPreservesSavedUnknownTarget]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testCatalogRetainsDisabledSelectionButRejectsRemovedOrMissingDiscoveredModel]' started.
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testCatalogRetainsDisabledSelectionButRejectsRemovedOrMissingDiscoveredModel]' passed (0.000 seconds).
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testClassifiedBackendFailureKeepsSafeOperationalSummary]' started.
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testClassifiedBackendFailureKeepsSafeOperationalSummary]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testEngineeringPromptRequiresSmallestObservableVerifiedChange]' started.
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testEngineeringPromptRequiresSmallestObservableVerifiedChange]' passed (0.000 seconds).
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testLocalTextUsesSameDispatcherContract]' started.
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testLocalTextUsesSameDispatcherContract]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testNormalChatRejectsToolCallsWithoutExecution]' started.
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testNormalChatRejectsToolCallsWithoutExecution]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testRemoteTextUsesDispatcherAndPreservesExactMultiTurnOrderAndMetadata]' started.
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testRemoteTextUsesDispatcherAndPreservesExactMultiTurnOrderAndMetadata]' passed (0.007 seconds).
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testSelectionPersistsAcrossStoreRestartAndIdentitySafeAppendDoesNotChangeVisibleConversation]' started.
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testSelectionPersistsAcrossStoreRestartAndIdentitySafeAppendDoesNotChangeVisibleConversation]' passed (0.003 seconds).
+Test Suite 'ChatGenerationSessionTests' passed at 2026-09-11 07:24:31.919.
+	 Executed 9 tests, with 0 failures (0 unexpected) in 0.017 (0.028) seconds
+Test Suite 'ConversationStoreCorruptionTests' started at 2026-09-11 07:24:31.919.
+Test Case '-[AutoMLXStudioTests.ConversationStoreCorruptionTests testMalformedSnapshotReportsTypedBoundedCorruption]' started.
+Test Case '-[AutoMLXStudioTests.ConversationStoreCorruptionTests testMalformedSnapshotReportsTypedBoundedCorruption]' passed (0.033 seconds).
+Test Suite 'ConversationStoreCorruptionTests' passed at 2026-09-11 07:24:31.952.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.033 (0.033) seconds
+Test Suite 'ConversationStoreMutationTests' started at 2026-09-11 07:24:31.952.
+Test Case '-[AutoMLXStudioTests.ConversationStoreMutationTests testHiddenMessageRolesAreRejectedWithoutChangingDurableHistory]' started.
+Test Case '-[AutoMLXStudioTests.ConversationStoreMutationTests testHiddenMessageRolesAreRejectedWithoutChangingDurableHistory]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.ConversationStoreMutationTests testProjectFilteringAndDeletionRemainStrictlyIsolated]' started.
+Test Case '-[AutoMLXStudioTests.ConversationStoreMutationTests testProjectFilteringAndDeletionRemainStrictlyIsolated]' passed (0.003 seconds).
+Test Case '-[AutoMLXStudioTests.ConversationStoreMutationTests testRenameAndFullUpdatePreserveStableIdentityAndCreationMetadata]' started.
+Test Case '-[AutoMLXStudioTests.ConversationStoreMutationTests testRenameAndFullUpdatePreserveStableIdentityAndCreationMetadata]' passed (0.018 seconds).
+Test Case '-[AutoMLXStudioTests.ConversationStoreMutationTests testTitleDerivationIsBoundedEditableAndValidated]' started.
+Test Case '-[AutoMLXStudioTests.ConversationStoreMutationTests testTitleDerivationIsBoundedEditableAndValidated]' passed (0.002 seconds).
+Test Suite 'ConversationStoreMutationTests' passed at 2026-09-11 07:24:31.976.
+	 Executed 4 tests, with 0 failures (0 unexpected) in 0.023 (0.024) seconds
+Test Suite 'ConversationStorePersistenceTests' started at 2026-09-11 07:24:31.976.
+Test Case '-[AutoMLXStudioTests.ConversationStorePersistenceTests testConversationAndPreferencesSurviveFreshStoreRestart]' started.
+Test Case '-[AutoMLXStudioTests.ConversationStorePersistenceTests testConversationAndPreferencesSurviveFreshStoreRestart]' passed (0.002 seconds).
+Test Case '-[AutoMLXStudioTests.ConversationStorePersistenceTests testLegacyUnwrappedRecordMigratesMissingPreferencesSafely]' started.
+Test Case '-[AutoMLXStudioTests.ConversationStorePersistenceTests testLegacyUnwrappedRecordMigratesMissingPreferencesSafely]' passed (0.002 seconds).
+Test Case '-[AutoMLXStudioTests.ConversationStorePersistenceTests testMemoryAndQualityDefaultsDependOnlyOnProjectAssociation]' started.
+Test Case '-[AutoMLXStudioTests.ConversationStorePersistenceTests testMemoryAndQualityDefaultsDependOnlyOnProjectAssociation]' passed (0.001 seconds).
+Test Suite 'ConversationStorePersistenceTests' passed at 2026-09-11 07:24:31.988.
+	 Executed 3 tests, with 0 failures (0 unexpected) in 0.005 (0.012) seconds
+Test Suite 'RemoteInferenceBackendTests' started at 2026-09-11 07:24:31.988.
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testDiscoveryMapsOnlyTrustworthyMetadataAndCachesPerServer]' started.
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testDiscoveryMapsOnlyTrustworthyMetadataAndCachesPerServer]' passed (0.005 seconds).
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testHealthRejectsUnrelatedHTMLServiceEvenWhenHTTPReturnsSuccess]' started.
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testHealthRejectsUnrelatedHTMLServiceEvenWhenHTTPReturnsSuccess]' passed (0.014 seconds).
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testHealthRequiresCompatibleModelsAPIAndReportsSelectedModelAbsenceAsDegraded]' started.
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testHealthRequiresCompatibleModelsAPIAndReportsSelectedModelAbsenceAsDegraded]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testHTTPAuthenticationFailureRedactsExactAndCredentialShapedSecrets]' started.
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testHTTPAuthenticationFailureRedactsExactAndCredentialShapedSecrets]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testMalformedGenerationResponseIsBoundedAndFallbackReady]' started.
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testMalformedGenerationResponseIsBoundedAndFallbackReady]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testMalformedToolArgumentsAreRejectedWithoutNaturalLanguageParsing]' started.
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testMalformedToolArgumentsAreRejectedWithoutNaturalLanguageParsing]' passed (0.011 seconds).
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testNativeToolCallIsStrictlyDecodedWithoutExecutingIt]' started.
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testNativeToolCallIsStrictlyDecodedWithoutExecutingIt]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testPriorAssistantToolCallAndToolResultRoundTripAsNativeMessages]' started.
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testPriorAssistantToolCallAndToolResultRoundTripAsNativeMessages]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testProfileBuildsCredentialFreeURLAndWarnsOnlyForRemoteCleartext]' started.
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testProfileBuildsCredentialFreeURLAndWarnsOnlyForRemoteCleartext]' passed (0.000 seconds).
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testStorePersistsMultipleProfilesWithoutPersistingTokenAndRemovesKeychainEntry]' started.
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testStorePersistsMultipleProfilesWithoutPersistingTokenAndRemovesKeychainEntry]' passed (0.017 seconds).
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testTaskCancellationStopsPendingInferenceWithoutFallback]' started.
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testTaskCancellationStopsPendingInferenceWithoutFallback]' passed (0.033 seconds).
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testTextGenerationBuildsAuthOnlyAtNetworkBoundaryAndNormalizesUsage]' started.
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testTextGenerationBuildsAuthOnlyAtNetworkBoundaryAndNormalizesUsage]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testTimeoutAndConnectionLossMapToDistinctFallbackReadyErrors]' started.
+2026-09-11 07:24:32.078778+0200 AutoMLXStudio[3417:53616] [Default] Task <FB816857-E7D6-4240-A3D9-D5C978C844DE>.<1> finished with error [-1001] Error Domain=NSURLErrorDomain Code=-1001 "(null)" UserInfo={_NSURLErrorRelatedURLSessionTaskErrorKey=(
+    "LocalDataTask <FB816857-E7D6-4240-A3D9-D5C978C844DE>.<1>"
+), _NSURLErrorFailingURLSessionTaskErrorKey=LocalDataTask <FB816857-E7D6-4240-A3D9-D5C978C844DE>.<1>}
+2026-09-11 07:24:32.078961+0200 AutoMLXStudio[3417:53652] [Default] Task <70758C0D-143C-4CD5-9C55-085A85613DEF>.<2> finished with error [-1005] Error Domain=NSURLErrorDomain Code=-1005 "(null)" UserInfo={_NSURLErrorRelatedURLSessionTaskErrorKey=(
+    "LocalDataTask <70758C0D-143C-4CD5-9C55-085A85613DEF>.<2>"
+), _NSURLErrorFailingURLSessionTaskErrorKey=LocalDataTask <70758C0D-143C-4CD5-9C55-085A85613DEF>.<2>}
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testTimeoutAndConnectionLossMapToDistinctFallbackReadyErrors]' passed (0.001 seconds).
+Test Suite 'RemoteInferenceBackendTests' passed at 2026-09-11 07:24:32.082.
+	 Executed 13 tests, with 0 failures (0 unexpected) in 0.089 (0.094) seconds
+Test Suite 'RemoteModelsControllerTests' started at 2026-09-11 07:24:32.082.
+Test Case '-[AutoMLXStudioTests.RemoteModelsControllerTests testConnectionPublishesRemoteHealthModelsAndUsesFreshCacheWithoutSecondLiveRefresh]' started.
+Test Case '-[AutoMLXStudioTests.RemoteModelsControllerTests testConnectionPublishesRemoteHealthModelsAndUsesFreshCacheWithoutSecondLiveRefresh]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.RemoteModelsControllerTests testLoadPublishesStableMultipleProfiles]' started.
+Test Case '-[AutoMLXStudioTests.RemoteModelsControllerTests testLoadPublishesStableMultipleProfiles]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.RemoteModelsControllerTests testNewBearerProfileRequiresExplicitTokenBeforePersistence]' started.
+Test Case '-[AutoMLXStudioTests.RemoteModelsControllerTests testNewBearerProfileRequiresExplicitTokenBeforePersistence]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.RemoteModelsControllerTests testTokenFailureRestoresPreviousProfileWithoutReadingExistingSecret]' started.
+Test Case '-[AutoMLXStudioTests.RemoteModelsControllerTests testTokenFailureRestoresPreviousProfileWithoutReadingExistingSecret]' passed (0.009 seconds).
+Test Suite 'RemoteModelsControllerTests' passed at 2026-09-11 07:24:32.093.
+	 Executed 4 tests, with 0 failures (0 unexpected) in 0.010 (0.011) seconds
+Test Suite 'AutoMLXStudioTests.xctest' passed at 2026-09-11 07:24:32.093.
+	 Executed 34 tests, with 0 failures (0 unexpected) in 0.178 (0.203) seconds
+Test Suite 'Selected tests' passed at 2026-09-11 07:24:32.093.
+	 Executed 34 tests, with 0 failures (0 unexpected) in 0.178 (0.203) seconds
+2026-09-11 07:24:32.404 xcodebuild[3292:52197] [MT] IDETestOperationsObserverDebug: 1.651 elapsed -- Testing started completed.
+2026-09-11 07:24:32.404 xcodebuild[3292:52197] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-09-11 07:24:32.404 xcodebuild[3292:52197] [MT] IDETestOperationsObserverDebug: 1.651 sec, +1.651 sec -- end
+
+Test session results, code coverage, and logs:
+	/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0601RemoteChatIntegration-20260911/TargetedComplete.xcresult
+
+** TEST SUCCEEDED **
+
+Testing started

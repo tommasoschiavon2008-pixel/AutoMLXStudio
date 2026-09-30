@@ -6,6 +6,7 @@ enum AgentKind: String, Codable, CaseIterable { // Classifies an agent by its or
     case engineering // Identifies the bounded workspace-and-tool orchestration agent introduced in V0.6.
     case reviewer // Identifies an agent that validates and improves a candidate answer.
     case output // Identifies an agent that prepares the final user-facing response.
+    case service // Identifies a dedicated bounded service represented as a logical product role.
 
     var displayName: String { // Converts the stored enum value into concise UI copy.
         switch self { // Selects the label that corresponds to the current kind.
@@ -14,6 +15,7 @@ enum AgentKind: String, Codable, CaseIterable { // Classifies an agent by its or
         case .engineering: return "Engineering" // Labels the one permission-controlled coding-workspace agent.
         case .reviewer: return "Reviewer" // Labels quality-review agents.
         case .output: return "Output" // Labels final-output agents.
+        case .service: return "Service" // Labels ASR, TTS, and deterministic retrieval truthfully.
         } // Ends the kind-to-label mapping.
     } // Ends the display-name accessor.
 } // Ends the agent-kind definition.
@@ -33,6 +35,11 @@ enum ModelCapability: String, Codable, CaseIterable, Hashable { // Defines capab
     case imageGeneration // Leaves a typed extension point for later image generation.
     case video // Leaves a typed extension point for later video processing.
     case audioAnalysis // Leaves a typed extension point for later non-speech audio analysis.
+    case planning // Records verified bounded task-decomposition suitability when known.
+    case debugging // Records verified fault-diagnosis suitability when known.
+    case reviewing // Records verified candidate-critique suitability when known.
+    case toolUse // Records verified structured tool-call support when known.
+    case longContext // Records a verified extended usable context window when known.
 
     var displayName: String { // Produces a stable human-readable capability label.
         switch self { // Selects a readable label for every persisted capability value.
@@ -50,6 +57,11 @@ enum ModelCapability: String, Codable, CaseIterable, Hashable { // Defines capab
         case .imageGeneration: return "Image Generation" // Labels the future image-generation extension point.
         case .video: return "Video" // Labels the future video extension point.
         case .audioAnalysis: return "Audio Analysis" // Labels the future general-audio extension point.
+        case .planning: return "Planning" // Labels task-decomposition capability.
+        case .debugging: return "Debugging" // Labels fault-diagnosis capability.
+        case .reviewing: return "Reviewing" // Labels candidate-critique capability.
+        case .toolUse: return "Tool Use" // Labels structured tool calls.
+        case .longContext: return "Long Context" // Labels extended usable context.
         } // Ends capability-label selection.
     } // Ends the capability label accessor.
 } // Ends the model-capability definition.
@@ -60,12 +72,18 @@ struct AgentDefinition: Identifiable, Codable, Equatable { // Stores one central
     let kind: AgentKind // Describes the agent's orchestration role.
     let systemPrompt: String // Keeps the agent's instructions out of views and workflow call sites.
     let requiredCapabilities: Set<ModelCapability> // Declares the capabilities required from an assigned model.
+    var operatingPolicy: AgentOperatingPolicy { AgentPolicyRegistry.policy(for: id) } // Resolves host permissions and context limits from code, not model prose.
 } // Ends the agent-definition value type.
 
 enum AgentID { // Centralizes identifiers so routing and execution never repeat raw keys.
     static let general = "general-agent" // Identifies the general-purpose specialist.
     static let coding = "coding-agent" // Identifies the general software-development specialist.
     static let engineering = "engineering-agent" // Identifies the bounded V0.6 agent that may request centrally controlled Mac tools.
+    static let planner = "planner-agent" // Identifies the bounded advisory task planner.
+    static let debugger = "debugging-agent" // Identifies the fault-diagnosis specialist.
+    static let asr = "asr-agent" // Identifies the dedicated speech-recognition role.
+    static let tts = "tts-agent" // Identifies the dedicated speech-synthesis role.
+    static let retrieval = "retrieval-agent" // Identifies the isolated Project Memory retrieval role.
     static let swift = "swift-agent" // Identifies the Apple-development specialist.
     static let research = "research-agent" // Identifies the context-only research specialist.
     static let python = "python-agent" // Identifies the logical Python specialist that shares the installed coding model.

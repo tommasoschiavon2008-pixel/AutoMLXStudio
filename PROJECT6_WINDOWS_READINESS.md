@@ -1,8 +1,16 @@
 # Windows remote readiness
 
-Software integration is implemented and deterministically tested. **PHYSICALLY VERIFIED: NO — PENDING PHYSICAL VALIDATION.** No real Windows host or LAN inference server was available/used during this run.
+## V0.6.0.1 update — 11 September 2026
+
+Ordinary Chat now uses the shared backend dispatcher for both local and remote text, persists the exact backend/server/model choice per conversation, prevents target switching during generation, preserves history across backend switches, rejects normal-Chat tool calls without execution, and records truthful duration/usage metadata. Deterministic software validation is documented in `PROJECT6_VALIDATION.md`.
+
+The Windows host was offline during this update. Therefore the previous physical result remains **PARTIAL** and every V0.6.0.1 physical delta remains **PENDING**. Use `PHYSICAL_REVALIDATION.md` for the complete focused checklist and `Validation/Fixtures/RemoteEngineering/PHYSICAL_REVALIDATION.md` beside the permanent fixture; do not infer a physical pass from intercepted HTTP tests.
+
+Software integration is implemented and deterministically tested. **V0.6.0.1 PHYSICALLY VERIFIED: NO — PENDING PHYSICAL VALIDATION.** A prior V0.6 backend/Engineering session produced partial physical evidence on 10 September, but no real Windows host or LAN inference server was available/used for the V0.6.0.1 Chat UI delta.
 
 The Mac continues to own UI, session orchestration, project memory selection, filesystem, tools, approval, and process execution. The Windows machine supplies inference only. LM Studio is one possible OpenAI-compatible server; no provider-specific API is required beyond the supported OpenAI-compatible endpoints and native tool-call contract.
+
+The 10 September physical session already confirmed TCP, `/v1/models`, Remote Models persistence/health/discovery, real backend inference, multi-turn, cancellation, the remote Engineering read/write round-trip, approvals, Stop recovery, and Mac tool locality. At that checkpoint, ordinary Chat UI remote routing and complete fixture verification remained open. V0.6.0.1 closes those items in software; both still require the focused physical delta below before the Windows status can change from PARTIAL/PENDING.
 
 ## Prepare a real test
 

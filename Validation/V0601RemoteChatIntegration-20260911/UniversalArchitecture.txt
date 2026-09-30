@@ -1,0 +1,1 @@
+Architectures in the fat file: Validation/V0601RemoteChatIntegration-20260911/Apps/Universal/AutoMLXStudio.app/Contents/MacOS/AutoMLXStudio are: x86_64 arm64 

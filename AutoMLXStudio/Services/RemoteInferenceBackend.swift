@@ -15,13 +15,14 @@ enum RemoteInferenceError: LocalizedError, Equatable, Sendable { // Defines type
     case timedOut // Indicates a configured network deadline elapsed.
     case cancelled // Indicates user or task cancellation rather than server degradation.
     case connectionLost // Indicates the private server became unreachable during a request.
+    case networkUnavailable // Indicates macOS reported that this process has no usable network path.
     case transport(String) // Stores one bounded redacted transport diagnostic.
 
     var isFallbackEligible: Bool { // Tells ModelRouter whether a compatible explicit fallback may be attempted.
         switch self { // Classifies failures without performing the fallback inside the transport layer.
         case .cancelled, .invalidRequest, .unsupportedAttachments, .invalidTarget: // Keeps user cancellation and caller contract errors from silently changing models.
             return false // Requires the caller to stop or repair the request.
-        case .profileNotFound, .serverDisabled, .backendMismatch, .authenticationUnavailable, .httpStatus, .incompatibleAPI, .malformedResponse, .malformedToolCall, .timedOut, .connectionLost, .transport: // Covers remote availability and compatibility failures.
+        case .profileNotFound, .serverDisabled, .backendMismatch, .authenticationUnavailable, .httpStatus, .incompatibleAPI, .malformedResponse, .malformedToolCall, .timedOut, .connectionLost, .networkUnavailable, .transport: // Covers remote availability and compatibility failures.
             return true // Allows only the router's already configured compatible fallback policy.
         } // Ends fallback classification.
     } // Ends fallback eligibility.
@@ -56,6 +57,8 @@ enum RemoteInferenceError: LocalizedError, Equatable, Sendable { // Defines type
             return "The remote server request was cancelled." // Distinguishes user cancellation from server failure.
         case .connectionLost: // Handles reachability loss during inference.
             return "The connection to the remote server was lost." // Reports a retry/fallback-ready private-network failure.
+        case .networkUnavailable: // Handles a process-specific unavailable network path, including macOS local-network privacy denial.
+            return "This Mac cannot access the remote server. Check AutoMLX Studio in System Settings > Privacy & Security > Local Network, then check the Mac network connection." // Gives the user a way to repair permission or connectivity without claiming the server itself failed.
         case .transport(let message): // Handles other bounded networking failures.
             return message // Returns only sanitized transport text.
         } // Ends remote failure rendering.
@@ -219,6 +222,8 @@ actor RemoteInferenceBackend: ModelInferenceBackend { // Implements multi-profil
                 status = .unknown // Avoids changing model health from a user action.
             case .timedOut, .connectionLost, .transport: // Handles server reachability failures.
                 status = .serverOffline // Records that the usable API could not be reached.
+            case .networkUnavailable: // Handles a Mac-side path or permission failure rather than a proven server outage.
+                status = .unavailable // Keeps a process-local restriction separate from server-offline health.
             case .incompatibleAPI, .malformedResponse, .malformedToolCall, .httpStatus: // Handles reachable but unusable protocol behavior.
                 status = .degraded // Records an API-level compatibility problem.
             case .invalidTarget, .profileNotFound, .serverDisabled, .backendMismatch, .authenticationUnavailable, .unsupportedAttachments, .invalidRequest: // Handles configuration or caller availability failures.
@@ -509,7 +514,9 @@ actor RemoteInferenceBackend: ModelInferenceBackend { // Implements multi-profil
                 throw RemoteInferenceError.cancelled // Preserves user cancellation separately from server loss.
             case .timedOut: // Handles URLSession deadline expiration.
                 throw RemoteInferenceError.timedOut // Exposes an explicit fallback-ready timeout.
-            case .networkConnectionLost, .notConnectedToInternet, .cannotConnectToHost, .cannotFindHost, .dnsLookupFailed: // Handles private-server reachability loss.
+            case .notConnectedToInternet: // Handles macOS no-path reports, including a local-network privacy denial.
+                throw RemoteInferenceError.networkUnavailable // Preserves the process-side failure category instead of reporting a dropped server connection.
+            case .networkConnectionLost, .cannotConnectToHost, .cannotFindHost, .dnsLookupFailed: // Handles private-server reachability loss.
                 throw RemoteInferenceError.connectionLost // Avoids leaking endpoint details from the underlying error.
             default: // Handles other TLS, protocol, and transport failures.
                 throw RemoteInferenceError.transport(Self.redacted(error.localizedDescription, knownSecrets: [knownToken].compactMap { $0 })) // Sanitizes any credential echo and bounds the diagnostic.

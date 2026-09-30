@@ -1,0 +1,389 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -project AutoMLXStudio.xcodeproj -scheme AutoMLXStudio -configuration Debug -destination platform=macOS,arch=arm64 test "-only-testing:AutoMLXStudioTests/BenchmarkHarnessTests" CODE_SIGNING_ALLOWED=NO
+
+Build settings from command line:
+    CODE_SIGNING_ALLOWED = NO
+
+ComputePackagePrebuildTargetDependencyGraph
+
+Prepare packages
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (2 targets)
+    Target 'AutoMLXStudioTests' in project 'AutoMLXStudio'
+        ➜ Explicit dependency on target 'AutoMLXStudio' in project 'AutoMLXStudio'
+    Target 'AutoMLXStudio' in project 'AutoMLXStudio' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk -x c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc --version
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld -version_details
+
+Build description signature: 32270151d43fd61cbd8ff8a3f14f4270
+Build description path: /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/XCBuildData/32270151d43fd61cbd8ff8a3f14f4270.xcbuilddata
+ClangStatCache /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/macosx26.5-25F70-e082c4a02f00227109f4ed75e425c832.sdkstatcache
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio.xcodeproj
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk -o /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/macosx26.5-25F70-e082c4a02f00227109f4ed75e425c832.sdkstatcache
+
+WriteAuxiliaryFile /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/AutoMLXStudioTests.SwiftFileList (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    write-file /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/AutoMLXStudioTests.SwiftFileList
+
+WriteAuxiliaryFile /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/AutoMLXStudioTests.LinkFileList (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    write-file /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/AutoMLXStudioTests.LinkFileList
+
+MkDir /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Products/Debug/AutoMLXStudio.app/Contents/PlugIns (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    /bin/mkdir -p /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Products/Debug/AutoMLXStudio.app/Contents/PlugIns
+
+WriteAuxiliaryFile /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/AutoMLXStudioTests.SwiftConstValuesFileList (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    write-file /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/AutoMLXStudioTests.SwiftConstValuesFileList
+
+WriteAuxiliaryFile /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/AutoMLXStudioTests-OutputFileMap.json (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    write-file /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/AutoMLXStudioTests-OutputFileMap.json
+
+MkDir /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Products/Debug/AutoMLXStudio.app/Contents/PlugIns/AutoMLXStudioTests.xctest (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    /bin/mkdir -p /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Products/Debug/AutoMLXStudio.app/Contents/PlugIns/AutoMLXStudioTests.xctest
+
+MkDir /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Products/Debug/AutoMLXStudio.app/Contents/PlugIns/AutoMLXStudioTests.xctest/Contents (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    /bin/mkdir -p /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Products/Debug/AutoMLXStudio.app/Contents/PlugIns/AutoMLXStudioTests.xctest/Contents
+
+MkDir /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Products/Debug/AutoMLXStudio.app/Contents/PlugIns/AutoMLXStudioTests.xctest/Contents/MacOS (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    /bin/mkdir -p /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Products/Debug/AutoMLXStudio.app/Contents/PlugIns/AutoMLXStudioTests.xctest/Contents/MacOS
+
+MkDir /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Products/Debug/AutoMLXStudio.app/Contents/Frameworks (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    /bin/mkdir -p /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Products/Debug/AutoMLXStudio.app/Contents/Frameworks
+
+ProcessInfoPlistFile /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Products/Debug/AutoMLXStudio.app/Contents/Info.plist /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/empty-AutoMLXStudio.plist (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    builtin-infoPlistUtility /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/empty-AutoMLXStudio.plist -producttype com.apple.product-type.application -genpkginfo /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Products/Debug/AutoMLXStudio.app/Contents/PkgInfo -expandbuildsettings -platform macosx -o /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Products/Debug/AutoMLXStudio.app/Contents/Info.plist
+
+Copy /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Products/Debug/AutoMLXStudio.app/Contents/Frameworks/XCUIAutomation.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCUIAutomation.framework (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -exclude Headers -exclude PrivateHeaders -exclude Modules -exclude \*.tbd -resolve-src-symlinks /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCUIAutomation.framework /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Products/Debug/AutoMLXStudio.app/Contents/Frameworks
+
+Copy /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Products/Debug/AutoMLXStudio.app/Contents/Frameworks/libXCTestBundleInject.dylib /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib/libXCTestBundleInject.dylib (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -exclude Headers -exclude PrivateHeaders -exclude Modules -exclude \*.tbd -resolve-src-symlinks /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib/libXCTestBundleInject.dylib /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Products/Debug/AutoMLXStudio.app/Contents/Frameworks
+
+Copy /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Products/Debug/AutoMLXStudio.app/Contents/Frameworks/libXCTestSwiftSupport.dylib /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib/libXCTestSwiftSupport.dylib (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -exclude Headers -exclude PrivateHeaders -exclude Modules -exclude \*.tbd -resolve-src-symlinks /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib/libXCTestSwiftSupport.dylib /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Products/Debug/AutoMLXStudio.app/Contents/Frameworks
+
+Copy /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Products/Debug/AutoMLXStudio.app/Contents/Frameworks/XCUnit.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks/XCUnit.framework (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -exclude Headers -exclude PrivateHeaders -exclude Modules -exclude \*.tbd -resolve-src-symlinks /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks/XCUnit.framework /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Products/Debug/AutoMLXStudio.app/Contents/Frameworks
+
+Copy /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Products/Debug/AutoMLXStudio.app/Contents/Frameworks/XCTestCore.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks/XCTestCore.framework (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -exclude Headers -exclude PrivateHeaders -exclude Modules -exclude \*.tbd -resolve-src-symlinks /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks/XCTestCore.framework /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Products/Debug/AutoMLXStudio.app/Contents/Frameworks
+
+Copy /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Products/Debug/AutoMLXStudio.app/Contents/Frameworks/XCTestSupport.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks/XCTestSupport.framework (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -exclude Headers -exclude PrivateHeaders -exclude Modules -exclude \*.tbd -resolve-src-symlinks /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks/XCTestSupport.framework /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Products/Debug/AutoMLXStudio.app/Contents/Frameworks
+
+Copy /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Products/Debug/AutoMLXStudio.app/Contents/Frameworks/XCTAutomationSupport.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks/XCTAutomationSupport.framework (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -exclude Headers -exclude PrivateHeaders -exclude Modules -exclude \*.tbd -resolve-src-symlinks /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks/XCTAutomationSupport.framework /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Products/Debug/AutoMLXStudio.app/Contents/Frameworks
+
+Copy /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Products/Debug/AutoMLXStudio.app/Contents/Frameworks/XCTest.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -exclude Headers -exclude PrivateHeaders -exclude Modules -exclude \*.tbd -resolve-src-symlinks /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Products/Debug/AutoMLXStudio.app/Contents/Frameworks
+
+Copy /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Products/Debug/AutoMLXStudio.app/Contents/Frameworks/Testing.framework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/Testing.framework (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -exclude Headers -exclude PrivateHeaders -exclude Modules -exclude \*.tbd -resolve-src-symlinks /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/Testing.framework /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Products/Debug/AutoMLXStudio.app/Contents/Frameworks
+
+SwiftDriver AutoMLXStudio normal arm64 com.apple.xcode.tools.swift.compiler (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    builtin-SwiftDriver -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name AutoMLXStudio -Onone @/Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio.SwiftFileList -DDEBUG -enable-bare-slash-regex -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk -target arm64-apple-macos14.0 -g -module-cache-path /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 5 -I /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Products/Debug -F /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Products/Debug -c -j10 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/macosx26.5-25F70-e082c4a02f00227109f4ed75e425c832.sdkstatcache -output-file-map /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -sdk-module-cache-path /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio_const_extract_protocols.json -Xcc -iquote -Xcc /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/AutoMLXStudio-generated-files.hmap -Xcc -I/Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/AutoMLXStudio-own-target-headers.hmap -Xcc -I/Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/AutoMLXStudio-all-target-headers.hmap -Xcc -iquote -Xcc /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/AutoMLXStudio-project-headers.hmap -Xcc -I/Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Products/Debug/include -Xcc -I/Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/DerivedSources-normal/arm64 -Xcc -I/Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/DerivedSources/arm64 -Xcc -I/Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/DerivedSources -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio-Swift.h -working-directory /Volumes/AutoMLXShrd/AutoMLXStudioV1_3 -experimental-emit-module-separately -disable-cmo
+
+SwiftCompile normal arm64 Compiling\ BenchmarkController.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/BenchmarkController.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/BenchmarkController.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/BenchmarkController.swift:63:27: warning: reference to captured var 'self' in concurrently-executing code; this is an error in the Swift 6 language mode
+                    await self?.publish(progress: progress, snapshot: snapshot) // Publishes one low-frequency checkpoint through the controller actor.
+                          ^
+
+SwiftCompile normal arm64 Compiling\ BenchmarkModels.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/Benchmarks/BenchmarkModels.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/Benchmarks/BenchmarkModels.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftEmitModule normal arm64 Emitting\ module\ for\ AutoMLXStudio (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+
+EmitSwiftModule normal arm64 (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 Compiling\ BenchmarkEvaluationEngine.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/BenchmarkEvaluationEngine.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/BenchmarkEvaluationEngine.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftDriverJobDiscovery normal arm64 Compiling BenchmarkController.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+
+SwiftCompile normal arm64 Compiling\ DashboardView.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Views/DashboardView.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Views/DashboardView.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 Compiling\ AutoMLXStudioApp.swift,\ BenchmarkView.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/AutoMLXStudioApp.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Views/BenchmarkView.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/AutoMLXStudioApp.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Views/BenchmarkView.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 Compiling\ ChatView.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Views/ChatView.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Views/ChatView.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 Compiling\ AgentsView.swift,\ AppState.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Views/AgentsView.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/AppState.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Views/AgentsView.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/AppState.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 Compiling\ RootView.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Views/RootView.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Views/RootView.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 Compiling\ SettingsView.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Views/SettingsView.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Views/SettingsView.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 Compiling\ ProjectsView.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Views/ProjectsView.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Views/ProjectsView.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 Compiling\ EngineeringView.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Views/EngineeringView.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Views/EngineeringView.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftDriverJobDiscovery normal arm64 Compiling BenchmarkEvaluationEngine.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+
+SwiftCompile normal arm64 Compiling\ ModelsView.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Views/ModelsView.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Views/ModelsView.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftDriverJobDiscovery normal arm64 Compiling DashboardView.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+
+SwiftCompile normal arm64 Compiling\ OptimizeView.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Views/OptimizeView.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Views/OptimizeView.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftDriverJobDiscovery normal arm64 Compiling RootView.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+
+SwiftDriverJobDiscovery normal arm64 Compiling SettingsView.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+
+SwiftDriverJobDiscovery normal arm64 Compiling OptimizeView.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+
+SwiftDriverJobDiscovery normal arm64 Emitting module for AutoMLXStudio (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+
+SwiftDriver\ Compilation\ Requirements AutoMLXStudio normal arm64 com.apple.xcode.tools.swift.compiler (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    builtin-Swift-Compilation-Requirements -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name AutoMLXStudio -Onone @/Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio.SwiftFileList -DDEBUG -enable-bare-slash-regex -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk -target arm64-apple-macos14.0 -g -module-cache-path /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 5 -I /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Products/Debug -F /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Products/Debug -c -j10 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/macosx26.5-25F70-e082c4a02f00227109f4ed75e425c832.sdkstatcache -output-file-map /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -sdk-module-cache-path /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio_const_extract_protocols.json -Xcc -iquote -Xcc /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/AutoMLXStudio-generated-files.hmap -Xcc -I/Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/AutoMLXStudio-own-target-headers.hmap -Xcc -I/Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/AutoMLXStudio-all-target-headers.hmap -Xcc -iquote -Xcc /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/AutoMLXStudio-project-headers.hmap -Xcc -I/Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Products/Debug/include -Xcc -I/Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/DerivedSources-normal/arm64 -Xcc -I/Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/DerivedSources/arm64 -Xcc -I/Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/DerivedSources -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio-Swift.h -working-directory /Volumes/AutoMLXShrd/AutoMLXStudioV1_3 -experimental-emit-module-separately -disable-cmo
+
+Copy /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Products/Debug/AutoMLXStudio.swiftmodule/arm64-apple-macos.swiftmodule /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio.swiftmodule (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio.swiftmodule /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Products/Debug/AutoMLXStudio.swiftmodule/arm64-apple-macos.swiftmodule
+
+Copy /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Products/Debug/AutoMLXStudio.swiftmodule/arm64-apple-macos.abi.json /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio.abi.json (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio.abi.json /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Products/Debug/AutoMLXStudio.swiftmodule/arm64-apple-macos.abi.json
+
+Copy /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Products/Debug/AutoMLXStudio.swiftmodule/Project/arm64-apple-macos.swiftsourceinfo /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio.swiftsourceinfo (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio.swiftsourceinfo /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Products/Debug/AutoMLXStudio.swiftmodule/Project/arm64-apple-macos.swiftsourceinfo
+
+SwiftDriver AutoMLXStudioTests normal arm64 com.apple.xcode.tools.swift.compiler (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    builtin-SwiftDriver -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name AutoMLXStudioTests -Onone @/Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/AutoMLXStudioTests.SwiftFileList -DDEBUG -plugin-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-bare-slash-regex -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk -target arm64-apple-macos14.0 -g -module-cache-path /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 5 -I /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Products/Debug -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib -F /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Products/Debug -F /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks -c -j10 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/macosx26.5-25F70-e082c4a02f00227109f4ed75e425c832.sdkstatcache -output-file-map /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/AutoMLXStudioTests-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -sdk-module-cache-path /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/AutoMLXStudioTests.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/AutoMLXStudioTests_const_extract_protocols.json -Xcc -iquote -Xcc /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/AutoMLXStudioTests-generated-files.hmap -Xcc -I/Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/AutoMLXStudioTests-own-target-headers.hmap -Xcc -I/Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/AutoMLXStudioTests-all-target-headers.hmap -Xcc -iquote -Xcc /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/AutoMLXStudioTests-project-headers.hmap -Xcc -I/Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Products/Debug/include -Xcc -I/Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/DerivedSources-normal/arm64 -Xcc -I/Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/DerivedSources/arm64 -Xcc -I/Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/DerivedSources -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/AutoMLXStudioTests-Swift.h -working-directory /Volumes/AutoMLXShrd/AutoMLXStudioV1_3 -experimental-emit-module-separately -disable-cmo
+
+SwiftDriverJobDiscovery normal arm64 Compiling BenchmarkModels.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+
+SwiftDriverJobDiscovery normal arm64 Compiling ModelsView.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+
+SwiftCompile normal arm64 Compiling\ ProjectMemoryLifecycleTests.swift,\ ProjectMemoryTests.swift,\ RemoteInferenceBackendTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/ProjectMemoryLifecycleTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/ProjectMemoryTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/RemoteInferenceBackendTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/ProjectMemoryLifecycleTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/ProjectMemoryTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/RemoteInferenceBackendTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 Compiling\ EngineeringAgentEngineTests.swift,\ EngineeringAgentToolRuntimeAdapterTests.swift,\ EngineeringIntegrationTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/EngineeringAgentEngineTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/EngineeringAgentToolRuntimeAdapterTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/EngineeringIntegrationTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/EngineeringAgentEngineTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/EngineeringAgentToolRuntimeAdapterTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/EngineeringIntegrationTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 Compiling\ BenchmarkHarnessTests.swift,\ ChatGenerationSessionTests.swift,\ ConversationStoreTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/BenchmarkHarnessTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/ChatGenerationSessionTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/ConversationStoreTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+Failed frontend command:
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift-frontend -frontend -c -primary-file /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/BenchmarkHarnessTests.swift -primary-file /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/ChatGenerationSessionTests.swift -primary-file /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/ConversationStoreTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/EngineeringAgentEngineTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/EngineeringAgentToolRuntimeAdapterTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/EngineeringIntegrationTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/EngineeringToolRuntimeTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/EngineeringWorkspaceTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/MLXIntegrationTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/MLXServiceOfflineEnvironmentTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/ModelArchitectureTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/ModelBackendRoutingTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/MultiModelIntegrationTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/MultiModelWorkflowTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/ProjectContextAssemblerTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/ProjectMemoryLifecycleTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/ProjectMemoryTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/RemoteInferenceBackendTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/RemoteModelsControllerTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/ResourceSafetyTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/V05RoutingTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/VisionAssistedWorkflowTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/VisionVoiceFoundationTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/VisionVoiceHardwareTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/WorkflowMemoryIntegrationTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/WorkflowRoutingTests.swift -supplementary-output-file-map /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/supplementaryOutputs-1 -target arm64-apple-macos14.0 -load-resolved-plugin /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib/swift/host/plugins/libFoundationMacros.dylib\#/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/bin/swift-plugin-server\#FoundationMacros -load-resolved-plugin /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib/swift/host/plugins/libObservationMacros.dylib\#/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/bin/swift-plugin-server\#ObservationMacros -load-resolved-plugin /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib/swift/host/plugins/libPreviewsMacros.dylib\#/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/bin/swift-plugin-server\#PreviewsMacros -load-resolved-plugin /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib/swift/host/plugins/libSwiftMacros.dylib\#/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/bin/swift-plugin-server\#SwiftMacros -load-resolved-plugin /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib/swift/host/plugins/libSwiftUIMacros.dylib\#/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/bin/swift-plugin-server\#SwiftUIMacros -disable-implicit-swift-modules -Xcc -fno-implicit-modules -Xcc -fno-implicit-module-maps -explicit-swift-module-map-file /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/AutoMLXStudioTests-dependencies-1.json -debug-module-path /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/AutoMLXStudioTests.swiftmodule -Xllvm -aarch64-use-tbi -enable-objc-interop -stack-check -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk -I /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Products/Debug -Isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib -F /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Products/Debug -F /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks -no-color-diagnostics -Xcc -fno-color-diagnostics -enable-testing -g -debug-info-format\=dwarf -dwarf-version\=4 -module-cache-path /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -swift-version 5 -Onone -D DEBUG -serialize-debugging-options -const-gather-protocols-file /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/AutoMLXStudioTests_const_extract_protocols.json -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -empty-abi-descriptor -validate-clang-modules-once -clang-build-session-file /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -working-directory -Xcc /Volumes/AutoMLXShrd/AutoMLXStudioV1_3 -enable-anonymous-context-mangled-names -file-compilation-dir /Volumes/AutoMLXShrd/AutoMLXStudioV1_3 -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -Xcc -ivfsstatcache -Xcc /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/macosx26.5-25F70-e082c4a02f00227109f4ed75e425c832.sdkstatcache -Xcc -I/Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/swift-overrides.hmap -Xcc -iquote -Xcc /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/AutoMLXStudioTests-generated-files.hmap -Xcc -I/Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/AutoMLXStudioTests-own-target-headers.hmap -Xcc -I/Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/AutoMLXStudioTests-all-target-headers.hmap -Xcc -iquote -Xcc /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/AutoMLXStudioTests-project-headers.hmap -Xcc -I/Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Products/Debug/include -Xcc -I/Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/DerivedSources-normal/arm64 -Xcc -I/Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/DerivedSources/arm64 -Xcc -I/Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/DerivedSources -Xcc -DDEBUG\=1 -no-auto-bridging-header-chaining -module-name AutoMLXStudioTests -frontend-parseable-output -disable-clang-spi -clang-target arm64-apple-macos26.5 -target-sdk-version 26.5 -target-sdk-name macosx26.5 -in-process-plugin-server-path /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/libSwiftInProcPluginServer.dylib -o /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/BenchmarkHarnessTests.o -o /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/ChatGenerationSessionTests.o -o /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/ConversationStoreTests.o -index-unit-output-path /AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/BenchmarkHarnessTests.o -index-unit-output-path /AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/ChatGenerationSessionTests.o -index-unit-output-path /AutoMLXStudio.build/Debug/AutoMLXStudioTests.build/Objects-normal/arm64/ConversationStoreTests.o -index-store-path /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Index.noindex/DataStore -index-system-modules
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/BenchmarkHarnessTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/BenchmarkHarnessTests.swift:164:37: error: call to actor-isolated instance method 'loadCustomSuites()' in a synchronous nonisolated context
+        XCTAssertEqual((await store.loadCustomSuites()).values, [suite]) // Restores the saved custom suite.
+                                    ^
+AutoMLXStudio.BenchmarkStore.loadCustomSuites:2:15: note: calls to instance method 'loadCustomSuites()' from outside of its actor context are implicitly asynchronous
+internal func loadCustomSuites() -> AutoMLXStudio.BenchmarkStoreLoad<AutoMLXStudio.BenchmarkSuite>}
+              ^
+/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/BenchmarkHarnessTests.swift:164:25: error: 'await' in an autoclosure that does not support concurrency
+        XCTAssertEqual((await store.loadCustomSuites()).values, [suite]) // Restores the saved custom suite.
+                        ^
+/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/BenchmarkHarnessTests.swift:174:51: warning: result of operator '==' is unused
+        second.modelConfiguration.maxOutputTokens == first.modelConfiguration.maxOutputTokens // Reads immutable configuration for compiler-visible intent.
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/BenchmarkHarnessTests.swift:185:37: error: cannot convert value of type 'Double?' to expected argument type 'Double'
+        XCTAssertEqual(run.summary?.overallScore, 100, accuracy: 0.0001) // Requires perfect weighted output.
+                                    ^
+                                                !
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/ChatGenerationSessionTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/ConversationStoreTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 Compiling\ MLXServiceOfflineEnvironmentTests.swift,\ ModelArchitectureTests.swift,\ ModelBackendRoutingTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/MLXServiceOfflineEnvironmentTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/ModelArchitectureTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/ModelBackendRoutingTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/MLXServiceOfflineEnvironmentTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/ModelArchitectureTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/ModelBackendRoutingTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftEmitModule normal arm64 Emitting\ module\ for\ AutoMLXStudioTests (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+
+EmitSwiftModule normal arm64 (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 Compiling\ V05RoutingTests.swift,\ VisionAssistedWorkflowTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/V05RoutingTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/VisionAssistedWorkflowTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/V05RoutingTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/VisionAssistedWorkflowTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftDriverJobDiscovery normal arm64 Compiling AgentsView.swift, AppState.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+
+SwiftCompile normal arm64 Compiling\ RemoteModelsControllerTests.swift,\ ResourceSafetyTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/RemoteModelsControllerTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/ResourceSafetyTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/RemoteModelsControllerTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/ResourceSafetyTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftDriverJobDiscovery normal arm64 Compiling ProjectsView.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+
+SwiftCompile normal arm64 Compiling\ EngineeringToolRuntimeTests.swift,\ EngineeringWorkspaceTests.swift,\ MLXIntegrationTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/EngineeringToolRuntimeTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/EngineeringWorkspaceTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/MLXIntegrationTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/EngineeringToolRuntimeTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/EngineeringWorkspaceTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/MLXIntegrationTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+
+SwiftDriverJobDiscovery normal arm64 Compiling EngineeringView.swift (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+
+SwiftCompile normal arm64 Compiling\ VisionVoiceFoundationTests.swift,\ VisionVoiceHardwareTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/VisionVoiceFoundationTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/VisionVoiceHardwareTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+
+
+Test session results, code coverage, and logs:
+	/Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-hbjqanvzmqismzbwgksekgebomml/Logs/Test/Test-AutoMLXStudio-2026.09.11_16-06-52-+0200.xcresult
+
+Testing failed:
+	Call to actor-isolated instance method 'loadCustomSuites()' in a synchronous nonisolated context
+	'await' in an autoclosure that does not support concurrency
+	Cannot convert value of type 'Double?' to expected argument type 'Double'
+	Testing cancelled because the build failed.
+
+** TEST FAILED **
+
+
+The following build commands failed:
+	SwiftCompile normal arm64 Compiling\ BenchmarkHarnessTests.swift,\ ChatGenerationSessionTests.swift,\ ConversationStoreTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/BenchmarkHarnessTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/ChatGenerationSessionTests.swift /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/ConversationStoreTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+	SwiftCompile normal arm64 /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/BenchmarkHarnessTests.swift (in target 'AutoMLXStudioTests' from project 'AutoMLXStudio')
+	Testing project AutoMLXStudio with scheme AutoMLXStudio
+(3 failures)

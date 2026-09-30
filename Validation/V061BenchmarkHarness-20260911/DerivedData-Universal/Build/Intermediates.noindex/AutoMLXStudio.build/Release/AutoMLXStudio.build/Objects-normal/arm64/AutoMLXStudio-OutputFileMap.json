@@ -1,0 +1,396 @@
+{
+  "" : {
+    "const-values" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio-primary.swiftconstvalues",
+    "dependencies" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio-primary.d",
+    "diagnostics" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio-primary.dia",
+    "emit-module-dependencies" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio-primary-emit-module.dia",
+    "pch" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio-primary.swiftdeps"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/AppState.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/AppState.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/AppState.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/AppState.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/AutoMLXStudioApp.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudioApp.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudioApp.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudioApp.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/Agents/AgentModels.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/AgentModels.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/AgentModels.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/AgentModels.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/Backends/ModelBackendModels.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ModelBackendModels.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ModelBackendModels.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ModelBackendModels.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/Benchmarks/BenchmarkModels.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/BenchmarkModels.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/BenchmarkModels.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/BenchmarkModels.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/Benchmarks/BuiltInBenchmarkSuite.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/BuiltInBenchmarkSuite.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/BuiltInBenchmarkSuite.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/BuiltInBenchmarkSuite.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/Conversations/ConversationModels.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ConversationModels.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ConversationModels.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ConversationModels.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/Engineering/EngineeringModels.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/EngineeringModels.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/EngineeringModels.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/EngineeringModels.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/EngineeringAgent/EngineeringAgentFallbackParser.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/EngineeringAgentFallbackParser.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/EngineeringAgentFallbackParser.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/EngineeringAgentFallbackParser.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/EngineeringAgent/EngineeringAgentModels.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/EngineeringAgentModels.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/EngineeringAgentModels.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/EngineeringAgentModels.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/Memory/ProjectMemoryModels.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ProjectMemoryModels.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ProjectMemoryModels.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ProjectMemoryModels.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/Models/LLMModel.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/LLMModel.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/LLMModel.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/LLMModel.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/Models/ModelAssignment.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ModelAssignment.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ModelAssignment.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ModelAssignment.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/Models/ModelProfile.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ModelProfile.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ModelProfile.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ModelProfile.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/Registry/AgentRegistry.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/AgentRegistry.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/AgentRegistry.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/AgentRegistry.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/Registry/ModelRegistry.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ModelRegistry.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ModelRegistry.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ModelRegistry.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/Requests/UserRequest.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/UserRequest.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/UserRequest.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/UserRequest.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/Routing/Director.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/Director.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/Director.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/Director.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/Routing/FastRouter.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/FastRouter.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/FastRouter.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/FastRouter.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/Routing/ModelGenerationRouting.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ModelGenerationRouting.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ModelGenerationRouting.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ModelGenerationRouting.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/Routing/ModelRouter.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ModelRouter.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ModelRouter.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ModelRouter.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/Voice/VoiceModels.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/VoiceModels.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/VoiceModels.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/VoiceModels.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/Workflow/WorkflowModels.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/WorkflowModels.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/WorkflowModels.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/WorkflowModels.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Models/AppModels.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/AppModels.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/AppModels.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/AppModels.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/AttachmentValidationService.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/AttachmentValidationService.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/AttachmentValidationService.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/AttachmentValidationService.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/BenchmarkAnalysis.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/BenchmarkAnalysis.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/BenchmarkAnalysis.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/BenchmarkAnalysis.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/BenchmarkController.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/BenchmarkController.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/BenchmarkController.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/BenchmarkController.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/BenchmarkEvaluationEngine.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/BenchmarkEvaluationEngine.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/BenchmarkEvaluationEngine.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/BenchmarkEvaluationEngine.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/BenchmarkGraders.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/BenchmarkGraders.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/BenchmarkGraders.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/BenchmarkGraders.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/BenchmarkReportExporter.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/BenchmarkReportExporter.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/BenchmarkReportExporter.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/BenchmarkReportExporter.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/BenchmarkStore.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/BenchmarkStore.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/BenchmarkStore.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/BenchmarkStore.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/ChatGenerationSession.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ChatGenerationSession.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ChatGenerationSession.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ChatGenerationSession.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/ConversationStore.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ConversationStore.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ConversationStore.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ConversationStore.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/EngineeringAgentEngine.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/EngineeringAgentEngine.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/EngineeringAgentEngine.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/EngineeringAgentEngine.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/EngineeringAgentModelBackendAdapter.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/EngineeringAgentModelBackendAdapter.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/EngineeringAgentModelBackendAdapter.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/EngineeringAgentModelBackendAdapter.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/EngineeringAgentToolRuntimeAdapter.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/EngineeringAgentToolRuntimeAdapter.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/EngineeringAgentToolRuntimeAdapter.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/EngineeringAgentToolRuntimeAdapter.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/EngineeringApprovalBroker.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/EngineeringApprovalBroker.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/EngineeringApprovalBroker.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/EngineeringApprovalBroker.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/EngineeringController.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/EngineeringController.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/EngineeringController.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/EngineeringController.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/EngineeringProcessRunner.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/EngineeringProcessRunner.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/EngineeringProcessRunner.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/EngineeringProcessRunner.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/EngineeringSessionBuilder.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/EngineeringSessionBuilder.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/EngineeringSessionBuilder.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/EngineeringSessionBuilder.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/EngineeringToolRuntime.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/EngineeringToolRuntime.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/EngineeringToolRuntime.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/EngineeringToolRuntime.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/EngineeringWorkspace.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/EngineeringWorkspace.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/EngineeringWorkspace.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/EngineeringWorkspace.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/HardwareService.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/HardwareService.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/HardwareService.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/HardwareService.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/LLMCompletionClient.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/LLMCompletionClient.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/LLMCompletionClient.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/LLMCompletionClient.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/LocalMLXBackend.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/LocalMLXBackend.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/LocalMLXBackend.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/LocalMLXBackend.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/MLXAudioRuntimeServices.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/MLXAudioRuntimeServices.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/MLXAudioRuntimeServices.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/MLXAudioRuntimeServices.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/MLXService.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/MLXService.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/MLXService.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/MLXService.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/MLXVLMVisionService.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/MLXVLMVisionService.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/MLXVLMVisionService.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/MLXVLMVisionService.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/ManagedPythonProcess.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ManagedPythonProcess.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ManagedPythonProcess.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ManagedPythonProcess.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/ModelBackendDispatcher.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ModelBackendDispatcher.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ModelBackendDispatcher.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ModelBackendDispatcher.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/ModelInstallationInspector.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ModelInstallationInspector.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ModelInstallationInspector.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ModelInstallationInspector.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/ModelMemorySampler.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ModelMemorySampler.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ModelMemorySampler.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ModelMemorySampler.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/ModelResourceManager.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ModelResourceManager.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ModelResourceManager.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ModelResourceManager.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/ProjectContextAssembler.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ProjectContextAssembler.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ProjectContextAssembler.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ProjectContextAssembler.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/ProjectMemoryRetrieval.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ProjectMemoryRetrieval.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ProjectMemoryRetrieval.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ProjectMemoryRetrieval.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/ProjectMemoryStore.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ProjectMemoryStore.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ProjectMemoryStore.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ProjectMemoryStore.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/RemoteInferenceBackend.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/RemoteInferenceBackend.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/RemoteInferenceBackend.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/RemoteInferenceBackend.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/RemoteModelsController.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/RemoteModelsController.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/RemoteModelsController.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/RemoteModelsController.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/RemoteServerStore.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/RemoteServerStore.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/RemoteServerStore.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/RemoteServerStore.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/RemoteServerTokenVault.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/RemoteServerTokenVault.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/RemoteServerTokenVault.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/RemoteServerTokenVault.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/ResourceBudget.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ResourceBudget.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ResourceBudget.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ResourceBudget.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/RuntimeAdapters/ModelRuntimeAdapter.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ModelRuntimeAdapter.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ModelRuntimeAdapter.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ModelRuntimeAdapter.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/VoiceFoundationServices.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/VoiceFoundationServices.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/VoiceFoundationServices.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/VoiceFoundationServices.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/WorkflowEngine.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/WorkflowEngine.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/WorkflowEngine.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/WorkflowEngine.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Services/WorkspaceController.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/WorkspaceController.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/WorkspaceController.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/WorkspaceController.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Views/AgentsView.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/AgentsView.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/AgentsView.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/AgentsView.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Views/BenchmarkView.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/BenchmarkView.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/BenchmarkView.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/BenchmarkView.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Views/ChatView.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ChatView.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ChatView.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ChatView.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Views/DashboardView.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/DashboardView.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/DashboardView.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/DashboardView.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Views/EngineeringView.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/EngineeringView.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/EngineeringView.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/EngineeringView.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Views/ModelsView.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ModelsView.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ModelsView.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ModelsView.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Views/OptimizeView.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/OptimizeView.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/OptimizeView.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/OptimizeView.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Views/ProjectsView.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ProjectsView.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ProjectsView.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/ProjectsView.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Views/RemoteModelsView.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/RemoteModelsView.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/RemoteModelsView.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/RemoteModelsView.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Views/RootView.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/RootView.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/RootView.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/RootView.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Views/SettingsView.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/SettingsView.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/SettingsView.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/SettingsView.o"
+  },
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Views/WorkflowTraceComponents.swift" : {
+    "index-unit-output-path" : "/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/WorkflowTraceComponents.o",
+    "llvm-bc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/WorkflowTraceComponents.bc",
+    "object" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/WorkflowTraceComponents.o"
+  }
+}

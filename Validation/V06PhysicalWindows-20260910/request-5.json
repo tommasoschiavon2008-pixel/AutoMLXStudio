@@ -1,0 +1,13 @@
+{
+  "backend" : "remote-openai-compatible",
+  "correlationValid" : true,
+  "messageCount" : 1,
+  "model" : "qwen\/qwen3-4b-2507",
+  "toolResultCount" : 0,
+  "toolResults" : [
+
+  ],
+  "tools" : [
+
+  ]
+}

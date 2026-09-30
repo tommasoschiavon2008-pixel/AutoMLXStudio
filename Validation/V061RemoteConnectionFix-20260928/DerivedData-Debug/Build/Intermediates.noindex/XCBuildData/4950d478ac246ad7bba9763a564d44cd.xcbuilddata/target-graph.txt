@@ -1,0 +1,4 @@
+Target dependency graph (2 targets)
+Target 'AutoMLXStudioTests' in project 'AutoMLXStudio'
+➜ Explicit dependency on target 'AutoMLXStudio' in project 'AutoMLXStudio'
+Target 'AutoMLXStudio' in project 'AutoMLXStudio' (no dependencies)

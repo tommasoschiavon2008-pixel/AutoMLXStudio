@@ -1,0 +1,28 @@
+{
+  "backend" : "remote-openai-compatible",
+  "correlationValid" : true,
+  "messageCount" : 3,
+  "model" : "qwen\/qwen3-4b-2507",
+  "toolResultCount" : 0,
+  "toolResults" : [
+
+  ],
+  "tools" : [
+    "build_project",
+    "create_file",
+    "file_info",
+    "git_diff",
+    "git_log",
+    "git_status",
+    "list_directory",
+    "read_file",
+    "replace_in_file",
+    "rollback_change",
+    "run_command",
+    "run_tests",
+    "search_files",
+    "search_text",
+    "unified_diff",
+    "write_file"
+  ]
+}

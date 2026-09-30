@@ -1,0 +1,9 @@
+{
+  "durationMS" : 594,
+  "finishReason" : "stop",
+  "model" : "qwen\/qwen3-4b-2507",
+  "text" : "AUTOMLX_WINDOWS_OK",
+  "toolCalls" : [
+
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "data": [
+    {
+      "id": "qwen/qwen3-4b-2507",
+      "object": "model",
+      "owned_by": "organization_owner"
+    },
+    {
+      "id": "mistral-small-3.1-24b-instruct-2503",
+      "object": "model",
+      "owned_by": "organization_owner"
+    },
+    {
+      "id": "deepseek/deepseek-r1-0528-qwen3-8b",
+      "object": "model",
+      "owned_by": "organization_owner"
+    },
+    {
+      "id": "qwen/qwen3-vl-8b",
+      "object": "model",
+      "owned_by": "organization_owner"
+    },
+    {
+      "id": "text-embedding-nomic-embed-text-v1.5",
+      "object": "model",
+      "owned_by": "organization_owner"
+    }
+  ],
+  "object": "list"
+}

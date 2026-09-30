@@ -1,0 +1,16 @@
+[
+  {
+    "before" : "1\n",
+    "command" : "write_file calculator.txt\nExpected SHA-256: 4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865\nSHA-256: 72fce59447a01f488b1169d2d742679cfe306a89772d67fef018bcfe95431f68; 5 bytes\n1 + 1",
+    "decision" : "allowOnce",
+    "id" : "3BCADEF2-8761-48D6-A361-2FC044E35A3D",
+    "tool" : "write_file"
+  },
+  {
+    "before" : "1 + 1",
+    "command" : "make test",
+    "decision" : "deny",
+    "id" : "FC4AE65E-2F5F-42A8-8CB4-D7F3303D001A",
+    "tool" : "run_tests"
+  }
+]

@@ -1,0 +1,5 @@
+Darwin
+/private/tmp/AutoMLXRemoteEngineeringFixture.SOugjU/allow
+FAIL: calculator must equal 2
+make: *** [test] Error 1
+BASELINE_EXIT_CODE=2

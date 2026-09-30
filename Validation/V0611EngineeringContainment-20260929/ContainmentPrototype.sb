@@ -1,0 +1,8 @@
+(version 1) ; Use the macOS Seatbelt profile grammar.
+(deny default) ; Reject every capability unless explicitly granted below.
+(allow process-exec) ; Let the approved tool invoke its build/test child executables.
+(allow process-fork) ; Let build systems create descendants that inherit this sandbox.
+(allow signal (target same-sandbox)) ; Let a command control only processes in its sandbox.
+(allow process-info* (target same-sandbox)) ; Let build tools observe their own descendants only.
+(allow file-read* (literal "/") (literal "/Volumes") (literal "/Volumes/AutoMLXShrd") (literal "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3") (literal "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation") (literal "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0611EngineeringContainment-20260929") (literal "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V0611EngineeringContainment-20260929/EngineeringContainmentTest") (subpath (param "WORKSPACE")) (subpath (param "RUNTIME")) (subpath "/System") (subpath "/usr") (subpath "/bin") (subpath "/sbin") (subpath "/private/etc") (subpath "/dev") (subpath "/Applications/Xcode.app") (subpath "/Library/Developer")) ; Permit only required ancestor traversal, workspace data, private runtime data, and read-only platform/toolchain data.
+(allow file-write* (subpath (param "WORKSPACE")) (subpath (param "RUNTIME")) (literal "/dev/null")) ; Restrict mutations to the selected workspace and private runtime directory.

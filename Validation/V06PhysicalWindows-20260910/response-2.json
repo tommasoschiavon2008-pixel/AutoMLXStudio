@@ -1,0 +1,9 @@
+{
+  "durationMS" : 407,
+  "finishReason" : "stop",
+  "model" : "qwen\/qwen3-4b-2507",
+  "text" : "I remember the number 7319.",
+  "toolCalls" : [
+
+  ]
+}

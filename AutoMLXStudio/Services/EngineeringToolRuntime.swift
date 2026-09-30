@@ -144,15 +144,15 @@ actor EngineeringToolRuntime { // Centralizes tool registration, validation, con
         try prepareSanitizedRuntimeDirectory() // Creates only per-runtime HOME and temporary storage.
         let environment = EngineeringSanitizedEnvironment.make(runtimeDirectoryURL: runtimeDirectoryURL) // Builds a small deterministic environment with no inherited keys or tokens.
         let outputLimit = workspace.limits.maximumProcessOutputBytes // Reads the configured per-stream bound.
-        let process = try await processRunner.run(executableURL: assessment.executableURL, arguments: command.arguments, workingDirectoryURL: cwd, environment: environment, timeoutMilliseconds: command.timeoutMilliseconds, outputLimitBytes: outputLimit) // Launches no shell and awaits exact child cleanup.
+        let process = try await processRunner.run(executableURL: assessment.executableURL, arguments: command.arguments, workingDirectoryURL: cwd, workspaceRootURL: workspace.rootURL, runtimeDirectoryURL: runtimeDirectoryURL, environment: environment, timeoutMilliseconds: command.timeoutMilliseconds, outputLimitBytes: outputLimit) // Constrains the approved command and descendants to the canonical workspace plus narrow platform exceptions.
         let combined = [process.standardOutput, process.standardError].filter { !$0.isEmpty }.joined(separator: process.standardOutput.isEmpty || process.standardError.isEmpty ? "" : "\n[stderr]\n") // Creates a bounded display form while retaining structured streams in process evidence.
         let summary = "Command exited \(process.terminationStatus) in \(process.durationMilliseconds) ms (PID \(process.processID))." // Reports exact process and duration evidence.
         return EngineeringToolResult(tool: tool, risk: risk, succeeded: process.terminationStatus == 0, summary: EngineeringSecretRedactor.redact(summary), text: EngineeringSecretRedactor.redact(combined), errorCode: process.terminationStatus == 0 ? nil : "nonzero_exit", directoryEntries: [], matches: [], fileInfo: nil, change: nil, process: process, durationMilliseconds: elapsedMilliseconds(since: startNanoseconds)) // Preserves structured evidence while accurately classifying nonzero command exits.
     } // Ends deterministic process execution.
 
     private func prepareSanitizedRuntimeDirectory() throws { // Creates an isolated HOME and TMPDIR without reading user configuration or credentials.
-        try fileManager.createDirectory(at: runtimeDirectoryURL.appendingPathComponent("home", isDirectory: true), withIntermediateDirectories: true) // Creates only the runtime's private HOME.
-        try fileManager.createDirectory(at: runtimeDirectoryURL.appendingPathComponent("tmp", isDirectory: true), withIntermediateDirectories: true) // Creates only the runtime's private temporary directory.
+        try fileManager.createDirectory(at: runtimeDirectoryURL.appendingPathComponent("home", isDirectory: true), withIntermediateDirectories: true, attributes: [.posixPermissions: 0o700]) // Creates owner-only runtime HOME and new parent directories.
+        try fileManager.createDirectory(at: runtimeDirectoryURL.appendingPathComponent("tmp", isDirectory: true), withIntermediateDirectories: true, attributes: [.posixPermissions: 0o700]) // Creates owner-only private temporary storage without granting access to host-global /tmp.
     } // Ends sanitized runtime-directory setup.
 
     private func reason(for invocation: EngineeringToolInvocation) -> String { // Produces the exact bounded rationale shown by approval UI.
@@ -219,6 +219,7 @@ actor EngineeringToolRuntime { // Centralizes tool registration, validation, con
         case .processLaunchFailed: return "process_launch_failed" // Maps direct Process launch failure.
         case .processTimedOut: return "process_timeout" // Maps exact-child deadline termination.
         case .processCancelled: return "process_cancelled" // Maps exact-child cooperative cancellation.
+        case .sandboxUnavailable: return "sandbox_unavailable" // Maps a fail-closed process containment setup refusal.
         } // Ends stable error-code selection.
     } // Ends structured error mapping.
 } // Ends centralized Engineering Tool Runtime.

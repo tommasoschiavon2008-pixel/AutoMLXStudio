@@ -1,0 +1,34 @@
+/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/AppState.swift:211:141: warning: 'weak' ownership of capture 'self' differs from implicitly-captured strong reference in outer scope [#ImplicitStrongCapture]
+207 |         statusText = "Starting legacy fallback model…" // Makes the exact manual launch behavior clear in V0.2.
+208 |         activeProcessDescription = "MLX inference server" // Preserves the existing status-bar activity.
+209 |         Task { // Runs the serialized resource transition without blocking the main actor.
+    |              |- note: 'self' implicitly strongly captured here
+    |              `- note: add 'self' as a capture list item to silence
+210 |             do { // Attempts the same existing server startup through the one V0.2 lifecycle owner.
+211 |                 let preparation = try await modelResourceManager.prepare(model: legacyProfile, configuration: runtimeConfiguration) { [weak self] text in Task { @MainActor in self?.appendLog(text) } } // Loads the legacy/fallback model and preserves process output.
+    |                                                                                                                                             |- warning: 'weak' ownership of capture 'self' differs from implicitly-captured strong reference in outer scope [#ImplicitStrongCapture]
+    |                                                                                                                                             `- note: explicitly assign the capture list item to silence
+212 |                 serverPort = preparation.port // Stores the actual automatically selected port.
+213 |                 serverRunning = true // Marks the ready managed endpoint available to Chat.
+
+/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/AppState.swift:482:135: warning: 'weak' ownership of capture 'self' differs from implicitly-captured strong reference in outer scope [#ImplicitStrongCapture]
+476 |         modelTestResults[modelID] = ModelTestResult(modelID: modelID, status: .running, message: "Loading and testing…", loadMilliseconds: nil, inferenceMilliseconds: nil, date: Date()) // Shows immediate progress without a modal.
+477 |         activeProcessDescription = "Testing \(profile.displayName)" // Makes physical model work visible in the existing status bar.
+478 |         Task { // Runs serialized loading and inference without blocking SwiftUI.
+    |              |- note: 'self' implicitly strongly captured here
+    |              `- note: add 'self' as a capture list item to silence
+479 |             let previousSnapshot = await modelResourceManager.snapshot() // Captures the user's prior active model and port for restoration.
+480 |             let previousProfile = previousSnapshot.activeModelID.flatMap { modelRegistry.model(id: $0) } // Resolves the previous physical model when any.
+481 |             do { // Attempts validation, model preparation, and a short non-empty completion.
+482 |                 let preparation = try await modelResourceManager.prepare(model: profile, configuration: runtimeConfiguration) { [weak self] text in Task { @MainActor in self?.appendLog(text) } } // Loads or reuses the selected model through the one resource manager.
+    |                                                                                                                                       |- warning: 'weak' ownership of capture 'self' differs from implicitly-captured strong reference in outer scope [#ImplicitStrongCapture]
+    |                                                                                                                                       `- note: explicitly assign the capture list item to silence
+483 |                 let inferenceStart = DispatchTime.now().uptimeNanoseconds // Starts inference-only timing.
+484 |                 let response = try await MLXCompletionClient(service: mlxService).complete(LLMCompletionRequest(serverPort: preparation.port, model: profile.completionModel, systemPrompt: "Return one short plain-text answer. Do not include analysis.", history: [], userPrompt: "Reply with the word OK.", maxTokens: 16)) // Sends a deterministic bounded text-model health prompt.
+
+[#ImplicitStrongCapture]: <https://docs.swift.org/compiler/documentation/diagnostics/implicit-strong-capture>
+note: Using codesigning identity override: Apple Development: schiavon.tommaso@icloud.com (D7UB8ZG7D3)
+2026-09-28 18:58:35.254 xcodebuild[87072:4411497] [MT] IDETestOperationsObserverDebug: 1.947 elapsed -- Testing started completed.
+2026-09-28 18:58:35.254 xcodebuild[87072:4411497] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-09-28 18:58:35.254 xcodebuild[87072:4411497] [MT] IDETestOperationsObserverDebug: 1.947 sec, +1.947 sec -- end
+Testing started

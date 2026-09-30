@@ -184,11 +184,19 @@ final class EngineeringToolRuntimeTests: XCTestCase { // Groups process and poli
         try Data("untracked".utf8).write(to: fixture.rootURL.appendingPathComponent("Visible.txt")) // Creates one deterministic untracked file.
         let runtime = try makeRuntime(fixture: fixture) // Creates the production runtime.
         let result = await runtime.execute(.gitStatus) // Invokes the typed read-only Git tool.
-        XCTAssertTrue(result.succeeded) // Confirms Git status completed normally.
+        XCTAssertTrue(result.succeeded, "Sandboxed git diagnostic: \(result)") // Confirms Git status completed normally and reports bounded diagnostics if containment blocks it.
         XCTAssertEqual(result.risk, .safeReadOnly) // Confirms no approval was required.
         XCTAssertTrue(result.text?.contains("Visible.txt") == true) // Confirms output came from the authorized temporary workspace.
         XCTAssertNotNil(result.process?.processID) // Confirms exact child identity is retained in structured evidence.
     } // Ends typed Git status coverage.
+
+    func testSandboxedWorkingDirectoryRemainsUsable() async throws { // Verifies a real child can inspect its canonical temporary workspace cwd.
+        let fixture = try makeFixture(prefix: "SandboxCWD") // Creates a disposable path under the macOS per-user temporary tree.
+        defer { try? FileManager.default.removeItem(at: fixture.containerURL) } // Cleans only the exact test-owned fixture after inspection.
+        let runtime = try makeRuntime(fixture: fixture) // Uses the real production sandbox launch path.
+        let result = await runtime.execute(.runCommand(EngineeringCommand(executable: "pwd", timeoutMilliseconds: 2_000, reason: "Inspect contained cwd"))) // Requests one harmless cwd read inside the workspace.
+        XCTAssertTrue(result.succeeded, "Sandboxed pwd diagnostic: \(result)") // Requires process startup and canonical cwd lookup to work.
+    } // Ends temporary-directory sandbox usability coverage.
 
     private func makeFixture(prefix: String) throws -> (containerURL: URL, rootURL: URL, historyURL: URL, runtimeURL: URL) { // Creates one exact test-owned workspace, history, and process cache tree.
         let containerURL = FileManager.default.temporaryDirectory.appendingPathComponent("AutoMLXStudioTests-\(prefix)-\(UUID().uuidString)", isDirectory: true) // Uses a collision-resistant disposable container.

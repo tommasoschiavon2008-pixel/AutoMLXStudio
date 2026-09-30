@@ -1,0 +1,1177 @@
+{
+  "run" : {
+    "caseIDs" : [
+      "D0610000-0000-4000-8000-000000000001",
+      "D0610000-0000-4000-8000-000000000002",
+      "D0610000-0000-4000-8000-000000000003",
+      "D0610000-0000-4000-8000-000000000004",
+      "D0610000-0000-4000-8000-000000000005",
+      "D0610000-0000-4000-8000-000000000006",
+      "D0610000-0000-4000-8000-000000000007",
+      "D0610000-0000-4000-8000-000000000008",
+      "D0610000-0000-4000-8000-000000000009",
+      "D0610000-0000-4000-8000-000000000010",
+      "D0610000-0000-4000-8000-000000000011",
+      "D0610000-0000-4000-8000-000000000012",
+      "D0610000-0000-4000-8000-000000000013",
+      "D0610000-0000-4000-8000-000000000014",
+      "D0610000-0000-4000-8000-000000000015",
+      "D0610000-0000-4000-8000-000000000016",
+      "D0610000-0000-4000-8000-000000000017",
+      "D0610000-0000-4000-8000-000000000018",
+      "D0610000-0000-4000-8000-000000000019",
+      "D0610000-0000-4000-8000-000000000020",
+      "D0610000-0000-4000-8000-000000000021",
+      "D0610000-0000-4000-8000-000000000022",
+      "D0610000-0000-4000-8000-000000000023",
+      "D0610000-0000-4000-8000-000000000024",
+      "D0610000-0000-4000-8000-000000000025",
+      "D0610000-0000-4000-8000-000000000026",
+      "D0610000-0000-4000-8000-000000000027",
+      "D0610000-0000-4000-8000-000000000028",
+      "D0610000-0000-4000-8000-000000000029",
+      "D0610000-0000-4000-8000-000000000030",
+      "D0610000-0000-4000-8000-000000000031",
+      "D0610000-0000-4000-8000-000000000032",
+      "D0610000-0000-4000-8000-000000000033"
+    ],
+    "completedAt" : "2026-08-11T00:00:00Z",
+    "environment" : {
+      "appVersion" : "0.6.1-test",
+      "architecture" : "arm64",
+      "hardwareClass" : "Test Host",
+      "macOSVersion" : "Test",
+      "physicalMemoryGB" : 1
+    },
+    "id" : "E0610000-0000-4000-8000-000000000001",
+    "isBaseline" : false,
+    "isDeterministicDemo" : true,
+    "mode" : "standard",
+    "modelConfiguration" : {
+      "appVersion" : "0.6.1-test",
+      "maxOutputTokens" : 512,
+      "mlxConfiguration" : "Fake",
+      "qualityMode" : "Deterministic Test",
+      "runsPerCase" : 1,
+      "seed" : 61,
+      "streaming" : false,
+      "target" : {
+        "backendID" : "local-mlx",
+        "location" : {
+          "local" : {
+
+          }
+        },
+        "modelID" : "deterministic-v061-fake"
+      },
+      "warmupEnabled" : false
+    },
+    "results" : [
+      {
+        "caseID" : "D0610000-0000-4000-8000-000000000001",
+        "caseName" : "Follow two transformations",
+        "category" : "general",
+        "grader" : "Exact Match",
+        "gradingDetails" : "Exact text matched.",
+        "id" : "E0610000-0000-4000-8000-000000000001",
+        "input" : "Return the word studio in uppercase, followed by a colon and the number 61. Return only the result.",
+        "iterations" : 1,
+        "metadata" : {
+          "backend" : "local-mlx",
+          "model" : "deterministic-v061-fake",
+          "tool-mode" : "simulated-or-none"
+        },
+        "output" : "STUDIO:61",
+        "repetition" : 1,
+        "retryCount" : 0,
+        "score" : 100,
+        "status" : "passed",
+        "timing" : {
+          "completedAt" : "2026-08-11T00:00:00Z",
+          "generationDurationMilliseconds" : 10,
+          "startedAt" : "2026-08-11T00:00:00Z",
+          "totalDurationMilliseconds" : 10
+        },
+        "toolCallCount" : 0,
+        "usage" : {
+          "inputTokens" : 8,
+          "outputTokens" : 2,
+          "totalTokens" : 10
+        }
+      },
+      {
+        "caseID" : "D0610000-0000-4000-8000-000000000002",
+        "caseName" : "Classify message intent",
+        "category" : "general",
+        "grader" : "Normalized Exact Match",
+        "gradingDetails" : "Normalized text matched.",
+        "id" : "E0610000-0000-4000-8000-000000000002",
+        "input" : "Classify this message as QUESTION, COMMAND, or STATEMENT. Return one label only: 'Please archive the completed run.'",
+        "iterations" : 1,
+        "metadata" : {
+          "backend" : "local-mlx",
+          "model" : "deterministic-v061-fake",
+          "tool-mode" : "simulated-or-none"
+        },
+        "output" : "COMMAND",
+        "repetition" : 1,
+        "retryCount" : 0,
+        "score" : 100,
+        "status" : "passed",
+        "timing" : {
+          "completedAt" : "2026-08-11T00:00:00Z",
+          "generationDurationMilliseconds" : 10,
+          "startedAt" : "2026-08-11T00:00:00Z",
+          "totalDurationMilliseconds" : 10
+        },
+        "toolCallCount" : 0,
+        "usage" : {
+          "inputTokens" : 8,
+          "outputTokens" : 2,
+          "totalTokens" : 10
+        }
+      },
+      {
+        "caseID" : "D0610000-0000-4000-8000-000000000003",
+        "caseName" : "Extract stable identifier",
+        "category" : "general",
+        "grader" : "Regular Expression",
+        "gradingDetails" : "Regular expression matched.",
+        "id" : "E0610000-0000-4000-8000-000000000003",
+        "input" : "Extract only the run identifier from: 'Result run_id=V061-042 is ready.'",
+        "iterations" : 1,
+        "metadata" : {
+          "backend" : "local-mlx",
+          "model" : "deterministic-v061-fake",
+          "tool-mode" : "simulated-or-none"
+        },
+        "output" : "V061-042",
+        "repetition" : 1,
+        "retryCount" : 0,
+        "score" : 100,
+        "status" : "passed",
+        "timing" : {
+          "completedAt" : "2026-08-11T00:00:00Z",
+          "generationDurationMilliseconds" : 10,
+          "startedAt" : "2026-08-11T00:00:00Z",
+          "totalDurationMilliseconds" : 10
+        },
+        "toolCallCount" : 0,
+        "usage" : {
+          "inputTokens" : 8,
+          "outputTokens" : 2,
+          "totalTokens" : 10
+        }
+      },
+      {
+        "caseID" : "D0610000-0000-4000-8000-000000000004",
+        "caseName" : "Retain required terms",
+        "category" : "general",
+        "grader" : "Contains",
+        "gradingDetails" : "Required phrase condition matched.",
+        "id" : "E0610000-0000-4000-8000-000000000004",
+        "input" : "Write one short sentence containing both 'offline' and 'deterministic'.",
+        "iterations" : 1,
+        "metadata" : {
+          "backend" : "local-mlx",
+          "model" : "deterministic-v061-fake",
+          "tool-mode" : "simulated-or-none"
+        },
+        "output" : "offline and deterministic",
+        "repetition" : 1,
+        "retryCount" : 0,
+        "score" : 100,
+        "status" : "passed",
+        "timing" : {
+          "completedAt" : "2026-08-11T00:00:00Z",
+          "generationDurationMilliseconds" : 10,
+          "startedAt" : "2026-08-11T00:00:00Z",
+          "totalDurationMilliseconds" : 10
+        },
+        "toolCallCount" : 0,
+        "usage" : {
+          "inputTokens" : 8,
+          "outputTokens" : 2,
+          "totalTokens" : 10
+        }
+      },
+      {
+        "caseID" : "D0610000-0000-4000-8000-000000000005",
+        "caseName" : "Concise one-line response",
+        "category" : "general",
+        "grader" : "Programmatic",
+        "gradingDetails" : "Response contained one line.",
+        "id" : "E0610000-0000-4000-8000-000000000005",
+        "input" : "Answer on exactly one non-empty line: What platform does AutoMLXStudio target?",
+        "iterations" : 1,
+        "metadata" : {
+          "backend" : "local-mlx",
+          "model" : "deterministic-v061-fake",
+          "tool-mode" : "simulated-or-none"
+        },
+        "output" : "macOS",
+        "repetition" : 1,
+        "retryCount" : 0,
+        "score" : 100,
+        "status" : "passed",
+        "timing" : {
+          "completedAt" : "2026-08-11T00:00:00Z",
+          "generationDurationMilliseconds" : 10,
+          "startedAt" : "2026-08-11T00:00:00Z",
+          "totalDurationMilliseconds" : 10
+        },
+        "toolCallCount" : 0,
+        "usage" : {
+          "inputTokens" : 8,
+          "outputTokens" : 2,
+          "totalTokens" : 10
+        }
+      },
+      {
+        "caseID" : "D0610000-0000-4000-8000-000000000006",
+        "caseName" : "Inventory remainder",
+        "category" : "reasoning",
+        "grader" : "Numeric",
+        "gradingDetails" : "Numeric value was within tolerance.",
+        "id" : "E0610000-0000-4000-8000-000000000006",
+        "input" : "A lab has 17 adapters. It assigns 4 adapters to each of 3 benches. How many remain? Return only the number.",
+        "iterations" : 1,
+        "metadata" : {
+          "backend" : "local-mlx",
+          "model" : "deterministic-v061-fake",
+          "tool-mode" : "simulated-or-none"
+        },
+        "output" : "5",
+        "repetition" : 1,
+        "retryCount" : 0,
+        "score" : 100,
+        "status" : "passed",
+        "timing" : {
+          "completedAt" : "2026-08-11T00:00:00Z",
+          "generationDurationMilliseconds" : 10,
+          "startedAt" : "2026-08-11T00:00:00Z",
+          "totalDurationMilliseconds" : 10
+        },
+        "toolCallCount" : 0,
+        "usage" : {
+          "inputTokens" : 8,
+          "outputTokens" : 2,
+          "totalTokens" : 10
+        }
+      },
+      {
+        "caseID" : "D0610000-0000-4000-8000-000000000007",
+        "caseName" : "Sequence continuation",
+        "category" : "reasoning",
+        "grader" : "Numeric",
+        "gradingDetails" : "Numeric value was within tolerance.",
+        "id" : "E0610000-0000-4000-8000-000000000007",
+        "input" : "Continue the sequence 3, 6, 12, 24. Return only the next number.",
+        "iterations" : 1,
+        "metadata" : {
+          "backend" : "local-mlx",
+          "model" : "deterministic-v061-fake",
+          "tool-mode" : "simulated-or-none"
+        },
+        "output" : "48",
+        "repetition" : 1,
+        "retryCount" : 0,
+        "score" : 100,
+        "status" : "passed",
+        "timing" : {
+          "completedAt" : "2026-08-11T00:00:00Z",
+          "generationDurationMilliseconds" : 10,
+          "startedAt" : "2026-08-11T00:00:00Z",
+          "totalDurationMilliseconds" : 10
+        },
+        "toolCallCount" : 0,
+        "usage" : {
+          "inputTokens" : 8,
+          "outputTokens" : 2,
+          "totalTokens" : 10
+        }
+      },
+      {
+        "caseID" : "D0610000-0000-4000-8000-000000000008",
+        "caseName" : "Constraint intersection",
+        "category" : "reasoning",
+        "grader" : "Normalized Exact Match",
+        "gradingDetails" : "Normalized text matched.",
+        "id" : "E0610000-0000-4000-8000-000000000008",
+        "input" : "A run must be after Tuesday, before Friday, and not Thursday. Return only the weekday.",
+        "iterations" : 1,
+        "metadata" : {
+          "backend" : "local-mlx",
+          "model" : "deterministic-v061-fake",
+          "tool-mode" : "simulated-or-none"
+        },
+        "output" : "Wednesday",
+        "repetition" : 1,
+        "retryCount" : 0,
+        "score" : 100,
+        "status" : "passed",
+        "timing" : {
+          "completedAt" : "2026-08-11T00:00:00Z",
+          "generationDurationMilliseconds" : 10,
+          "startedAt" : "2026-08-11T00:00:00Z",
+          "totalDurationMilliseconds" : 10
+        },
+        "toolCallCount" : 0,
+        "usage" : {
+          "inputTokens" : 8,
+          "outputTokens" : 2,
+          "totalTokens" : 10
+        }
+      },
+      {
+        "caseID" : "D0610000-0000-4000-8000-000000000009",
+        "caseName" : "Weighted total",
+        "category" : "reasoning",
+        "grader" : "Numeric",
+        "gradingDetails" : "Numeric value was within tolerance.",
+        "id" : "E0610000-0000-4000-8000-000000000009",
+        "input" : "Quality is 80 with weight 0.35 and Reliability is 60 with weight 0.25. Ignore all other dimensions. Return only their unnormalized weighted sum.",
+        "iterations" : 1,
+        "metadata" : {
+          "backend" : "local-mlx",
+          "model" : "deterministic-v061-fake",
+          "tool-mode" : "simulated-or-none"
+        },
+        "output" : "43",
+        "repetition" : 1,
+        "retryCount" : 0,
+        "score" : 100,
+        "status" : "passed",
+        "timing" : {
+          "completedAt" : "2026-08-11T00:00:00Z",
+          "generationDurationMilliseconds" : 10,
+          "startedAt" : "2026-08-11T00:00:00Z",
+          "totalDurationMilliseconds" : 10
+        },
+        "toolCallCount" : 0,
+        "usage" : {
+          "inputTokens" : 8,
+          "outputTokens" : 2,
+          "totalTokens" : 10
+        }
+      },
+      {
+        "caseID" : "D0610000-0000-4000-8000-000000000010",
+        "caseName" : "Ordering deduction",
+        "category" : "reasoning",
+        "grader" : "Normalized Exact Match",
+        "gradingDetails" : "Normalized text matched.",
+        "id" : "E0610000-0000-4000-8000-000000000010",
+        "input" : "Mira finishes before Niko. Niko finishes before Oren. Return the three names from first to last separated by commas.",
+        "iterations" : 1,
+        "metadata" : {
+          "backend" : "local-mlx",
+          "model" : "deterministic-v061-fake",
+          "tool-mode" : "simulated-or-none"
+        },
+        "output" : "Mira,Niko,Oren",
+        "repetition" : 1,
+        "retryCount" : 0,
+        "score" : 100,
+        "status" : "passed",
+        "timing" : {
+          "completedAt" : "2026-08-11T00:00:00Z",
+          "generationDurationMilliseconds" : 10,
+          "startedAt" : "2026-08-11T00:00:00Z",
+          "totalDurationMilliseconds" : 10
+        },
+        "toolCallCount" : 0,
+        "usage" : {
+          "inputTokens" : 8,
+          "outputTokens" : 2,
+          "totalTokens" : 10
+        }
+      },
+      {
+        "caseID" : "D0610000-0000-4000-8000-000000000011",
+        "caseName" : "Swift array result",
+        "category" : "coding",
+        "grader" : "Exact Match",
+        "gradingDetails" : "Exact text matched.",
+        "id" : "E0610000-0000-4000-8000-000000000011",
+        "input" : "In Swift, what does `[1, 2, 3].map { $0 * 2 }` produce? Return exactly `[2, 4, 6]`.",
+        "iterations" : 1,
+        "metadata" : {
+          "backend" : "local-mlx",
+          "model" : "deterministic-v061-fake",
+          "tool-mode" : "simulated-or-none"
+        },
+        "output" : "[2, 4, 6]",
+        "repetition" : 1,
+        "retryCount" : 0,
+        "score" : 100,
+        "status" : "passed",
+        "timing" : {
+          "completedAt" : "2026-08-11T00:00:00Z",
+          "generationDurationMilliseconds" : 10,
+          "startedAt" : "2026-08-11T00:00:00Z",
+          "totalDurationMilliseconds" : 10
+        },
+        "toolCallCount" : 0,
+        "usage" : {
+          "inputTokens" : 8,
+          "outputTokens" : 2,
+          "totalTokens" : 10
+        }
+      },
+      {
+        "caseID" : "D0610000-0000-4000-8000-000000000012",
+        "caseName" : "Python loop output",
+        "category" : "coding",
+        "grader" : "Numeric",
+        "gradingDetails" : "Numeric value was within tolerance.",
+        "id" : "E0610000-0000-4000-8000-000000000012",
+        "input" : "What single integer is printed by `total = 0\nfor n in [2, 5, 1]: total += n\nprint(total)`? Return only the integer.",
+        "iterations" : 1,
+        "metadata" : {
+          "backend" : "local-mlx",
+          "model" : "deterministic-v061-fake",
+          "tool-mode" : "simulated-or-none"
+        },
+        "output" : "8",
+        "repetition" : 1,
+        "retryCount" : 0,
+        "score" : 100,
+        "status" : "passed",
+        "timing" : {
+          "completedAt" : "2026-08-11T00:00:00Z",
+          "generationDurationMilliseconds" : 10,
+          "startedAt" : "2026-08-11T00:00:00Z",
+          "totalDurationMilliseconds" : 10
+        },
+        "toolCallCount" : 0,
+        "usage" : {
+          "inputTokens" : 8,
+          "outputTokens" : 2,
+          "totalTokens" : 10
+        }
+      },
+      {
+        "caseID" : "D0610000-0000-4000-8000-000000000013",
+        "caseName" : "C++ boundary correction",
+        "category" : "coding",
+        "grader" : "Normalized Exact Match",
+        "gradingDetails" : "Normalized text matched.",
+        "id" : "E0610000-0000-4000-8000-000000000013",
+        "input" : "A C++ loop over a vector uses `i <= values.size()` and reads `values[i]`. Return only the corrected loop condition.",
+        "iterations" : 1,
+        "metadata" : {
+          "backend" : "local-mlx",
+          "model" : "deterministic-v061-fake",
+          "tool-mode" : "simulated-or-none"
+        },
+        "output" : "i < values.size()",
+        "repetition" : 1,
+        "retryCount" : 0,
+        "score" : 100,
+        "status" : "passed",
+        "timing" : {
+          "completedAt" : "2026-08-11T00:00:00Z",
+          "generationDurationMilliseconds" : 10,
+          "startedAt" : "2026-08-11T00:00:00Z",
+          "totalDurationMilliseconds" : 10
+        },
+        "toolCallCount" : 0,
+        "usage" : {
+          "inputTokens" : 8,
+          "outputTokens" : 2,
+          "totalTokens" : 10
+        }
+      },
+      {
+        "caseID" : "D0610000-0000-4000-8000-000000000014",
+        "caseName" : "Swift optional safeguard",
+        "category" : "coding",
+        "grader" : "Normalized Exact Match",
+        "gradingDetails" : "Normalized text matched.",
+        "id" : "E0610000-0000-4000-8000-000000000014",
+        "input" : "Return the Swift keyword pair used to unwrap an optional and exit when it is nil. Return only two words.",
+        "iterations" : 1,
+        "metadata" : {
+          "backend" : "local-mlx",
+          "model" : "deterministic-v061-fake",
+          "tool-mode" : "simulated-or-none"
+        },
+        "output" : "guard let",
+        "repetition" : 1,
+        "retryCount" : 0,
+        "score" : 100,
+        "status" : "passed",
+        "timing" : {
+          "completedAt" : "2026-08-11T00:00:00Z",
+          "generationDurationMilliseconds" : 10,
+          "startedAt" : "2026-08-11T00:00:00Z",
+          "totalDurationMilliseconds" : 10
+        },
+        "toolCallCount" : 0,
+        "usage" : {
+          "inputTokens" : 8,
+          "outputTokens" : 2,
+          "totalTokens" : 10
+        }
+      },
+      {
+        "caseID" : "D0610000-0000-4000-8000-000000000015",
+        "caseName" : "Complexity classification",
+        "category" : "coding",
+        "grader" : "Normalized Exact Match",
+        "gradingDetails" : "Normalized text matched.",
+        "id" : "E0610000-0000-4000-8000-000000000015",
+        "input" : "A loop visits every element once and does constant work. Return only the Big-O time complexity.",
+        "iterations" : 1,
+        "metadata" : {
+          "backend" : "local-mlx",
+          "model" : "deterministic-v061-fake",
+          "tool-mode" : "simulated-or-none"
+        },
+        "output" : "O(n)",
+        "repetition" : 1,
+        "retryCount" : 0,
+        "score" : 100,
+        "status" : "passed",
+        "timing" : {
+          "completedAt" : "2026-08-11T00:00:00Z",
+          "generationDurationMilliseconds" : 10,
+          "startedAt" : "2026-08-11T00:00:00Z",
+          "totalDurationMilliseconds" : 10
+        },
+        "toolCallCount" : 0,
+        "usage" : {
+          "inputTokens" : 8,
+          "outputTokens" : 2,
+          "totalTokens" : 10
+        }
+      },
+      {
+        "caseID" : "D0610000-0000-4000-8000-000000000016",
+        "caseName" : "Run state object",
+        "category" : "structured-output",
+        "grader" : "JSON Validation",
+        "gradingDetails" : "JSON structure and declared values matched.",
+        "id" : "E0610000-0000-4000-8000-000000000016",
+        "input" : "Return strict JSON only with keys status and version. status must be \"ready\" and version must be 61.",
+        "iterations" : 1,
+        "metadata" : {
+          "backend" : "local-mlx",
+          "model" : "deterministic-v061-fake",
+          "tool-mode" : "simulated-or-none"
+        },
+        "output" : "{\"status\":\"ready\",\"version\":61}",
+        "repetition" : 1,
+        "retryCount" : 0,
+        "score" : 100,
+        "status" : "passed",
+        "timing" : {
+          "completedAt" : "2026-08-11T00:00:00Z",
+          "generationDurationMilliseconds" : 10,
+          "startedAt" : "2026-08-11T00:00:00Z",
+          "totalDurationMilliseconds" : 10
+        },
+        "toolCallCount" : 0,
+        "usage" : {
+          "inputTokens" : 8,
+          "outputTokens" : 2,
+          "totalTokens" : 10
+        }
+      },
+      {
+        "caseID" : "D0610000-0000-4000-8000-000000000017",
+        "caseName" : "Nested score object",
+        "category" : "structured-output",
+        "grader" : "JSON Validation",
+        "gradingDetails" : "JSON structure and declared values matched.",
+        "id" : "E0610000-0000-4000-8000-000000000017",
+        "input" : "Return strict JSON only: an object containing metrics.score equal to 100.",
+        "iterations" : 1,
+        "metadata" : {
+          "backend" : "local-mlx",
+          "model" : "deterministic-v061-fake",
+          "tool-mode" : "simulated-or-none"
+        },
+        "output" : "{\"metrics\":{\"score\":100}}",
+        "repetition" : 1,
+        "retryCount" : 0,
+        "score" : 100,
+        "status" : "passed",
+        "timing" : {
+          "completedAt" : "2026-08-11T00:00:00Z",
+          "generationDurationMilliseconds" : 10,
+          "startedAt" : "2026-08-11T00:00:00Z",
+          "totalDurationMilliseconds" : 10
+        },
+        "toolCallCount" : 0,
+        "usage" : {
+          "inputTokens" : 8,
+          "outputTokens" : 2,
+          "totalTokens" : 10
+        }
+      },
+      {
+        "caseID" : "D0610000-0000-4000-8000-000000000018",
+        "caseName" : "Boolean policy object",
+        "category" : "structured-output",
+        "grader" : "JSON Validation",
+        "gradingDetails" : "JSON structure and declared values matched.",
+        "id" : "E0610000-0000-4000-8000-000000000018",
+        "input" : "Return strict JSON only with enabled set to false and mode set to \"sequential\".",
+        "iterations" : 1,
+        "metadata" : {
+          "backend" : "local-mlx",
+          "model" : "deterministic-v061-fake",
+          "tool-mode" : "simulated-or-none"
+        },
+        "output" : "{\"enabled\":false,\"mode\":\"sequential\"}",
+        "repetition" : 1,
+        "retryCount" : 0,
+        "score" : 100,
+        "status" : "passed",
+        "timing" : {
+          "completedAt" : "2026-08-11T00:00:00Z",
+          "generationDurationMilliseconds" : 10,
+          "startedAt" : "2026-08-11T00:00:00Z",
+          "totalDurationMilliseconds" : 10
+        },
+        "toolCallCount" : 0,
+        "usage" : {
+          "inputTokens" : 8,
+          "outputTokens" : 2,
+          "totalTokens" : 10
+        }
+      },
+      {
+        "caseID" : "D0610000-0000-4000-8000-000000000019",
+        "caseName" : "String array root",
+        "category" : "structured-output",
+        "grader" : "JSON Validation",
+        "gradingDetails" : "JSON structure and declared values matched.",
+        "id" : "E0610000-0000-4000-8000-000000000019",
+        "input" : "Return strict JSON only: an array containing the strings alpha and beta in that order.",
+        "iterations" : 1,
+        "metadata" : {
+          "backend" : "local-mlx",
+          "model" : "deterministic-v061-fake",
+          "tool-mode" : "simulated-or-none"
+        },
+        "output" : "[\"alpha\",\"beta\"]",
+        "repetition" : 1,
+        "retryCount" : 0,
+        "score" : 100,
+        "status" : "passed",
+        "timing" : {
+          "completedAt" : "2026-08-11T00:00:00Z",
+          "generationDurationMilliseconds" : 10,
+          "startedAt" : "2026-08-11T00:00:00Z",
+          "totalDurationMilliseconds" : 10
+        },
+        "toolCallCount" : 0,
+        "usage" : {
+          "inputTokens" : 8,
+          "outputTokens" : 2,
+          "totalTokens" : 10
+        }
+      },
+      {
+        "caseID" : "D0610000-0000-4000-8000-000000000020",
+        "caseName" : "Optional field schema",
+        "category" : "structured-output",
+        "grader" : "JSON Validation",
+        "gradingDetails" : "JSON structure and declared values matched.",
+        "id" : "E0610000-0000-4000-8000-000000000020",
+        "input" : "Return strict JSON only with id equal to \"case-20\". An optional note string may be included.",
+        "iterations" : 1,
+        "metadata" : {
+          "backend" : "local-mlx",
+          "model" : "deterministic-v061-fake",
+          "tool-mode" : "simulated-or-none"
+        },
+        "output" : "{\"id\":\"case-20\"}",
+        "repetition" : 1,
+        "retryCount" : 0,
+        "score" : 100,
+        "status" : "passed",
+        "timing" : {
+          "completedAt" : "2026-08-11T00:00:00Z",
+          "generationDurationMilliseconds" : 10,
+          "startedAt" : "2026-08-11T00:00:00Z",
+          "totalDurationMilliseconds" : 10
+        },
+        "toolCallCount" : 0,
+        "usage" : {
+          "inputTokens" : 8,
+          "outputTokens" : 2,
+          "totalTokens" : 10
+        }
+      },
+      {
+        "caseID" : "D0610000-0000-4000-8000-000000000021",
+        "caseName" : "Select weather lookup",
+        "category" : "tool-use",
+        "grader" : "Tool Call Validation",
+        "gradingDetails" : "Tool names, order, and arguments matched.",
+        "id" : "E0610000-0000-4000-8000-000000000021",
+        "input" : "Use the provided harmless tool representation to look up weather for Rome. Do not answer with prose.",
+        "iterations" : 1,
+        "metadata" : {
+          "backend" : "local-mlx",
+          "model" : "deterministic-v061-fake",
+          "tool-mode" : "native"
+        },
+        "repetition" : 1,
+        "retryCount" : 0,
+        "score" : 100,
+        "status" : "passed",
+        "timing" : {
+          "completedAt" : "2026-08-11T00:00:00Z",
+          "generationDurationMilliseconds" : 10,
+          "startedAt" : "2026-08-11T00:00:00Z",
+          "totalDurationMilliseconds" : 10
+        },
+        "toolCallCount" : 1,
+        "usage" : {
+          "inputTokens" : 8,
+          "outputTokens" : 2,
+          "totalTokens" : 10
+        }
+      },
+      {
+        "caseID" : "D0610000-0000-4000-8000-000000000022",
+        "caseName" : "Select calculator",
+        "category" : "tool-use",
+        "grader" : "Tool Call Validation",
+        "gradingDetails" : "Tool names, order, and arguments matched.",
+        "id" : "E0610000-0000-4000-8000-000000000022",
+        "input" : "Use the provided harmless tool representation to calculate 7 multiplied by 9. Do not answer with prose.",
+        "iterations" : 1,
+        "metadata" : {
+          "backend" : "local-mlx",
+          "model" : "deterministic-v061-fake",
+          "tool-mode" : "native"
+        },
+        "repetition" : 1,
+        "retryCount" : 0,
+        "score" : 100,
+        "status" : "passed",
+        "timing" : {
+          "completedAt" : "2026-08-11T00:00:00Z",
+          "generationDurationMilliseconds" : 10,
+          "startedAt" : "2026-08-11T00:00:00Z",
+          "totalDurationMilliseconds" : 10
+        },
+        "toolCallCount" : 1,
+        "usage" : {
+          "inputTokens" : 8,
+          "outputTokens" : 2,
+          "totalTokens" : 10
+        }
+      },
+      {
+        "caseID" : "D0610000-0000-4000-8000-000000000023",
+        "caseName" : "Select project search",
+        "category" : "tool-use",
+        "grader" : "Tool Call Validation",
+        "gradingDetails" : "Tool names, order, and arguments matched.",
+        "id" : "E0610000-0000-4000-8000-000000000023",
+        "input" : "Use the provided harmless tool representation to search project text for BenchmarkRun. Do not answer with prose.",
+        "iterations" : 1,
+        "metadata" : {
+          "backend" : "local-mlx",
+          "model" : "deterministic-v061-fake",
+          "tool-mode" : "native"
+        },
+        "repetition" : 1,
+        "retryCount" : 0,
+        "score" : 100,
+        "status" : "passed",
+        "timing" : {
+          "completedAt" : "2026-08-11T00:00:00Z",
+          "generationDurationMilliseconds" : 10,
+          "startedAt" : "2026-08-11T00:00:00Z",
+          "totalDurationMilliseconds" : 10
+        },
+        "toolCallCount" : 1,
+        "usage" : {
+          "inputTokens" : 8,
+          "outputTokens" : 2,
+          "totalTokens" : 10
+        }
+      },
+      {
+        "caseID" : "D0610000-0000-4000-8000-000000000024",
+        "caseName" : "Ordered two-tool plan",
+        "category" : "tool-use",
+        "grader" : "Tool Call Validation",
+        "gradingDetails" : "Tool names, order, and arguments matched.",
+        "id" : "E0610000-0000-4000-8000-000000000024",
+        "input" : "Return two harmless tool calls in order: search_project for AppState, then open_file for AppState.swift. Do not answer with prose.",
+        "iterations" : 1,
+        "metadata" : {
+          "backend" : "local-mlx",
+          "model" : "deterministic-v061-fake",
+          "tool-mode" : "native"
+        },
+        "repetition" : 1,
+        "retryCount" : 0,
+        "score" : 100,
+        "status" : "passed",
+        "timing" : {
+          "completedAt" : "2026-08-11T00:00:00Z",
+          "generationDurationMilliseconds" : 10,
+          "startedAt" : "2026-08-11T00:00:00Z",
+          "totalDurationMilliseconds" : 10
+        },
+        "toolCallCount" : 2,
+        "usage" : {
+          "inputTokens" : 8,
+          "outputTokens" : 2,
+          "totalTokens" : 10
+        }
+      },
+      {
+        "caseID" : "D0610000-0000-4000-8000-000000000025",
+        "caseName" : "Four-phase change plan",
+        "category" : "engineering",
+        "grader" : "Programmatic",
+        "gradingDetails" : "Engineering phases were complete and ordered.",
+        "id" : "E0610000-0000-4000-8000-000000000025",
+        "input" : "For a safe code change, give a concise plan whose phase labels appear in this exact order: Inspect, Edit, Test, Verify.",
+        "iterations" : 1,
+        "metadata" : {
+          "backend" : "local-mlx",
+          "model" : "deterministic-v061-fake",
+          "tool-mode" : "simulated-or-none"
+        },
+        "output" : "Inspect, then Edit, then Test, then Verify.",
+        "repetition" : 1,
+        "retryCount" : 0,
+        "score" : 100,
+        "status" : "passed",
+        "timing" : {
+          "completedAt" : "2026-08-11T00:00:00Z",
+          "generationDurationMilliseconds" : 10,
+          "startedAt" : "2026-08-11T00:00:00Z",
+          "totalDurationMilliseconds" : 10
+        },
+        "toolCallCount" : 0,
+        "usage" : {
+          "inputTokens" : 8,
+          "outputTokens" : 2,
+          "totalTokens" : 10
+        }
+      },
+      {
+        "caseID" : "D0610000-0000-4000-8000-000000000026",
+        "caseName" : "Isolated fixture repair",
+        "category" : "engineering",
+        "grader" : "Normalized Exact Match",
+        "gradingDetails" : "Normalized text matched.",
+        "id" : "E0610000-0000-4000-8000-000000000026",
+        "input" : "A fixture function returns `a - b` but its contract says sum. Name the exact replacement expression only.",
+        "iterations" : 1,
+        "metadata" : {
+          "backend" : "local-mlx",
+          "model" : "deterministic-v061-fake",
+          "tool-mode" : "simulated-or-none"
+        },
+        "output" : "a + b",
+        "repetition" : 1,
+        "retryCount" : 0,
+        "score" : 100,
+        "status" : "passed",
+        "timing" : {
+          "completedAt" : "2026-08-11T00:00:00Z",
+          "generationDurationMilliseconds" : 10,
+          "startedAt" : "2026-08-11T00:00:00Z",
+          "totalDurationMilliseconds" : 10
+        },
+        "toolCallCount" : 0,
+        "usage" : {
+          "inputTokens" : 8,
+          "outputTokens" : 2,
+          "totalTokens" : 10
+        }
+      },
+      {
+        "caseID" : "D0610000-0000-4000-8000-000000000027",
+        "caseName" : "Verification command intent",
+        "category" : "engineering",
+        "grader" : "Normalized Exact Match",
+        "gradingDetails" : "Normalized text matched.",
+        "id" : "E0610000-0000-4000-8000-000000000027",
+        "input" : "A Swift package change needs its unit suite run. Return only the conventional SwiftPM test command.",
+        "iterations" : 1,
+        "metadata" : {
+          "backend" : "local-mlx",
+          "model" : "deterministic-v061-fake",
+          "tool-mode" : "simulated-or-none"
+        },
+        "output" : "swift test",
+        "repetition" : 1,
+        "retryCount" : 0,
+        "score" : 100,
+        "status" : "passed",
+        "timing" : {
+          "completedAt" : "2026-08-11T00:00:00Z",
+          "generationDurationMilliseconds" : 10,
+          "startedAt" : "2026-08-11T00:00:00Z",
+          "totalDurationMilliseconds" : 10
+        },
+        "toolCallCount" : 0,
+        "usage" : {
+          "inputTokens" : 8,
+          "outputTokens" : 2,
+          "totalTokens" : 10
+        }
+      },
+      {
+        "caseID" : "D0610000-0000-4000-8000-000000000028",
+        "caseName" : "Detect force unwrap",
+        "category" : "reviewer",
+        "grader" : "Normalized Exact Match",
+        "gradingDetails" : "Normalized text matched.",
+        "id" : "E0610000-0000-4000-8000-000000000028",
+        "input" : "Review `let value = input!` where input may be nil. Return only the defect label `unsafe force unwrap`.",
+        "iterations" : 1,
+        "metadata" : {
+          "backend" : "local-mlx",
+          "model" : "deterministic-v061-fake",
+          "tool-mode" : "simulated-or-none"
+        },
+        "output" : "unsafe force unwrap",
+        "repetition" : 1,
+        "retryCount" : 0,
+        "score" : 100,
+        "status" : "passed",
+        "timing" : {
+          "completedAt" : "2026-08-11T00:00:00Z",
+          "generationDurationMilliseconds" : 10,
+          "startedAt" : "2026-08-11T00:00:00Z",
+          "totalDurationMilliseconds" : 10
+        },
+        "toolCallCount" : 0,
+        "usage" : {
+          "inputTokens" : 8,
+          "outputTokens" : 2,
+          "totalTokens" : 10
+        }
+      },
+      {
+        "caseID" : "D0610000-0000-4000-8000-000000000029",
+        "caseName" : "Assign blocking severity",
+        "category" : "reviewer",
+        "grader" : "Normalized Exact Match",
+        "gradingDetails" : "Normalized text matched.",
+        "id" : "E0610000-0000-4000-8000-000000000029",
+        "input" : "A change deletes all user projects on app launch. Return only the severity: BLOCKER, HIGH, MEDIUM, or LOW.",
+        "iterations" : 1,
+        "metadata" : {
+          "backend" : "local-mlx",
+          "model" : "deterministic-v061-fake",
+          "tool-mode" : "simulated-or-none"
+        },
+        "output" : "BLOCKER",
+        "repetition" : 1,
+        "retryCount" : 0,
+        "score" : 100,
+        "status" : "passed",
+        "timing" : {
+          "completedAt" : "2026-08-11T00:00:00Z",
+          "generationDurationMilliseconds" : 10,
+          "startedAt" : "2026-08-11T00:00:00Z",
+          "totalDurationMilliseconds" : 10
+        },
+        "toolCallCount" : 0,
+        "usage" : {
+          "inputTokens" : 8,
+          "outputTokens" : 2,
+          "totalTokens" : 10
+        }
+      },
+      {
+        "caseID" : "D0610000-0000-4000-8000-000000000030",
+        "caseName" : "Identify missing assertion",
+        "category" : "reviewer",
+        "grader" : "Normalized Exact Match",
+        "gradingDetails" : "Normalized text matched.",
+        "id" : "E0610000-0000-4000-8000-000000000030",
+        "input" : "A test calls a function but checks no output or state. Return only `missing assertion`.",
+        "iterations" : 1,
+        "metadata" : {
+          "backend" : "local-mlx",
+          "model" : "deterministic-v061-fake",
+          "tool-mode" : "simulated-or-none"
+        },
+        "output" : "missing assertion",
+        "repetition" : 1,
+        "retryCount" : 0,
+        "score" : 100,
+        "status" : "passed",
+        "timing" : {
+          "completedAt" : "2026-08-11T00:00:00Z",
+          "generationDurationMilliseconds" : 10,
+          "startedAt" : "2026-08-11T00:00:00Z",
+          "totalDurationMilliseconds" : 10
+        },
+        "toolCallCount" : 0,
+        "usage" : {
+          "inputTokens" : 8,
+          "outputTokens" : 2,
+          "totalTokens" : 10
+        }
+      },
+      {
+        "caseID" : "D0610000-0000-4000-8000-000000000031",
+        "caseName" : "Synthetic recall slot 73",
+        "category" : "long-context",
+        "grader" : "Programmatic",
+        "gradingDetails" : "Registered expected string matched.",
+        "id" : "E0610000-0000-4000-8000-000000000031",
+        "input" : "Read the synthetic records below. Return only the verification token in Record 73.\n\nRecord 1: synthetic benchmark filler value 17.\nRecord 2: synthetic benchmark filler value 34.\nRecord 3: synthetic benchmark filler value 51.\nRecord 4: synthetic benchmark filler value 68.\nRecord 5: synthetic benchmark filler value 85.\nRecord 6: synthetic benchmark filler value 102.\nRecord 7: synthetic benchmark filler value 119.\nRecord 8: synthetic benchmark filler value 136.\nRecord 9: synthetic benchmark filler value 153.\nRecord 10: synthetic benchmark filler value 170.\nRecord 11: synthetic benchmark filler value 187.\nRecord 12: synthetic benchmark filler value 204.\nRecord 13: synthetic benchmark filler value 221.\nRecord 14: synthetic benchmark filler value 238.\nRecord 15: synthetic benchmark filler value 255.\nRecord 16: synthetic benchmark filler value 272.\nRecord 17: synthetic benchmark filler value 289.\nRecord 18: synthetic benchmark filler value 306.\nRecord 19: synthetic benchmark filler value 323.\nRecord 20: synthetic benchmark filler value 340.\nRecord 21: synthetic benchmark filler value 357.\nRecord 22: synthetic benchmark filler value 374.\nRecord 23: synthetic benchmark filler value 391.\nRecord 24: synthetic benchmark filler value 408.\nRecord 25: synthetic benchmark filler value 425.\nRecord 26: synthetic benchmark filler value 442.\nRecord 27: synthetic benchmark filler value 459.\nRecord 28: synthetic benchmark filler value 476.\nRecord 29: synthetic benchmark filler value 493.\nRecord 30: synthetic benchmark filler value 510.\nRecord 31: synthetic benchmark filler value 527.\nRecord 32: synthetic benchmark filler value 544.\nRecord 33: synthetic benchmark filler value 561.\nRecord 34: synthetic benchmark filler value 578.\nRecord 35: synthetic benchmark filler value 595.\nRecord 36: synthetic benchmark filler value 612.\nRecord 37: synthetic benchmark filler value 629.\nRecord 38: synthetic benchmark filler value 646.\nRecord 39: synthetic benchmark filler value 663.\nRecord 40: synthetic benchmark filler value 680.\nRecord 41: synthetic benchmark filler value 697.\nRecord 42: synthetic benchmark filler value 714.\nRecord 43: synthetic benchmark filler value 731.\nRecord 44: synthetic benchmark filler value 748.\nRecord 45: synthetic benchmark filler value 765.\nRecord 46: synthetic benchmark filler value 782.\nRecord 47: synthetic benchmark filler value 799.\nRecord 48: synthetic benchmark filler value 816.\nRecord 49: synthetic benchmark filler value 833.\nRecord 50: synthetic benchmark filler value 850.\nRecord 51: synthetic benchmark filler value 867.\nRecord 52: synthetic benchmark filler value 884.\nRecord 53: synthetic benchmark filler value 901.\nRecord 54: synthetic benchmark filler value 918.\nRecord 55: synthetic benchmark filler value 935.\nRecord 56: synthetic benchmark filler value 952.\nRecord 57: synthetic benchmark filler value 969.\nRecord 58: synthetic benchmark filler value 986.\nRecord 59: synthetic benchmark filler value 1003.\nRecord 60: synthetic benchmark filler value 1020.\nRecord 61: synthetic benchmark filler value 1037.\nRecord 62: synthetic benchmark filler value 1054.\nRecord 63: synthetic benchmark filler value 1071.\nRecord 64: synthetic benchmark filler value 1088.\nRecord 65: synthetic benchmark filler value 1105.\nRecord 66: synthetic benchmark filler value 1122.\nRecord 67: synthetic benchmark filler value 1139.\nRecord 68: synthetic benchmark filler value 1156.\nRecord 69: synthetic benchmark filler value 1173.\nRecord 70: synthetic benchmark filler value 1190.\nRecord 71: synthetic benchmark filler value 1207.\nRecord 72: synthetic benchmark filler value 1224.\nRecord 73: verification token ORCHID-731.\nRecord 74: synthetic benchmark filler value 1258.\nRecord 75: synthetic benchmark filler value 1275.\nRecord 76: synthetic benchmark filler value 1292.\nRecord 77: synthetic benchmark filler value 1309.\nRecord 78: synthetic benchmark filler value 1326.\nRecord 79: synthetic benchmark filler value 1343.\nRecord 80: synthetic benchmark filler value 1360.\nRecord 81: synthetic benchmark filler value 1377.\nRecord 82: synthetic benchmark filler value 1394.\nRecord 83: synthetic benchmark filler value 1411.\nRecord 84: synthetic benchmark filler value 1428.\nRecord 85: synthetic benchmark filler value 1445.\nRecord 86: synthetic benchmark filler value 1462.\nRecord 87: synthetic benchmark filler value 1479.\nRecord 88: synthetic benchmark filler value 1496.\nRecord 89: synthetic benchmark filler value 1513.\nRecord 90: synthetic benchmark filler value 1530.\nRecord 91: synthetic benchmark filler value 1547.\nRecord 92: synthetic benchmark filler value 1564.\nRecord 93: synthetic benchmark filler value 1581.\nRecord 94: synthetic benchmark filler value 1598.\nRecord 95: synthetic benchmark filler value 1615.\nRecord 96: synthetic benchmark filler value 1632.\nRecord 97: synthetic benchmark filler value 1649.\nRecord 98: synthetic benchmark filler value 1666.\nRecord 99: synthetic benchmark filler value 1683.\nRecord 100: synthetic benchmark filler value 1700.\nRecord 101: synthetic benchmark filler value 1717.\nRecord 102: synthetic benchmark filler value 1734.\nRecord 103: synthetic benchmark filler value 1751.\nRecord 104: synthetic benchmark filler value 1768.\nRecord 105: synthetic benchmark filler value 1785.\nRecord 106: synthetic benchmark filler value 1802.\nRecord 107: synthetic benchmark filler value 1819.\nRecord 108: synthetic benchmark filler value 1836.\nRecord 109: synthetic benchmark filler value 1853.\nRecord 110: synthetic benchmark filler value 1870.\nRecord 111: synthetic benchmark filler value 1887.\nRecord 112: synthetic benchmark filler value 1904.\nRecord 113: synthetic benchmark filler value 1921.\nRecord 114: synthetic benchmark filler value 1938.\nRecord 115: synthetic benchmark filler value 1955.\nRecord 116: synthetic benchmark filler value 1972.\nRecord 117: synthetic benchmark filler value 1989.\nRecord 118: synthetic benchmark filler value 2006.\nRecord 119: synthetic benchmark filler value 2023.\nRecord 120: synthetic benchmark filler value 2040.\nRecord 121: synthetic benchmark filler value 2057.\nRecord 122: synthetic benchmark filler value 2074.\nRecord 123: synthetic benchmark filler value 2091.\nRecord 124: synthetic benchmark filler value 2108.\nRecord 125: synthetic benchmark filler value 2125.\nRecord 126: synthetic benchmark filler value 2142.\nRecord 127: synthetic benchmark filler value 2159.\nRecord 128: synthetic benchmark filler value 2176.\nRecord 129: synthetic benchmark filler value 2193.\nRecord 130: synthetic benchmark filler value 2210.\nRecord 131: synthetic benchmark filler value 2227.\nRecord 132: synthetic benchmark filler value 2244.\nRecord 133: synthetic benchmark filler value 2261.\nRecord 134: synthetic benchmark filler value 2278.\nRecord 135: synthetic benchmark filler value 2295.\nRecord 136: synthetic benchmark filler value 2312.\nRecord 137: synthetic benchmark filler value 2329.\nRecord 138: synthetic benchmark filler value 2346.\nRecord 139: synthetic benchmark filler value 2363.\nRecord 140: synthetic benchmark filler value 2380.\nRecord 141: synthetic benchmark filler value 2397.\nRecord 142: synthetic benchmark filler value 2414.\nRecord 143: synthetic benchmark filler value 2431.\nRecord 144: synthetic benchmark filler value 2448.\nRecord 145: synthetic benchmark filler value 2465.\nRecord 146: synthetic benchmark filler value 2482.\nRecord 147: synthetic benchmark filler value 2499.\nRecord 148: synthetic benchmark filler value 2516.\nRecord 149: synthetic benchmark filler value 2533.\nRecord 150: synthetic benchmark filler value 2550.\nRecord 151: synthetic benchmark filler value 2567.\nRecord 152: synthetic benchmark filler value 2584.\nRecord 153: synthetic benchmark filler value 2601.\nRecord 154: synthetic benchmark filler value 2618.\nRecord 155: synthetic benchmark filler value 2635.\nRecord 156: synthetic benchmark filler value 2652.\nRecord 157: synthetic benchmark filler value 2669.\nRecord 158: synthetic benchmark filler value 2686.\nRecord 159: synthetic benchmark filler value 2703.\nRecord 160: synthetic benchmark filler value 2720.\nRecord 161: synthetic benchmark filler value 2737.\nRecord 162: synthetic benchmark filler value 2754.\nRecord 163: synthetic benchmark filler value 2771.\nRecord 164: synthetic benchmark filler value 2788.\nRecord 165: synthetic benchmark filler value 2805.\nRecord 166: synthetic benchmark filler value 2822.\nRecord 167: synthetic benchmark filler value 2839.\nRecord 168: synthetic benchmark filler value 2856.\nRecord 169: synthetic benchmark filler value 2873.\nRecord 170: synthetic benchmark filler value 2890.\nRecord 171: synthetic benchmark filler value 2907.\nRecord 172: synthetic benchmark filler value 2924.\nRecord 173: synthetic benchmark filler value 2941.\nRecord 174: synthetic benchmark filler value 2958.\nRecord 175: synthetic benchmark filler value 2975.\nRecord 176: synthetic benchmark filler value 2992.\nRecord 177: synthetic benchmark filler value 3009.\nRecord 178: synthetic benchmark filler value 3026.\nRecord 179: synthetic benchmark filler value 3043.\nRecord 180: synthetic benchmark filler value 3060.\nRecord 181: synthetic benchmark filler value 3077.\nRecord 182: synthetic benchmark filler value 3094.\nRecord 183: synthetic benchmark filler value 3111.\nRecord 184: synthetic benchmark filler value 3128.\nRecord 185: synthetic benchmark filler value 3145.\nRecord 186: synthetic benchmark filler value 3162.\nRecord 187: synthetic benchmark filler value 3179.\nRecord 188: synthetic benchmark filler value 3196.\nRecord 189: synthetic benchmark filler value 3213.\nRecord 190: synthetic benchmark filler value 3230.\nRecord 191: synthetic benchmark filler value 3247.\nRecord 192: synthetic benchmark filler value 3264.\nRecord 193: synthetic benchmark filler value 3281.\nRecord 194: synthetic benchmark filler value 3298.\nRecord 195: synthetic benchmark filler value 3315.\nRecord 196: synthetic benchmark filler value 3332.\nRecord 197: synthetic benchmark filler value 3349.\nRecord 198: synthetic benchmark filler value 3366.\nRecord 199: synthetic benchmark filler value 3383.\nRecord 200: synthetic benchmark filler value 3400.\nRecord 201: synthetic benchmark filler value 3417.\nRecord 202: synthetic benchmark filler value 3434.\nRecord 203: synthetic benchmark filler value 3451.\nRecord 204: synthetic benchmark filler value 3468.\nRecord 205: synthetic benchmark filler value 3485.\nRecord 206: synthetic benchmark filler value 3502.\nRecord 207: synthetic benchmark filler value 3519.\nRecord 208: synthetic benchmark filler value 3536.\nRecord 209: synthetic benchmark filler value 3553.\nRecord 210: synthetic benchmark filler value 3570.\nRecord 211: synthetic benchmark filler value 3587.\nRecord 212: synthetic benchmark filler value 3604.\nRecord 213: synthetic benchmark filler value 3621.\nRecord 214: synthetic benchmark filler value 3638.\nRecord 215: synthetic benchmark filler value 3655.\nRecord 216: synthetic benchmark filler value 3672.\nRecord 217: synthetic benchmark filler value 3689.\nRecord 218: synthetic benchmark filler value 3706.\nRecord 219: synthetic benchmark filler value 3723.\nRecord 220: synthetic benchmark filler value 3740.\nRecord 221: synthetic benchmark filler value 3757.\nRecord 222: synthetic benchmark filler value 3774.\nRecord 223: synthetic benchmark filler value 3791.\nRecord 224: synthetic benchmark filler value 3808.\nRecord 225: synthetic benchmark filler value 3825.\nRecord 226: synthetic benchmark filler value 3842.\nRecord 227: synthetic benchmark filler value 3859.\nRecord 228: synthetic benchmark filler value 3876.\nRecord 229: synthetic benchmark filler value 3893.\nRecord 230: synthetic benchmark filler value 3910.\nRecord 231: synthetic benchmark filler value 3927.\nRecord 232: synthetic benchmark filler value 3944.\nRecord 233: synthetic benchmark filler value 3961.\nRecord 234: synthetic benchmark filler value 3978.\nRecord 235: synthetic benchmark filler value 3995.\nRecord 236: synthetic benchmark filler value 4012.\nRecord 237: synthetic benchmark filler value 4029.\nRecord 238: synthetic benchmark filler value 4046.\nRecord 239: synthetic benchmark filler value 4063.\nRecord 240: synthetic benchmark filler value 4080.",
+        "iterations" : 1,
+        "metadata" : {
+          "backend" : "local-mlx",
+          "model" : "deterministic-v061-fake",
+          "tool-mode" : "simulated-or-none"
+        },
+        "output" : "ORCHID-731",
+        "repetition" : 1,
+        "retryCount" : 0,
+        "score" : 100,
+        "status" : "passed",
+        "timing" : {
+          "completedAt" : "2026-08-11T00:00:00Z",
+          "generationDurationMilliseconds" : 10,
+          "startedAt" : "2026-08-11T00:00:00Z",
+          "totalDurationMilliseconds" : 10
+        },
+        "toolCallCount" : 0,
+        "usage" : {
+          "inputTokens" : 8,
+          "outputTokens" : 2,
+          "totalTokens" : 10
+        }
+      },
+      {
+        "caseID" : "D0610000-0000-4000-8000-000000000032",
+        "caseName" : "Synthetic recall slot 142",
+        "category" : "long-context",
+        "grader" : "Programmatic",
+        "gradingDetails" : "Registered expected string matched.",
+        "id" : "E0610000-0000-4000-8000-000000000032",
+        "input" : "Read the synthetic records below. Return only the verification token in Record 142.\n\nRecord 1: synthetic benchmark filler value 17.\nRecord 2: synthetic benchmark filler value 34.\nRecord 3: synthetic benchmark filler value 51.\nRecord 4: synthetic benchmark filler value 68.\nRecord 5: synthetic benchmark filler value 85.\nRecord 6: synthetic benchmark filler value 102.\nRecord 7: synthetic benchmark filler value 119.\nRecord 8: synthetic benchmark filler value 136.\nRecord 9: synthetic benchmark filler value 153.\nRecord 10: synthetic benchmark filler value 170.\nRecord 11: synthetic benchmark filler value 187.\nRecord 12: synthetic benchmark filler value 204.\nRecord 13: synthetic benchmark filler value 221.\nRecord 14: synthetic benchmark filler value 238.\nRecord 15: synthetic benchmark filler value 255.\nRecord 16: synthetic benchmark filler value 272.\nRecord 17: synthetic benchmark filler value 289.\nRecord 18: synthetic benchmark filler value 306.\nRecord 19: synthetic benchmark filler value 323.\nRecord 20: synthetic benchmark filler value 340.\nRecord 21: synthetic benchmark filler value 357.\nRecord 22: synthetic benchmark filler value 374.\nRecord 23: synthetic benchmark filler value 391.\nRecord 24: synthetic benchmark filler value 408.\nRecord 25: synthetic benchmark filler value 425.\nRecord 26: synthetic benchmark filler value 442.\nRecord 27: synthetic benchmark filler value 459.\nRecord 28: synthetic benchmark filler value 476.\nRecord 29: synthetic benchmark filler value 493.\nRecord 30: synthetic benchmark filler value 510.\nRecord 31: synthetic benchmark filler value 527.\nRecord 32: synthetic benchmark filler value 544.\nRecord 33: synthetic benchmark filler value 561.\nRecord 34: synthetic benchmark filler value 578.\nRecord 35: synthetic benchmark filler value 595.\nRecord 36: synthetic benchmark filler value 612.\nRecord 37: synthetic benchmark filler value 629.\nRecord 38: synthetic benchmark filler value 646.\nRecord 39: synthetic benchmark filler value 663.\nRecord 40: synthetic benchmark filler value 680.\nRecord 41: synthetic benchmark filler value 697.\nRecord 42: synthetic benchmark filler value 714.\nRecord 43: synthetic benchmark filler value 731.\nRecord 44: synthetic benchmark filler value 748.\nRecord 45: synthetic benchmark filler value 765.\nRecord 46: synthetic benchmark filler value 782.\nRecord 47: synthetic benchmark filler value 799.\nRecord 48: synthetic benchmark filler value 816.\nRecord 49: synthetic benchmark filler value 833.\nRecord 50: synthetic benchmark filler value 850.\nRecord 51: synthetic benchmark filler value 867.\nRecord 52: synthetic benchmark filler value 884.\nRecord 53: synthetic benchmark filler value 901.\nRecord 54: synthetic benchmark filler value 918.\nRecord 55: synthetic benchmark filler value 935.\nRecord 56: synthetic benchmark filler value 952.\nRecord 57: synthetic benchmark filler value 969.\nRecord 58: synthetic benchmark filler value 986.\nRecord 59: synthetic benchmark filler value 1003.\nRecord 60: synthetic benchmark filler value 1020.\nRecord 61: synthetic benchmark filler value 1037.\nRecord 62: synthetic benchmark filler value 1054.\nRecord 63: synthetic benchmark filler value 1071.\nRecord 64: synthetic benchmark filler value 1088.\nRecord 65: synthetic benchmark filler value 1105.\nRecord 66: synthetic benchmark filler value 1122.\nRecord 67: synthetic benchmark filler value 1139.\nRecord 68: synthetic benchmark filler value 1156.\nRecord 69: synthetic benchmark filler value 1173.\nRecord 70: synthetic benchmark filler value 1190.\nRecord 71: synthetic benchmark filler value 1207.\nRecord 72: synthetic benchmark filler value 1224.\nRecord 73: synthetic benchmark filler value 1241.\nRecord 74: synthetic benchmark filler value 1258.\nRecord 75: synthetic benchmark filler value 1275.\nRecord 76: synthetic benchmark filler value 1292.\nRecord 77: synthetic benchmark filler value 1309.\nRecord 78: synthetic benchmark filler value 1326.\nRecord 79: synthetic benchmark filler value 1343.\nRecord 80: synthetic benchmark filler value 1360.\nRecord 81: synthetic benchmark filler value 1377.\nRecord 82: synthetic benchmark filler value 1394.\nRecord 83: synthetic benchmark filler value 1411.\nRecord 84: synthetic benchmark filler value 1428.\nRecord 85: synthetic benchmark filler value 1445.\nRecord 86: synthetic benchmark filler value 1462.\nRecord 87: synthetic benchmark filler value 1479.\nRecord 88: synthetic benchmark filler value 1496.\nRecord 89: synthetic benchmark filler value 1513.\nRecord 90: synthetic benchmark filler value 1530.\nRecord 91: synthetic benchmark filler value 1547.\nRecord 92: synthetic benchmark filler value 1564.\nRecord 93: synthetic benchmark filler value 1581.\nRecord 94: synthetic benchmark filler value 1598.\nRecord 95: synthetic benchmark filler value 1615.\nRecord 96: synthetic benchmark filler value 1632.\nRecord 97: synthetic benchmark filler value 1649.\nRecord 98: synthetic benchmark filler value 1666.\nRecord 99: synthetic benchmark filler value 1683.\nRecord 100: synthetic benchmark filler value 1700.\nRecord 101: synthetic benchmark filler value 1717.\nRecord 102: synthetic benchmark filler value 1734.\nRecord 103: synthetic benchmark filler value 1751.\nRecord 104: synthetic benchmark filler value 1768.\nRecord 105: synthetic benchmark filler value 1785.\nRecord 106: synthetic benchmark filler value 1802.\nRecord 107: synthetic benchmark filler value 1819.\nRecord 108: synthetic benchmark filler value 1836.\nRecord 109: synthetic benchmark filler value 1853.\nRecord 110: synthetic benchmark filler value 1870.\nRecord 111: synthetic benchmark filler value 1887.\nRecord 112: synthetic benchmark filler value 1904.\nRecord 113: synthetic benchmark filler value 1921.\nRecord 114: synthetic benchmark filler value 1938.\nRecord 115: synthetic benchmark filler value 1955.\nRecord 116: synthetic benchmark filler value 1972.\nRecord 117: synthetic benchmark filler value 1989.\nRecord 118: synthetic benchmark filler value 2006.\nRecord 119: synthetic benchmark filler value 2023.\nRecord 120: synthetic benchmark filler value 2040.\nRecord 121: synthetic benchmark filler value 2057.\nRecord 122: synthetic benchmark filler value 2074.\nRecord 123: synthetic benchmark filler value 2091.\nRecord 124: synthetic benchmark filler value 2108.\nRecord 125: synthetic benchmark filler value 2125.\nRecord 126: synthetic benchmark filler value 2142.\nRecord 127: synthetic benchmark filler value 2159.\nRecord 128: synthetic benchmark filler value 2176.\nRecord 129: synthetic benchmark filler value 2193.\nRecord 130: synthetic benchmark filler value 2210.\nRecord 131: synthetic benchmark filler value 2227.\nRecord 132: synthetic benchmark filler value 2244.\nRecord 133: synthetic benchmark filler value 2261.\nRecord 134: synthetic benchmark filler value 2278.\nRecord 135: synthetic benchmark filler value 2295.\nRecord 136: synthetic benchmark filler value 2312.\nRecord 137: synthetic benchmark filler value 2329.\nRecord 138: synthetic benchmark filler value 2346.\nRecord 139: synthetic benchmark filler value 2363.\nRecord 140: synthetic benchmark filler value 2380.\nRecord 141: synthetic benchmark filler value 2397.\nRecord 142: verification token EMBER-942.\nRecord 143: synthetic benchmark filler value 2431.\nRecord 144: synthetic benchmark filler value 2448.\nRecord 145: synthetic benchmark filler value 2465.\nRecord 146: synthetic benchmark filler value 2482.\nRecord 147: synthetic benchmark filler value 2499.\nRecord 148: synthetic benchmark filler value 2516.\nRecord 149: synthetic benchmark filler value 2533.\nRecord 150: synthetic benchmark filler value 2550.\nRecord 151: synthetic benchmark filler value 2567.\nRecord 152: synthetic benchmark filler value 2584.\nRecord 153: synthetic benchmark filler value 2601.\nRecord 154: synthetic benchmark filler value 2618.\nRecord 155: synthetic benchmark filler value 2635.\nRecord 156: synthetic benchmark filler value 2652.\nRecord 157: synthetic benchmark filler value 2669.\nRecord 158: synthetic benchmark filler value 2686.\nRecord 159: synthetic benchmark filler value 2703.\nRecord 160: synthetic benchmark filler value 2720.\nRecord 161: synthetic benchmark filler value 2737.\nRecord 162: synthetic benchmark filler value 2754.\nRecord 163: synthetic benchmark filler value 2771.\nRecord 164: synthetic benchmark filler value 2788.\nRecord 165: synthetic benchmark filler value 2805.\nRecord 166: synthetic benchmark filler value 2822.\nRecord 167: synthetic benchmark filler value 2839.\nRecord 168: synthetic benchmark filler value 2856.\nRecord 169: synthetic benchmark filler value 2873.\nRecord 170: synthetic benchmark filler value 2890.\nRecord 171: synthetic benchmark filler value 2907.\nRecord 172: synthetic benchmark filler value 2924.\nRecord 173: synthetic benchmark filler value 2941.\nRecord 174: synthetic benchmark filler value 2958.\nRecord 175: synthetic benchmark filler value 2975.\nRecord 176: synthetic benchmark filler value 2992.\nRecord 177: synthetic benchmark filler value 3009.\nRecord 178: synthetic benchmark filler value 3026.\nRecord 179: synthetic benchmark filler value 3043.\nRecord 180: synthetic benchmark filler value 3060.\nRecord 181: synthetic benchmark filler value 3077.\nRecord 182: synthetic benchmark filler value 3094.\nRecord 183: synthetic benchmark filler value 3111.\nRecord 184: synthetic benchmark filler value 3128.\nRecord 185: synthetic benchmark filler value 3145.\nRecord 186: synthetic benchmark filler value 3162.\nRecord 187: synthetic benchmark filler value 3179.\nRecord 188: synthetic benchmark filler value 3196.\nRecord 189: synthetic benchmark filler value 3213.\nRecord 190: synthetic benchmark filler value 3230.\nRecord 191: synthetic benchmark filler value 3247.\nRecord 192: synthetic benchmark filler value 3264.\nRecord 193: synthetic benchmark filler value 3281.\nRecord 194: synthetic benchmark filler value 3298.\nRecord 195: synthetic benchmark filler value 3315.\nRecord 196: synthetic benchmark filler value 3332.\nRecord 197: synthetic benchmark filler value 3349.\nRecord 198: synthetic benchmark filler value 3366.\nRecord 199: synthetic benchmark filler value 3383.\nRecord 200: synthetic benchmark filler value 3400.\nRecord 201: synthetic benchmark filler value 3417.\nRecord 202: synthetic benchmark filler value 3434.\nRecord 203: synthetic benchmark filler value 3451.\nRecord 204: synthetic benchmark filler value 3468.\nRecord 205: synthetic benchmark filler value 3485.\nRecord 206: synthetic benchmark filler value 3502.\nRecord 207: synthetic benchmark filler value 3519.\nRecord 208: synthetic benchmark filler value 3536.\nRecord 209: synthetic benchmark filler value 3553.\nRecord 210: synthetic benchmark filler value 3570.\nRecord 211: synthetic benchmark filler value 3587.\nRecord 212: synthetic benchmark filler value 3604.\nRecord 213: synthetic benchmark filler value 3621.\nRecord 214: synthetic benchmark filler value 3638.\nRecord 215: synthetic benchmark filler value 3655.\nRecord 216: synthetic benchmark filler value 3672.\nRecord 217: synthetic benchmark filler value 3689.\nRecord 218: synthetic benchmark filler value 3706.\nRecord 219: synthetic benchmark filler value 3723.\nRecord 220: synthetic benchmark filler value 3740.\nRecord 221: synthetic benchmark filler value 3757.\nRecord 222: synthetic benchmark filler value 3774.\nRecord 223: synthetic benchmark filler value 3791.\nRecord 224: synthetic benchmark filler value 3808.\nRecord 225: synthetic benchmark filler value 3825.\nRecord 226: synthetic benchmark filler value 3842.\nRecord 227: synthetic benchmark filler value 3859.\nRecord 228: synthetic benchmark filler value 3876.\nRecord 229: synthetic benchmark filler value 3893.\nRecord 230: synthetic benchmark filler value 3910.\nRecord 231: synthetic benchmark filler value 3927.\nRecord 232: synthetic benchmark filler value 3944.\nRecord 233: synthetic benchmark filler value 3961.\nRecord 234: synthetic benchmark filler value 3978.\nRecord 235: synthetic benchmark filler value 3995.\nRecord 236: synthetic benchmark filler value 4012.\nRecord 237: synthetic benchmark filler value 4029.\nRecord 238: synthetic benchmark filler value 4046.\nRecord 239: synthetic benchmark filler value 4063.\nRecord 240: synthetic benchmark filler value 4080.",
+        "iterations" : 1,
+        "metadata" : {
+          "backend" : "local-mlx",
+          "model" : "deterministic-v061-fake",
+          "tool-mode" : "simulated-or-none"
+        },
+        "output" : "EMBER-942",
+        "repetition" : 1,
+        "retryCount" : 0,
+        "score" : 100,
+        "status" : "passed",
+        "timing" : {
+          "completedAt" : "2026-08-11T00:00:00Z",
+          "generationDurationMilliseconds" : 10,
+          "startedAt" : "2026-08-11T00:00:00Z",
+          "totalDurationMilliseconds" : 10
+        },
+        "toolCallCount" : 0,
+        "usage" : {
+          "inputTokens" : 8,
+          "outputTokens" : 2,
+          "totalTokens" : 10
+        }
+      },
+      {
+        "caseID" : "D0610000-0000-4000-8000-000000000033",
+        "caseName" : "Synthetic recall slot 219",
+        "category" : "long-context",
+        "grader" : "Programmatic",
+        "gradingDetails" : "Registered expected string matched.",
+        "id" : "E0610000-0000-4000-8000-000000000033",
+        "input" : "Read the synthetic records below. Return only the verification token in Record 219.\n\nRecord 1: synthetic benchmark filler value 17.\nRecord 2: synthetic benchmark filler value 34.\nRecord 3: synthetic benchmark filler value 51.\nRecord 4: synthetic benchmark filler value 68.\nRecord 5: synthetic benchmark filler value 85.\nRecord 6: synthetic benchmark filler value 102.\nRecord 7: synthetic benchmark filler value 119.\nRecord 8: synthetic benchmark filler value 136.\nRecord 9: synthetic benchmark filler value 153.\nRecord 10: synthetic benchmark filler value 170.\nRecord 11: synthetic benchmark filler value 187.\nRecord 12: synthetic benchmark filler value 204.\nRecord 13: synthetic benchmark filler value 221.\nRecord 14: synthetic benchmark filler value 238.\nRecord 15: synthetic benchmark filler value 255.\nRecord 16: synthetic benchmark filler value 272.\nRecord 17: synthetic benchmark filler value 289.\nRecord 18: synthetic benchmark filler value 306.\nRecord 19: synthetic benchmark filler value 323.\nRecord 20: synthetic benchmark filler value 340.\nRecord 21: synthetic benchmark filler value 357.\nRecord 22: synthetic benchmark filler value 374.\nRecord 23: synthetic benchmark filler value 391.\nRecord 24: synthetic benchmark filler value 408.\nRecord 25: synthetic benchmark filler value 425.\nRecord 26: synthetic benchmark filler value 442.\nRecord 27: synthetic benchmark filler value 459.\nRecord 28: synthetic benchmark filler value 476.\nRecord 29: synthetic benchmark filler value 493.\nRecord 30: synthetic benchmark filler value 510.\nRecord 31: synthetic benchmark filler value 527.\nRecord 32: synthetic benchmark filler value 544.\nRecord 33: synthetic benchmark filler value 561.\nRecord 34: synthetic benchmark filler value 578.\nRecord 35: synthetic benchmark filler value 595.\nRecord 36: synthetic benchmark filler value 612.\nRecord 37: synthetic benchmark filler value 629.\nRecord 38: synthetic benchmark filler value 646.\nRecord 39: synthetic benchmark filler value 663.\nRecord 40: synthetic benchmark filler value 680.\nRecord 41: synthetic benchmark filler value 697.\nRecord 42: synthetic benchmark filler value 714.\nRecord 43: synthetic benchmark filler value 731.\nRecord 44: synthetic benchmark filler value 748.\nRecord 45: synthetic benchmark filler value 765.\nRecord 46: synthetic benchmark filler value 782.\nRecord 47: synthetic benchmark filler value 799.\nRecord 48: synthetic benchmark filler value 816.\nRecord 49: synthetic benchmark filler value 833.\nRecord 50: synthetic benchmark filler value 850.\nRecord 51: synthetic benchmark filler value 867.\nRecord 52: synthetic benchmark filler value 884.\nRecord 53: synthetic benchmark filler value 901.\nRecord 54: synthetic benchmark filler value 918.\nRecord 55: synthetic benchmark filler value 935.\nRecord 56: synthetic benchmark filler value 952.\nRecord 57: synthetic benchmark filler value 969.\nRecord 58: synthetic benchmark filler value 986.\nRecord 59: synthetic benchmark filler value 1003.\nRecord 60: synthetic benchmark filler value 1020.\nRecord 61: synthetic benchmark filler value 1037.\nRecord 62: synthetic benchmark filler value 1054.\nRecord 63: synthetic benchmark filler value 1071.\nRecord 64: synthetic benchmark filler value 1088.\nRecord 65: synthetic benchmark filler value 1105.\nRecord 66: synthetic benchmark filler value 1122.\nRecord 67: synthetic benchmark filler value 1139.\nRecord 68: synthetic benchmark filler value 1156.\nRecord 69: synthetic benchmark filler value 1173.\nRecord 70: synthetic benchmark filler value 1190.\nRecord 71: synthetic benchmark filler value 1207.\nRecord 72: synthetic benchmark filler value 1224.\nRecord 73: synthetic benchmark filler value 1241.\nRecord 74: synthetic benchmark filler value 1258.\nRecord 75: synthetic benchmark filler value 1275.\nRecord 76: synthetic benchmark filler value 1292.\nRecord 77: synthetic benchmark filler value 1309.\nRecord 78: synthetic benchmark filler value 1326.\nRecord 79: synthetic benchmark filler value 1343.\nRecord 80: synthetic benchmark filler value 1360.\nRecord 81: synthetic benchmark filler value 1377.\nRecord 82: synthetic benchmark filler value 1394.\nRecord 83: synthetic benchmark filler value 1411.\nRecord 84: synthetic benchmark filler value 1428.\nRecord 85: synthetic benchmark filler value 1445.\nRecord 86: synthetic benchmark filler value 1462.\nRecord 87: synthetic benchmark filler value 1479.\nRecord 88: synthetic benchmark filler value 1496.\nRecord 89: synthetic benchmark filler value 1513.\nRecord 90: synthetic benchmark filler value 1530.\nRecord 91: synthetic benchmark filler value 1547.\nRecord 92: synthetic benchmark filler value 1564.\nRecord 93: synthetic benchmark filler value 1581.\nRecord 94: synthetic benchmark filler value 1598.\nRecord 95: synthetic benchmark filler value 1615.\nRecord 96: synthetic benchmark filler value 1632.\nRecord 97: synthetic benchmark filler value 1649.\nRecord 98: synthetic benchmark filler value 1666.\nRecord 99: synthetic benchmark filler value 1683.\nRecord 100: synthetic benchmark filler value 1700.\nRecord 101: synthetic benchmark filler value 1717.\nRecord 102: synthetic benchmark filler value 1734.\nRecord 103: synthetic benchmark filler value 1751.\nRecord 104: synthetic benchmark filler value 1768.\nRecord 105: synthetic benchmark filler value 1785.\nRecord 106: synthetic benchmark filler value 1802.\nRecord 107: synthetic benchmark filler value 1819.\nRecord 108: synthetic benchmark filler value 1836.\nRecord 109: synthetic benchmark filler value 1853.\nRecord 110: synthetic benchmark filler value 1870.\nRecord 111: synthetic benchmark filler value 1887.\nRecord 112: synthetic benchmark filler value 1904.\nRecord 113: synthetic benchmark filler value 1921.\nRecord 114: synthetic benchmark filler value 1938.\nRecord 115: synthetic benchmark filler value 1955.\nRecord 116: synthetic benchmark filler value 1972.\nRecord 117: synthetic benchmark filler value 1989.\nRecord 118: synthetic benchmark filler value 2006.\nRecord 119: synthetic benchmark filler value 2023.\nRecord 120: synthetic benchmark filler value 2040.\nRecord 121: synthetic benchmark filler value 2057.\nRecord 122: synthetic benchmark filler value 2074.\nRecord 123: synthetic benchmark filler value 2091.\nRecord 124: synthetic benchmark filler value 2108.\nRecord 125: synthetic benchmark filler value 2125.\nRecord 126: synthetic benchmark filler value 2142.\nRecord 127: synthetic benchmark filler value 2159.\nRecord 128: synthetic benchmark filler value 2176.\nRecord 129: synthetic benchmark filler value 2193.\nRecord 130: synthetic benchmark filler value 2210.\nRecord 131: synthetic benchmark filler value 2227.\nRecord 132: synthetic benchmark filler value 2244.\nRecord 133: synthetic benchmark filler value 2261.\nRecord 134: synthetic benchmark filler value 2278.\nRecord 135: synthetic benchmark filler value 2295.\nRecord 136: synthetic benchmark filler value 2312.\nRecord 137: synthetic benchmark filler value 2329.\nRecord 138: synthetic benchmark filler value 2346.\nRecord 139: synthetic benchmark filler value 2363.\nRecord 140: synthetic benchmark filler value 2380.\nRecord 141: synthetic benchmark filler value 2397.\nRecord 142: synthetic benchmark filler value 2414.\nRecord 143: synthetic benchmark filler value 2431.\nRecord 144: synthetic benchmark filler value 2448.\nRecord 145: synthetic benchmark filler value 2465.\nRecord 146: synthetic benchmark filler value 2482.\nRecord 147: synthetic benchmark filler value 2499.\nRecord 148: synthetic benchmark filler value 2516.\nRecord 149: synthetic benchmark filler value 2533.\nRecord 150: synthetic benchmark filler value 2550.\nRecord 151: synthetic benchmark filler value 2567.\nRecord 152: synthetic benchmark filler value 2584.\nRecord 153: synthetic benchmark filler value 2601.\nRecord 154: synthetic benchmark filler value 2618.\nRecord 155: synthetic benchmark filler value 2635.\nRecord 156: synthetic benchmark filler value 2652.\nRecord 157: synthetic benchmark filler value 2669.\nRecord 158: synthetic benchmark filler value 2686.\nRecord 159: synthetic benchmark filler value 2703.\nRecord 160: synthetic benchmark filler value 2720.\nRecord 161: synthetic benchmark filler value 2737.\nRecord 162: synthetic benchmark filler value 2754.\nRecord 163: synthetic benchmark filler value 2771.\nRecord 164: synthetic benchmark filler value 2788.\nRecord 165: synthetic benchmark filler value 2805.\nRecord 166: synthetic benchmark filler value 2822.\nRecord 167: synthetic benchmark filler value 2839.\nRecord 168: synthetic benchmark filler value 2856.\nRecord 169: synthetic benchmark filler value 2873.\nRecord 170: synthetic benchmark filler value 2890.\nRecord 171: synthetic benchmark filler value 2907.\nRecord 172: synthetic benchmark filler value 2924.\nRecord 173: synthetic benchmark filler value 2941.\nRecord 174: synthetic benchmark filler value 2958.\nRecord 175: synthetic benchmark filler value 2975.\nRecord 176: synthetic benchmark filler value 2992.\nRecord 177: synthetic benchmark filler value 3009.\nRecord 178: synthetic benchmark filler value 3026.\nRecord 179: synthetic benchmark filler value 3043.\nRecord 180: synthetic benchmark filler value 3060.\nRecord 181: synthetic benchmark filler value 3077.\nRecord 182: synthetic benchmark filler value 3094.\nRecord 183: synthetic benchmark filler value 3111.\nRecord 184: synthetic benchmark filler value 3128.\nRecord 185: synthetic benchmark filler value 3145.\nRecord 186: synthetic benchmark filler value 3162.\nRecord 187: synthetic benchmark filler value 3179.\nRecord 188: synthetic benchmark filler value 3196.\nRecord 189: synthetic benchmark filler value 3213.\nRecord 190: synthetic benchmark filler value 3230.\nRecord 191: synthetic benchmark filler value 3247.\nRecord 192: synthetic benchmark filler value 3264.\nRecord 193: synthetic benchmark filler value 3281.\nRecord 194: synthetic benchmark filler value 3298.\nRecord 195: synthetic benchmark filler value 3315.\nRecord 196: synthetic benchmark filler value 3332.\nRecord 197: synthetic benchmark filler value 3349.\nRecord 198: synthetic benchmark filler value 3366.\nRecord 199: synthetic benchmark filler value 3383.\nRecord 200: synthetic benchmark filler value 3400.\nRecord 201: synthetic benchmark filler value 3417.\nRecord 202: synthetic benchmark filler value 3434.\nRecord 203: synthetic benchmark filler value 3451.\nRecord 204: synthetic benchmark filler value 3468.\nRecord 205: synthetic benchmark filler value 3485.\nRecord 206: synthetic benchmark filler value 3502.\nRecord 207: synthetic benchmark filler value 3519.\nRecord 208: synthetic benchmark filler value 3536.\nRecord 209: synthetic benchmark filler value 3553.\nRecord 210: synthetic benchmark filler value 3570.\nRecord 211: synthetic benchmark filler value 3587.\nRecord 212: synthetic benchmark filler value 3604.\nRecord 213: synthetic benchmark filler value 3621.\nRecord 214: synthetic benchmark filler value 3638.\nRecord 215: synthetic benchmark filler value 3655.\nRecord 216: synthetic benchmark filler value 3672.\nRecord 217: synthetic benchmark filler value 3689.\nRecord 218: synthetic benchmark filler value 3706.\nRecord 219: verification token COBALT-518.\nRecord 220: synthetic benchmark filler value 3740.\nRecord 221: synthetic benchmark filler value 3757.\nRecord 222: synthetic benchmark filler value 3774.\nRecord 223: synthetic benchmark filler value 3791.\nRecord 224: synthetic benchmark filler value 3808.\nRecord 225: synthetic benchmark filler value 3825.\nRecord 226: synthetic benchmark filler value 3842.\nRecord 227: synthetic benchmark filler value 3859.\nRecord 228: synthetic benchmark filler value 3876.\nRecord 229: synthetic benchmark filler value 3893.\nRecord 230: synthetic benchmark filler value 3910.\nRecord 231: synthetic benchmark filler value 3927.\nRecord 232: synthetic benchmark filler value 3944.\nRecord 233: synthetic benchmark filler value 3961.\nRecord 234: synthetic benchmark filler value 3978.\nRecord 235: synthetic benchmark filler value 3995.\nRecord 236: synthetic benchmark filler value 4012.\nRecord 237: synthetic benchmark filler value 4029.\nRecord 238: synthetic benchmark filler value 4046.\nRecord 239: synthetic benchmark filler value 4063.\nRecord 240: synthetic benchmark filler value 4080.",
+        "iterations" : 1,
+        "metadata" : {
+          "backend" : "local-mlx",
+          "model" : "deterministic-v061-fake",
+          "tool-mode" : "simulated-or-none"
+        },
+        "output" : "COBALT-518",
+        "repetition" : 1,
+        "retryCount" : 0,
+        "score" : 100,
+        "status" : "passed",
+        "timing" : {
+          "completedAt" : "2026-08-11T00:00:00Z",
+          "generationDurationMilliseconds" : 10,
+          "startedAt" : "2026-08-11T00:00:00Z",
+          "totalDurationMilliseconds" : 10
+        },
+        "toolCallCount" : 0,
+        "usage" : {
+          "inputTokens" : 8,
+          "outputTokens" : 2,
+          "totalTokens" : 10
+        }
+      }
+    ],
+    "scoreWeights" : {
+      "engineering" : 0.15,
+      "performance" : 0.05,
+      "quality" : 0.35,
+      "reliability" : 0.25,
+      "toolUse" : 0.2
+    },
+    "startedAt" : "2026-08-11T00:00:00Z",
+    "state" : "completed",
+    "suiteID" : "D0610000-0000-4000-8000-000000000001",
+    "suiteName" : "AutoMLXStudio Core Evaluation",
+    "suiteVersion" : 1,
+    "summary" : {
+      "categoryScores" : {
+        "coding" : 100,
+        "engineering" : 100,
+        "general" : 100,
+        "long-context" : 100,
+        "reasoning" : 100,
+        "reviewer" : 100,
+        "structured-output" : 100,
+        "tool-use" : 100
+      },
+      "engineeringScore" : 100,
+      "failures" : 0,
+      "iterations" : 33,
+      "malformedOutputs" : 0,
+      "overallScore" : 100,
+      "performance" : {
+        "maximumLatencyMilliseconds" : 10,
+        "meanLatencyMilliseconds" : 10,
+        "meanOutputTokensPerSecond" : 200,
+        "medianLatencyMilliseconds" : 10,
+        "minimumLatencyMilliseconds" : 10,
+        "p95LatencyMilliseconds" : 10
+      },
+      "performanceScore" : 100,
+      "qualityScore" : 100,
+      "reliabilityScore" : 100,
+      "tokensPerCorrectAnswer" : 10,
+      "tokensPerScorePoint" : 0.1,
+      "toolCalls" : 5,
+      "toolUseScore" : 100,
+      "totalTokens" : 330,
+      "weightedContributions" : {
+        "Engineering" : 15,
+        "Performance" : 5,
+        "Quality" : 35,
+        "Reliability" : 25,
+        "Tool Use" : 20
+      }
+    }
+  },
+  "schemaVersion" : 1
+}

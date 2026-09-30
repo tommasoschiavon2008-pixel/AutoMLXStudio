@@ -2,25 +2,26 @@ import Darwin // Supplies exact-PID SIGKILL escalation for only the child proces
 import Foundation // Supplies direct Process execution, pipes, monotonic timing, locks, and Swift concurrency bridges.
 
 actor EngineeringProcessRunner { // Serializes deterministic commands and owns at most one exact child process.
-    private var activeProcess: Process? // Retains the exact Process instance launched by the current invocation.
+    private var activeProcess: EngineeringOwnedProcess? // Retains the exact child group launched by the current invocation.
     private var activeGate: EngineeringProcessCompletionGate? // Retains the single-resolution timeout and cancellation gate.
 
-    func run(executableURL: URL, arguments: [String], workingDirectoryURL: URL, environment: [String: String], timeoutMilliseconds: Int, outputLimitBytes: Int) async throws -> EngineeringProcessResult { // Launches one direct executable without a shell and returns bounded evidence.
+    func run(executableURL: URL, arguments: [String], workingDirectoryURL: URL, workspaceRootURL: URL, runtimeDirectoryURL: URL, environment: [String: String], timeoutMilliseconds: Int, outputLimitBytes: Int) async throws -> EngineeringProcessResult { // Launches one executable and its descendants inside the canonical workspace sandbox.
         guard activeProcess == nil else { throw EngineeringRuntimeError.processLaunchFailed("Another engineering command is already active.") } // Prevents ambiguous overlapping ownership in one runner.
         guard FileManager.default.isExecutableFile(atPath: executableURL.path) else { throw EngineeringRuntimeError.executableMissing(executableURL.path) } // Requires the exact allowlisted host executable.
         var isDirectory: ObjCBool = false // Receives current-directory filesystem metadata.
         guard FileManager.default.fileExists(atPath: workingDirectoryURL.path, isDirectory: &isDirectory), isDirectory.boolValue else { throw EngineeringRuntimeError.workspaceUnavailable(workingDirectoryURL.path) } // Requires an existing contained cwd supplied by EngineeringWorkspace.
-        let process = Process() // Creates the exact child object owned by this invocation.
+        let sandboxed = try EngineeringCommandSandbox.prepare(executableURL: executableURL, arguments: arguments, workspaceRootURL: workspaceRootURL, runtimeDirectoryURL: runtimeDirectoryURL, environment: environment) // Establishes an OS-enforced deny-default child boundary before Process.run.
+        let process = EngineeringOwnedProcess() // Creates an atomically isolated child group without inherited host descriptors.
         let outputPipe = Pipe() // Captures stdout without invoking a shell or writing external artifacts.
         let errorPipe = Pipe() // Captures stderr independently for structured results.
         let outputBuffer = EngineeringBoundedOutputBuffer(limit: max(1, outputLimitBytes)) // Keeps bounded beginning and end of stdout while draining all bytes.
         let errorBuffer = EngineeringBoundedOutputBuffer(limit: max(1, outputLimitBytes)) // Keeps bounded beginning and end of stderr while draining all bytes.
         outputPipe.fileHandleForReading.readabilityHandler = { handle in outputBuffer.append(handle.availableData) } // Continuously drains stdout to avoid pipe backpressure.
         errorPipe.fileHandleForReading.readabilityHandler = { handle in errorBuffer.append(handle.availableData) } // Continuously drains stderr to avoid pipe backpressure.
-        process.executableURL = executableURL // Launches the exact resolved binary directly.
-        process.arguments = arguments // Preserves every argument boundary so shell metacharacters remain ordinary data.
+        process.executableURL = sandboxed.executableURL // Launches only the pinned macOS sandbox wrapper.
+        process.arguments = sandboxed.arguments // Preserves exact command arguments after the generated profile and trusted tool binary.
         process.currentDirectoryURL = workingDirectoryURL // Constrains relative child paths to the authorized workspace cwd.
-        process.environment = environment // Supplies only the caller's sanitized non-secret environment.
+        process.environment = sandboxed.environment // Supplies only the sanitized environment and verified developer-directory identity.
         process.standardOutput = outputPipe // Connects bounded stdout capture.
         process.standardError = errorPipe // Connects bounded stderr capture.
         let normalizedTimeout = max(1, timeoutMilliseconds) // Guarantees a finite positive deadline.
@@ -41,8 +42,8 @@ actor EngineeringProcessRunner { // Serializes deterministic commands and owns a
             let status = try await withTaskCancellationHandler(operation: { try await gate.wait() }, onCancel: { gate.cancel() }) // Requests termination only for this owned child on cancellation.
             outputPipe.fileHandleForReading.readabilityHandler = nil // Stops concurrent stdout callbacks after confirmed exit.
             errorPipe.fileHandleForReading.readabilityHandler = nil // Stops concurrent stderr callbacks after confirmed exit.
-            outputBuffer.append(outputPipe.fileHandleForReading.readDataToEndOfFile()) // Drains any final bytes delivered between the last callback and exit.
-            errorBuffer.append(errorPipe.fileHandleForReading.readDataToEndOfFile()) // Drains any final diagnostic bytes after exit.
+            outputBuffer.drainAvailable(from: outputPipe.fileHandleForReading) // Collects bounded residual bytes without waiting on an inherited writer.
+            errorBuffer.drainAvailable(from: errorPipe.fileHandleForReading) // Cannot hang Stop if a detached process retains the diagnostics pipe.
             activeProcess = nil // Releases exact process ownership after confirmed termination.
             activeGate = nil // Releases the completed gate.
             let duration = Int((DispatchTime.now().uptimeNanoseconds - start) / 1_000_000) // Measures actual launch-to-exit duration.
@@ -50,8 +51,8 @@ actor EngineeringProcessRunner { // Serializes deterministic commands and owns a
         } catch { // Releases actor state only after the gate has confirmed owned-child exit.
             outputPipe.fileHandleForReading.readabilityHandler = nil // Stops stdout callbacks after terminal failure.
             errorPipe.fileHandleForReading.readabilityHandler = nil // Stops stderr callbacks after terminal failure.
-            outputBuffer.append(outputPipe.fileHandleForReading.readDataToEndOfFile()) // Drains residual stdout without exposing it through the thrown error.
-            errorBuffer.append(errorPipe.fileHandleForReading.readDataToEndOfFile()) // Drains residual stderr without exposing it through the thrown error.
+            outputBuffer.drainAvailable(from: outputPipe.fileHandleForReading) // Drains only immediately available bytes after failed commands.
+            errorBuffer.drainAvailable(from: errorPipe.fileHandleForReading) // Bounds cleanup even if a descendant holds stderr open.
             activeProcess = nil // Releases exact process ownership.
             activeGate = nil // Releases terminal gate ownership.
             throw error // Preserves timeout or cancellation identity.
@@ -109,6 +110,19 @@ private final class EngineeringBoundedOutputBuffer: @unchecked Sendable { // Dra
         return value // Returns truncation evidence.
     } // Ends truncation inspection.
 
+    func drainAvailable(from handle: FileHandle) { // Finishes pipe collection without an unbounded EOF wait.
+        let descriptor = handle.fileDescriptor // Captures the owned read descriptor before closing it.
+        defer { try? handle.close() } // Releases this invocation's descriptor on every cleanup path.
+        guard fcntl(descriptor, F_SETFL, fcntl(descriptor, F_GETFL) | O_NONBLOCK) != -1 else { return } // Refuses to perform potentially blocking residual reads.
+        var bytes = [UInt8](repeating: 0, count: 16_384) // Uses a fixed temporary drain buffer.
+        for _ in 0..<64 { // Limits final work even if a detached writer continuously produces output.
+            let count = Darwin.read(descriptor, &bytes, bytes.count) // Reads only bytes immediately available in the pipe.
+            if count < 0 && errno == EINTR { continue } // Retries interruption only within the finite drain budget.
+            guard count > 0 else { break } // Stops at EOF or EAGAIN without waiting for another writer.
+            append(Data(bytes.prefix(count))) // Retains only the existing bounded head/tail representation.
+        } // Ends finite residual pipe drainage.
+    } // Ends nonblocking stream cleanup.
+
     var stringValue: String { // Converts retained bytes into a display-safe string without assuming valid UTF-8.
         lock.lock() // Begins exclusive snapshot creation.
         let first = head // Copies leading retained bytes.
@@ -126,14 +140,14 @@ private final class EngineeringBoundedOutputBuffer: @unchecked Sendable { // Dra
 
 private final class EngineeringProcessCompletionGate: @unchecked Sendable { // Guarantees one continuation resolution across exit, timeout, and cancellation races.
     private let lock = NSLock() // Serializes terminal state, error cause, and continuation access.
-    private let process: Process // Retains only the exact child owned by the invocation.
+    private let process: EngineeringOwnedProcess // Retains the exact unreaped leader and its process-group signal authority.
     private let timeoutMilliseconds: Int // Stores the finite normalized deadline.
     private var continuation: CheckedContinuation<Int32, Error>? // Stores the sole awaiting Swift continuation.
     private var terminalStatus: Int32? // Stores very fast exit status until wait registration.
     private var terminalError: EngineeringRuntimeError? // Stores timeout or cancellation identity until actual child exit.
     private var resolved = false // Prevents duplicate continuation resume.
 
-    init(process: Process, timeoutMilliseconds: Int) { // Captures exact child ownership and timeout policy.
+    init(process: EngineeringOwnedProcess, timeoutMilliseconds: Int) { // Captures exact group ownership and timeout policy.
         self.process = process // Retains the direct Foundation child object.
         self.timeoutMilliseconds = max(1, timeoutMilliseconds) // Guarantees a positive timeout.
     } // Ends completion-gate construction.
@@ -186,7 +200,7 @@ private final class EngineeringProcessCompletionGate: @unchecked Sendable { // G
         if shouldTerminate { process.terminate() } // Sends graceful SIGTERM only to the exact Foundation child.
         Task { // Starts bounded escalation without blocking a caller or the main thread.
             try? await Task.sleep(nanoseconds: 500_000_000) // Allows the owned child half a second to exit cleanly.
-            if self.process.isRunning, self.process.processIdentifier == processID { Darwin.kill(processID, SIGKILL) } // Escalates only against the same still-running owned PID.
+            if self.process.processIdentifier == processID { self.process.forceTerminate() } // Serializes escalation against reaping and terminates only the still-owned process group.
         } // Ends exact-PID escalation observer.
     } // Ends exact child termination request.
 } // Ends process completion arbitration.

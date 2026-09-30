@@ -1,0 +1,44 @@
+Validation/V061BenchmarkHarness-20260911/UI/Freeze/._Benchmark-Cancelled-State.png
+Validation/V061BenchmarkHarness-20260911/UI/Freeze/._Benchmark-Compare-Normal.png
+Validation/V061BenchmarkHarness-20260911/UI/Freeze/._Benchmark-Comparison-Populated.png
+Validation/V061BenchmarkHarness-20260911/UI/Freeze/._Benchmark-CustomSuites-Normal.png
+Validation/V061BenchmarkHarness-20260911/UI/Freeze/._Benchmark-Error-State.png
+Validation/V061BenchmarkHarness-20260911/UI/Freeze/._Benchmark-History-Normal.png
+Validation/V061BenchmarkHarness-20260911/UI/Freeze/._Benchmark-History-Populated.png
+Validation/V061BenchmarkHarness-20260911/UI/Freeze/._Benchmark-NewRun-Minimum.png
+Validation/V061BenchmarkHarness-20260911/UI/Freeze/._Benchmark-NewRun-Normal.png
+Validation/V061BenchmarkHarness-20260911/UI/Freeze/._Benchmark-Overview-Minimum.png
+Validation/V061BenchmarkHarness-20260911/UI/Freeze/._Benchmark-Overview-Normal.png
+Validation/V061BenchmarkHarness-20260911/UI/Freeze/._Benchmark-Results-CaseDetail-Minimum.png
+Validation/V061BenchmarkHarness-20260911/UI/Freeze/._Benchmark-Results-CaseDetail-Normal.png
+Validation/V061BenchmarkHarness-20260911/UI/Freeze/._Benchmark-Running.png
+Validation/V061BenchmarkHarness-20260911/UI/Freeze/Benchmark-Cancelled-State.png
+Validation/V061BenchmarkHarness-20260911/UI/Freeze/Benchmark-Compare-Normal.png
+Validation/V061BenchmarkHarness-20260911/UI/Freeze/Benchmark-Comparison-Populated.png
+Validation/V061BenchmarkHarness-20260911/UI/Freeze/Benchmark-CustomSuites-Normal.png
+Validation/V061BenchmarkHarness-20260911/UI/Freeze/Benchmark-Error-State.png
+Validation/V061BenchmarkHarness-20260911/UI/Freeze/Benchmark-History-Normal.png
+Validation/V061BenchmarkHarness-20260911/UI/Freeze/Benchmark-History-Populated.png
+Validation/V061BenchmarkHarness-20260911/UI/Freeze/Benchmark-NewRun-Minimum.png
+Validation/V061BenchmarkHarness-20260911/UI/Freeze/Benchmark-NewRun-Normal.png
+Validation/V061BenchmarkHarness-20260911/UI/Freeze/Benchmark-Overview-Minimum.png
+Validation/V061BenchmarkHarness-20260911/UI/Freeze/Benchmark-Overview-Normal.png
+Validation/V061BenchmarkHarness-20260911/UI/Freeze/Benchmark-Results-CaseDetail-Minimum.png
+Validation/V061BenchmarkHarness-20260911/UI/Freeze/Benchmark-Results-CaseDetail-Normal.png
+Validation/V061BenchmarkHarness-20260911/UI/Freeze/Benchmark-Running.png
+
+Dimensions:
+Benchmark-Cancelled-State.png: 2360x1520
+Benchmark-Compare-Normal.png: 2360x1520
+Benchmark-Comparison-Populated.png: 2360x1520
+Benchmark-CustomSuites-Normal.png: 2360x1520
+Benchmark-Error-State.png: 2360x1520
+Benchmark-History-Normal.png: 2360x1520
+Benchmark-History-Populated.png: 2360x1520
+Benchmark-NewRun-Minimum.png: 1700x1372
+Benchmark-NewRun-Normal.png: 2360x1520
+Benchmark-Overview-Minimum.png: 1700x1372
+Benchmark-Overview-Normal.png: 2360x1520
+Benchmark-Results-CaseDetail-Minimum.png: 1700x1372
+Benchmark-Results-CaseDetail-Normal.png: 2360x1520
+Benchmark-Running.png: 2360x1520

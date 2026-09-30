@@ -1,0 +1,120 @@
+--- a/project.yml
++++ b/project.yml
+@@ -19,6 +19,7 @@
+         INFOPLIST_KEY_CFBundleDisplayName: "AutoMLX Studio"
+         INFOPLIST_KEY_LSApplicationCategoryType: "public.app-category.developer-tools"
+         INFOPLIST_KEY_NSMicrophoneUsageDescription: "AutoMLX Studio records audio only when you press the microphone button to create a local transcription."
++        INFOPLIST_KEY_NSLocalNetworkUsageDescription: "Connects to inference servers you configure on your local network to discover models and run chats, engineering tasks, and benchmarks." # Explains user-initiated private LAN inference in the macOS permission prompt.
+         GENERATE_INFOPLIST_FILE: YES
+         CODE_SIGN_STYLE: Automatic
+         ENABLE_APP_SANDBOX: NO
+--- a/AutoMLXStudio.xcodeproj/project.pbxproj
++++ b/AutoMLXStudio.xcodeproj/project.pbxproj
+@@ -823,6 +823,7 @@
+ 				INFOPLIST_KEY_CFBundleDisplayName = "AutoMLX Studio";
+ 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+ 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "AutoMLX Studio records audio only when you press the microphone button to create a local transcription.";
++				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Connects to inference servers you configure on your local network to discover models and run chats, engineering tasks, and benchmarks.";
+ 				LD_RUNPATH_SEARCH_PATHS = (
+ 					"$(inherited)",
+ 					"@executable_path/../Frameworks",
+@@ -908,6 +909,7 @@
+ 				INFOPLIST_KEY_CFBundleDisplayName = "AutoMLX Studio";
+ 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
+ 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "AutoMLX Studio records audio only when you press the microphone button to create a local transcription.";
++				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Connects to inference servers you configure on your local network to discover models and run chats, engineering tasks, and benchmarks.";
+ 				LD_RUNPATH_SEARCH_PATHS = (
+ 					"$(inherited)",
+ 					"@executable_path/../Frameworks",
+--- a/AutoMLXStudio/Services/RemoteInferenceBackend.swift
++++ b/AutoMLXStudio/Services/RemoteInferenceBackend.swift
+@@ -15,13 +15,14 @@
+     case timedOut // Indicates a configured network deadline elapsed.
+     case cancelled // Indicates user or task cancellation rather than server degradation.
+     case connectionLost // Indicates the private server became unreachable during a request.
++    case networkUnavailable // Indicates macOS reported that this process has no usable network path.
+     case transport(String) // Stores one bounded redacted transport diagnostic.
+ 
+     var isFallbackEligible: Bool { // Tells ModelRouter whether a compatible explicit fallback may be attempted.
+         switch self { // Classifies failures without performing the fallback inside the transport layer.
+         case .cancelled, .invalidRequest, .unsupportedAttachments, .invalidTarget: // Keeps user cancellation and caller contract errors from silently changing models.
+             return false // Requires the caller to stop or repair the request.
+-        case .profileNotFound, .serverDisabled, .backendMismatch, .authenticationUnavailable, .httpStatus, .incompatibleAPI, .malformedResponse, .malformedToolCall, .timedOut, .connectionLost, .transport: // Covers remote availability and compatibility failures.
++        case .profileNotFound, .serverDisabled, .backendMismatch, .authenticationUnavailable, .httpStatus, .incompatibleAPI, .malformedResponse, .malformedToolCall, .timedOut, .connectionLost, .networkUnavailable, .transport: // Covers remote availability and compatibility failures.
+             return true // Allows only the router's already configured compatible fallback policy.
+         } // Ends fallback classification.
+     } // Ends fallback eligibility.
+@@ -56,6 +57,8 @@
+             return "The remote server request was cancelled." // Distinguishes user cancellation from server failure.
+         case .connectionLost: // Handles reachability loss during inference.
+             return "The connection to the remote server was lost." // Reports a retry/fallback-ready private-network failure.
++        case .networkUnavailable: // Handles a process-specific unavailable network path, including macOS local-network privacy denial.
++            return "This Mac cannot access the remote server. Check AutoMLX Studio in System Settings > Privacy & Security > Local Network, then check the Mac network connection." // Gives the user a way to repair permission or connectivity without claiming the server itself failed.
+         case .transport(let message): // Handles other bounded networking failures.
+             return message // Returns only sanitized transport text.
+         } // Ends remote failure rendering.
+@@ -219,6 +222,8 @@
+                 status = .unknown // Avoids changing model health from a user action.
+             case .timedOut, .connectionLost, .transport: // Handles server reachability failures.
+                 status = .serverOffline // Records that the usable API could not be reached.
++            case .networkUnavailable: // Handles a Mac-side path or permission failure rather than a proven server outage.
++                status = .unavailable // Keeps a process-local restriction separate from server-offline health.
+             case .incompatibleAPI, .malformedResponse, .malformedToolCall, .httpStatus: // Handles reachable but unusable protocol behavior.
+                 status = .degraded // Records an API-level compatibility problem.
+             case .invalidTarget, .profileNotFound, .serverDisabled, .backendMismatch, .authenticationUnavailable, .unsupportedAttachments, .invalidRequest: // Handles configuration or caller availability failures.
+@@ -509,7 +514,9 @@
+                 throw RemoteInferenceError.cancelled // Preserves user cancellation separately from server loss.
+             case .timedOut: // Handles URLSession deadline expiration.
+                 throw RemoteInferenceError.timedOut // Exposes an explicit fallback-ready timeout.
+-            case .networkConnectionLost, .notConnectedToInternet, .cannotConnectToHost, .cannotFindHost, .dnsLookupFailed: // Handles private-server reachability loss.
++            case .notConnectedToInternet: // Handles macOS no-path reports, including a local-network privacy denial.
++                throw RemoteInferenceError.networkUnavailable // Preserves the process-side failure category instead of reporting a dropped server connection.
++            case .networkConnectionLost, .cannotConnectToHost, .cannotFindHost, .dnsLookupFailed: // Handles private-server reachability loss.
+                 throw RemoteInferenceError.connectionLost // Avoids leaking endpoint details from the underlying error.
+             default: // Handles other TLS, protocol, and transport failures.
+                 throw RemoteInferenceError.transport(Self.redacted(error.localizedDescription, knownSecrets: [knownToken].compactMap { $0 })) // Sanitizes any credential echo and bounds the diagnostic.
+--- a/AutoMLXStudioTests/RemoteInferenceBackendTests.swift
++++ b/AutoMLXStudioTests/RemoteInferenceBackendTests.swift
+@@ -222,6 +222,42 @@
+         XCTAssertFalse(health.apiCompatible) // Confirms usable inference compatibility remains false.
+         XCTAssertNil(health.discoveredModelCount) // Confirms no model count is invented from unrelated HTML.
+     } // Ends false-positive health prevention testing.
++
++    func testLMStudioModelsResponseAtVersionedBasePathIsHealthy() async throws { // Covers the exact standard LM Studio response and versioned endpoint used by the Windows connection.
++        let environment = makeTemporaryEnvironment() // Isolates the production profile store from the user's configured servers.
++        var profile = makeProfile(host: "192.168.1.7") // Uses the real failure's IPv4 shape without sending any network traffic.
++        profile.basePath = "/v1/" // Exercises a harmless trailing slash that must not duplicate the API prefix.
++        let store = RemoteServerStore(fileURL: environment.fileURL, tokenVault: environment.vault) // Uses the production actor with disposable persistence.
++        try await store.save(profile) // Persists one validated server snapshot for the real backend implementation.
++        let backend = RemoteInferenceBackend(profileProvider: store, session: makeSession(protocolClass: RemoteURLProtocolStub.self)) // Routes only this test's HTTP request into its recording stub.
++        RemoteURLProtocolStub.configure { request in // Validates the request before returning the minimal real-server response shape.
++            XCTAssertEqual(request.url?.absoluteString, "http://192.168.1.7:1234/v1/models") // Proves the app requests the intended URL with exactly one `/v1` segment.
++            return .init(data: try Self.jsonData(["object": "list", "data": [["id": "qwen/qwen3-4b-2507", "object": "model", "owned_by": "organization_owner"]]])) // Supplies a valid OpenAI-compatible listing with no optional custom fields.
++        } // Ends the fixed LM Studio response.
++        let health = await backend.health(for: makeTarget(profile: profile, modelID: "qwen/qwen3-4b-2507")) // Exercises the actual discovery, decoding, and connection-status path.
++        XCTAssertEqual(health.status, .healthy) // Requires the expected Healthy state after a valid response.
++        XCTAssertTrue(health.apiCompatible) // Requires an explicit compatible API result rather than TCP-only success.
++        XCTAssertEqual(health.discoveredModelCount, 1) // Preserves the actual number of decoded provider models.
++        let models = try await backend.discoverModels(serverID: profile.id) // Reads the validated discovery result from the production actor.
++        XCTAssertEqual(models.map(\.id), ["qwen/qwen3-4b-2507"]) // Proves the requested model is available to the UI and dispatcher.
++        XCTAssertEqual(RemoteURLProtocolStub.requests().count, 1) // Confirms health and discovery share one successful API observation.
++    } // Ends the exact Windows model-list regression test.
++
++    func testMacNetworkPathFailureDoesNotClaimRemoteServerIsOffline() async throws { // Reproduces the observed macOS URL error without mislabeling the Windows service.
++        let setup = try await makeBackend() // Creates the production backend and a disposable configured profile.
++        RemoteURLProtocolStub.configure { _ in .init(error: URLError(.notConnectedToInternet)) } // Simulates the `-1009` URLSession result logged when local-network access was prohibited.
++        let health = await setup.backend.health(for: makeTarget(profile: setup.profile)) // Runs the actual health error mapping.
++        XCTAssertEqual(health.status, .unavailable) // Distinguishes a Mac-side path restriction from a proven server outage.
++        XCTAssertFalse(health.apiCompatible) // Does not claim API compatibility without any HTTP response.
++        XCTAssertTrue(health.conciseError?.contains("Local Network") == true) // Provides the relevant macOS privacy setting as an actionable diagnostic.
++        let request = ModelGenerationRequest(target: makeTarget(profile: setup.profile), systemInstructions: "Respond.", messages: [ModelGenerationMessage(role: .user, content: "Hello")]) // Reuses the same configured server for Chat transport classification.
++        do { // Requires a typed error rather than accepting an absent generation response.
++            _ = try await setup.backend.generate(request: request) // Calls the real production generation transport through the stub.
++            XCTFail("Expected a Mac network-path failure.") // Fails if the app silently reports a successful generation.
++        } catch let error as RemoteInferenceError { // Inspects the normalized app error.
++            XCTAssertEqual(error, .networkUnavailable) // Prevents the misleading dropped-server message observed in the UI.
++        } // Ends exact transport-category verification.
++    } // Ends the local-network denial regression test.
+ 
+     func testTextGenerationBuildsAuthOnlyAtNetworkBoundaryAndNormalizesUsage() async throws { // Verifies request encoding, bearer isolation, response decoding, and duration metadata.
+         let secret = "private-bearer-987654321" // Supplies a distinctive credential for leakage assertions.

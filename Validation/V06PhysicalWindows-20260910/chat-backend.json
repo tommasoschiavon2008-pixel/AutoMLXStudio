@@ -1,0 +1,6 @@
+{
+  "fallback" : false,
+  "pass" : true,
+  "response" : "AUTOMLX_WINDOWS_OK",
+  "scope" : "Production dispatcher\/backend harness; ordinary Chat UI is local-only"
+}

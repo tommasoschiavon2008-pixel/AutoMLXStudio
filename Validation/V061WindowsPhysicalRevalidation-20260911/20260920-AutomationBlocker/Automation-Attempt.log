@@ -1,0 +1,44 @@
+UTC 2026-09-20T19:36:53Z
+Controlled native automation attempt: cua.getApp("/tmp/AutoMLXStudio-V061-DebugFreezeFinal/Build/Products/Debug/AutoMLXStudio.app")
+CUA result: Invalid app: /tmp/AutoMLXStudio-V061-DebugFreezeFinal/Build/Products/Debug/AutoMLXStudio.app
+Artifact path exists: no
+22269 /Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node --experimental-vm-modules /var/folders/2g/q2qk1gk540d5ygkzr28n20ym0000gn/T/.tmpuIJx6g/kernel.js --session-id db1094bd0106427ab9dc852f45e7ff0c --working-dir /Volumes/Crucial X9 Pro/AutoMLXStudioV1_3
+22270 /Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node /var/folders/2g/q2qk1gk540d5ygkzr28n20ym0000gn/T/.tmpuIJx6g/trusted-worker.js /Volumes/Crucial X9 Pro/AutoMLXStudioV1_3
+22324 /bin/zsh -lc set -o pipefail
+EVIDENCE_ROOT='Validation/V061WindowsPhysicalRevalidation-20260911'
+{
+  printf 'UTC '; date -u '+%Y-%m-%dT%H:%M:%SZ'
+  printf '%s\n' 'Controlled native automation attempt: cua.getApp("/tmp/AutoMLXStudio-V061-DebugFreezeFinal/Build/Products/Debug/AutoMLXStudio.app")'
+  printf '%s\n' 'CUA result: Invalid app: /tmp/AutoMLXStudio-V061-DebugFreezeFinal/Build/Products/Debug/AutoMLXStudio.app'
+  if test -d '/tmp/AutoMLXStudio-V061-DebugFreezeFinal/Build/Products/Debug/AutoMLXStudio.app'; then
+    printf '%s\n' 'Artifact path exists: yes'
+  else
+    printf '%s\n' 'Artifact path exists: no'
+  fi
+  /usr/bin/pgrep -afil 'AutoMLXStudio' || true
+} | /usr/bin/tee "$EVIDENCE_ROOT/20260920-AutomationBlocker/Automation-Attempt.log"
+{
+  printf 'UTC '; date -u '+%Y-%m-%dT%H:%M:%SZ'
+  printf '%s\n' 'Source manifest post-validation check:'
+  /usr/bin/shasum -a 256 -c 'Validation/V061BenchmarkHarness-20260911/SourceManifest-freeze-final.sha256'
+} | /usr/bin/tee "$EVIDENCE_ROOT/20260920-Preflight/SourceIntegrity-After.log"
+exit "${pipestatus[1]}"
+22331 /bin/zsh -lc set -o pipefail
+EVIDENCE_ROOT='Validation/V061WindowsPhysicalRevalidation-20260911'
+{
+  printf 'UTC '; date -u '+%Y-%m-%dT%H:%M:%SZ'
+  printf '%s\n' 'Controlled native automation attempt: cua.getApp("/tmp/AutoMLXStudio-V061-DebugFreezeFinal/Build/Products/Debug/AutoMLXStudio.app")'
+  printf '%s\n' 'CUA result: Invalid app: /tmp/AutoMLXStudio-V061-DebugFreezeFinal/Build/Products/Debug/AutoMLXStudio.app'
+  if test -d '/tmp/AutoMLXStudio-V061-DebugFreezeFinal/Build/Products/Debug/AutoMLXStudio.app'; then
+    printf '%s\n' 'Artifact path exists: yes'
+  else
+    printf '%s\n' 'Artifact path exists: no'
+  fi
+  /usr/bin/pgrep -afil 'AutoMLXStudio' || true
+} | /usr/bin/tee "$EVIDENCE_ROOT/20260920-AutomationBlocker/Automation-Attempt.log"
+{
+  printf 'UTC '; date -u '+%Y-%m-%dT%H:%M:%SZ'
+  printf '%s\n' 'Source manifest post-validation check:'
+  /usr/bin/shasum -a 256 -c 'Validation/V061BenchmarkHarness-20260911/SourceManifest-freeze-final.sha256'
+} | /usr/bin/tee "$EVIDENCE_ROOT/20260920-Preflight/SourceIntegrity-After.log"
+exit "${pipestatus[1]}"

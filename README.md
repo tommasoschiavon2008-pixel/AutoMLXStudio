@@ -1,5 +1,11 @@
 # AutoMLX Studio
 
+V0.6.1 adds a correctness-first Model Evaluation / Benchmark Harness for exact configured local MLX and remote OpenAI-compatible targets. It includes 33 original offline cases across eight categories, deterministic graders, per-case timeouts, cooperative cancellation, truthful performance/usage metrics, weighted scores, versioned history, comparison, best-model-by-role evidence, custom suite import/export, and JSON/Markdown result export. Benchmark tool calls are inert graded data and are never executed.
+
+V0.6.0.1 added ordinary Chat for installed local MLX text models and explicitly configured remote OpenAI-compatible models. Chat and Benchmark now share one backend dispatcher; credentials remain in Keychain and optional token/TTFT metrics remain unavailable when a backend does not report them.
+
+Windows software readiness and the still-pending focused physical revalidation are documented in `PROJECT6_VALIDATION.md`, `PROJECT6_WINDOWS_READINESS.md`, and `PHYSICAL_REVALIDATION.md`.
+
 AutoMLX Studio is a native macOS SwiftUI application for offline MLX model control, chat, multimodal orchestration, optimization, and benchmarking.
 
 The current **V0.6 Distributed Engineering** preserves the V0.1–V0.4 features and adds:
@@ -23,11 +29,11 @@ Previously implemented features remain available:
 
 The normal runtime never downloads a model. Missing files or optional runtimes produce explicit unavailable states. A local model path is preferred over repository metadata, and only child processes started and retained by this app may be terminated.
 
-Engineering orchestration, workspace authority, edits, commands, and approvals always run on the Mac. In distributed mode, the server receives prompts, selected context, tool definitions, and bounded tool results, never a filesystem handle. This still transmits selected source content; use a trusted endpoint. Existing Chat, Voice, Optimize, and Benchmark workflows retain their local behavior.
+Engineering orchestration, workspace authority, edits, commands, and approvals always run on the Mac. In distributed mode, the server receives prompts, selected context, tool definitions, and bounded tool results, never a filesystem handle. This still transmits selected source content; use a trusted endpoint. Benchmark may evaluate an explicitly selected remote target, but it never executes returned tool intent.
 
 The operational repository is `/Volumes/AutoMLXShrd/AutoMLXStudioV1_3`. The old repository on Crucial X9 Pro is preserved; the external model/runtime paths below have not moved.
 
-See [Project 6 architecture](PROJECT6_ARCHITECTURE.md), [Engineering usage and safety](PROJECT6_ENGINEERING.md), [Windows readiness checklist](PROJECT6_WINDOWS_READINESS.md), and [V0.6 validation evidence](PROJECT6_VALIDATION.md). Physical Windows validation is pending; deterministic software tests are not a claim of a tested Windows machine.
+See [V0.6.1 Benchmark Harness](PROJECT_V061_BENCHMARKS.md), [Project 6 architecture](PROJECT6_ARCHITECTURE.md), [Engineering usage and safety](PROJECT6_ENGINEERING.md), [Windows readiness checklist](PROJECT6_WINDOWS_READINESS.md), and [validation evidence](PROJECT6_VALIDATION.md). Physical Windows validation is pending; deterministic software tests are not a claim of a tested Windows machine.
 
 ## Build and test
 

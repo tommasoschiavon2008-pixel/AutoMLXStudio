@@ -1,0 +1,6 @@
+FAIL: shipping_total(12, 3) returned 9; expected 15
+make: *** [test] Error 1
+real 0.03
+user 0.01
+sys 0.01
+exit_code=2

@@ -1,0 +1,12 @@
+{
+  "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio/Core/Agents/AgentModels.swift" : {
+    "abi-baseline-json" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio.abi.json",
+    "const-values" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio-primary.swiftconstvalues",
+    "dependencies" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio-primary.d",
+    "diagnostics" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio-primary.dia",
+    "objc-header" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio-Swift.h",
+    "swiftdoc" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio.swiftdoc",
+    "swiftmodule" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio.swiftmodule",
+    "swiftsourceinfo" : "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Universal/Build/Intermediates.noindex/AutoMLXStudio.build/Release/AutoMLXStudio.build/Objects-normal/arm64/AutoMLXStudio.swiftsourceinfo"
+  }
+}

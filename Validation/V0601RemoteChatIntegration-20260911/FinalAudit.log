@@ -1,0 +1,61 @@
+V0.6.0.1 final audit
+UTC 2026-09-11T05:46:41Z
+
+Physical endpoint/model identifiers in application source (expected: none):
+
+Existing optional provider-family recognition (informational, not routing configuration):
+577:        if http.value(forHTTPHeaderField: "x-lmstudio-version") != nil { // Detects LM Studio's explicit version header without persisting the value.
+578:            return "LM Studio" // Returns the stable server family label.
+
+Literal production credential values (expected: none):
+
+Physical status declarations:
+Validation/Fixtures/RemoteEngineering/PHYSICAL_REVALIDATION.md:3:Status: **PENDING.** Run this only when the physical Windows host is available. Work on a disposable copy of this fixture; keep this baseline intentionally failing.
+Validation/V0601RemoteChatIntegration-20260911/FINAL_REPORT.md:8:- Previous physical validation: **PARTIAL — distributed integration confirmed**
+Validation/V0601RemoteChatIntegration-20260911/FINAL_REPORT.md:9:- Physical revalidation: **PENDING**
+Validation/V0601RemoteChatIntegration-20260911/FINAL_REPORT.md:123:The previous physical result remains **PARTIAL — distributed integration confirmed**. It physically confirmed TCP, `/v1/models`, Remote Models persistence/health/discovery, real backend inference, multi-turn, cancellation, remote Engineering read/write round-trip, approvals, Stop recovery, and Mac tool locality.
+Validation/V0601RemoteChatIntegration-20260911/FINAL_REPORT.md:125:V0.6.0.1 current software readiness is **READY**. The only remaining acceptance blocker is external: run the short real Windows delta through ordinary Chat and the disposable Engineering fixture. Until then, physical revalidation remains **PENDING**. This is not a software blocker and no physical pass is claimed.
+Validation/V0601RemoteChatIntegration-20260911/FINAL_REPORT.md:129:AutoMLXStudio V0.6.0.1 is software-ready for complete focused Windows revalidation. There are no known remaining software blockers in the requested scope. The next action is to restore the physical Windows host and run the documented delta; only a real successful run may change the physical status from PARTIAL/PENDING. V0.6.1 Benchmark Harness, downloads, training/fine-tuning/LoRA, and new Vision work were not started.
+PHYSICAL_REVALIDATION.md:3:Status: **PENDING — Windows is offline and was not contacted on 11 September 2026.**
+PHYSICAL_REVALIDATION.md:43:| Ordinary Chat remote selection | Grouped server/model selection remains selected | PENDING |
+PHYSICAL_REVALIDATION.md:44:| Ordinary Chat response | Exact remote target produces visible text | PENDING |
+PHYSICAL_REVALIDATION.md:45:| Multi-turn | System plus user/assistant/user context is coherent and not duplicated | PENDING |
+PHYSICAL_REVALIDATION.md:46:| Stop and recovery | In-flight remote Chat cancels; next request succeeds | PENDING |
+PHYSICAL_REVALIDATION.md:47:| Backend switch | Local/remote switch keeps history; next turn uses the new target | PENDING |
+PHYSICAL_REVALIDATION.md:48:| Error states | No crash, stuck spinner, history loss, selection loss, or silent fallback | PENDING |
+PHYSICAL_REVALIDATION.md:49:| Engineering fixture | Exact one-line repair, approved test, and post-edit verification pass | PENDING |
+PHYSICAL_REVALIDATION.md:50:| Denial/locality | Denied edit is unchanged; all file/process work remains on Mac | PENDING |
+PROJECT6_VALIDATION.md:9:Windows physical revalidation was not run because the host is offline. The current physical status is **PARTIAL / V0.6.0.1 DELTA PENDING**, with the exact focused procedure in `PHYSICAL_REVALIDATION.md`.
+PROJECT6_VALIDATION.md:78:PENDING PHYSICAL VALIDATION
+PROJECT6_VALIDATION.md:133:Remaining software blockers: **NONE**. V0.6 is complete for the requested software scope. Physical Windows validation remains **PENDING PHYSICAL VALIDATION**. The next recommended milestone is **V0.6.1 — Model Evaluation / Benchmark Harness**, to establish quantitative baselines before fine-tuning/LoRA. It was not started in this task.
+PROJECT6_WINDOWS_READINESS.md:7:The Windows host was offline during this update. Therefore the previous physical result remains **PARTIAL** and every V0.6.0.1 physical delta remains **PENDING**. Use `PHYSICAL_REVALIDATION.md` for the complete focused checklist and `Validation/Fixtures/RemoteEngineering/PHYSICAL_REVALIDATION.md` beside the permanent fixture; do not infer a physical pass from intercepted HTTP tests.
+PROJECT6_WINDOWS_READINESS.md:9:Software integration is implemented and deterministically tested. **V0.6.0.1 PHYSICALLY VERIFIED: NO — PENDING PHYSICAL VALIDATION.** A prior V0.6 backend/Engineering session produced partial physical evidence on 10 September, but no real Windows host or LAN inference server was available/used for the V0.6.0.1 Chat UI delta.
+PROJECT6_WINDOWS_READINESS.md:13:The 10 September physical session already confirmed TCP, `/v1/models`, Remote Models persistence/health/discovery, real backend inference, multi-turn, cancellation, the remote Engineering read/write round-trip, approvals, Stop recovery, and Mac tool locality. At that checkpoint, ordinary Chat UI remote routing and complete fixture verification remained open. V0.6.0.1 closes those items in software; both still require the focused physical delta below before the Windows status can change from PARTIAL/PENDING.
+PROJECT6_WINDOWS_READINESS.md:30:| Health | Mac receives a compatible API response from the Windows host | PENDING |
+PROJECT6_WINDOWS_READINESS.md:31:| Discovery | `/v1/models` returns the selected Windows model identity | PENDING |
+PROJECT6_WINDOWS_READINESS.md:32:| Generation | A simple text request receives the selected model's answer | PENDING |
+PROJECT6_WINDOWS_READINESS.md:33:| Multi-turn | The next request uses the prior conversation correctly | PENDING |
+PROJECT6_WINDOWS_READINESS.md:34:| Cancellation | Stop ends the Mac-owned inference request promptly; unrelated processes remain running | PENDING |
+PROJECT6_WINDOWS_READINESS.md:35:| Timeout | An unreachable or deliberately delayed test endpoint produces a bounded timeout, without a false success | PENDING |
+PROJECT6_WINDOWS_READINESS.md:36:| Native tools | Windows returns a valid call; the Mac executes it after policy checks | PENDING |
+PROJECT6_WINDOWS_READINESS.md:37:| Correlation | The next Windows request contains the assistant call and its matching Mac tool result | PENDING |
+PROJECT6_WINDOWS_READINESS.md:38:| Full Engineering | Inspect → approve edit → real test → verify completes in the disposable Mac workspace | PENDING |
+PROJECT6_WINDOWS_READINESS.md:39:| Deny | Denying the proposed edit leaves the file unchanged and ends with permission denied | PENDING |
+PROJECT6_WINDOWS_READINESS.md:40:| Locality | File changes/processes occur on the Mac; Windows has no direct filesystem access to that workspace | PENDING |
+PROJECT6_WINDOWS_READINESS.md:41:| Fallback | A controlled remote failure either uses only an explicitly compatible local assignment, visibly, or reports failure | PENDING |
+
+Final result summaries:
+{"result":"Passed","totalTestCount":37,"passedTests":37,"skippedTests":0,"failedTests":0}
+{"result":"Passed","totalTestCount":209,"passedTests":203,"skippedTests":6,"failedTests":0}
+{"result":"Passed","totalTestCount":209,"passedTests":203,"skippedTests":6,"failedTests":0}
+
+Build outcomes:
+DebugFinalVerified: ** BUILD SUCCEEDED **
+ReleaseFinalVerified: ** BUILD SUCCEEDED **
+UniversalFinalVerified: ** BUILD SUCCEEDED **
+Validation/V0601RemoteChatIntegration-20260911/Apps/DebugFinalVerified/AutoMLXStudio.app/Contents/MacOS/AutoMLXStudio:     Mach-O 64-bit executable arm64
+Validation/V0601RemoteChatIntegration-20260911/Apps/ReleaseFinalVerified/AutoMLXStudio.app/Contents/MacOS/AutoMLXStudio:   Mach-O 64-bit executable arm64
+Validation/V0601RemoteChatIntegration-20260911/Apps/UniversalFinalVerified/AutoMLXStudio.app/Contents/MacOS/AutoMLXStudio: Mach-O universal binary with 2 architectures: [x86_64:Mach-O 64-bit executable x86_64] [arm64]
+Validation/V0601RemoteChatIntegration-20260911/Apps/UniversalFinalVerified/AutoMLXStudio.app/Contents/MacOS/AutoMLXStudio (for architecture x86_64):	Mach-O 64-bit executable x86_64
+Validation/V0601RemoteChatIntegration-20260911/Apps/UniversalFinalVerified/AutoMLXStudio.app/Contents/MacOS/AutoMLXStudio (for architecture arm64):	Mach-O 64-bit executable arm64
+x86_64 arm64

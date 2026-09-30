@@ -264,7 +264,7 @@ final class EngineeringController: ObservableObject { // Coordinates authorized 
             try Task.checkCancellation() // Stops before constructing model and runtime actors after optional retrieval.
             activeEngine = components.engine // Publishes only the exact engine owned by this run.
             activeToolRuntime = components.toolRuntime // Publishes only the exact runtime owned by this run.
-            let allowedTools = Set(EngineeringToolRuntime.definitions.map { $0.name.rawValue }) // Applies the complete registered typed tool set as an explicit plan boundary.
+            let allowedTools = AgentPolicyRegistry.engineeringToolNames(for: AgentID.engineering, profile: .safe) // Intersects registered tools with the code-owned SAFE role policy before any model proposal.
             let plan = EngineeringExecutionPlan(workspaceID: descriptor.id, workspaceName: descriptor.displayName, quality: quality, allowedToolNames: allowedTools, reviewerEnabled: quality != .fast, composerEnabled: quality == .thorough, verificationExpected: true) // Maps visible quality to fixed iteration and bounded quality-stage policy.
             statusText = remoteTarget == nil ? "Engineering Agent · Local — Mac" : "Engineering Agent · Remote primary" // Makes requested execution location visible without pre-claiming success.
             let sessionResult = await components.engine.execute(EngineeringAgentInput(task: normalizedTask, workspaceOverview: overview, projectMemoryContext: memoryContext), plan: plan, onEvents: { [weak self] events in // Streams operational metadata without publishing model reasoning or file contents.

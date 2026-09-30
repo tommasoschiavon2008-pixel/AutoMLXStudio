@@ -1,0 +1,5 @@
+{
+  "cancelled" : true,
+  "message" : "The remote server request was cancelled.",
+  "type" : "RemoteInferenceError"
+}

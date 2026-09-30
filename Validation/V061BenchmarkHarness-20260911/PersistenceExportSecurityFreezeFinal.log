@@ -1,0 +1,31 @@
+[A9 targeted test evidence]
+1193:Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testCustomSuiteImportPreviewAndExportRoundTrip]' started.
+1194:Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testCustomSuiteImportPreviewAndExportRoundTrip]' passed (0.004 seconds).
+1195:Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testDeterministicDemoCompletesAndExportsJSONAndMarkdown]' started.
+1196:Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testDeterministicDemoCompletesAndExportsJSONAndMarkdown]' passed (0.022 seconds).
+1205:Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testProgrammaticRegistryRejectsUnknownIdentifiers]' started.
+1206:Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testProgrammaticRegistryRejectsUnknownIdentifiers]' passed (0.000 seconds).
+1215:Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testVersionedPersistenceSkipsOnlyCorruptRecord]' started.
+1216:Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testVersionedPersistenceSkipsOnlyCorruptRecord]' passed (0.014 seconds).
+
+[Export secret scan]
+PASS: no API key, bearer token, user path, or physical Windows address found in deterministic exports.
+
+[Imported-suite execution surface]
+AutoMLXStudio/Services/BenchmarkGraders.swift:19:struct BenchmarkGraderRegistry: Sendable { // Resolves declarative suite specifications to isolated deterministic strategies.
+AutoMLXStudio/Services/BenchmarkGraders.swift:29:        case .programmatic(let identifier, let expected): return ProgrammaticBenchmarkGrader(identifier: identifier, expected: expected).grade(input) // Uses only a closed registry of harmless functions.
+AutoMLXStudio/Services/BenchmarkGraders.swift:158:        struct Call: Decodable { let name: String; let arguments: [String: JSONValue] } // Defines one simulated call without executable fields.
+AutoMLXStudio/Services/BenchmarkGraders.swift:171:        switch identifier { // Resolves a fixed registry and never loads executable suite content.
+AutoMLXStudio/Services/BenchmarkGraders.swift:185:        } // Ends programmatic registry resolution.
+AutoMLXStudio/Services/BenchmarkGraders.swift:186:    } // Ends programmatic grading.
+AutoMLXStudio/Services/BenchmarkGraders.swift:187:} // Ends registered programmatic grader.
+AutoMLXStudio/Services/BenchmarkStore.swift:15:    static let maximumImportBytes = BenchmarkSuiteValidator.maximumImportBytes // Reuses the fixed two-mebibyte import limit.
+AutoMLXStudio/Services/BenchmarkStore.swift:60:        guard data.count <= Self.maximumImportBytes else { throw BenchmarkValidationError.importTooLarge } // Bounds memory and disk inputs.
+AutoMLXStudio/Core/Benchmarks/BuiltInBenchmarkSuite.swift:26:        textCase(5, "Concise one-line response", .general, "Answer on exactly one non-empty line: What platform does AutoMLXStudio target?", "A one-line answer naming macOS.", .programmatic(identifier: "single-line", expected: nil), ["format"]), // Tests concise response shape.
+AutoMLXStudio/Core/Benchmarks/BuiltInBenchmarkSuite.swift:61:        textCase(25, "Four-phase change plan", .engineering, "For a safe code change, give a concise plan whose phase labels appear in this exact order: Inspect, Edit, Test, Verify.", "Inspect, Edit, Test, Verify in order.", .programmatic(identifier: "ordered-plan", expected: nil), ["quick", "workflow"]), // Tests complete workflow sequencing.
+AutoMLXStudio/Core/Benchmarks/BuiltInBenchmarkSuite.swift:63:        textCase(27, "Verification command intent", .engineering, "A Swift package change needs its unit suite run. Return only the conventional SwiftPM test command.", "swift test", .normalized(expected: "swift test", options: .init()), ["test-intent"]), // Tests verification-tool intent without shell execution.
+AutoMLXStudio/Core/Benchmarks/BuiltInBenchmarkSuite.swift:93:        return BenchmarkCase(id: identifier(number), name: "Synthetic recall slot \(slot)", category: .longContext, prompt: prompt, expectedDescription: token, grading: .programmatic(identifier: "expected-string", expected: .string(token)), timeoutSeconds: 120, maxOutputTokens: 64, tags: [tag, "synthetic", "context-warning"], difficulty: .medium) // Returns the fully local long-context case.
+AutoMLXStudio/Core/Benchmarks/BuiltInBenchmarkSuite.swift:102:    static let maximumImportBytes = 2 * 1_024 * 1_024 // Caps imported suite JSON at two mebibytes.
+AutoMLXStudio/Core/Benchmarks/BuiltInBenchmarkSuite.swift:106:        guard !suite.cases.isEmpty else { throw BenchmarkValidationError.emptySuite } // Requires executable content.
+AutoMLXStudio/Core/Benchmarks/BuiltInBenchmarkSuite.swift:124:        case .programmatic(let identifier, _): guard ["ordered-plan", "single-line", "expected-string"].contains(identifier) else { throw BenchmarkValidationError.corruptRecord } // Allows only registered non-executable identifiers.
+AutoMLXStudio/Core/Benchmarks/BuiltInBenchmarkSuite.swift:125:        case .exact, .normalized, .json, .toolCalls: break // Requires no additional executable validation.

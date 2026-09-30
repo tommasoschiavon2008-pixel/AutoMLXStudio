@@ -9,6 +9,7 @@ struct RootView: View {
                 Label(item.rawValue, systemImage: item.symbol)
                     .tag(item)
                     .padding(.vertical, 3)
+                    .accessibilityLabel(item.rawValue) // Gives every sidebar destination, including Benchmark, an explicit stable assistive label.
             }
             .navigationTitle("AutoMLX Studio")
             .navigationSplitViewColumnWidth(min: 190, ideal: 210, max: 250)
@@ -44,7 +45,7 @@ struct RootView: View {
         case .optimize:
             OptimizeView()
         case .benchmark:
-            BenchmarkView()
+            BenchmarkView(controller: appState.benchmarkController) // Reuses the app-owned evaluation state across sidebar navigation.
         case .settings:
             SettingsView()
         }

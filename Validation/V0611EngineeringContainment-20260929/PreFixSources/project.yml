@@ -1,0 +1,73 @@
+name: AutoMLXStudio
+options:
+  bundleIdPrefix: com.tommaso
+  deploymentTarget:
+    macOS: "14.0"
+settings:
+  base:
+    SWIFT_VERSION: "5.10"
+targets:
+  AutoMLXStudio:
+    type: application
+    platform: macOS
+    sources:
+      - AutoMLXStudio
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.tommaso.AutoMLXStudio
+        PRODUCT_NAME: AutoMLXStudio
+        INFOPLIST_KEY_CFBundleDisplayName: "AutoMLX Studio"
+        INFOPLIST_KEY_LSApplicationCategoryType: "public.app-category.developer-tools"
+        INFOPLIST_KEY_NSMicrophoneUsageDescription: "AutoMLX Studio records audio only when you press the microphone button to create a local transcription."
+        INFOPLIST_KEY_NSLocalNetworkUsageDescription: "Connects to inference servers you configure on your local network to discover models and run chats, engineering tasks, and benchmarks." # Explains user-initiated private LAN inference in the macOS permission prompt.
+        GENERATE_INFOPLIST_FILE: YES
+        CODE_SIGN_STYLE: Automatic
+        ENABLE_APP_SANDBOX: NO
+        MACOSX_DEPLOYMENT_TARGET: "14.0"
+  AutoMLXStudioTests: # Defines deterministic unit coverage for routing, planning, and workflow recovery.
+    type: bundle.unit-test # Builds an XCTest bundle without adding runtime dependencies to the app.
+    platform: macOS # Runs the tests on the same platform as AutoMLX Studio.
+    sources: # Declares the isolated unit-test source folder.
+      - AutoMLXStudioTests # Includes the V0.1 orchestration test suite.
+    dependencies: # Makes internal application types available through @testable import.
+      - target: AutoMLXStudio # Links the tests against the application target.
+    settings: # Keeps test deployment and signing aligned with local Debug builds.
+      base: # Starts test-target build settings.
+        PRODUCT_BUNDLE_IDENTIFIER: com.tommaso.AutoMLXStudioTests # Gives the test bundle a stable identifier.
+        GENERATE_INFOPLIST_FILE: YES # Lets XcodeGen produce the unit-test Info.plist.
+        CODE_SIGN_STYLE: Automatic # Preserves the project's existing signing convention.
+        MACOSX_DEPLOYMENT_TARGET: "14.0" # Matches the application deployment target.
+schemes: # Declares reproducible normal and opt-in hardware validation entry points.
+  AutoMLXStudio: # Preserves the standard application build and inexpensive test scheme.
+    build: # Defines targets compiled by standard scheme actions.
+      targets: # Maps each target to the actions that require it.
+        AutoMLXStudio: all # Builds the application for every standard scheme action.
+        AutoMLXStudioTests: [test] # Builds the test bundle only for the Test action.
+    run: # Configures normal local application launches.
+      config: Debug # Uses the debuggable application configuration.
+    test: # Configures the default skip-capable suite.
+      config: Debug # Runs unit tests against the Debug build.
+      targets: # Lists test bundles included in the default suite.
+        - AutoMLXStudioTests # Includes all V0.1, V0.2, V0.2.1, and foundation tests.
+    profile: # Configures performance profiling without changing source settings.
+      config: Release # Profiles the optimized application build.
+    analyze: # Configures static analysis for the application.
+      config: Debug # Analyzes the debuggable configuration.
+    archive: # Configures distributable local archives.
+      config: Release # Archives the optimized application configuration.
+  AutoMLXStudioHardwareValidation: # Provides an explicit opt-in scheme for real local model loading.
+    build: # Defines only targets required by physical validation.
+      targets: # Maps the app and test bundle to their hardware-test actions.
+        AutoMLXStudio: [build, test] # Builds the application host and links it into XCTest.
+        AutoMLXStudioTests: [test] # Builds the physical integration test bundle.
+    test: # Configures the deliberately expensive local hardware action.
+      config: Debug # Retains diagnostics and testability during real model switching.
+      targets: # Lists the test bundle; command-line selection still limits the executed case.
+        - AutoMLXStudioTests # Includes the skip-capable hardware integration test.
+      environmentVariables: # Passes the opt-in flag to the hosted XCTest process explicitly.
+        RUN_MLX_MULTI_MODEL_TESTS: "1" # Enables only the guarded Coder → Reasoner → General test when selected.
+        RUN_MLX_VISION_HARDWARE_TESTS: "1" # Enables generated-image Qwen3-VL inference when the external download is complete.
+        RUN_MLX_AUDIO_HARDWARE_TESTS: "1" # Enables deterministic ASR and silent TTS inference against installed local models.
+    management: # Keeps the specialized scheme available but secondary in Xcode.
+      shared: true # Makes physical validation reproducible for local command-line runs.
+      orderHint: 100 # Places the specialized scheme after the normal app scheme.

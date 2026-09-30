@@ -1,0 +1,702 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -project AutoMLXStudio.xcodeproj -scheme AutoMLXStudio -configuration Debug -destination platform=macOS,arch=arm64 -derivedDataPath /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-V0611Containment-20260929 CODE_SIGN_STYLE=Automatic DEVELOPMENT_TEAM=3MKXA7AA48 test
+
+Build settings from command line:
+    CODE_SIGN_STYLE = Automatic
+    DEVELOPMENT_TEAM = 3MKXA7AA48
+
+ComputePackagePrebuildTargetDependencyGraph
+
+Prepare packages
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (2 targets)
+    Target 'AutoMLXStudioTests' in project 'AutoMLXStudio'
+        ➜ Explicit dependency on target 'AutoMLXStudio' in project 'AutoMLXStudio'
+    Target 'AutoMLXStudio' in project 'AutoMLXStudio' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ClangStatCache /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-V0611Containment-20260929/SDKStatCaches.noindex/macosx27.0-26A425-7231f6df4def33e022ae2eb8f782df1a.sdkstatcache
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudio.xcodeproj
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk -o /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-V0611Containment-20260929/SDKStatCaches.noindex/macosx27.0-26A425-7231f6df4def33e022ae2eb8f782df1a.sdkstatcache
+
+CodeSign /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-V0611Containment-20260929/Build/Products/Debug/AutoMLXStudio.app/Contents/MacOS/AutoMLXStudio.debug.dylib (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+    Signing Identity:     "Apple Development: schiavon.tommaso@icloud.com (D7UB8ZG7D3)"
+    
+    /usr/bin/codesign --force --sign B41D3A86A557DD6A9B62E9DF0BD7A295B2E41153 --timestamp\=none --generate-entitlement-der /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-V0611Containment-20260929/Build/Products/Debug/AutoMLXStudio.app/Contents/MacOS/AutoMLXStudio.debug.dylib
+/Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-V0611Containment-20260929/Build/Products/Debug/AutoMLXStudio.app/Contents/MacOS/AutoMLXStudio.debug.dylib: replacing existing signature
+
+CodeSign /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-V0611Containment-20260929/Build/Products/Debug/AutoMLXStudio.app/Contents/MacOS/__preview.dylib (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+    Signing Identity:     "Apple Development: schiavon.tommaso@icloud.com (D7UB8ZG7D3)"
+    
+    /usr/bin/codesign --force --sign B41D3A86A557DD6A9B62E9DF0BD7A295B2E41153 --timestamp\=none --generate-entitlement-der /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-V0611Containment-20260929/Build/Products/Debug/AutoMLXStudio.app/Contents/MacOS/__preview.dylib
+/Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-V0611Containment-20260929/Build/Products/Debug/AutoMLXStudio.app/Contents/MacOS/__preview.dylib: replacing existing signature
+
+CodeSign /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-V0611Containment-20260929/Build/Products/Debug/AutoMLXStudio.app (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    
+    Signing Identity:     "Apple Development: schiavon.tommaso@icloud.com (D7UB8ZG7D3)"
+    
+    /usr/bin/codesign --force --sign B41D3A86A557DD6A9B62E9DF0BD7A295B2E41153 --entitlements /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-V0611Containment-20260929/Build/Intermediates.noindex/AutoMLXStudio.build/Debug/AutoMLXStudio.build/AutoMLXStudio.app.xcent --timestamp\=none --generate-entitlement-der /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-V0611Containment-20260929/Build/Products/Debug/AutoMLXStudio.app
+/Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-V0611Containment-20260929/Build/Products/Debug/AutoMLXStudio.app: replacing existing signature
+
+Validate /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-V0611Containment-20260929/Build/Products/Debug/AutoMLXStudio.app (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    builtin-validationUtility /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-V0611Containment-20260929/Build/Products/Debug/AutoMLXStudio.app -no-validate-extension -infoplist-subpath Contents/Info.plist
+
+RegisterWithLaunchServices /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-V0611Containment-20260929/Build/Products/Debug/AutoMLXStudio.app (in target 'AutoMLXStudio' from project 'AutoMLXStudio')
+    cd /Volumes/AutoMLXShrd/AutoMLXStudioV1_3
+    builtin-lsregisterurl --record-path /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-V0611Containment-20260929/Build/Intermediates.noindex/XCBuildData/registered-launchservices.txt -- /System/Library/Frameworks/CoreServices.framework/Versions/Current/Frameworks/LaunchServices.framework/Versions/Current/Support/lsregister -f -R -trusted /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-V0611Containment-20260929/Build/Products/Debug/AutoMLXStudio.app
+
+PruneExplicitPrecompiledModules /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-V0611Containment-20260929/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules
+
+PruneExplicitPrecompiledModules /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-V0611Containment-20260929/Build/Intermediates.noindex/ExplicitPrecompiledModules
+
+PruneExplicitPrecompiledModules /Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-V0611Containment-20260929/SDKExplicitPrecompiledModules
+
+2026-09-29 22:18:21.443539+0200 AutoMLXStudio[6699:108549] ApplePersistenceIgnoreState: Existing state will not be touched. New state will be written to /var/folders/2g/q2qk1gk540d5ygkzr28n20ym0000gn/T/com.tommaso.AutoMLXStudio.savedState
+Test Suite 'All tests' started at 2026-09-29 22:18:21.897.
+Test Suite 'AutoMLXStudioTests.xctest' started at 2026-09-29 22:18:21.897.
+Test Suite 'AudioHardwareTests' started at 2026-09-29 22:18:21.897.
+Test Case '-[AutoMLXStudioTests.AudioHardwareTests testInstalledASRAndTTSBackendHardwarePreflight]' started.
+Test Case '-[AutoMLXStudioTests.AudioHardwareTests testInstalledASRAndTTSBackendHardwarePreflight]' passed (0.049 seconds).
+Test Case '-[AutoMLXStudioTests.AudioHardwareTests testRealASRWithDeterministicSynthesizedWAV]' started.
+/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/VisionVoiceHardwareTests.swift:87: -[AutoMLXStudioTests.AudioHardwareTests testRealASRWithDeterministicSynthesizedWAV] : Test skipped - Set RUN_MLX_AUDIO_HARDWARE_TESTS=1 to run real local ASR inference.
+Test Case '-[AutoMLXStudioTests.AudioHardwareTests testRealASRWithDeterministicSynthesizedWAV]' skipped (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.AudioHardwareTests testRealTTSGeneratesReadableAudioWithoutPlayback]' started.
+/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/VisionVoiceHardwareTests.swift:118: -[AutoMLXStudioTests.AudioHardwareTests testRealTTSGeneratesReadableAudioWithoutPlayback] : Test skipped - Set RUN_MLX_AUDIO_HARDWARE_TESTS=1 to run real local TTS inference.
+Test Case '-[AutoMLXStudioTests.AudioHardwareTests testRealTTSGeneratesReadableAudioWithoutPlayback]' skipped (0.001 seconds).
+Test Suite 'AudioHardwareTests' passed at 2026-09-29 22:18:21.949.
+	 Executed 3 tests, with 2 tests skipped and 0 failures (0 unexpected) in 0.051 (0.051) seconds
+Test Suite 'BenchmarkHarnessTests' started at 2026-09-29 22:18:21.949.
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testBuiltInSuiteHasThirtyThreeStableCasesAcrossAllCategories]' started.
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testBuiltInSuiteHasThirtyThreeStableCasesAcrossAllCategories]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testCancellationPreservesCompletedResults]' started.
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testCancellationPreservesCompletedResults]' passed (0.054 seconds).
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testComparisonAndBestModelByRole]' started.
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testComparisonAndBestModelByRole]' passed (0.005 seconds).
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testContainsAndRegexGraders]' started.
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testContainsAndRegexGraders]' passed (0.000 seconds).
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testCustomSuiteImportPreviewAndExportRoundTrip]' started.
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testCustomSuiteImportPreviewAndExportRoundTrip]' passed (0.003 seconds).
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testDeterministicDemoCompletesAndExportsJSONAndMarkdown]' started.
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testDeterministicDemoCompletesAndExportsJSONAndMarkdown]' passed (0.010 seconds).
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testExactAndNormalizedGraders]' started.
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testExactAndNormalizedGraders]' passed (0.000 seconds).
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testNumericGraderRejectsProseAndHonorsTolerance]' started.
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testNumericGraderRejectsProseAndHonorsTolerance]' passed (0.000 seconds).
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testOptionalJudgeStaysSeparatedFromDeterministicScore]' started.
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testOptionalJudgeStaysSeparatedFromDeterministicScore]' passed (0.000 seconds).
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testPerCaseTimeoutIsIsolated]' started.
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testPerCaseTimeoutIsIsolated]' passed (0.012 seconds).
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testProgrammaticRegistryRejectsUnknownIdentifiers]' started.
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testProgrammaticRegistryRejectsUnknownIdentifiers]' passed (0.000 seconds).
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testSequentialRunnerIsolatesOneFailureAndContinues]' started.
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testSequentialRunnerIsolatesOneFailureAndContinues]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testStrictJSONGraderValidatesNestedTypesAndValues]' started.
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testStrictJSONGraderValidatesNestedTypesAndValues]' passed (0.000 seconds).
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testSummaryUsesAvailableWeightsAndTruthfulMetrics]' started.
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testSummaryUsesAvailableWeightsAndTruthfulMetrics]' passed (0.000 seconds).
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testToolGraderAcceptsNativeAndSimulatedCallsWithoutExecution]' started.
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testToolGraderAcceptsNativeAndSimulatedCallsWithoutExecution]' passed (0.000 seconds).
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testVersionedPersistenceSkipsOnlyCorruptRecord]' started.
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testVersionedPersistenceSkipsOnlyCorruptRecord]' passed (0.006 seconds).
+Test Suite 'BenchmarkHarnessTests' passed at 2026-09-29 22:18:22.046.
+	 Executed 16 tests, with 0 failures (0 unexpected) in 0.095 (0.097) seconds
+Test Suite 'BenchmarkUIValidationTests' started at 2026-09-29 22:18:22.046.
+Test Case '-[AutoMLXStudioTests.BenchmarkUIValidationTests testBenchmarkIdlePagesRenderAtNormalAndMinimumSizes]' started.
+2026-09-29 22:18:22.167005+0200 AutoMLXStudio[6699:108575] [Common] Unable to obtain a task name port right for pid 437: (os/kern) failure (0x5)
+Test Case '-[AutoMLXStudioTests.BenchmarkUIValidationTests testBenchmarkIdlePagesRenderAtNormalAndMinimumSizes]' passed (0.344 seconds).
+Test Case '-[AutoMLXStudioTests.BenchmarkUIValidationTests testBenchmarkRunningResultsComparisonHistoryCaseErrorAndCancelledStatesRender]' started.
+Test Case '-[AutoMLXStudioTests.BenchmarkUIValidationTests testBenchmarkRunningResultsComparisonHistoryCaseErrorAndCancelledStatesRender]' passed (0.346 seconds).
+Test Suite 'BenchmarkUIValidationTests' passed at 2026-09-29 22:18:22.737.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.690 (0.691) seconds
+Test Suite 'ChatGenerationSessionTests' started at 2026-09-29 22:18:22.737.
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testCancellationStopsRemoteSession]' started.
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testCancellationStopsRemoteSession]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testCatalogKeepsCollidingRemoteModelNamesDistinctAndPreservesSavedUnknownTarget]' started.
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testCatalogKeepsCollidingRemoteModelNamesDistinctAndPreservesSavedUnknownTarget]' passed (0.000 seconds).
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testCatalogRetainsDisabledSelectionButRejectsRemovedOrMissingDiscoveredModel]' started.
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testCatalogRetainsDisabledSelectionButRejectsRemovedOrMissingDiscoveredModel]' passed (0.000 seconds).
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testChatNativeLayoutRendersAtNormalAndMinimumDetailSizesWithLongState]' started.
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testChatNativeLayoutRendersAtNormalAndMinimumDetailSizesWithLongState]' passed (0.169 seconds).
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testChatNativeLayoutRendersRemoteEmptyErrorAndGeneratingStates]' started.
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testChatNativeLayoutRendersRemoteEmptyErrorAndGeneratingStates]' passed (0.193 seconds).
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testClassifiedBackendFailureKeepsSafeOperationalSummary]' started.
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testClassifiedBackendFailureKeepsSafeOperationalSummary]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testEngineeringPromptRequiresSmallestObservableVerifiedChange]' started.
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testEngineeringPromptRequiresSmallestObservableVerifiedChange]' passed (0.000 seconds).
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testLocalTextUsesSameDispatcherContract]' started.
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testLocalTextUsesSameDispatcherContract]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testNormalChatRejectsToolCallsWithoutExecution]' started.
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testNormalChatRejectsToolCallsWithoutExecution]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testRemoteTextUsesDispatcherAndPreservesExactMultiTurnOrderAndMetadata]' started.
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testRemoteTextUsesDispatcherAndPreservesExactMultiTurnOrderAndMetadata]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testSelectionPersistsAcrossStoreRestartAndIdentitySafeAppendDoesNotChangeVisibleConversation]' started.
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testSelectionPersistsAcrossStoreRestartAndIdentitySafeAppendDoesNotChangeVisibleConversation]' passed (0.002 seconds).
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testSwitchingLocalRemoteAndBackRoutesEveryNewTurnWithoutLosingHistory]' started.
+Test Case '-[AutoMLXStudioTests.ChatGenerationSessionTests testSwitchingLocalRemoteAndBackRoutesEveryNewTurnWithoutLosingHistory]' passed (0.001 seconds).
+Test Suite 'ChatGenerationSessionTests' passed at 2026-09-29 22:18:23.109.
+	 Executed 12 tests, with 0 failures (0 unexpected) in 0.370 (0.372) seconds
+Test Suite 'ConversationStoreCorruptionTests' started at 2026-09-29 22:18:23.109.
+Test Case '-[AutoMLXStudioTests.ConversationStoreCorruptionTests testMalformedSnapshotReportsTypedBoundedCorruption]' started.
+Test Case '-[AutoMLXStudioTests.ConversationStoreCorruptionTests testMalformedSnapshotReportsTypedBoundedCorruption]' passed (0.001 seconds).
+Test Suite 'ConversationStoreCorruptionTests' passed at 2026-09-29 22:18:23.110.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.001 (0.001) seconds
+Test Suite 'ConversationStoreMutationTests' started at 2026-09-29 22:18:23.110.
+Test Case '-[AutoMLXStudioTests.ConversationStoreMutationTests testHiddenMessageRolesAreRejectedWithoutChangingDurableHistory]' started.
+Test Case '-[AutoMLXStudioTests.ConversationStoreMutationTests testHiddenMessageRolesAreRejectedWithoutChangingDurableHistory]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.ConversationStoreMutationTests testProjectFilteringAndDeletionRemainStrictlyIsolated]' started.
+Test Case '-[AutoMLXStudioTests.ConversationStoreMutationTests testProjectFilteringAndDeletionRemainStrictlyIsolated]' passed (0.003 seconds).
+Test Case '-[AutoMLXStudioTests.ConversationStoreMutationTests testRenameAndFullUpdatePreserveStableIdentityAndCreationMetadata]' started.
+Test Case '-[AutoMLXStudioTests.ConversationStoreMutationTests testRenameAndFullUpdatePreserveStableIdentityAndCreationMetadata]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.ConversationStoreMutationTests testTitleDerivationIsBoundedEditableAndValidated]' started.
+Test Case '-[AutoMLXStudioTests.ConversationStoreMutationTests testTitleDerivationIsBoundedEditableAndValidated]' passed (0.001 seconds).
+Test Suite 'ConversationStoreMutationTests' passed at 2026-09-29 22:18:23.116.
+	 Executed 4 tests, with 0 failures (0 unexpected) in 0.006 (0.006) seconds
+Test Suite 'ConversationStorePersistenceTests' started at 2026-09-29 22:18:23.116.
+Test Case '-[AutoMLXStudioTests.ConversationStorePersistenceTests testConversationAndPreferencesSurviveFreshStoreRestart]' started.
+Test Case '-[AutoMLXStudioTests.ConversationStorePersistenceTests testConversationAndPreferencesSurviveFreshStoreRestart]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.ConversationStorePersistenceTests testLegacyUnwrappedRecordMigratesMissingPreferencesSafely]' started.
+Test Case '-[AutoMLXStudioTests.ConversationStorePersistenceTests testLegacyUnwrappedRecordMigratesMissingPreferencesSafely]' passed (0.002 seconds).
+Test Case '-[AutoMLXStudioTests.ConversationStorePersistenceTests testMemoryAndQualityDefaultsDependOnlyOnProjectAssociation]' started.
+Test Case '-[AutoMLXStudioTests.ConversationStorePersistenceTests testMemoryAndQualityDefaultsDependOnlyOnProjectAssociation]' passed (0.001 seconds).
+Test Suite 'ConversationStorePersistenceTests' passed at 2026-09-29 22:18:23.121.
+	 Executed 3 tests, with 0 failures (0 unexpected) in 0.004 (0.005) seconds
+Test Suite 'EngineeringAgentEngineTests' started at 2026-09-29 22:18:23.121.
+Test Case '-[AutoMLXStudioTests.EngineeringAgentEngineTests testCancellationStopsOwnedSessionAndConcurrentRunIsBusy]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringAgentEngineTests testCancellationStopsOwnedSessionAndConcurrentRunIsBusy]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringAgentEngineTests testComposerFailurePreservesBestPrimaryCandidate]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringAgentEngineTests testComposerFailurePreservesBestPrimaryCandidate]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringAgentEngineTests testCumulativeHistoryBudgetKeepsTaskIdentityAndNewestToolData]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringAgentEngineTests testCumulativeHistoryBudgetKeepsTaskIdentityAndNewestToolData]' passed (0.010 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringAgentEngineTests testFastModeStopsAtEightIterations]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringAgentEngineTests testFastModeStopsAtEightIterations]' passed (0.000 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringAgentEngineTests testMalformedArgumentsReceiveExactlyOneRepairTurn]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringAgentEngineTests testMalformedArgumentsReceiveExactlyOneRepairTurn]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringAgentEngineTests testNativeToolBatchAboveFourUsesSingleRepairAndExecutesNothing]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringAgentEngineTests testNativeToolBatchAboveFourUsesSingleRepairAndExecutesNothing]' passed (0.000 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringAgentEngineTests testNaturalLanguageCommandIsNeverParsedAsFallbackTool]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringAgentEngineTests testNaturalLanguageCommandIsNeverParsedAsFallbackTool]' passed (0.000 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringAgentEngineTests testNormalReadEditTestCompleteFlowIsVerified]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringAgentEngineTests testNormalReadEditTestCompleteFlowIsVerified]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringAgentEngineTests testPromptInjectionDataCannotGrantDisallowedCommandPermission]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringAgentEngineTests testPromptInjectionDataCannotGrantDisallowedCommandPermission]' passed (0.000 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringAgentEngineTests testQualityModesExposeExactHardIterationCeilings]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringAgentEngineTests testQualityModesExposeExactHardIterationCeilings]' passed (0.000 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringAgentEngineTests testRemoteFailureAndLocalFallbackAreTransparent]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringAgentEngineTests testRemoteFailureAndLocalFallbackAreTransparent]' passed (0.000 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringAgentEngineTests testReviewerFailureDoesNotPreventComposerRecovery]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringAgentEngineTests testReviewerFailureDoesNotPreventComposerRecovery]' passed (0.000 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringAgentEngineTests testRuntimePermissionDenialTerminatesSession]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringAgentEngineTests testRuntimePermissionDenialTerminatesSession]' passed (0.000 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringAgentEngineTests testSecondMalformedCallFailsWithoutAnotherRepair]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringAgentEngineTests testSecondMalformedCallFailsWithoutAnotherRepair]' passed (0.000 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringAgentEngineTests testStrictJSONFallbackExecutesOnlyExactEnvelope]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringAgentEngineTests testStrictJSONFallbackExecutesOnlyExactEnvelope]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringAgentEngineTests testThreeIdenticalCallResultsTriggerLoopDetection]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringAgentEngineTests testThreeIdenticalCallResultsTriggerLoopDetection]' passed (0.000 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringAgentEngineTests testWorkspaceNameIsUntrustedDataAndNeverInterpolatedIntoSystemPolicy]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringAgentEngineTests testWorkspaceNameIsUntrustedDataAndNeverInterpolatedIntoSystemPolicy]' passed (0.000 seconds).
+Test Suite 'EngineeringAgentEngineTests' passed at 2026-09-29 22:18:23.141.
+	 Executed 17 tests, with 0 failures (0 unexpected) in 0.018 (0.020) seconds
+Test Suite 'EngineeringAgentToolRuntimeAdapterTests' started at 2026-09-29 22:18:23.141.
+Test Case '-[AutoMLXStudioTests.EngineeringAgentToolRuntimeAdapterTests testAdapterAppliesIndependentUTF8SafeOutputBound]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringAgentToolRuntimeAdapterTests testAdapterAppliesIndependentUTF8SafeOutputBound]' passed (0.020 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringAgentToolRuntimeAdapterTests testApprovalBrokerCancellationDefaultsToDenyAndRemovesWaiter]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringAgentToolRuntimeAdapterTests testApprovalBrokerCancellationDefaultsToDenyAndRemovesWaiter]' passed (0.011 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringAgentToolRuntimeAdapterTests testApprovalBrokerStreamsAndResolvesExactRequestOnce]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringAgentToolRuntimeAdapterTests testApprovalBrokerStreamsAndResolvesExactRequestOnce]' passed (0.102 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringAgentToolRuntimeAdapterTests testApprovalTimeoutThroughBrokerReturnsDeniedAndNeverLaunchesCommand]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringAgentToolRuntimeAdapterTests testApprovalTimeoutThroughBrokerReturnsDeniedAndNeverLaunchesCommand]' passed (0.047 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringAgentToolRuntimeAdapterTests testBuildAndTestInvocationsMapOnlyRealVerificationEvidence]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringAgentToolRuntimeAdapterTests testBuildAndTestInvocationsMapOnlyRealVerificationEvidence]' passed (0.038 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringAgentToolRuntimeAdapterTests testCreateFilePreservesInstructionLikeContentAsInertData]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringAgentToolRuntimeAdapterTests testCreateFilePreservesInstructionLikeContentAsInertData]' passed (0.003 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringAgentToolRuntimeAdapterTests testDefinitionsAreCompleteClosedAndValidJSONSchemas]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringAgentToolRuntimeAdapterTests testDefinitionsAreCompleteClosedAndValidJSONSchemas]' passed (0.002 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringAgentToolRuntimeAdapterTests testParentTaskCancellationPropagatesToExactRuntimeProcess]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringAgentToolRuntimeAdapterTests testParentTaskCancellationPropagatesToExactRuntimeProcess]' passed (0.543 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringAgentToolRuntimeAdapterTests testPathTraversalAndAbsoluteTargetsRemainRuntimeDenied]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringAgentToolRuntimeAdapterTests testPathTraversalAndAbsoluteTargetsRemainRuntimeDenied]' passed (0.003 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringAgentToolRuntimeAdapterTests testRawCommandEnvironmentAndShellExecutableCannotCrossBoundary]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringAgentToolRuntimeAdapterTests testRawCommandEnvironmentAndShellExecutableCannotCrossBoundary]' passed (0.004 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringAgentToolRuntimeAdapterTests testRunCommandKeepsEveryShellMetacharacterInsideOneArgument]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringAgentToolRuntimeAdapterTests testRunCommandKeepsEveryShellMetacharacterInsideOneArgument]' passed (0.028 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringAgentToolRuntimeAdapterTests testSessionCancellationIgnoresForeignSessionAndStopsOwner]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringAgentToolRuntimeAdapterTests testSessionCancellationIgnoresForeignSessionAndStopsOwner]' passed (0.574 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringAgentToolRuntimeAdapterTests testStrictDecoderRejectsProseMarkdownExtraFieldsNullsAndWrongTypes]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringAgentToolRuntimeAdapterTests testStrictDecoderRejectsProseMarkdownExtraFieldsNullsAndWrongTypes]' passed (0.004 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringAgentToolRuntimeAdapterTests testUnknownToolInvalidIdentityAndOversizedArgumentsFailWithoutReflection]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringAgentToolRuntimeAdapterTests testUnknownToolInvalidIdentityAndOversizedArgumentsFailWithoutReflection]' passed (0.004 seconds).
+Test Suite 'EngineeringAgentToolRuntimeAdapterTests' passed at 2026-09-29 22:18:24.528.
+	 Executed 14 tests, with 0 failures (0 unexpected) in 1.383 (1.387) seconds
+Test Suite 'EngineeringCommandContainmentTests' started at 2026-09-29 22:18:24.528.
+Test Case '-[AutoMLXStudioTests.EngineeringCommandContainmentTests testAllowOnceRequiresFreshApprovalForNextCommand]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringCommandContainmentTests testAllowOnceRequiresFreshApprovalForNextCommand]' passed (0.060 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringCommandContainmentTests testDirectFileBoundaryAndCanonicalSymlinkHandling]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringCommandContainmentTests testDirectFileBoundaryAndCanonicalSymlinkHandling]' passed (0.003 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringCommandContainmentTests testRealSandboxAllowsNormalCommandAndWorkspaceMake]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringCommandContainmentTests testRealSandboxAllowsNormalCommandAndWorkspaceMake]' passed (0.023 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringCommandContainmentTests testRealSandboxBlocksOutsideWriteAndDenyNeverLaunches]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringCommandContainmentTests testRealSandboxBlocksOutsideWriteAndDenyNeverLaunches]' passed (0.013 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringCommandContainmentTests testRealSandboxBlocksRelativeAbsoluteSymlinkScriptAndNestedEscapes]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringCommandContainmentTests testRealSandboxBlocksRelativeAbsoluteSymlinkScriptAndNestedEscapes]' passed (0.109 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringCommandContainmentTests testStopAndTimeoutTerminateChildAndGrandchildWithoutTouchingOtherProcesses]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringCommandContainmentTests testStopAndTimeoutTerminateChildAndGrandchildWithoutTouchingOtherProcesses]' passed (2.614 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringCommandContainmentTests testSuccessfulLeaderExitCleansUpBackgroundChild]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringCommandContainmentTests testSuccessfulLeaderExitCleansUpBackgroundChild]' passed (0.039 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringCommandContainmentTests testSwiftPackageBuildAndTestsRemainUsableInsideWorkspace]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringCommandContainmentTests testSwiftPackageBuildAndTestsRemainUsableInsideWorkspace]' passed (10.182 seconds).
+Test Suite 'EngineeringCommandContainmentTests' passed at 2026-09-29 22:18:37.573.
+	 Executed 8 tests, with 0 failures (0 unexpected) in 13.043 (13.045) seconds
+Test Suite 'EngineeringIntegrationTests' started at 2026-09-29 22:18:37.573.
+Test Case '-[AutoMLXStudioTests.EngineeringIntegrationTests testAppStateOwnsStableControllersAcrossNavigation]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringIntegrationTests testAppStateOwnsStableControllersAcrossNavigation]' passed (0.028 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringIntegrationTests testCancellationWhileEditApprovalPendingPreservesBytes]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringIntegrationTests testCancellationWhileEditApprovalPendingPreservesBytes]' passed (0.013 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringIntegrationTests testControllerPreservesActiveAndCompletedStateOnPageReload]' started.
+2026-09-29 22:18:37.616448+0200 AutoMLXStudio[6699:108576] [logging-persist] cannot open file at line 53009 of [8fa8248e30]
+2026-09-29 22:18:37.616457+0200 AutoMLXStudio[6699:108576] [logging-persist] os_unix.c:53009: (2) open(/private/var/db/DetachedSignatures) - No such file or directory
+Test Case '-[AutoMLXStudioTests.EngineeringIntegrationTests testControllerPreservesActiveAndCompletedStateOnPageReload]' passed (0.050 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringIntegrationTests testDenyEditPreservesBytesAndStopsSession]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringIntegrationTests testDenyEditPreservesBytesAndStopsSession]' passed (0.013 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringIntegrationTests testDistinctRealToolFailuresReachExactFastIterationLimit]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringIntegrationTests testDistinctRealToolFailuresReachExactFastIterationLimit]' passed (0.011 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringIntegrationTests testEngineeringNativeLayoutRendersAtMinimumDetailSize]' started.
+2026-09-29 22:18:37.721124+0200 AutoMLXStudio[6699:108549] [Invalid Configuration] No symbol named 'lock.mac' found in system symbol set
+Test Case '-[AutoMLXStudioTests.EngineeringIntegrationTests testEngineeringNativeLayoutRendersAtMinimumDetailSize]' passed (0.110 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringIntegrationTests testLocalStrictJSONInspectEditTestVerify]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringIntegrationTests testLocalStrictJSONInspectEditTestVerify]' passed (0.039 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringIntegrationTests testMalformedOutputFailsAfterOneRepair]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringIntegrationTests testMalformedOutputFailsAfterOneRepair]' passed (0.003 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringIntegrationTests testNewMutationInvalidatesOlderVerification]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringIntegrationTests testNewMutationInvalidatesOlderVerification]' passed (0.115 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringIntegrationTests testRemoteHTTPInspectApproveEditTestVerifyThroughProductionBuilder]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringIntegrationTests testRemoteHTTPInspectApproveEditTestVerifyThroughProductionBuilder]' passed (0.159 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringIntegrationTests testRepeatedRealReadTriggersLoopDetection]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringIntegrationTests testRepeatedRealReadTriggersLoopDetection]' passed (0.015 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringIntegrationTests testToolErrorCannotFabricateVerification]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringIntegrationTests testToolErrorCannotFabricateVerification]' passed (0.008 seconds).
+Test Suite 'EngineeringIntegrationTests' passed at 2026-09-29 22:18:38.140.
+	 Executed 12 tests, with 0 failures (0 unexpected) in 0.564 (0.567) seconds
+Test Suite 'EngineeringToolRuntimeTests' started at 2026-09-29 22:18:38.140.
+Test Case '-[AutoMLXStudioTests.EngineeringToolRuntimeTests testAllowOnceRunsOnlyTheExactApprovedExternalInvocation]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringToolRuntimeTests testAllowOnceRunsOnlyTheExactApprovedExternalInvocation]' passed (0.019 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringToolRuntimeTests testApprovalTimeoutDeniesAndNeverLaunchesLateAllowDecision]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringToolRuntimeTests testApprovalTimeoutDeniesAndNeverLaunchesLateAllowDecision]' passed (0.329 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringToolRuntimeTests testCancellationStopsOwnedChildAndPreservesUnrelatedProcess]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringToolRuntimeTests testCancellationStopsOwnedChildAndPreservesUnrelatedProcess]' passed (0.519 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringToolRuntimeTests testCommandTimeoutTerminatesOnlyTheOwnedChild]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringToolRuntimeTests testCommandTimeoutTerminatesOnlyTheOwnedChild]' passed (0.551 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringToolRuntimeTests testDefaultApprovalProviderDeniesExternalCommandWithoutLaunchingProcess]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringToolRuntimeTests testDefaultApprovalProviderDeniesExternalCommandWithoutLaunchingProcess]' passed (0.003 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringToolRuntimeTests testDirectCommandTreatsShellMetacharactersAsInertData]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringToolRuntimeTests testDirectCommandTreatsShellMetacharactersAsInertData]' passed (0.027 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringToolRuntimeTests testPolicyBlocksShellDestructionTraversalAndHistoryRewriteBeforeApproval]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringToolRuntimeTests testPolicyBlocksShellDestructionTraversalAndHistoryRewriteBeforeApproval]' passed (0.002 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringToolRuntimeTests testProcessOutputIsBoundedMalformedUTF8SafeAndSecretRedacted]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringToolRuntimeTests testProcessOutputIsBoundedMalformedUTF8SafeAndSecretRedacted]' passed (0.032 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringToolRuntimeTests testRuntimeRejectsEscapingWorkingDirectoryBeforeProcessLaunch]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringToolRuntimeTests testRuntimeRejectsEscapingWorkingDirectoryBeforeProcessLaunch]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringToolRuntimeTests testSandboxedWorkingDirectoryRemainsUsable]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringToolRuntimeTests testSandboxedWorkingDirectoryRemainsUsable]' passed (0.011 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringToolRuntimeTests testSanitizedEnvironmentContainsNoInheritedCredentials]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringToolRuntimeTests testSanitizedEnvironmentContainsNoInheritedCredentials]' passed (0.000 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringToolRuntimeTests testToolRegistryIsStableUniqueAndRiskAnnotated]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringToolRuntimeTests testToolRegistryIsStableUniqueAndRiskAnnotated]' passed (0.000 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringToolRuntimeTests testTypedGitStatusRunsOnlyInsideTemporaryRepository]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringToolRuntimeTests testTypedGitStatusRunsOnlyInsideTemporaryRepository]' passed (0.620 seconds).
+Test Suite 'EngineeringToolRuntimeTests' passed at 2026-09-29 22:18:40.260.
+	 Executed 13 tests, with 0 failures (0 unexpected) in 2.116 (2.119) seconds
+Test Suite 'EngineeringWorkspaceTests' started at 2026-09-29 22:18:40.260.
+Test Case '-[AutoMLXStudioTests.EngineeringWorkspaceTests testCreateWriteAndReplaceUseExpectedStateAndDeterministicCounts]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringWorkspaceTests testCreateWriteAndReplaceUseExpectedStateAndDeterministicCounts]' passed (0.004 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringWorkspaceTests testDescriptorCatalogPersistsAuthorizationAndRemovalNeverDeletesWorkspace]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringWorkspaceTests testDescriptorCatalogPersistsAuthorizationAndRemovalNeverDeletesWorkspace]' passed (0.002 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringWorkspaceTests testExpectedHashConflictPreservesExternalEdit]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringWorkspaceTests testExpectedHashConflictPreservesExternalEdit]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringWorkspaceTests testHiddenSensitiveBinaryAndEmbeddedSecretsNeverLeak]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringWorkspaceTests testHiddenSensitiveBinaryAndEmbeddedSecretsNeverLeak]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringWorkspaceTests testReadAndDirectoryResultsRespectConfiguredBounds]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringWorkspaceTests testReadAndDirectoryResultsRespectConfiguredBounds]' passed (0.002 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringWorkspaceTests testRejectsAbsoluteParentAndNormalizationPathEscapes]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringWorkspaceTests testRejectsAbsoluteParentAndNormalizationPathEscapes]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringWorkspaceTests testRejectsFileAndDirectorySymlinkEscapes]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringWorkspaceTests testRejectsFileAndDirectorySymlinkEscapes]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringWorkspaceTests testRollbackConflictPreservesPostEditExternalChanges]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringWorkspaceTests testRollbackConflictPreservesPostEditExternalChanges]' passed (0.002 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringWorkspaceTests testSearchIsLiteralBoundedAndSkipsGeneratedHiddenBinaryAndSymlinkFiles]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringWorkspaceTests testSearchIsLiteralBoundedAndSkipsGeneratedHiddenBinaryAndSymlinkFiles]' passed (0.003 seconds).
+Test Case '-[AutoMLXStudioTests.EngineeringWorkspaceTests testUnifiedDiffAndRollbackWorkWithoutGitAndPersistHistory]' started.
+Test Case '-[AutoMLXStudioTests.EngineeringWorkspaceTests testUnifiedDiffAndRollbackWorkWithoutGitAndPersistHistory]' passed (0.002 seconds).
+Test Suite 'EngineeringWorkspaceTests' passed at 2026-09-29 22:18:40.281.
+	 Executed 10 tests, with 0 failures (0 unexpected) in 0.020 (0.021) seconds
+Test Suite 'MLXIntegrationTests' started at 2026-09-29 22:18:40.281.
+Test Case '-[AutoMLXStudioTests.MLXIntegrationTests testRealServerAutoPortFullWorkflowAndStop]' started.
+/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/MLXIntegrationTests.swift:7: -[AutoMLXStudioTests.MLXIntegrationTests testRealServerAutoPortFullWorkflowAndStop] : Test skipped - Set RUN_MLX_INTEGRATION_TESTS=1 to run the real local MLX integration test.
+Test Case '-[AutoMLXStudioTests.MLXIntegrationTests testRealServerAutoPortFullWorkflowAndStop]' skipped (0.001 seconds).
+Test Suite 'MLXIntegrationTests' passed at 2026-09-29 22:18:40.282.
+	 Executed 1 test, with 1 test skipped and 0 failures (0 unexpected) in 0.001 (0.001) seconds
+Test Suite 'MLXServiceOfflineEnvironmentTests' started at 2026-09-29 22:18:40.282.
+Test Case '-[AutoMLXStudioTests.MLXServiceOfflineEnvironmentTests testOfflineRuntimeEnvironmentForcesAllOfflineFlagsAndPreservesInheritedValues]' started.
+Test Case '-[AutoMLXStudioTests.MLXServiceOfflineEnvironmentTests testOfflineRuntimeEnvironmentForcesAllOfflineFlagsAndPreservesInheritedValues]' passed (0.000 seconds).
+Test Case '-[AutoMLXStudioTests.MLXServiceOfflineEnvironmentTests testOfflineRuntimeEnvironmentPreservesLegacyEmptyPathBehavior]' started.
+Test Case '-[AutoMLXStudioTests.MLXServiceOfflineEnvironmentTests testOfflineRuntimeEnvironmentPreservesLegacyEmptyPathBehavior]' passed (0.000 seconds).
+Test Suite 'MLXServiceOfflineEnvironmentTests' passed at 2026-09-29 22:18:40.283.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.001 (0.001) seconds
+Test Suite 'ModelArchitectureTests' started at 2026-09-29 22:18:40.283.
+Test Case '-[AutoMLXStudioTests.ModelArchitectureTests testAssignmentLookupAndMutationRemainSeparateFromAgentDefinition]' started.
+Test Case '-[AutoMLXStudioTests.ModelArchitectureTests testAssignmentLookupAndMutationRemainSeparateFromAgentDefinition]' passed (0.000 seconds).
+Test Case '-[AutoMLXStudioTests.ModelArchitectureTests testCapabilityMatchingRequiresEveryAgentCapability]' started.
+Test Case '-[AutoMLXStudioTests.ModelArchitectureTests testCapabilityMatchingRequiresEveryAgentCapability]' passed (0.000 seconds).
+Test Case '-[AutoMLXStudioTests.ModelArchitectureTests testConcurrentDifferentLoadsRemainSerialized]' started.
+Test Case '-[AutoMLXStudioTests.ModelArchitectureTests testConcurrentDifferentLoadsRemainSerialized]' passed (0.129 seconds).
+Test Case '-[AutoMLXStudioTests.ModelArchitectureTests testConcurrentDuplicateLoadIsCoalesced]' started.
+Test Case '-[AutoMLXStudioTests.ModelArchitectureTests testConcurrentDuplicateLoadIsCoalesced]' passed (0.085 seconds).
+Test Case '-[AutoMLXStudioTests.ModelArchitectureTests testDeclaredFallbackPrecedesCapabilityPreference]' started.
+Test Case '-[AutoMLXStudioTests.ModelArchitectureTests testDeclaredFallbackPrecedesCapabilityPreference]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.ModelArchitectureTests testDeclaredFallbackSelectionWhenPreferredIsMissing]' started.
+Test Case '-[AutoMLXStudioTests.ModelArchitectureTests testDeclaredFallbackSelectionWhenPreferredIsMissing]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.ModelArchitectureTests testDefaultCatalogAssignmentsAndLegacyMigration]' started.
+Test Case '-[AutoMLXStudioTests.ModelArchitectureTests testDefaultCatalogAssignmentsAndLegacyMigration]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.ModelArchitectureTests testDisabledModelIsIgnored]' started.
+Test Case '-[AutoMLXStudioTests.ModelArchitectureTests testDisabledModelIsIgnored]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.ModelArchitectureTests testMissingLocalModelIsIgnoredAndLegacyFallbackWinsLast]' started.
+Test Case '-[AutoMLXStudioTests.ModelArchitectureTests testMissingLocalModelIsIgnoredAndLegacyFallbackWinsLast]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.ModelArchitectureTests testModelRegistrationUpdateAndRemoval]' started.
+Test Case '-[AutoMLXStudioTests.ModelArchitectureTests testModelRegistrationUpdateAndRemoval]' passed (0.002 seconds).
+Test Case '-[AutoMLXStudioTests.ModelArchitectureTests testPreferredModelSelection]' started.
+Test Case '-[AutoMLXStudioTests.ModelArchitectureTests testPreferredModelSelection]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.ModelArchitectureTests testRegistryPersistenceRoundTripPreservesUserConfiguration]' started.
+Test Case '-[AutoMLXStudioTests.ModelArchitectureTests testRegistryPersistenceRoundTripPreservesUserConfiguration]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.ModelArchitectureTests testResourceManagerStateTransitionsAndStop]' started.
+Test Case '-[AutoMLXStudioTests.ModelArchitectureTests testResourceManagerStateTransitionsAndStop]' passed (0.031 seconds).
+Test Case '-[AutoMLXStudioTests.ModelArchitectureTests testSwitchPoliciesApplyExplicitReuseRules]' started.
+Test Case '-[AutoMLXStudioTests.ModelArchitectureTests testSwitchPoliciesApplyExplicitReuseRules]' passed (0.001 seconds).
+Test Suite 'ModelArchitectureTests' passed at 2026-09-29 22:18:40.540.
+	 Executed 14 tests, with 0 failures (0 unexpected) in 0.254 (0.257) seconds
+Test Suite 'ModelBackendRoutingTests' started at 2026-09-29 22:18:40.541.
+Test Case '-[AutoMLXStudioTests.ModelBackendRoutingTests testCancellationStopsBeforeLocalFallbackAndRetainsTrace]' started.
+Test Case '-[AutoMLXStudioTests.ModelBackendRoutingTests testCancellationStopsBeforeLocalFallbackAndRetainsTrace]' passed (0.002 seconds).
+Test Case '-[AutoMLXStudioTests.ModelBackendRoutingTests testEngineeringAdapterPreservesNativeAssistantToolCallsAcrossTurns]' started.
+Test Case '-[AutoMLXStudioTests.ModelBackendRoutingTests testEngineeringAdapterPreservesNativeAssistantToolCallsAcrossTurns]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.ModelBackendRoutingTests testEngineeringAdapterUsesStrictJSONForLocalToolFallback]' started.
+Test Case '-[AutoMLXStudioTests.ModelBackendRoutingTests testEngineeringAdapterUsesStrictJSONForLocalToolFallback]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.ModelBackendRoutingTests testEngineeringRouteConfigurationMapsPrimaryReviewerAndComposerTargets]' started.
+Test Case '-[AutoMLXStudioTests.ModelBackendRoutingTests testEngineeringRouteConfigurationMapsPrimaryReviewerAndComposerTargets]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.ModelBackendRoutingTests testFallbackDisabledNeverInvokesConfiguredLocalAlternative]' started.
+Test Case '-[AutoMLXStudioTests.ModelBackendRoutingTests testFallbackDisabledNeverInvokesConfiguredLocalAlternative]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.ModelBackendRoutingTests testIncompatibleDeclaredFallbackAndUnrelatedCatalogModelNeverRun]' started.
+Test Case '-[AutoMLXStudioTests.ModelBackendRoutingTests testIncompatibleDeclaredFallbackAndUnrelatedCatalogModelNeverRun]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.ModelBackendRoutingTests testLocalMLXBackendMapsExistingClientRequestAndNormalizedResult]' started.
+Test Case '-[AutoMLXStudioTests.ModelBackendRoutingTests testLocalMLXBackendMapsExistingClientRequestAndNormalizedResult]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.ModelBackendRoutingTests testRemoteFailureUsesCompatibleLocalFallbackOnlyWhenAllowed]' started.
+Test Case '-[AutoMLXStudioTests.ModelBackendRoutingTests testRemoteFailureUsesCompatibleLocalFallbackOnlyWhenAllowed]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.ModelBackendRoutingTests testRemoteSuccessDoesNotTouchLocalResourceManager]' started.
+Test Case '-[AutoMLXStudioTests.ModelBackendRoutingTests testRemoteSuccessDoesNotTouchLocalResourceManager]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.ModelBackendRoutingTests testRouterPrefersRemoteAndKeepsOnlyOrderedCompatibleFallbacks]' started.
+Test Case '-[AutoMLXStudioTests.ModelBackendRoutingTests testRouterPrefersRemoteAndKeepsOnlyOrderedCompatibleFallbacks]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.ModelBackendRoutingTests testTerminalFailureStopsFallbackAndKeepsSafeErrorTrace]' started.
+Test Case '-[AutoMLXStudioTests.ModelBackendRoutingTests testTerminalFailureStopsFallbackAndKeepsSafeErrorTrace]' passed (0.001 seconds).
+Test Suite 'ModelBackendRoutingTests' passed at 2026-09-29 22:18:40.555.
+	 Executed 11 tests, with 0 failures (0 unexpected) in 0.012 (0.015) seconds
+Test Suite 'ModelInstallationAuditorTests' started at 2026-09-29 22:18:40.555.
+Test Case '-[AutoMLXStudioTests.ModelInstallationAuditorTests testCompleteFilesCanReportRuntimeUnavailableAndMalformedWeightsInvalid]' started.
+Test Case '-[AutoMLXStudioTests.ModelInstallationAuditorTests testCompleteFilesCanReportRuntimeUnavailableAndMalformedWeightsInvalid]' passed (0.005 seconds).
+Test Case '-[AutoMLXStudioTests.ModelInstallationAuditorTests testIncompleteAndDownloadingAreDistinguishedByTransferEvidence]' started.
+Test Case '-[AutoMLXStudioTests.ModelInstallationAuditorTests testIncompleteAndDownloadingAreDistinguishedByTransferEvidence]' passed (0.004 seconds).
+Test Suite 'ModelInstallationAuditorTests' passed at 2026-09-29 22:18:40.565.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.009 (0.010) seconds
+Test Suite 'ModelInstallationValidationTests' started at 2026-09-29 22:18:40.566.
+Test Case '-[AutoMLXStudioTests.ModelInstallationValidationTests testMissingIndexedShardMakesExistingDirectoryIncomplete]' started.
+Test Case '-[AutoMLXStudioTests.ModelInstallationValidationTests testMissingIndexedShardMakesExistingDirectoryIncomplete]' passed (0.004 seconds).
+Test Suite 'ModelInstallationValidationTests' passed at 2026-09-29 22:18:40.570.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.004 (0.005) seconds
+Test Suite 'ModelResidencyPolicyTests' started at 2026-09-29 22:18:40.570.
+Test Case '-[AutoMLXStudioTests.ModelResidencyPolicyTests testLargeTextToVisionRequiresSwitchAndSameModelReuses]' started.
+Test Case '-[AutoMLXStudioTests.ModelResidencyPolicyTests testLargeTextToVisionRequiresSwitchAndSameModelReuses]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.ModelResidencyPolicyTests testSmallAudioCoexistsOnlyWithinBudgetAndOtherwiseReleasesLargeModel]' started.
+Test Case '-[AutoMLXStudioTests.ModelResidencyPolicyTests testSmallAudioCoexistsOnlyWithinBudgetAndOtherwiseReleasesLargeModel]' passed (0.001 seconds).
+Test Suite 'ModelResidencyPolicyTests' passed at 2026-09-29 22:18:40.573.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.002 (0.002) seconds
+Test Suite 'MultiModelIntegrationTests' started at 2026-09-29 22:18:40.573.
+Test Case '-[AutoMLXStudioTests.MultiModelIntegrationTests testInstalledGeneralCodingAndReasoningModelsSwitchPhysically]' started.
+/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/MultiModelIntegrationTests.swift:6: -[AutoMLXStudioTests.MultiModelIntegrationTests testInstalledGeneralCodingAndReasoningModelsSwitchPhysically] : Test skipped - Set RUN_MLX_MULTI_MODEL_TESTS=1 to run physical multi-model MLX switching.
+Test Case '-[AutoMLXStudioTests.MultiModelIntegrationTests testInstalledGeneralCodingAndReasoningModelsSwitchPhysically]' skipped (0.001 seconds).
+Test Suite 'MultiModelIntegrationTests' passed at 2026-09-29 22:18:40.574.
+	 Executed 1 test, with 1 test skipped and 0 failures (0 unexpected) in 0.001 (0.002) seconds
+Test Suite 'MultiModelWorkflowTests' started at 2026-09-29 22:18:40.575.
+Test Case '-[AutoMLXStudioTests.MultiModelWorkflowTests testWorkflowUsesThreeAgentModelSelections]' started.
+Test Case '-[AutoMLXStudioTests.MultiModelWorkflowTests testWorkflowUsesThreeAgentModelSelections]' passed (0.036 seconds).
+Test Suite 'MultiModelWorkflowTests' passed at 2026-09-29 22:18:40.611.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.036 (0.037) seconds
+Test Suite 'OpenAIResponseSafetyTests' started at 2026-09-29 22:18:40.612.
+Test Case '-[AutoMLXStudioTests.OpenAIResponseSafetyTests testAssistantContentRemainsAvailableWhenPresent]' started.
+Test Case '-[AutoMLXStudioTests.OpenAIResponseSafetyTests testAssistantContentRemainsAvailableWhenPresent]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.OpenAIResponseSafetyTests testReasoningOnlyResponseDecodesButHasNoUserFacingContent]' started.
+Test Case '-[AutoMLXStudioTests.OpenAIResponseSafetyTests testReasoningOnlyResponseDecodesButHasNoUserFacingContent]' passed (0.001 seconds).
+Test Suite 'OpenAIResponseSafetyTests' passed at 2026-09-29 22:18:40.614.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.002 (0.002) seconds
+Test Suite 'ProjectContextAssemblerTests' started at 2026-09-29 22:18:40.614.
+Test Case '-[AutoMLXStudioTests.ProjectContextAssemblerTests testAllGlobalAndPerDocumentBudgetsAreHardBounds]' started.
+Test Case '-[AutoMLXStudioTests.ProjectContextAssemblerTests testAllGlobalAndPerDocumentBudgetsAreHardBounds]' passed (0.002 seconds).
+Test Case '-[AutoMLXStudioTests.ProjectContextAssemblerTests testAssemblyHonorsParentTaskCancellation]' started.
+Test Case '-[AutoMLXStudioTests.ProjectContextAssemblerTests testAssemblyHonorsParentTaskCancellation]' passed (0.002 seconds).
+Test Case '-[AutoMLXStudioTests.ProjectContextAssemblerTests testCitationUsesOnlySelectedChunkAndExactInjectedTruncatedExcerpt]' started.
+Test Case '-[AutoMLXStudioTests.ProjectContextAssemblerTests testCitationUsesOnlySelectedChunkAndExactInjectedTruncatedExcerpt]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.ProjectContextAssemblerTests testPromptInjectionRemainsInsideCollisionFreeUntrustedDataEnvelope]' started.
+Test Case '-[AutoMLXStudioTests.ProjectContextAssemblerTests testPromptInjectionRemainsInsideCollisionFreeUntrustedDataEnvelope]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.ProjectContextAssemblerTests testQueryBuilderUsesOnlyBoundedCurrentRequestAndOptionalHint]' started.
+Test Case '-[AutoMLXStudioTests.ProjectContextAssemblerTests testQueryBuilderUsesOnlyBoundedCurrentRequestAndOptionalHint]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.ProjectContextAssemblerTests testRoundRobinSelectionIsDeterministicAndPreventsOneDocumentDominating]' started.
+Test Case '-[AutoMLXStudioTests.ProjectContextAssemblerTests testRoundRobinSelectionIsDeterministicAndPreventsOneDocumentDominating]' passed (0.002 seconds).
+Test Suite 'ProjectContextAssemblerTests' passed at 2026-09-29 22:18:40.626.
+	 Executed 6 tests, with 0 failures (0 unexpected) in 0.010 (0.012) seconds
+Test Suite 'ProjectMemoryChunkingTests' started at 2026-09-29 22:18:40.627.
+Test Case '-[AutoMLXStudioTests.ProjectMemoryChunkingTests testChunkingIsStableOrderedAndOverlapped]' started.
+Test Case '-[AutoMLXStudioTests.ProjectMemoryChunkingTests testChunkingIsStableOrderedAndOverlapped]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.ProjectMemoryChunkingTests testWorkflowStagesExposeTypedCategories]' started.
+Test Case '-[AutoMLXStudioTests.ProjectMemoryChunkingTests testWorkflowStagesExposeTypedCategories]' passed (0.001 seconds).
+Test Suite 'ProjectMemoryChunkingTests' passed at 2026-09-29 22:18:40.629.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.002 (0.002) seconds
+Test Suite 'ProjectMemoryLifecycleTests' started at 2026-09-29 22:18:40.629.
+Test Case '-[AutoMLXStudioTests.ProjectMemoryLifecycleTests testCatalogIsolatesCorruptJSONAndKeepsHealthyProjectsVisible]' started.
+Test Case '-[AutoMLXStudioTests.ProjectMemoryLifecycleTests testCatalogIsolatesCorruptJSONAndKeepsHealthyProjectsVisible]' passed (0.003 seconds).
+Test Case '-[AutoMLXStudioTests.ProjectMemoryLifecycleTests testChunkIdentifiersAreDeterministicAndOwnershipSensitive]' started.
+Test Case '-[AutoMLXStudioTests.ProjectMemoryLifecycleTests testChunkIdentifiersAreDeterministicAndOwnershipSensitive]' passed (0.002 seconds).
+Test Case '-[AutoMLXStudioTests.ProjectMemoryLifecycleTests testDeleteProjectIsContainedToItsSnapshotAndPreservesSources]' started.
+Test Case '-[AutoMLXStudioTests.ProjectMemoryLifecycleTests testDeleteProjectIsContainedToItsSnapshotAndPreservesSources]' passed (0.004 seconds).
+Test Case '-[AutoMLXStudioTests.ProjectMemoryLifecycleTests testDuplicateFingerprintIsRejectedAcrossDifferentFilenames]' started.
+Test Case '-[AutoMLXStudioTests.ProjectMemoryLifecycleTests testDuplicateFingerprintIsRejectedAcrossDifferentFilenames]' passed (0.003 seconds).
+Test Case '-[AutoMLXStudioTests.ProjectMemoryLifecycleTests testIncrementalVectorUpsertClearAndStaleFingerprintRejection]' started.
+Test Case '-[AutoMLXStudioTests.ProjectMemoryLifecycleTests testIncrementalVectorUpsertClearAndStaleFingerprintRejection]' passed (0.007 seconds).
+Test Case '-[AutoMLXStudioTests.ProjectMemoryLifecycleTests testProjectNameLimitsAndRenamePreserveStableIdentity]' started.
+Test Case '-[AutoMLXStudioTests.ProjectMemoryLifecycleTests testProjectNameLimitsAndRenamePreserveStableIdentity]' passed (0.002 seconds).
+Test Case '-[AutoMLXStudioTests.ProjectMemoryLifecycleTests testReindexPreservesDocumentIdentityAndUnaffectedRecordsWithoutWritingSource]' started.
+Test Case '-[AutoMLXStudioTests.ProjectMemoryLifecycleTests testReindexPreservesDocumentIdentityAndUnaffectedRecordsWithoutWritingSource]' passed (0.006 seconds).
+Test Case '-[AutoMLXStudioTests.ProjectMemoryLifecycleTests testRemoveDocumentDeletesOnlyOwnedMemoryAndNeverSourceFiles]' started.
+Test Case '-[AutoMLXStudioTests.ProjectMemoryLifecycleTests testRemoveDocumentDeletesOnlyOwnedMemoryAndNeverSourceFiles]' passed (0.005 seconds).
+Test Case '-[AutoMLXStudioTests.ProjectMemoryLifecycleTests testSchemaOneAndUnversionedSnapshotsMigrateOnNextSave]' started.
+Test Case '-[AutoMLXStudioTests.ProjectMemoryLifecycleTests testSchemaOneAndUnversionedSnapshotsMigrateOnNextSave]' passed (0.004 seconds).
+Test Case '-[AutoMLXStudioTests.ProjectMemoryLifecycleTests testSourceMetadataReportsCurrentThenModifiedWithoutChangingDurableText]' started.
+Test Case '-[AutoMLXStudioTests.ProjectMemoryLifecycleTests testSourceMetadataReportsCurrentThenModifiedWithoutChangingDurableText]' passed (0.002 seconds).
+Test Suite 'ProjectMemoryLifecycleTests' passed at 2026-09-29 22:18:40.666.
+	 Executed 10 tests, with 0 failures (0 unexpected) in 0.036 (0.037) seconds
+Test Suite 'ProjectMemoryPersistenceTests' started at 2026-09-29 22:18:40.667.
+Test Case '-[AutoMLXStudioTests.ProjectMemoryPersistenceTests testFileIngestionAcceptsSourceAndRejectsUnsupportedBinaryType]' started.
+Test Case '-[AutoMLXStudioTests.ProjectMemoryPersistenceTests testFileIngestionAcceptsSourceAndRejectsUnsupportedBinaryType]' passed (0.002 seconds).
+Test Case '-[AutoMLXStudioTests.ProjectMemoryPersistenceTests testProjectsPersistDocumentsAndRemainIsolated]' started.
+Test Case '-[AutoMLXStudioTests.ProjectMemoryPersistenceTests testProjectsPersistDocumentsAndRemainIsolated]' passed (0.002 seconds).
+Test Suite 'ProjectMemoryPersistenceTests' passed at 2026-09-29 22:18:40.671.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.004 (0.004) seconds
+Test Suite 'ProjectMemoryRetrievalTests' started at 2026-09-29 22:18:40.671.
+Test Case '-[AutoMLXStudioTests.ProjectMemoryRetrievalTests testCosineSimilarityRanksExpectedDirectionAndRejectsDimensions]' started.
+Test Case '-[AutoMLXStudioTests.ProjectMemoryRetrievalTests testCosineSimilarityRanksExpectedDirectionAndRejectsDimensions]' passed (0.000 seconds).
+Test Case '-[AutoMLXStudioTests.ProjectMemoryRetrievalTests testEmbeddingSearchFallsBackOnlyAtRerankerAndReturnsActualCitation]' started.
+Test Case '-[AutoMLXStudioTests.ProjectMemoryRetrievalTests testEmbeddingSearchFallsBackOnlyAtRerankerAndReturnsActualCitation]' passed (0.002 seconds).
+Test Case '-[AutoMLXStudioTests.ProjectMemoryRetrievalTests testUnavailableEmbeddingUsesLexicalFallbackWithoutCrossingProjects]' started.
+Test Case '-[AutoMLXStudioTests.ProjectMemoryRetrievalTests testUnavailableEmbeddingUsesLexicalFallbackWithoutCrossingProjects]' passed (0.002 seconds).
+Test Suite 'ProjectMemoryRetrievalTests' passed at 2026-09-29 22:18:40.675.
+	 Executed 3 tests, with 0 failures (0 unexpected) in 0.004 (0.005) seconds
+Test Suite 'RemoteInferenceBackendTests' started at 2026-09-29 22:18:40.675.
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testDiscoveryMapsOnlyTrustworthyMetadataAndCachesPerServer]' started.
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testDiscoveryMapsOnlyTrustworthyMetadataAndCachesPerServer]' passed (0.002 seconds).
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testHealthRejectsUnrelatedHTMLServiceEvenWhenHTTPReturnsSuccess]' started.
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testHealthRejectsUnrelatedHTMLServiceEvenWhenHTTPReturnsSuccess]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testHealthRequiresCompatibleModelsAPIAndReportsSelectedModelAbsenceAsDegraded]' started.
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testHealthRequiresCompatibleModelsAPIAndReportsSelectedModelAbsenceAsDegraded]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testHTTPAuthenticationFailureRedactsExactAndCredentialShapedSecrets]' started.
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testHTTPAuthenticationFailureRedactsExactAndCredentialShapedSecrets]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testLMStudioModelsResponseAtVersionedBasePathIsHealthy]' started.
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testLMStudioModelsResponseAtVersionedBasePathIsHealthy]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testMacNetworkPathFailureDoesNotClaimRemoteServerIsOffline]' started.
+2026-09-29 22:18:40.682742+0200 AutoMLXStudio[6699:108676] [Default] Task <162ED85A-5255-499A-B90B-0ABE202282E5>.<1> finished with error [-1009] Error Domain=NSURLErrorDomain Code=-1009 "(null)" UserInfo={_NSURLErrorRelatedURLSessionTaskErrorKey=(
+    "LocalDataTask <162ED85A-5255-499A-B90B-0ABE202282E5>.<1>"
+), _NSURLErrorFailingURLSessionTaskErrorKey=LocalDataTask <162ED85A-5255-499A-B90B-0ABE202282E5>.<1>}
+2026-09-29 22:18:40.682996+0200 AutoMLXStudio[6699:108655] [Default] Task <0EE907DB-832E-434C-AE5E-253FDEF0D1BC>.<2> finished with error [-1009] Error Domain=NSURLErrorDomain Code=-1009 "(null)" UserInfo={_NSURLErrorRelatedURLSessionTaskErrorKey=(
+    "LocalDataTask <0EE907DB-832E-434C-AE5E-253FDEF0D1BC>.<2>"
+), _NSURLErrorFailingURLSessionTaskErrorKey=LocalDataTask <0EE907DB-832E-434C-AE5E-253FDEF0D1BC>.<2>}
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testMacNetworkPathFailureDoesNotClaimRemoteServerIsOffline]' passed (0.002 seconds).
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testMalformedGenerationResponseIsBoundedAndFallbackReady]' started.
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testMalformedGenerationResponseIsBoundedAndFallbackReady]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testMalformedToolArgumentsAreRejectedWithoutNaturalLanguageParsing]' started.
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testMalformedToolArgumentsAreRejectedWithoutNaturalLanguageParsing]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testNativeToolCallIsStrictlyDecodedWithoutExecutingIt]' started.
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testNativeToolCallIsStrictlyDecodedWithoutExecutingIt]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testPriorAssistantToolCallAndToolResultRoundTripAsNativeMessages]' started.
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testPriorAssistantToolCallAndToolResultRoundTripAsNativeMessages]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testProfileBuildsCredentialFreeURLAndWarnsOnlyForRemoteCleartext]' started.
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testProfileBuildsCredentialFreeURLAndWarnsOnlyForRemoteCleartext]' passed (0.000 seconds).
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testStorePersistsMultipleProfilesWithoutPersistingTokenAndRemovesKeychainEntry]' started.
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testStorePersistsMultipleProfilesWithoutPersistingTokenAndRemovesKeychainEntry]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testTaskCancellationStopsPendingInferenceWithoutFallback]' started.
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testTaskCancellationStopsPendingInferenceWithoutFallback]' passed (0.034 seconds).
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testTextGenerationBuildsAuthOnlyAtNetworkBoundaryAndNormalizesUsage]' started.
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testTextGenerationBuildsAuthOnlyAtNetworkBoundaryAndNormalizesUsage]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testTimeoutAndConnectionLossMapToDistinctFallbackReadyErrors]' started.
+2026-09-29 22:18:40.727081+0200 AutoMLXStudio[6699:108685] [Default] Task <4B6A251B-29AE-4CF0-895C-A66114EEEFC5>.<1> finished with error [-1001] Error Domain=NSURLErrorDomain Code=-1001 "(null)" UserInfo={_NSURLErrorRelatedURLSessionTaskErrorKey=(
+    "LocalDataTask <4B6A251B-29AE-4CF0-895C-A66114EEEFC5>.<1>"
+), _NSURLErrorFailingURLSessionTaskErrorKey=LocalDataTask <4B6A251B-29AE-4CF0-895C-A66114EEEFC5>.<1>}
+2026-09-29 22:18:40.727273+0200 AutoMLXStudio[6699:108674] [Default] Task <C5C2ABAC-5350-40BC-99C7-4E68A1FAB922>.<2> finished with error [-1005] Error Domain=NSURLErrorDomain Code=-1005 "(null)" UserInfo={_NSURLErrorRelatedURLSessionTaskErrorKey=(
+    "LocalDataTask <C5C2ABAC-5350-40BC-99C7-4E68A1FAB922>.<2>"
+), _NSURLErrorFailingURLSessionTaskErrorKey=LocalDataTask <C5C2ABAC-5350-40BC-99C7-4E68A1FAB922>.<2>}
+Test Case '-[AutoMLXStudioTests.RemoteInferenceBackendTests testTimeoutAndConnectionLossMapToDistinctFallbackReadyErrors]' passed (0.001 seconds).
+Test Suite 'RemoteInferenceBackendTests' passed at 2026-09-29 22:18:40.728.
+	 Executed 15 tests, with 0 failures (0 unexpected) in 0.051 (0.053) seconds
+Test Suite 'RemoteModelsControllerTests' started at 2026-09-29 22:18:40.728.
+Test Case '-[AutoMLXStudioTests.RemoteModelsControllerTests testConnectionPublishesRemoteHealthModelsAndUsesFreshCacheWithoutSecondLiveRefresh]' started.
+Test Case '-[AutoMLXStudioTests.RemoteModelsControllerTests testConnectionPublishesRemoteHealthModelsAndUsesFreshCacheWithoutSecondLiveRefresh]' passed (0.102 seconds).
+Test Case '-[AutoMLXStudioTests.RemoteModelsControllerTests testLoadPublishesStableMultipleProfiles]' started.
+Test Case '-[AutoMLXStudioTests.RemoteModelsControllerTests testLoadPublishesStableMultipleProfiles]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.RemoteModelsControllerTests testNewBearerProfileRequiresExplicitTokenBeforePersistence]' started.
+Test Case '-[AutoMLXStudioTests.RemoteModelsControllerTests testNewBearerProfileRequiresExplicitTokenBeforePersistence]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.RemoteModelsControllerTests testTokenFailureRestoresPreviousProfileWithoutReadingExistingSecret]' started.
+Test Case '-[AutoMLXStudioTests.RemoteModelsControllerTests testTokenFailureRestoresPreviousProfileWithoutReadingExistingSecret]' passed (0.001 seconds).
+Test Suite 'RemoteModelsControllerTests' passed at 2026-09-29 22:18:40.834.
+	 Executed 4 tests, with 0 failures (0 unexpected) in 0.105 (0.107) seconds
+Test Suite 'ResourceReuseTests' started at 2026-09-29 22:18:40.835.
+Test Case '-[AutoMLXStudioTests.ResourceReuseTests testWarmReuseSkipsSecondStartAndReportsReuseMetrics]' started.
+Test Case '-[AutoMLXStudioTests.ResourceReuseTests testWarmReuseSkipsSecondStartAndReportsReuseMetrics]' passed (0.002 seconds).
+Test Suite 'ResourceReuseTests' passed at 2026-09-29 22:18:40.837.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.002 (0.002) seconds
+Test Suite 'StopTimeoutTests' started at 2026-09-29 22:18:40.837.
+Test Case '-[AutoMLXStudioTests.StopTimeoutTests testForcedTerminationIsPropagatedWhenExitIsConfirmed]' started.
+Test Case '-[AutoMLXStudioTests.StopTimeoutTests testForcedTerminationIsPropagatedWhenExitIsConfirmed]' passed (0.002 seconds).
+Test Case '-[AutoMLXStudioTests.StopTimeoutTests testUnconfirmedStopBlocksReplacementStart]' started.
+Test Case '-[AutoMLXStudioTests.StopTimeoutTests testUnconfirmedStopBlocksReplacementStart]' passed (0.002 seconds).
+Test Suite 'StopTimeoutTests' passed at 2026-09-29 22:18:40.841.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.003 (0.004) seconds
+Test Suite 'V05RoutingTests' started at 2026-09-29 22:18:40.841.
+Test Case '-[AutoMLXStudioTests.V05RoutingTests testCompoundPlanIsCappedAtOneSecondary]' started.
+Test Case '-[AutoMLXStudioTests.V05RoutingTests testCompoundPlanIsCappedAtOneSecondary]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.V05RoutingTests testCVariantsRemainDistinct]' started.
+Test Case '-[AutoMLXStudioTests.V05RoutingTests testCVariantsRemainDistinct]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.V05RoutingTests testEachNewTaxonomyIntentRoutesDeterministically]' started.
+Test Case '-[AutoMLXStudioTests.V05RoutingTests testEachNewTaxonomyIntentRoutesDeterministically]' passed (0.002 seconds).
+Test Case '-[AutoMLXStudioTests.V05RoutingTests testGenericCodingSignalDoesNotCreateRedundantSecondary]' started.
+Test Case '-[AutoMLXStudioTests.V05RoutingTests testGenericCodingSignalDoesNotCreateRedundantSecondary]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.V05RoutingTests testLegacyGeneralQualityPolicyRemainsDirect]' started.
+Test Case '-[AutoMLXStudioTests.V05RoutingTests testLegacyGeneralQualityPolicyRemainsDirect]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.V05RoutingTests testLegacyPlanInitializerDefaultsSecondaryToNil]' started.
+Test Case '-[AutoMLXStudioTests.V05RoutingTests testLegacyPlanInitializerDefaultsSecondaryToNil]' passed (0.000 seconds).
+Test Case '-[AutoMLXStudioTests.V05RoutingTests testLogicalSpecialistsAreRegisteredExactlyOnce]' started.
+Test Case '-[AutoMLXStudioTests.V05RoutingTests testLogicalSpecialistsAreRegisteredExactlyOnce]' passed (0.000 seconds).
+Test Case '-[AutoMLXStudioTests.V05RoutingTests testLogicalSpecialistsReuseExistingPhysicalCatalogModels]' started.
+Test Case '-[AutoMLXStudioTests.V05RoutingTests testLogicalSpecialistsReuseExistingPhysicalCatalogModels]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.V05RoutingTests testResearchPrecedenceCanRetainOneSwiftSecondary]' started.
+Test Case '-[AutoMLXStudioTests.V05RoutingTests testResearchPrecedenceCanRetainOneSwiftSecondary]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.V05RoutingTests testStandaloneCUsesExactBoundariesWithoutFalsePositives]' started.
+Test Case '-[AutoMLXStudioTests.V05RoutingTests testStandaloneCUsesExactBoundariesWithoutFalsePositives]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.V05RoutingTests testSwiftAndSQLPlanUsesOneDatabaseSecondary]' started.
+Test Case '-[AutoMLXStudioTests.V05RoutingTests testSwiftAndSQLPlanUsesOneDatabaseSecondary]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.V05RoutingTests testSwiftPrecedenceSuppressesAmbiguousCppConcepts]' started.
+Test Case '-[AutoMLXStudioTests.V05RoutingTests testSwiftPrecedenceSuppressesAmbiguousCppConcepts]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.V05RoutingTests testWebAndDatabasePromptsDoNotClaimExternalAccess]' started.
+Test Case '-[AutoMLXStudioTests.V05RoutingTests testWebAndDatabasePromptsDoNotClaimExternalAccess]' passed (0.001 seconds).
+Test Suite 'V05RoutingTests' passed at 2026-09-29 22:18:40.855.
+	 Executed 13 tests, with 0 failures (0 unexpected) in 0.011 (0.014) seconds
+Test Suite 'VisionAssistedWorkflowTests' started at 2026-09-29 22:18:40.855.
+Test Case '-[AutoMLXStudioTests.VisionAssistedWorkflowTests testImageRoutingRulesDistinguishPureVisionFromVisionAssistedCoding]' started.
+Test Case '-[AutoMLXStudioTests.VisionAssistedWorkflowTests testImageRoutingRulesDistinguishPureVisionFromVisionAssistedCoding]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.VisionAssistedWorkflowTests testScreenshotWithSwiftQuestionRunsVisionThenSwiftReviewerAndComposer]' started.
+Test Case '-[AutoMLXStudioTests.VisionAssistedWorkflowTests testScreenshotWithSwiftQuestionRunsVisionThenSwiftReviewerAndComposer]' passed (0.002 seconds).
+Test Suite 'VisionAssistedWorkflowTests' passed at 2026-09-29 22:18:40.859.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.003 (0.003) seconds
+Test Suite 'VisionFoundationTests' started at 2026-09-29 22:18:40.859.
+Test Case '-[AutoMLXStudioTests.VisionFoundationTests testIncompleteVisionInstallationIsNeverSelectedOrStarted]' started.
+Test Case '-[AutoMLXStudioTests.VisionFoundationTests testIncompleteVisionInstallationIsNeverSelectedOrStarted]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.VisionFoundationTests testPNGValidationAndTypedVisionRouting]' started.
+Test Case '-[AutoMLXStudioTests.VisionFoundationTests testPNGValidationAndTypedVisionRouting]' passed (0.010 seconds).
+Test Case '-[AutoMLXStudioTests.VisionFoundationTests testUnsupportedGIFContentIsRejectedEvenWithAnAllowedExtension]' started.
+Test Case '-[AutoMLXStudioTests.VisionFoundationTests testUnsupportedGIFContentIsRejectedEvenWithAnAllowedExtension]' passed (0.002 seconds).
+Test Suite 'VisionFoundationTests' passed at 2026-09-29 22:18:40.872.
+	 Executed 3 tests, with 0 failures (0 unexpected) in 0.013 (0.013) seconds
+Test Suite 'VisionHardwareTests' started at 2026-09-29 22:18:40.872.
+Test Case '-[AutoMLXStudioTests.VisionHardwareTests testInstalledVisionBackendHardwarePreflight]' started.
+/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/VisionVoiceHardwareTests.swift:10: -[AutoMLXStudioTests.VisionHardwareTests testInstalledVisionBackendHardwarePreflight] : Test skipped - Vision hardware skipped: Missing: indexed weight shard: model-00001-of-00004.safetensors, indexed weight shard: model-00002-of-00004.safetensors, indexed weight shard: model-00003-of-00004.safetensors, indexed weight shard: model-00004-of-00004.safetensors. Download lock files were detected; locks alone do not prove an active transfer.
+Test Case '-[AutoMLXStudioTests.VisionHardwareTests testInstalledVisionBackendHardwarePreflight]' skipped (0.016 seconds).
+Test Case '-[AutoMLXStudioTests.VisionHardwareTests testRealVisionInferenceWithGeneratedProjectFiveImage]' started.
+/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/AutoMLXStudioTests/VisionVoiceHardwareTests.swift:19: -[AutoMLXStudioTests.VisionHardwareTests testRealVisionInferenceWithGeneratedProjectFiveImage] : Test skipped - Set RUN_MLX_VISION_HARDWARE_TESTS=1 to run real local Vision inference.
+Test Case '-[AutoMLXStudioTests.VisionHardwareTests testRealVisionInferenceWithGeneratedProjectFiveImage]' skipped (0.001 seconds).
+Test Suite 'VisionHardwareTests' passed at 2026-09-29 22:18:40.890.
+	 Executed 2 tests, with 2 tests skipped and 0 failures (0 unexpected) in 0.017 (0.017) seconds
+Test Suite 'VoiceFoundationTests' started at 2026-09-29 22:18:40.890.
+Test Case '-[AutoMLXStudioTests.VoiceFoundationTests testDeniedMicrophonePermissionFailsWithoutStartingCapture]' started.
+Test Case '-[AutoMLXStudioTests.VoiceFoundationTests testDeniedMicrophonePermissionFailsWithoutStartingCapture]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.VoiceFoundationTests testPressRecordTranscriptionBecomesReadyDraftWithoutAutoSend]' started.
+Test Case '-[AutoMLXStudioTests.VoiceFoundationTests testPressRecordTranscriptionBecomesReadyDraftWithoutAutoSend]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.VoiceFoundationTests testSpeakAssistantResponsesPreferenceRoundTripsAndLegacyStateDefaultsOff]' started.
+Test Case '-[AutoMLXStudioTests.VoiceFoundationTests testSpeakAssistantResponsesPreferenceRoundTripsAndLegacyStateDefaultsOff]' passed (0.000 seconds).
+Test Case '-[AutoMLXStudioTests.VoiceFoundationTests testTTSFailureDoesNotAlterAssistantText]' started.
+Test Case '-[AutoMLXStudioTests.VoiceFoundationTests testTTSFailureDoesNotAlterAssistantText]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.VoiceFoundationTests testUnavailableASRFailsWithoutProducingOrSendingDraft]' started.
+Test Case '-[AutoMLXStudioTests.VoiceFoundationTests testUnavailableASRFailsWithoutProducingOrSendingDraft]' passed (0.001 seconds).
+Test Suite 'VoiceFoundationTests' passed at 2026-09-29 22:18:40.893.
+	 Executed 5 tests, with 0 failures (0 unexpected) in 0.003 (0.003) seconds
+Test Suite 'WorkflowMemoryIntegrationTests' started at 2026-09-29 22:18:40.893.
+Test Case '-[AutoMLXStudioTests.WorkflowMemoryIntegrationTests testCancellationAfterSpecialistPreservesPartialWithoutFailureStatus]' started.
+Test Case '-[AutoMLXStudioTests.WorkflowMemoryIntegrationTests testCancellationAfterSpecialistPreservesPartialWithoutFailureStatus]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.WorkflowMemoryIntegrationTests testComposerFailurePreservesReviewedCandidate]' started.
+Test Case '-[AutoMLXStudioTests.WorkflowMemoryIntegrationTests testComposerFailurePreservesReviewedCandidate]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.WorkflowMemoryIntegrationTests testEnabledLexicalMemoryIsProjectIsolatedTraceableAndInjectionDelimited]' started.
+Test Case '-[AutoMLXStudioTests.WorkflowMemoryIntegrationTests testEnabledLexicalMemoryIsProjectIsolatedTraceableAndInjectionDelimited]' passed (0.003 seconds).
+Test Case '-[AutoMLXStudioTests.WorkflowMemoryIntegrationTests testEnabledMemoryWithNoMatchesShowsDeterministicNoEvidenceNotice]' started.
+Test Case '-[AutoMLXStudioTests.WorkflowMemoryIntegrationTests testEnabledMemoryWithNoMatchesShowsDeterministicNoEvidenceNotice]' passed (0.002 seconds).
+Test Case '-[AutoMLXStudioTests.WorkflowMemoryIntegrationTests testFastBalancedAndThoroughExecuteExpectedStageSets]' started.
+Test Case '-[AutoMLXStudioTests.WorkflowMemoryIntegrationTests testFastBalancedAndThoroughExecuteExpectedStageSets]' passed (0.002 seconds).
+Test Case '-[AutoMLXStudioTests.WorkflowMemoryIntegrationTests testLegacyExecuteRetainsOriginalTraceAndMetadataShape]' started.
+Test Case '-[AutoMLXStudioTests.WorkflowMemoryIntegrationTests testLegacyExecuteRetainsOriginalTraceAndMetadataShape]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.WorkflowMemoryIntegrationTests testManualMemoryOffSkipsRetrievalAndInjectsNoSourceBlock]' started.
+Test Case '-[AutoMLXStudioTests.WorkflowMemoryIntegrationTests testManualMemoryOffSkipsRetrievalAndInjectsNoSourceBlock]' passed (0.002 seconds).
+Test Suite 'WorkflowMemoryIntegrationTests' passed at 2026-09-29 22:18:40.906.
+	 Executed 7 tests, with 0 failures (0 unexpected) in 0.011 (0.012) seconds
+Test Suite 'WorkflowRoutingTests' started at 2026-09-29 22:18:40.906.
+Test Case '-[AutoMLXStudioTests.WorkflowRoutingTests testDirectorUsesCentralIntentMapping]' started.
+Test Case '-[AutoMLXStudioTests.WorkflowRoutingTests testDirectorUsesCentralIntentMapping]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.WorkflowRoutingTests testFinalComposerFailureReturnsReviewedCandidate]' started.
+Test Case '-[AutoMLXStudioTests.WorkflowRoutingTests testFinalComposerFailureReturnsReviewedCandidate]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.WorkflowRoutingTests testRequiredCodingRoutingCase]' started.
+Test Case '-[AutoMLXStudioTests.WorkflowRoutingTests testRequiredCodingRoutingCase]' passed (0.000 seconds).
+Test Case '-[AutoMLXStudioTests.WorkflowRoutingTests testRequiredGeneralRoutingCase]' started.
+Test Case '-[AutoMLXStudioTests.WorkflowRoutingTests testRequiredGeneralRoutingCase]' passed (0.000 seconds).
+Test Case '-[AutoMLXStudioTests.WorkflowRoutingTests testRequiredResearchRoutingCase]' started.
+Test Case '-[AutoMLXStudioTests.WorkflowRoutingTests testRequiredResearchRoutingCase]' passed (0.000 seconds).
+Test Case '-[AutoMLXStudioTests.WorkflowRoutingTests testRequiredSwiftRoutingCase]' started.
+Test Case '-[AutoMLXStudioTests.WorkflowRoutingTests testRequiredSwiftRoutingCase]' passed (0.000 seconds).
+Test Case '-[AutoMLXStudioTests.WorkflowRoutingTests testResearchAgentForbidsFabricatedSearchesAndCitations]' started.
+Test Case '-[AutoMLXStudioTests.WorkflowRoutingTests testResearchAgentForbidsFabricatedSearchesAndCitations]' passed (0.000 seconds).
+Test Case '-[AutoMLXStudioTests.WorkflowRoutingTests testReviewerFailurePreservesSpecialistAndStillComposes]' started.
+Test Case '-[AutoMLXStudioTests.WorkflowRoutingTests testReviewerFailurePreservesSpecialistAndStillComposes]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.WorkflowRoutingTests testTrivialGeneralWorkflowRecordsSkippedQualityStages]' started.
+Test Case '-[AutoMLXStudioTests.WorkflowRoutingTests testTrivialGeneralWorkflowRecordsSkippedQualityStages]' passed (0.001 seconds).
+Test Suite 'WorkflowRoutingTests' passed at 2026-09-29 22:18:40.912.
+	 Executed 9 tests, with 0 failures (0 unexpected) in 0.005 (0.007) seconds
+Test Suite 'AutoMLXStudioTests.xctest' passed at 2026-09-29 22:18:40.913.
+	 Executed 238 tests, with 6 tests skipped and 0 failures (0 unexpected) in 18.962 (19.015) seconds
+Test Suite 'All tests' passed at 2026-09-29 22:18:40.913.
+	 Executed 238 tests, with 6 tests skipped and 0 failures (0 unexpected) in 18.962 (19.016) seconds
+2026-09-29 22:18:41.205 xcodebuild[6675:108356] [MT] IDETestOperationsObserverDebug: 20.207 elapsed -- Testing started completed.
+2026-09-29 22:18:41.205 xcodebuild[6675:108356] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-09-29 22:18:41.205 xcodebuild[6675:108356] [MT] IDETestOperationsObserverDebug: 20.207 sec, +20.207 sec -- end
+
+Test session results, code coverage, and logs:
+	/Users/tommasoschiavon/Library/Developer/Xcode/DerivedData/AutoMLXStudio-V0611Containment-20260929/Logs/Test/Test-AutoMLXStudio-2026.09.29_22-18-20-+0200.xcresult
+
+** TEST SUCCEEDED **
+
+Testing started

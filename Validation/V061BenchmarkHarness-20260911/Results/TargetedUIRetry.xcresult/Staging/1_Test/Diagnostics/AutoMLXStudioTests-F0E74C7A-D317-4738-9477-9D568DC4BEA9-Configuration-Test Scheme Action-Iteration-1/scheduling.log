@@ -1,0 +1,3 @@
+2026-09-11 14:31:47 +0000: Received worker from worker provider: <XCTHTestRunner: 0xa099d3480, PID: 0, device: My Mac (00008142-0002716E0EF1401C)>
+2026-09-11 14:31:48 +0000: Worker <XCTHTestRunner: 0xa099d3480, PID: 16374, device: My Mac (00008142-0002716E0EF1401C)> finished bootstrapping
+2026-09-11 14:31:48 +0000: Parallelization disabled; test execution driven by the test process

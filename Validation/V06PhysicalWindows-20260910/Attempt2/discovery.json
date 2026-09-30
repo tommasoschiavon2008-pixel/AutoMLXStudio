@@ -1,0 +1,11 @@
+{
+  "models" : [
+    "qwen\/qwen3-4b-2507",
+    "mistral-small-3.1-24b-instruct-2503",
+    "deepseek\/deepseek-r1-0528-qwen3-8b",
+    "qwen\/qwen3-vl-8b",
+    "text-embedding-nomic-embed-text-v1.5"
+  ],
+  "selectedModel" : "qwen\/qwen3-4b-2507",
+  "selectedModelPresent" : true
+}

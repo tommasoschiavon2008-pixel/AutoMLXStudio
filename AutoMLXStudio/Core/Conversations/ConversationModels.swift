@@ -8,6 +8,13 @@ enum AgentExecutionQuality: String, CaseIterable, Identifiable, Equatable, Senda
     var id: String { rawValue } // Gives SwiftUI a stable display-friendly identity.
 } // Ends the persisted execution-quality choices.
 
+enum ChatExecutionMode: String, Codable, CaseIterable, Identifiable, Sendable { // Distinguishes exact-model Chat from the visible multi-agent route.
+    case direct // Runs only the exact model selected in the Chat picker for backward compatibility.
+    case agents // Routes local text through the registered specialist, context, and quality stages.
+    var id: String { rawValue } // Supplies stable SwiftUI picker identity.
+    var displayName: String { self == .agents ? "Agents" : "Direct" } // Labels the two honest execution paths concisely.
+} // Ends the durable Chat execution-mode definition.
+
 extension AgentExecutionQuality: Codable { // Adds tolerant decoding so earlier lowercase prototypes remain readable.
     init(from decoder: Decoder) throws { // Decodes one case-insensitive persisted quality value.
         let container = try decoder.singleValueContainer() // Opens the single raw-string value.
@@ -28,7 +35,7 @@ extension AgentExecutionQuality: Codable { // Adds tolerant decoding so earlier 
 
 enum ConversationPersistenceSchema { // Publishes the local snapshot compatibility boundary for migrations and tests.
     static let minimumSupportedVersion = 0 // Accepts the explicit prototype schema and legacy unwrapped conversation arrays.
-    static let currentVersion = 1 // Writes the first production schema containing memory and quality preferences.
+    static let currentVersion = 3 // Writes the schema that also persists an explicit direct-versus-agents Chat choice.
 } // Ends conversation schema-version constants.
 
 struct Conversation: Identifiable, Codable, Equatable, Sendable { // Stores only user-visible chat data and durable preferences, never runtime prompts or private reasoning.
@@ -43,9 +50,11 @@ struct Conversation: Identifiable, Codable, Equatable, Sendable { // Stores only
     var updatedAt: Date // Records the latest durable message or metadata mutation.
     var useProjectMemory: Bool // Persists the user's retrieval preference independently for each conversation.
     var qualityOverride: AgentExecutionQuality? // Persists an optional override while nil continues to use the application default.
+    var selectedModelTarget: ModelGenerationTarget? // Persists the exact backend-qualified Chat model choice without credentials or endpoint data.
+    var executionMode: ChatExecutionMode // Persists whether this conversation uses the selected model directly or the visible agent workflow.
     var titleWasEdited: Bool // Prevents a later first message from overwriting an explicitly renamed title.
 
-    init(id: UUID = UUID(), projectID: UUID? = nil, title: String? = nil, messages: [ChatMessage] = [], createdAt: Date = Date(), updatedAt: Date? = nil, useProjectMemory: Bool? = nil, qualityOverride: AgentExecutionQuality? = nil, titleWasEdited: Bool? = nil) { // Creates a complete backward-compatible conversation value.
+    init(id: UUID = UUID(), projectID: UUID? = nil, title: String? = nil, messages: [ChatMessage] = [], createdAt: Date = Date(), updatedAt: Date? = nil, useProjectMemory: Bool? = nil, qualityOverride: AgentExecutionQuality? = nil, selectedModelTarget: ModelGenerationTarget? = nil, executionMode: ChatExecutionMode = .agents, titleWasEdited: Bool? = nil) { // Creates a new conversation with an explicit multi-agent default while retaining direct mode for migrated records.
         self.id = id // Stores the supplied or generated durable identity.
         self.projectID = projectID // Stores the optional project association.
         self.messages = messages // Stores only the caller-supplied visible history.
@@ -54,6 +63,8 @@ struct Conversation: Identifiable, Codable, Equatable, Sendable { // Stores only
         self.updatedAt = updatedAt ?? createdAt // Uses creation time until the first durable mutation.
         self.useProjectMemory = useProjectMemory ?? (projectID != nil) // Defaults memory ON for project chats and OFF for ordinary chats.
         self.qualityOverride = qualityOverride // Stores a real override only when the user selected one.
+        self.selectedModelTarget = selectedModelTarget // Stores nil for legacy automatic local routing or one exact user selection.
+        self.executionMode = executionMode // Stores the user-visible execution contract independently from quality and model identity.
         self.titleWasEdited = titleWasEdited ?? (title != nil) // Treats an explicitly supplied title as user-owned by default.
     } // Ends complete conversation construction.
 
@@ -82,6 +93,8 @@ struct Conversation: Identifiable, Codable, Equatable, Sendable { // Stores only
         case updatedAt // Persists last mutation time.
         case useProjectMemory // Persists the retrieval preference introduced with schema version one.
         case qualityOverride // Persists the optional quality override introduced with schema version one.
+        case selectedModelTarget // Persists the backend-qualified selection introduced with schema version two.
+        case executionMode // Persists the explicit agent/direct route introduced with schema version three.
         case titleWasEdited // Persists whether deterministic title replacement remains allowed.
     } // Ends conversation coding keys.
 
@@ -96,6 +109,8 @@ struct Conversation: Identifiable, Codable, Equatable, Sendable { // Stores only
         updatedAt = try container.decodeIfPresent(Date.self, forKey: .updatedAt) ?? createdAt // Preserves creation time when a legacy update timestamp is absent.
         useProjectMemory = try container.decodeIfPresent(Bool.self, forKey: .useProjectMemory) ?? (projectID != nil) // Migrates missing preferences to the documented project-aware default.
         qualityOverride = try container.decodeIfPresent(AgentExecutionQuality.self, forKey: .qualityOverride) // Leaves legacy conversations on the application-wide quality policy.
+        selectedModelTarget = try container.decodeIfPresent(ModelGenerationTarget.self, forKey: .selectedModelTarget) // Leaves older conversations on deterministic local selection until the user chooses a model.
+        executionMode = try container.decodeIfPresent(ChatExecutionMode.self, forKey: .executionMode) ?? .direct // Migrates older conversations to their exact prior one-model behavior.
         let derivedTitle = Self.derivedTitle(from: messages) // Computes the only title an unedited legacy record would have received.
         titleWasEdited = try container.decodeIfPresent(Bool.self, forKey: .titleWasEdited) ?? (title != derivedTitle) // Infers edit ownership without overwriting a distinct legacy title.
     } // Ends backward-compatible conversation decoding.
@@ -110,6 +125,7 @@ enum ConversationListScope: Equatable, Sendable { // Makes project filtering exp
 enum ConversationStoreError: LocalizedError, Equatable, Sendable { // Defines typed bounded failures for validation, lookup, schema, corruption, and persistence.
     case invalidTitle(String) // Reports an empty or overlong editable title with bounded detail.
     case invalidMessageRole(String) // Prevents hidden system or internal-role messages from entering visible conversation persistence.
+    case invalidModelSelection(String) // Rejects malformed or location-incompatible backend-qualified model selections.
     case conversationNotFound(UUID) // Reports selection-independent lookup or mutation of an unknown identity.
     case conversationAlreadyExists(UUID) // Prevents an explicit UUID from silently replacing an existing conversation.
     case unsupportedSchemaVersion(Int) // Reports a snapshot written by an incompatible future schema.
@@ -120,6 +136,7 @@ enum ConversationStoreError: LocalizedError, Equatable, Sendable { // Defines ty
         switch self { // Selects the exact typed failure description.
         case let .invalidTitle(detail): return "Invalid conversation title: \(detail)" // Explains title validation failure.
         case let .invalidMessageRole(role): return "Conversation messages may contain only visible user or assistant roles; received \(role)." // Explains the no-hidden-prompt storage boundary.
+        case let .invalidModelSelection(detail): return "Invalid Chat model selection: \(detail)" // Explains bounded backend, location, or model identity failure.
         case let .conversationNotFound(id): return "Conversation was not found: \(id.uuidString)." // Identifies the missing stable UUID.
         case let .conversationAlreadyExists(id): return "Conversation already exists: \(id.uuidString)." // Identifies the conflicting stable UUID.
         case let .unsupportedSchemaVersion(version): return "Unsupported conversation schema version: \(version)." // Identifies the incompatible snapshot version.

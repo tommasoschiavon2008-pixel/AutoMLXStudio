@@ -35,7 +35,7 @@ final class AppState: ObservableObject {
     lazy var remoteModelsController = RemoteModelsController(store: remoteServerStore, inferenceService: remoteInferenceBackend) // Keeps remote configuration alive when changing pages.
     let hardwareService = HardwareService()
     let agentRegistry = AgentRegistry() // Exposes the centralized V0.1 agent definitions to read-only UI surfaces.
-    let workspace = WorkspaceController() // Owns durable projects, conversations, visible messages, and document-ingestion state outside the model runtime.
+    let workspace: WorkspaceController // Owns durable projects, conversations, visible messages, and document-ingestion state outside the model runtime.
     private var pendingVoiceTraceEvents: [VoiceServiceTraceEvent] = [] // Carries capture and ASR evidence into the next manually sent request.
     private var workspaceObservation: AnyCancellable? // Forwards nested workspace changes through this existing environment object without duplicating persisted state.
     private var generationTask: Task<Void, Never>? // Retains only the current app-started Chat workflow for exact cooperative cancellation.
@@ -45,6 +45,15 @@ final class AppState: ObservableObject {
         let initialConfiguration = runtimeConfiguration // Supplies a stable fallback if the application state has been released.
         return LocalMLXBackend(resourceManager: modelResourceManager, completionClient: MLXCompletionClient(service: mlxService), modelProvider: { [weak self] id in await self?.modelRegistry.model(id: id) }, configurationProvider: { [weak self] in await self?.runtimeConfiguration ?? initialConfiguration }) // Resolves current profiles and configuration without a retain cycle.
     }() // Ends shared local backend construction.
+    lazy var modelBackendDispatcher: ModelBackendDispatcher = { // Creates one authoritative backend-neutral dispatcher shared by Chat and Benchmark.
+        let registry = try! ModelBackendRegistry(backends: [localInferenceBackend, remoteInferenceBackend]) // Registers the statically unique local and remote adapters once.
+        return ModelBackendDispatcher(registry: registry) // Returns exact typed dispatch without adaptive model selection.
+    }() // Ends shared dispatcher construction.
+    lazy var chatGenerationSession: ChatGenerationSession = { // Builds ordinary Chat on the same backend-neutral adapters used by Engineering.
+        let prompt = agentRegistry.agent(id: AgentID.general)?.systemPrompt ?? "Answer the user's request accurately and directly." // Reuses the centralized general Chat instruction with a safe non-empty fallback.
+        return ChatGenerationSession(dispatcher: modelBackendDispatcher, memoryStore: workspace.memoryStore, systemInstructions: prompt) // Shares exact local runtime, remote profile authority, and Project Memory ownership.
+    }() // Ends shared ordinary Chat session construction.
+    lazy var benchmarkController = BenchmarkController(client: DispatcherBenchmarkGenerationClient(dispatcher: modelBackendDispatcher)) // Preserves benchmark configuration, progress, history, and comparisons across sidebar navigation.
     lazy var engineeringSessionBuilder = EngineeringSessionBuilder(backends: [localInferenceBackend, remoteInferenceBackend], approvalBroker: engineeringApprovalBroker, registryProvider: { [weak self] in self?.modelRegistry ?? ModelRegistry(models: [], assignments: [], legacyFallbackModelID: "") }, remoteModelsProvider: { [weak self] in self?.remoteModelsController.modelsByServerID.values.flatMap { $0 } ?? [] }) // Centralizes immutable run configuration with weak app-state providers.
     lazy var engineeringController = EngineeringController(memoryStore: workspace.memoryStore, sessionBuilder: engineeringSessionBuilder, approvalBroker: engineeringApprovalBroker) // Preserves session, model, project, approvals, and results across sidebar navigation.
     lazy var voiceController = VoiceConversationController( // Owns microphone, real MLX Audio ASR/TTS, and one playback service rather than agents.
@@ -67,14 +76,19 @@ final class AppState: ObservableObject {
         memoryStore: workspace.memoryStore // Gives the opt-in integrated workflow the exact durable Project Memory authority already owned by WorkspaceController.
     ) // Ends lazy workflow-engine construction.
 
-    init(startsBackgroundTasks: Bool = true) { // Allows graph tests to inspect ownership without starting workspace or hardware bootstrap tasks.
+    convenience init(startsBackgroundTasks: Bool = true) { // Preserves normal construction while keeping the main-actor workspace initializer out of a default argument.
+        self.init(startsBackgroundTasks: startsBackgroundTasks, workspace: WorkspaceController()) // Creates the production workspace on the same main actor as AppState.
+    } // Ends production convenience construction.
+
+    init(startsBackgroundTasks: Bool, workspace: WorkspaceController, loadsPersistentState: Bool = true, inspectsModelFiles: Bool = true) { // Allows tests to inject isolated storage and explicitly suppress user-state or filesystem discovery.
+        self.workspace = workspace // Stores the production or isolated workspace before lazy services capture its memory authority.
         let home = FileManager.default.homeDirectoryForCurrentUser.path
         self.mlxRepoPath = UserDefaults.standard.string(forKey: "mlxRepoPath")
             ?? "/Volumes/Crucial X9 Pro/app/MLX/mlx-lm-main" // Uses the provided working environment only when no persisted path exists.
         let savedModelIdentifier = UserDefaults.standard.string(forKey: "modelIdentifier")
             ?? "mlx-community/Llama-3.2-3B-Instruct-4bit" // Reads the proven V0.1 setting before V0.2 registry migration.
         self.modelIdentifier = savedModelIdentifier // Preserves the legacy/fallback setting and existing Optimize/Benchmark inputs.
-        self.modelRegistry = ModelRegistry.defaultRegistry(legacyIdentifier: savedModelIdentifier) // Creates the offline catalog and migrates the V0.1 model on first launch.
+        self.modelRegistry = inspectsModelFiles ? ModelRegistry.defaultRegistry(legacyIdentifier: savedModelIdentifier) : ModelRegistry(models: [], assignments: [], legacyFallbackModelID: savedModelIdentifier, modelsRoot: "") // Creates the production inspected catalog or a deliberately empty test-host registry.
         self.outputModelPath = UserDefaults.standard.string(forKey: "outputModelPath")
             ?? "\(home)/Models/AutoMLX"
         let savedPort = UserDefaults.standard.integer(forKey: "serverPort")
@@ -87,19 +101,36 @@ final class AppState: ObservableObject {
         if let savedQuality = UserDefaults.standard.string(forKey: "defaultAgentQuality"), let quality = AgentExecutionQuality(rawValue: savedQuality) { self.defaultAgentQuality = quality } // Restores Fast, Balanced, or Thorough while retaining Balanced for older installations.
         if let savedPreset = UserDefaults.standard.string(forKey: "projectContextBudgetPreset"), let preset = ProjectContextBudgetPreset(rawValue: savedPreset) { self.projectContextBudgetPreset = preset } // Restores the bounded context preset while retaining Balanced for older installations.
 
-        loadPersistentState() // Restores benchmarks, user assignments, catalog edits, and switching policy.
+        if loadsPersistentState { loadPersistentState() } // Restores production state only when the caller explicitly retains that boundary.
         workspaceObservation = workspace.objectWillChange.sink { [weak self] _ in self?.objectWillChange.send() } // Makes nested project and conversation mutations refresh existing environment-object views.
 
         guard startsBackgroundTasks else { return } // Preserves normal app startup and permits read-only dependency-graph inspection in tests.
 
         Task {
             await workspace.load() // Restores durable project and conversation state independently from hardware discovery.
+            await remoteModelsController.load() // Restores non-secret remote profiles for Chat selection without making a network request.
             hardware = await hardwareService.readProfile()
             targetMemoryGB = max(4, min(12, hardware.memoryGB * 0.75))
         }
     }
 
     var chatMessages: [ChatMessage] { workspace.messages } // Preserves the existing read-only Chat UI surface while making the durable selected conversation authoritative.
+
+    var chatModelChoices: [ChatModelChoice] { // Combines current local registry and configured remote observations for the shared Chat picker.
+        ChatModelCatalog.choices(localModels: modelRegistry.models, remoteProfiles: remoteModelsController.profiles, remoteModelsByServerID: remoteModelsController.modelsByServerID, preserving: workspace.selectedConversation?.selectedModelTarget) // Preserves an exact saved remote target without persisting endpoint or credential data in the conversation.
+    } // Ends visible Chat model catalog access.
+
+    var effectiveChatModelChoice: ChatModelChoice? { // Resolves the current persisted target or deterministic local default for display and generation.
+        if let saved = workspace.selectedConversation?.selectedModelTarget { return ChatModelCatalog.choice(for: saved, in: chatModelChoices) } // Requires an exact backend, server, and model match for persisted selections.
+        if let preferredID = modelRegistry.assignment(for: AgentID.general)?.preferredModelID, let preferred = chatModelChoices.first(where: { $0.target.backendID == .localMLX && $0.target.modelID == preferredID && $0.isSelectable }) { return preferred } // Uses the existing General Agent local assignment as the migration default.
+        return chatModelChoices.first { $0.target.backendID == .localMLX && $0.isSelectable } // Falls back only to another explicit usable local text catalog entry.
+    } // Ends effective Chat model resolution.
+
+    func setChatModelTarget(_ target: ModelGenerationTarget) async { // Persists one user-selected exact target on the current conversation.
+        guard !isGenerating else { return } // Freezes backend and model identity for the complete active request.
+        do { try await workspace.setSelectedModelTarget(target) } // Stores only backend, server UUID, and model ID in conversation persistence.
+        catch { workspace.errorMessage = error.localizedDescription } // Preserves the previous selection and surfaces bounded persistence failure.
+    } // Ends Chat model selection update.
 
 
     private var stateFileURL: URL {
@@ -236,23 +267,59 @@ final class AppState: ObservableObject {
             do { _ = try await workspace.createConversation(projectID: nil) } // Creates one durable normal conversation rather than an orphan in-memory transcript.
             catch { statusText = "Conversation unavailable"; workspace.errorMessage = error.localizedDescription; return } // Stops before inference when the user message cannot be stored safely.
         } // Ends durable destination recovery.
-        let conversationHistory = chatMessages // Captures prior context before appending the current request.
+        guard let conversation = workspace.selectedConversation else { statusText = "Conversation unavailable"; return } // Requires one exact durable destination after first-launch recovery.
+        let conversationID = conversation.id // Freezes the response destination independently from later navigation or list ordering.
+        let conversationHistory = conversation.messages // Captures prior visible context before appending the current request exactly once.
         let visibleText = normalizedText.isEmpty ? "Image attachment" : normalizedText // Gives attachment-only messages an accessible visible label.
         let userMessage = ChatMessage(role: "user", content: visibleText, attachments: request.attachments) // Preserves validated URL-backed attachment metadata on its originating message.
-        do { try await workspace.appendMessage(userMessage) } // Persists the visible user request atomically before any expensive model execution.
+        do { try await workspace.appendMessage(userMessage, to: conversationID) } // Persists the visible user request to the captured destination before expensive work.
         catch { statusText = "Could not save message"; workspace.errorMessage = error.localizedDescription; return } // Avoids generating an answer for history the application could not durably associate.
-        if Task.isCancelled { statusText = "Workflow cancelled"; return } // Honors Stop before any model selection or process work begins.
-        activeProcessDescription = "Multi-model workflow" // Makes serialized model selection and switching visible in the status bar.
-        let selectedConversation = workspace.selectedConversation // Captures one coherent durable preference snapshot before asynchronous retrieval and inference begin.
+        if Task.isCancelled { await persistChatCancellation(to: conversationID); return } // Honors Stop before model selection while retaining the durable user message.
+        guard let choice = effectiveChatModelChoice else { await persistChatFailure("No installed, enabled local Chat model is available.", to: conversationID); return } // Requires one explicit usable target without silently choosing remote configuration.
+        guard choice.isSelectable else { // Preserves a disabled or missing exact selection without silently falling back.
+            if case .unavailable(let reason) = choice.state { await persistChatFailure(reason, to: conversationID) } // Shows the catalog's bounded corrective reason.
+            else { await persistChatFailure("The selected Chat model is unavailable.", to: conversationID) } // Handles a defensive unknown state without changing the selection.
+            return // Stops before local resource or remote network work.
+        } // Ends target availability validation.
+        if !request.attachments.isEmpty { // Preserves the established image workflow only on the verified local multimodal boundary.
+            guard choice.target.backendID == .localMLX else { await persistChatFailure("Remote image input is not enabled for this Chat backend. Remove the attachment or choose a local model.", to: conversationID); return } // Prevents unverified remote attachment transmission.
+            await performLocalAttachmentChat(request: request, conversation: conversation, conversationHistory: conversationHistory, conversationID: conversationID) // Reuses the V0.3 Vision-aware local workflow without claiming dispatcher attachment support.
+            return // Completes the separate verified attachment path.
+        } // Ends local-only attachment routing.
+        if conversation.executionMode == .agents, choice.target.backendID == .localMLX { // Sends local text to the actual specialist workflow when the user selected Agents.
+            await performLocalAttachmentChat(request: request, conversation: conversation, conversationHistory: conversationHistory, conversationID: conversationID) // Reuses routing, per-agent model selection, bounded memory, reviewer policy, traces, and Stop.
+            return // Prevents a duplicate direct General Agent generation after orchestration.
+        } // Ends local multi-agent Chat routing.
+        activeProcessDescription = choice.target.backendID == .localMLX ? "Local Chat generation" : "Remote Chat generation" // Makes the selected execution location visible without endpoint data.
+        statusText = choice.target.backendID == .localMLX ? "Generating on this Mac…" : "Generating on remote server…" // Reports the actual selected location while the non-streaming response is pending.
+        do { // Executes ordinary text Chat through one backend-neutral session.
+            let output = try await chatGenerationSession.generate(target: choice.target, priorMessages: conversationHistory, currentUserText: normalizedText, projectID: conversation.projectID, usesProjectMemory: conversation.useProjectMemory, contextLimits: projectContextBudgetPreset.limits) // Preserves exact multi-turn order and current conversation preferences.
+            let assistant = ChatMessage(role: "assistant", content: output.text, citations: output.citations, generationStatus: .complete, agentID: AgentID.general, modelID: output.metadata.target.modelID, generationMetadata: output.metadata) // Stores visible text and truthful backend-neutral accounting only.
+            try await workspace.appendMessage(assistant, to: conversationID) // Commits the response only to the immutable originating conversation.
+            pendingVoiceTraceEvents = [] // Consumes any input Voice service evidence once the typed request completes.
+            let speechEvent = await voiceController.synthesizeAndPlayAssistantResponse(output.text, enabled: speakAssistantResponses && !Task.isCancelled) // Keeps optional local speech subordinate to stored text.
+            if let speechEvent, speechEvent.status == .failed { appendLog("Optional speech failed: \(speechEvent.detail)") } // Records bounded speech failure without changing the Chat result.
+            statusText = choice.target.backendID == .localMLX ? "Local response complete" : "Remote response complete" // Reports the exact successful execution location.
+            if choice.target.backendID == .localMLX { await synchronizeRuntimeSnapshot(); let snapshot = await modelResourceManager.snapshot(); activeModelID = snapshot.activeModelID; serverRunning = snapshot.activePort != nil; if let port = snapshot.activePort { serverPort = port } } // Mirrors the local backend's actual retained runtime state after dispatcher execution.
+        } catch is CancellationError { // Handles Stop from retrieval, local MLX, or URLSession remote inference.
+            await persistChatCancellation(to: conversationID) // Retains prior history and adds one explicit cancelled terminal state.
+        } catch { // Handles offline, timeout, HTTP, malformed, missing-model, removed-server, credential, and routing failures uniformly.
+            await persistChatFailure(error.localizedDescription, to: conversationID) // Adds one bounded failed assistant state without clearing the saved selection.
+        } // Ends ordinary dispatcher Chat recovery.
+        activeProcessDescription = nil // Clears the global activity line on every terminal result.
+    } // Ends durable typed Chat execution.
+
+    private func performLocalAttachmentChat(request: UserRequest, conversation: Conversation, conversationHistory: [ChatMessage], conversationID: UUID) async { // Preserves the established local Vision workflow as an explicit non-remote compatibility path.
+        activeProcessDescription = "Local multimodal workflow" // Makes the local-only exception visible during execution.
         let workflowOptions = WorkflowRequestOptions( // Builds the explicit V0.5 execution contract without changing any legacy overload.
-            conversationID: selectedConversation?.id, // Links the operational trace to the exact durable visible conversation.
-            projectID: selectedConversation?.projectID, // Restricts retrieval to the one project associated with this conversation or disables it for normal Chat.
-            memoryPreference: selectedConversation?.useProjectMemory, // Honors the visible persisted Project Memory toggle rather than applying an implicit global choice.
-            quality: selectedConversation?.qualityOverride ?? defaultAgentQuality, // Applies the per-conversation override first and the persisted application default otherwise.
+            conversationID: conversationID, // Links the operational trace to the exact durable visible conversation.
+            projectID: conversation.projectID, // Restricts retrieval to the one project associated with this conversation or disables it for normal Chat.
+            memoryPreference: conversation.useProjectMemory, // Honors the visible persisted Project Memory toggle rather than applying an implicit global choice.
+            quality: conversation.qualityOverride ?? defaultAgentQuality, // Applies the per-conversation override first and the persisted application default otherwise.
             contextLimits: projectContextBudgetPreset.limits // Applies the named persisted hard budget selected in Settings.
         ) // Ends the immutable per-request Project Chat execution options.
         let result = await workflowEngine.execute( // Sends Chat through the real orchestration layer instead of direct inference.
-            request: UserRequest(text: normalizedText, attachments: request.attachments), // Supplies the normalized typed request without copying media bytes.
+            request: UserRequest(text: request.text.trimmingCharacters(in: .whitespacesAndNewlines), attachments: request.attachments), // Supplies the normalized typed request without copying media bytes.
             conversationHistory: conversationHistory, // Supplies only conversation messages that existed before the request.
             modelRegistry: modelRegistry, // Supplies persisted V0.2 assignments and installed model state.
             runtimeConfiguration: runtimeConfiguration, // Reuses the existing MLX environment and automatic port selection.
@@ -261,7 +328,7 @@ final class AppState: ObservableObject {
             onOutput: { [weak self] text in Task { @MainActor in self?.appendLog(text) } } // Preserves real server transition diagnostics.
         ) // Ends workflow execution.
         let assistantMessage = ChatMessage(role: "assistant", content: result.answer, workflowTraceID: result.trace.id, citations: result.citations, generationStatus: result.generationStatus, agentID: result.trace.specialistID, modelID: result.trace.modelIdentifier) // Links exact trace, grounding, delivery, agent, and physical-model metadata to the durable response.
-        do { try await workspace.appendMessage(assistantMessage) } // Persists the best complete or partial visible answer before optional speech or transient UI updates.
+        do { try await workspace.appendMessage(assistantMessage, to: conversationID) } // Persists the best complete or partial visible answer to the originating conversation.
         catch { workspace.errorMessage = error.localizedDescription; appendLog("Conversation persistence failed: \(error.localizedDescription)") } // Preserves runtime evidence while reporting the local storage failure explicitly.
         let shouldSpeak = result.generationStatus == .complete && !Task.isCancelled // Prevents cancelled, failed, or partially unwinding output from starting new TTS work.
         let speechEvent = await voiceController.synthesizeAndPlayAssistantResponse(result.answer, enabled: speakAssistantResponses && shouldSpeak) // Runs optional speech only after the assistant text is safely stored.
@@ -279,7 +346,27 @@ final class AppState: ObservableObject {
         activeProcessDescription = nil // Clears status-bar activity after all stage transitions.
         await synchronizeRuntimeSnapshot() // Mirrors model lifecycle states into the Models and Agents pages.
         saveSettings() // Persists actual port, assignments, and runtime-independent user configuration.
-    } // Ends durable typed Chat execution.
+    } // Ends the explicit local attachment compatibility workflow.
+
+    private func persistChatCancellation(to conversationID: UUID) async { // Records a stable terminal cancellation without clearing prior history or selection.
+        let message = ChatMessage(role: "assistant", content: "Generation cancelled.", generationStatus: .cancelled) // Creates a visible non-error cancellation record.
+        do { try await workspace.appendMessage(message, to: conversationID) } // Commits only to the originating conversation even after navigation.
+        catch { workspace.errorMessage = error.localizedDescription } // Reports persistence failure without restarting inference.
+        pendingVoiceTraceEvents = [] // Consumes stale input-service evidence after the stopped request.
+        statusText = "Generation cancelled" // Clears ambiguous spinner wording with an explicit terminal state.
+        activeProcessDescription = nil // Releases the global activity indicator after cancellation.
+    } // Ends cancellation persistence.
+
+    private func persistChatFailure(_ detail: String, to conversationID: UUID) async { // Records one controlled failure while preserving user history and saved target.
+        let bounded = String(detail.replacingOccurrences(of: "\\s+", with: " ", options: .regularExpression).trimmingCharacters(in: .whitespacesAndNewlines).prefix(512)) // Prevents oversized or multiline transport diagnostics from dominating Chat.
+        let visible = bounded.isEmpty ? "Chat generation failed." : bounded // Supplies stable text if an unexpected error has no localized description.
+        let message = ChatMessage(role: "assistant", content: visible, generationStatus: .failed) // Creates a visible failed terminal record without private response bodies.
+        do { try await workspace.appendMessage(message, to: conversationID) } // Commits only to the exact originating conversation.
+        catch { workspace.errorMessage = error.localizedDescription } // Reports persistence failure without losing the already committed user turn.
+        pendingVoiceTraceEvents = [] // Consumes stale input-service evidence after failure.
+        statusText = "Chat generation failed" // Publishes a terminal state so no indefinite spinner remains.
+        activeProcessDescription = nil // Releases the global activity indicator on every failure.
+    } // Ends controlled Chat failure persistence.
 
     func consumeVoiceDraftForComposer() -> String? { // Moves a successful transcription into Chat without sending it automatically.
         guard let draft = voiceController.consumeLatestDraft() else { return nil } // Requires one ready controller-owned transcription.

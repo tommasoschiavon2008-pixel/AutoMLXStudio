@@ -1,0 +1,12 @@
+{
+  "durationMS" : 7297,
+  "finishReason" : "tool_calls",
+  "model" : "qwen\/qwen3-4b-2507",
+  "text" : "",
+  "toolCalls" : [
+    {
+      "id" : "bTIjuLScZcEm231KAibUCwOoxf0xCbxy",
+      "name" : "write_file"
+    }
+  ]
+}

@@ -233,6 +233,7 @@ enum EngineeringRuntimeError: LocalizedError, Equatable, Sendable { // Defines s
     case processLaunchFailed(String) // Reports a bounded Foundation launch diagnostic.
     case processTimedOut(Int) // Reports termination of the exact owned child at its deadline.
     case processCancelled // Reports cooperative cancellation after exact child cleanup.
+    case sandboxUnavailable(String) // Reports failure to establish mandatory process containment without launching unsandboxed.
 
     var errorDescription: String? { // Produces concise diagnostics safe for tool traces and UI display.
         switch self { // Selects a stable human-readable description for each structured category.
@@ -260,6 +261,7 @@ enum EngineeringRuntimeError: LocalizedError, Equatable, Sendable { // Defines s
         case let .processLaunchFailed(detail): return "Command could not start: \(detail)" // Describes direct launch failure.
         case let .processTimedOut(milliseconds): return "Owned command exceeded \(milliseconds) ms and was stopped." // Describes exact-child timeout cleanup.
         case .processCancelled: return "Owned command was cancelled and stopped." // Describes exact-child cooperative cancellation.
+        case let .sandboxUnavailable(detail): return detail // Describes a fail-closed containment setup error without sensitive paths.
         } // Ends error-description selection.
     } // Ends localized diagnostics.
 } // Ends structured Engineering Runtime errors.

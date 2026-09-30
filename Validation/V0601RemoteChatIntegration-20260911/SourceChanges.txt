@@ -1,0 +1,10 @@
+CREATED  AutoMLXStudio/Services/ChatGenerationSession.swift
+CREATED  AutoMLXStudioTests/ChatGenerationSessionTests.swift
+MODIFIED AutoMLXStudio.xcodeproj/project.pbxproj
+MODIFIED AutoMLXStudio/AppState.swift
+MODIFIED AutoMLXStudio/Core/Conversations/ConversationModels.swift
+MODIFIED AutoMLXStudio/Core/Registry/AgentRegistry.swift
+MODIFIED AutoMLXStudio/Models/AppModels.swift
+MODIFIED AutoMLXStudio/Services/ConversationStore.swift
+MODIFIED AutoMLXStudio/Services/WorkspaceController.swift
+MODIFIED AutoMLXStudio/Views/ChatView.swift

@@ -75,6 +75,15 @@ enum ChatGenerationStatus: String, Codable, Equatable, Sendable { // Describes o
     case failed // Indicates no valid assistant candidate could be delivered.
 } // Ends visible chat generation states.
 
+struct ChatGenerationMetadata: Codable, Equatable, Sendable { // Persists only provider-neutral operational facts returned by normal Chat inference.
+    let target: ModelGenerationTarget // Records the exact backend, location, and requested model used for this response.
+    let usage: ModelGenerationUsage? // Preserves token accounting only when the backend actually reports it.
+    let durationMilliseconds: Int // Preserves measured end-to-end backend duration for later inspection.
+    let finishReason: ModelFinishReason? // Preserves the provider completion reason without inventing one.
+    let toolCallCount: Int // Records safely rejected normal-Chat tool calls without storing arguments or executing tools.
+    let timeToFirstTokenMilliseconds: Int? // Remains nil until a genuinely streaming backend measures first-token latency.
+} // Ends normal Chat generation metadata.
+
 struct ChatMessage: Identifiable, Codable, Equatable, Sendable {
     let id: UUID
     let role: String
@@ -86,8 +95,9 @@ struct ChatMessage: Identifiable, Codable, Equatable, Sendable {
     let generationStatus: ChatGenerationStatus // Records complete, generating, cancelled, or failed visible delivery state.
     let agentID: String? // Stores the actual successful specialist identity when useful for local inspection.
     let modelID: String? // Stores the actual successful specialist model identity when useful for local inspection.
+    let generationMetadata: ChatGenerationMetadata? // Stores backend-neutral usage and duration when this message came through the shared dispatcher.
 
-    init(id: UUID = UUID(), role: String, content: String, workflowTraceID: UUID? = nil, attachments: [UserAttachment] = [], citations: [LocalMemoryCitation] = [], createdAt: Date = Date(), generationStatus: ChatGenerationStatus = .complete, agentID: String? = nil, modelID: String? = nil) { // Keeps prior call sites source-compatible while enabling durable Project Chat metadata.
+    init(id: UUID = UUID(), role: String, content: String, workflowTraceID: UUID? = nil, attachments: [UserAttachment] = [], citations: [LocalMemoryCitation] = [], createdAt: Date = Date(), generationStatus: ChatGenerationStatus = .complete, agentID: String? = nil, modelID: String? = nil, generationMetadata: ChatGenerationMetadata? = nil) { // Keeps prior call sites source-compatible while enabling durable Project Chat metadata.
         self.id = id
         self.role = role
         self.content = content
@@ -98,9 +108,10 @@ struct ChatMessage: Identifiable, Codable, Equatable, Sendable {
         self.generationStatus = generationStatus // Stores the visible delivery state without transient process objects.
         self.agentID = agentID // Stores actual specialist identity only when known.
         self.modelID = modelID // Stores actual physical model identity only when known.
+        self.generationMetadata = generationMetadata // Stores only truthful dispatcher metadata when available.
     }
 
-    private enum CodingKeys: String, CodingKey { case id, role, content, workflowTraceID, attachments, citations, createdAt, generationStatus, agentID, modelID } // Defines stable keys for backward-compatible decoding.
+    private enum CodingKeys: String, CodingKey { case id, role, content, workflowTraceID, attachments, citations, createdAt, generationStatus, agentID, modelID, generationMetadata } // Defines stable keys for backward-compatible decoding.
 
     init(from decoder: Decoder) throws { // Decodes V0.1/V0.2 messages that predate attachments safely.
         let container = try decoder.container(keyedBy: CodingKeys.self) // Opens the keyed persisted message payload.
@@ -114,6 +125,7 @@ struct ChatMessage: Identifiable, Codable, Equatable, Sendable {
         generationStatus = try container.decodeIfPresent(ChatGenerationStatus.self, forKey: .generationStatus) ?? .complete // Treats every legacy stored message as already delivered.
         agentID = try container.decodeIfPresent(String.self, forKey: .agentID) // Restores actual specialist metadata only when persisted.
         modelID = try container.decodeIfPresent(String.self, forKey: .modelID) // Restores actual physical model metadata only when persisted.
+        generationMetadata = try container.decodeIfPresent(ChatGenerationMetadata.self, forKey: .generationMetadata) // Leaves every legacy message without invented dispatcher metadata.
     } // Ends backward-compatible ChatMessage decoding.
 }
 

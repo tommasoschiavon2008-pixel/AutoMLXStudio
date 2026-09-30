@@ -1,5 +1,35 @@
 # V0.6 final validation
 
+## V0.6.1 Model Evaluation / Benchmark Harness — 11 September 2026
+
+V0.6.1 replaces the visible throughput-only Benchmark page with a backend-neutral correctness and reliability harness while retaining the legacy persistence API for compatibility. The built-in suite contains 33 original offline cases across eight categories. Exact, normalized, contains, regex, numeric, strict JSON, native/simulated tool-call, and closed-registry programmatic graders are deterministic and separately tested.
+
+The sequential runner uses the shared `ModelBackendDispatcher` with fallback disabled, per-case timeouts, isolated failures, cooperative cancellation, and progress checkpoint persistence. The native UI includes Overview, New Run, Running, Results/case detail, History, Comparison, and Custom Suites. Scoring, truthful optional metrics, schema-versioned storage, import preview, JSON/Markdown export, fairness checks, and evidence-only best-model-by-role recommendations are documented in `PROJECT_V061_BENCHMARKS.md`.
+
+Authoritative test, build, architecture, UI, demo-export, and manifest evidence is stored in `Validation/V061BenchmarkHarness-20260911/`. Physical Windows testing was not performed; the previous physical status remains **PARTIAL** and the current V0.6.1 physical status remains **PENDING**.
+
+## V0.6.0.1 remote Chat integration — 11 September 2026
+
+The focused V0.6.0.1 work adds ordinary Chat remote selection and dispatcher routing without changing the V0.6 Engineering authority boundary. Local and remote text now share `ModelBackendDispatcher`; image requests remain explicitly on the established local Vision workflow because remote attachment support is not verified. Model selection persists per conversation as the exact backend, server UUID, and model ID. Tokens remain exclusively in the Keychain-backed remote vault.
+
+New deterministic validation covers local/remote dispatch, exact multi-turn order, collision-safe model identity, restart persistence, disabled/removed/missing server-model state, stale-response destination safety, cancellation, safe backend failure propagation, and non-execution of normal-Chat tool calls. Existing remote adapter tests continue to cover intercepted completion, timeout, connection loss, HTTP status, malformed API response, discovery, credentials, cancellation, and native tool parsing. Final V0.6.0.1 counts and build evidence are stored under `Validation/V0601RemoteChatIntegration-20260911/`.
+
+Windows physical revalidation was not run because the host is offline. The current physical status is **PARTIAL / V0.6.0.1 DELTA PENDING**, with the exact focused procedure in `PHYSICAL_REVALIDATION.md`.
+
+V0.6.0.1 software completion is **100%** and software status is **READY**. The authoritative 11 September results are:
+
+| V0.6.0.1 verification | Executed | Passed | Skipped | Failed |
+|---|---:|---:|---:|---:|
+| Targeted final | 37 | 37 | 0 | 0 |
+| Full suite final #1 | 209 | 203 | 6 | 0 |
+| Full suite final #2 | 209 | 203 | 6 | 0 |
+
+Debug arm64, Release arm64, and Release Universal builds all passed after the final test runs. `file` and `lipo` confirm the Universal executable contains `x86_64` and `arm64`. Native offscreen rendering validated normal and minimum window sizes plus local/remote selection, long names, empty, error, generating/Stop, disabled-control, scrolling, and long-message states. The authoritative details, logs, result bundles, screenshots, manifests, and binaries are in `Validation/V0601RemoteChatIntegration-20260911/FINAL_REPORT.md`.
+
+The six skips are the same explicit hardware/external-model tests from V0.6; no failure was converted to a skip. Deterministic remote tests used intercepted HTTP or injected adapters and are software evidence only. No Windows connection, model download, Benchmark Harness, training, fine-tuning, LoRA, or Vision milestone work was performed.
+
+## Preserved V0.6 baseline — 10 September 2026
+
 Validated on 10 September 2026 in `/Volumes/AutoMLXShrd/AutoMLXStudioV1_3`.
 
 **Software complete: YES. Completion: 100% of the requested V0.6 software scope.** Physical Windows acceptance is separate and remains pending. The deterministic tests do not establish physical model quality, real LAN behavior, or Windows hardware compatibility.
@@ -108,4 +138,4 @@ xcodebuild -project AutoMLXStudio.xcodeproj -scheme AutoMLXStudio -configuration
 
 ## Final verdict
 
-Remaining software blockers: **NONE**. V0.6 is complete for the requested software scope. Physical Windows validation remains **PENDING PHYSICAL VALIDATION**. The next recommended milestone is **V0.6.1 — Model Evaluation / Benchmark Harness**, to establish quantitative baselines before fine-tuning/LoRA. It was not started in this task.
+Remaining V0.6 software blockers: **NONE**. V0.6 remains complete for its requested software scope. V0.6.1 Benchmark Harness validation is recorded above and in its dedicated evidence directory. Physical Windows validation remains **PENDING PHYSICAL VALIDATION**.

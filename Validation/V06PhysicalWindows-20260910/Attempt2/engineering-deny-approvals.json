@@ -1,0 +1,9 @@
+[
+  {
+    "before" : "1\n",
+    "command" : "write_file calculator.txt\nExpected SHA-256: 4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865\nSHA-256: 53c234e5e8472b6ac51c1ae1cab3fe06fad053beb8ebfd8977b010655bfdd3c3; 2 bytes\n2\n",
+    "decision" : "deny",
+    "id" : "BA3CCC6D-A550-469F-9443-B0F523C9E79A",
+    "tool" : "write_file"
+  }
+]

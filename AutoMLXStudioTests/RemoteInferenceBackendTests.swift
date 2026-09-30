@@ -223,6 +223,42 @@ final class RemoteInferenceBackendTests: XCTestCase { // Verifies multi-server p
         XCTAssertNil(health.discoveredModelCount) // Confirms no model count is invented from unrelated HTML.
     } // Ends false-positive health prevention testing.
 
+    func testLMStudioModelsResponseAtVersionedBasePathIsHealthy() async throws { // Covers the exact standard LM Studio response and versioned endpoint used by the Windows connection.
+        let environment = makeTemporaryEnvironment() // Isolates the production profile store from the user's configured servers.
+        var profile = makeProfile(host: "192.168.1.7") // Uses the real failure's IPv4 shape without sending any network traffic.
+        profile.basePath = "/v1/" // Exercises a harmless trailing slash that must not duplicate the API prefix.
+        let store = RemoteServerStore(fileURL: environment.fileURL, tokenVault: environment.vault) // Uses the production actor with disposable persistence.
+        try await store.save(profile) // Persists one validated server snapshot for the real backend implementation.
+        let backend = RemoteInferenceBackend(profileProvider: store, session: makeSession(protocolClass: RemoteURLProtocolStub.self)) // Routes only this test's HTTP request into its recording stub.
+        RemoteURLProtocolStub.configure { request in // Validates the request before returning the minimal real-server response shape.
+            XCTAssertEqual(request.url?.absoluteString, "http://192.168.1.7:1234/v1/models") // Proves the app requests the intended URL with exactly one `/v1` segment.
+            return .init(data: try Self.jsonData(["object": "list", "data": [["id": "qwen/qwen3-4b-2507", "object": "model", "owned_by": "organization_owner"]]])) // Supplies a valid OpenAI-compatible listing with no optional custom fields.
+        } // Ends the fixed LM Studio response.
+        let health = await backend.health(for: makeTarget(profile: profile, modelID: "qwen/qwen3-4b-2507")) // Exercises the actual discovery, decoding, and connection-status path.
+        XCTAssertEqual(health.status, .healthy) // Requires the expected Healthy state after a valid response.
+        XCTAssertTrue(health.apiCompatible) // Requires an explicit compatible API result rather than TCP-only success.
+        XCTAssertEqual(health.discoveredModelCount, 1) // Preserves the actual number of decoded provider models.
+        let models = try await backend.discoverModels(serverID: profile.id) // Reads the validated discovery result from the production actor.
+        XCTAssertEqual(models.map(\.id), ["qwen/qwen3-4b-2507"]) // Proves the requested model is available to the UI and dispatcher.
+        XCTAssertEqual(RemoteURLProtocolStub.requests().count, 1) // Confirms health and discovery share one successful API observation.
+    } // Ends the exact Windows model-list regression test.
+
+    func testMacNetworkPathFailureDoesNotClaimRemoteServerIsOffline() async throws { // Reproduces the observed macOS URL error without mislabeling the Windows service.
+        let setup = try await makeBackend() // Creates the production backend and a disposable configured profile.
+        RemoteURLProtocolStub.configure { _ in .init(error: URLError(.notConnectedToInternet)) } // Simulates the `-1009` URLSession result logged when local-network access was prohibited.
+        let health = await setup.backend.health(for: makeTarget(profile: setup.profile)) // Runs the actual health error mapping.
+        XCTAssertEqual(health.status, .unavailable) // Distinguishes a Mac-side path restriction from a proven server outage.
+        XCTAssertFalse(health.apiCompatible) // Does not claim API compatibility without any HTTP response.
+        XCTAssertTrue(health.conciseError?.contains("Local Network") == true) // Provides the relevant macOS privacy setting as an actionable diagnostic.
+        let request = ModelGenerationRequest(target: makeTarget(profile: setup.profile), systemInstructions: "Respond.", messages: [ModelGenerationMessage(role: .user, content: "Hello")]) // Reuses the same configured server for Chat transport classification.
+        do { // Requires a typed error rather than accepting an absent generation response.
+            _ = try await setup.backend.generate(request: request) // Calls the real production generation transport through the stub.
+            XCTFail("Expected a Mac network-path failure.") // Fails if the app silently reports a successful generation.
+        } catch let error as RemoteInferenceError { // Inspects the normalized app error.
+            XCTAssertEqual(error, .networkUnavailable) // Prevents the misleading dropped-server message observed in the UI.
+        } // Ends exact transport-category verification.
+    } // Ends the local-network denial regression test.
+
     func testTextGenerationBuildsAuthOnlyAtNetworkBoundaryAndNormalizesUsage() async throws { // Verifies request encoding, bearer isolation, response decoding, and duration metadata.
         let secret = "private-bearer-987654321" // Supplies a distinctive credential for leakage assertions.
         let setup = try await makeBackend(authenticationMode: .bearerToken, token: secret) // Creates an authenticated deterministic backend.

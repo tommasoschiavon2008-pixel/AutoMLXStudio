@@ -1,0 +1,53 @@
+Xcode version: 26.6 (17F113)
+16:27:50.611 xcodebuild[15685:424965] Beginning test session AutoMLXStudioTests-A9C31485-C52A-428E-B64F-A91DE1B619AC at 2026-09-11 16:27:50.611 on target <DVTLocalComputer: 0x8fd542600 (My Mac | arm64e)> (26.6.2 (25G83))
+16:27:50.611 xcodebuild[15685:424965] 	/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild
+-project
+AutoMLXStudio.xcodeproj
+-scheme
+AutoMLXStudio
+-configuration
+Debug
+-destination
+platform=macOS,arch=arm64
+-derivedDataPath
+Validation/V061BenchmarkHarness-20260911/DerivedData-TargetedFinalUI
+-resultBundlePath
+Validation/V061BenchmarkHarness-20260911/Results/TargetedFinalUI.xcresult
+CODE_SIGNING_ALLOWED=NO
+ARCHS=arm64
+ONLY_ACTIVE_ARCH=YES
+test
+-only-testing:AutoMLXStudioTests/BenchmarkHarnessTests
+-only-testing:AutoMLXStudioTests/BenchmarkUIValidationTests
+16:27:50.616 xcodebuild[15685:424965] Test standard output and standard error is at /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/Results/TargetedFinalUI.xcresult/Staging/1_Test/Diagnostics/AutoMLXStudioTests-3AC0290D-3D8E-43AE-AF2E-FED2E18C963E-Configuration-Test Scheme Action-Iteration-1/AutoMLXStudioTests-54E9A554-BEBA-4F97-A05B-A477CBEA4B29/StandardOutputAndStandardError.txt
+16:27:50.617 xcodebuild[15685:424965] Setting up test runner session
+16:27:50.617 xcodebuild[15685:424965] Requesting a socket for communication with testmanagerd.
+16:27:50.617 xcodebuild[15685:424965] Registering/updating daemon-based crash report observer for process names (
+    WindowServer,
+    AutoMLXStudioTests,
+    AutoMLXStudio,
+    xctest,
+    DTServiceHub,
+    debugserver,
+    testmanagerd
+)
+16:27:50.617 xcodebuild[15685:425029] Got socket for DTX-layer communication.
+16:27:50.617 xcodebuild[15685:425701] Received connection for test runner session
+16:27:50.617 xcodebuild[15685:425701] Listening for proxy connection request from the test bundle
+16:27:50.617 xcodebuild[15685:425029] XPC connection for control was invalidated.
+16:27:50.617 xcodebuild[15685:424965] Test runner session acquired connection.
+16:27:50.617 xcodebuild[15685:425701] Initiating session with identifier: A9C31485-C52A-428E-B64F-A91DE1B619AC
+16:27:50.644 xcodebuild[15685:424965] Finished requesting crash reports. Continuing with testing.
+16:27:50.644 xcodebuild[15685:425029] Got reply to session initiation request with identifier A9C31485-C52A-428E-B64F-A91DE1B619AC (error: (null))
+16:27:50.661 xcodebuild[15685:424965] Launch session started.
+16:27:50.730 xcodebuild[15685:424965] Test process runnable PID is 15847.
+16:27:50.730 xcodebuild[15685:425019] XCTHTestOperationStateMachine: Transitioning from state Initial to AcquiredPID
+2026-09-11 16:27:51.389912+0200 AutoMLXStudio[15847:426127] [Connection] Unable to get synchronousRemoteObjectProxy, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-09-11 16:27:51.390058+0200 AutoMLXStudio[15847:426127] [Application] Error registering app with intents framework: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-09-11 16:27:51.390851+0200 AutoMLXStudio[15847:426126] [Connection] Unable to get synchronousRemoteObjectProxy, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-09-11 16:27:51.390865+0200 AutoMLXStudio[15847:426126] [Connection] Unable to re-register with Process Instance Registry, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-09-11 16:27:51.391685+0200 AutoMLXStudio[15847:426127] [Connection] Unable to get synchronousRemoteObjectProxy, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-09-11 16:27:51.391694+0200 AutoMLXStudio[15847:426127] [Connection] Unable to re-register with Process Instance Registry, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-09-11 16:27:51.392530+0200 AutoMLXStudio[15847:426127] [Connection] Will NOT re-try to establish the connection
+2026-09-11 16:27:51.392554+0200 AutoMLXStudio[15847:426176] [Connection] Unable to get synchronousRemoteObjectProxy, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-09-11 16:27:51.392565+0200 AutoMLXStudio[15847:426176] [Connection] Unable to re-register with Process Instance Registry, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}

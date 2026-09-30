@@ -1,0 +1,31 @@
+UTC 2026-09-20T19:49:38Z
+bundle_path=Validation/V061BenchmarkHarness-20260911/DerivedData-Debug/Build/Products/Debug/AutoMLXStudio.app
+configuration=Debug (derived from Build/Products/Debug path)
+com.tommaso.AutoMLXStudio
+Print: Entry, ":CFBundleShortVersionString", Does Not Exist
+Print: Entry, ":CFBundleVersion", Does Not Exist
+You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+de235f3adf28482aa3911758fe77b17a272505f565413b8202348f430c43e9f8  Validation/V061BenchmarkHarness-20260911/DerivedData-Debug/Build/Products/Debug/AutoMLXStudio.app/Contents/MacOS/AutoMLXStudio
+Executable=/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-Debug/Build/Products/Debug/AutoMLXStudio.app/Contents/MacOS/AutoMLXStudio
+Identifier=AutoMLXStudio
+Format=app bundle with Mach-O thin (arm64)
+CodeDirectory v=20400 size=422 flags=0x20002(adhoc,linker-signed) hashes=10+0 location=embedded
+VersionPlatform=1
+VersionMin=917504
+VersionSDK=1705216
+Hash type=sha256 size=32
+CandidateCDHash sha256=1c654b8578c216bd6edb466083f82c9fdb66ffc9
+CandidateCDHashFull sha256=1c654b8578c216bd6edb466083f82c9fdb66ffc9cad9de3041aba30bd5d042e3
+Hash choices=sha256
+CMSDigest=1c654b8578c216bd6edb466083f82c9fdb66ffc9cad9de3041aba30bd5d042e3
+CMSDigestType=2
+Executable Segment base=0
+Executable Segment limit=7264
+Executable Segment flags=0x1
+Page size=4096
+CDHash=1c654b8578c216bd6edb466083f82c9fdb66ffc9
+Signature=adhoc
+Info.plist=not bound
+TeamIdentifier=not set
+Sealed Resources=none
+Internal requirements=none

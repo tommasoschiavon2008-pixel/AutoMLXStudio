@@ -1,0 +1,741 @@
+Xcode version: 26.6 (17F113)
+16:33:24.955 xcodebuild[16557:431516] Beginning test session AutoMLXStudioTests-1BE455AC-4DCD-420F-B943-9B0912E091C3 at 2026-09-11 16:33:24.954 on target <DVTLocalComputer: 0x859546600 (My Mac | arm64e)> (26.6.2 (25G83))
+16:33:24.955 xcodebuild[16557:431516] 	/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild
+-project
+AutoMLXStudio.xcodeproj
+-scheme
+AutoMLXStudio
+-configuration
+Debug
+-destination
+platform=macOS,arch=arm64
+-derivedDataPath
+Validation/V061BenchmarkHarness-20260911/DerivedData-TargetedUIRetry
+-resultBundlePath
+Validation/V061BenchmarkHarness-20260911/Results/TargetedUIFinal.xcresult
+CODE_SIGNING_ALLOWED=NO
+ARCHS=arm64
+ONLY_ACTIVE_ARCH=YES
+test
+-only-testing:AutoMLXStudioTests/BenchmarkHarnessTests
+-only-testing:AutoMLXStudioTests/BenchmarkUIValidationTests
+16:33:24.959 xcodebuild[16557:431516] Test standard output and standard error is at /Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/Results/TargetedUIFinal.xcresult/Staging/1_Test/Diagnostics/AutoMLXStudioTests-4C73A2EB-02A2-4ACE-9AD7-CD581B38DFC0-Configuration-Test Scheme Action-Iteration-1/AutoMLXStudioTests-1B113EC5-F463-4D88-82FC-2DFE5093CA42/StandardOutputAndStandardError.txt
+16:33:24.959 xcodebuild[16557:431516] Setting up test runner session
+16:33:24.959 xcodebuild[16557:431516] Requesting a socket for communication with testmanagerd.
+16:33:24.959 xcodebuild[16557:431516] Registering/updating daemon-based crash report observer for process names (
+    WindowServer,
+    AutoMLXStudioTests,
+    AutoMLXStudio,
+    xctest,
+    DTServiceHub,
+    debugserver,
+    testmanagerd
+)
+16:33:24.960 xcodebuild[16557:431555] Got socket for DTX-layer communication.
+16:33:24.960 xcodebuild[16557:431547] Received connection for test runner session
+16:33:24.960 xcodebuild[16557:431555] XPC connection for control was invalidated.
+16:33:24.960 xcodebuild[16557:431547] Listening for proxy connection request from the test bundle
+16:33:24.960 xcodebuild[16557:431516] Test runner session acquired connection.
+16:33:24.960 xcodebuild[16557:431547] Initiating session with identifier: 1BE455AC-4DCD-420F-B943-9B0912E091C3
+16:33:24.977 xcodebuild[16557:431516] Finished requesting crash reports. Continuing with testing.
+16:33:24.977 xcodebuild[16557:431520] Got reply to session initiation request with identifier 1BE455AC-4DCD-420F-B943-9B0912E091C3 (error: (null))
+16:33:24.987 xcodebuild[16557:431516] Launch session started.
+16:33:25.059 xcodebuild[16557:431516] Test process runnable PID is 16582.
+16:33:25.059 xcodebuild[16557:431551] XCTHTestOperationStateMachine: Transitioning from state Initial to AcquiredPID
+2026-09-11 16:33:25.315682+0200 AutoMLXStudio[16582:431824] [Connection] Unable to get synchronousRemoteObjectProxy, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-09-11 16:33:25.316192+0200 AutoMLXStudio[16582:431824] [Application] Error registering app with intents framework: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-09-11 16:33:25.317214+0200 AutoMLXStudio[16582:431773] [Connection] Unable to get synchronousRemoteObjectProxy, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-09-11 16:33:25.317234+0200 AutoMLXStudio[16582:431773] [Connection] Unable to re-register with Process Instance Registry, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-09-11 16:33:25.318376+0200 AutoMLXStudio[16582:431774] [Connection] Unable to get synchronousRemoteObjectProxy, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-09-11 16:33:25.318391+0200 AutoMLXStudio[16582:431774] [Connection] Unable to re-register with Process Instance Registry, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-09-11 16:33:25.319515+0200 AutoMLXStudio[16582:431774] [Connection] Will NOT re-try to establish the connection
+2026-09-11 16:33:25.319546+0200 AutoMLXStudio[16582:431824] [Connection] Unable to get synchronousRemoteObjectProxy, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-09-11 16:33:25.319563+0200 AutoMLXStudio[16582:431824] [Connection] Unable to re-register with Process Instance Registry, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-09-11 16:33:25.356571+0200 AutoMLXStudio[16582:431747] ApplePersistenceIgnoreState: Existing state will not be touched. New state will be written to /var/folders/2g/q2qk1gk540d5ygkzr28n20ym0000gn/T/com.tommaso.AutoMLXStudio.savedState
+16:33:25.534 xcodebuild[16557:431555] Handling proxy channel request from test runner
+16:33:25.534 AutoMLXStudio[16582:431747] Creating future for 'requesting test configuration' with timeout 600.00
+16:33:25.534 AutoMLXStudio[16582:431747] Notifying test runner ready
+16:33:25.534 xcodebuild[16557:431556] Test runner is ready with capabilities: <XCTCapabilities: 0x8573a0c40>: {
+    "delayed attachment transfer" = 1;
+    "fetch all test identifiers" = 2;
+    "ubiquitous test identifiers" = 1;
+}
+16:33:25.535 xcodebuild[16557:431516] Test runner session successfully initiated.
+16:33:25.535 xcodebuild[16557:431516] Authorizing test process ID 16582
+16:33:25.534 AutoMLXStudio[16582:431747] <XCTWaiter: 0x7d7a773c0> entering wait loop for 600.00s with expectations: `requesting test configuration`
+16:33:25.535 xcodebuild[16557:431556] XCTHTestOperationStateMachine: Transitioning from state AcquiredPID to ReportedReady
+16:33:25.535 xcodebuild[16557:431516] Got authorization response from test daemon: Success
+16:33:25.535 xcodebuild[16557:431516] Registering/updating daemon-based crash report observer for process names (
+    WindowServer,
+    AutoMLXStudioTests,
+    AutoMLXStudio,
+    xctest,
+    DTServiceHub,
+    debugserver,
+    testmanagerd
+)
+16:33:25.535 AutoMLXStudio[16582:431831] Received test runner ready reply. Waiting for request to start running tests.
+16:33:25.535 xcodebuild[16557:431516] Telling test runner to start executing tests.
+16:33:25.535 AutoMLXStudio[16582:431747] Returning result XCTWaiterResultCompleted for synchronous waiter <XCTWaiter: 0x7d7a773c0>
+16:33:25.535 AutoMLXStudio[16582:431747] Wait <XCTWaiterWait: 0x7d5fba580> completed after 0.001s
+16:33:25.535 AutoMLXStudio[16582:431747] cleaning up requesting test configuration
+16:33:25.535 AutoMLXStudio[16582:431747] Loading test bundle at: file:///Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-TargetedUIRetry/Build/Products/Debug/AutoMLXStudio.app/Contents/PlugIns/AutoMLXStudioTests.xctest/
+16:33:25.535 AutoMLXStudio[16582:431747] Finished loading test bundle
+16:33:25.535 AutoMLXStudio[16582:431747] Interop: not enabled, so skipping install
+16:33:25.535 AutoMLXStudio[16582:431831] _IDE_startExecutingTestPlanWithProtocolVersion:36
+16:33:25.535 AutoMLXStudio[16582:431747] Registering in-process symbolication service with image names: AutoMLXStudioTests, AutoMLXStudio
+16:33:25.535 AutoMLXStudio[16582:431747] Running tests with active test configuration: <XCTestConfiguration: 0x7d5e8e700>
+	                  testBundleURL:file:///Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-TargetedUIRetry/Build/Products/Debug/AutoMLXStudio.app/Contents/PlugIns/AutoMLXStudioTests.xctest/
+	         testBundleRelativePath:Contents/PlugIns/AutoMLXStudioTests.xctest
+	              productModuleName:AutoMLXStudioTests
+	                  testSelection:<XCTTestSelection: 0x7d7a776c0>
+	            identifiersToRun:<XCTTestIdentifier leaf ["BenchmarkHarnessTests"]>, <XCTTestIdentifier container, class ["BenchmarkUIValidationTests"]>, <XCTTestIdentifier container, class ["BenchmarkHarnessTests"]>, <XCTTestIdentifier leaf ["BenchmarkUIValidationTests"]>, <XCTTestIdentifier container ["BenchmarkHarnessTests"]>, <XCTTestIdentifier container ["BenchmarkUIValidationTests"]>
+	            identifiersToSkip:
+	            tagsToRun:(null)
+	            tagsToSkip:<XCTTagSelection: 0x7d5ed85e0>
+	            mode:and
+	            tags:{(
+)}
+	  includeXCTests:NO
+
+
+	             reportResultsToIDE:YES
+	               testsDrivenByIDE:NO
+	inProcessParallelizationEnabled:NO
+	              sessionIdentifier:1BE455AC-4DCD-420F-B943-9B0912E091C3
+	      disablePerformanceMetrics:NO
+	treatMissingBaselinesAsFailures:NO
+	                baselineFileURL:(null)
+	       baselineFileRelativePath:(null)
+	          targetApplicationPath:(null)
+	      targetApplicationBundleID:(null)
+	 testApplicationDependencies:
+{
+    "com.tommaso.AutoMLXStudio" = "/Volumes/AutoMLXShrd/AutoMLXStudioV1_3/Validation/V061BenchmarkHarness-20260911/DerivedData-TargetedUIRetry/Build/Products/Debug/AutoMLXStudio.app";
+}
+	 bundleIDsForCrashReportEmphasis:
+{(
+    "com.tommaso.AutoMLXStudio",
+    "com.tommaso.AutoMLXStudioTests"
+)}
+	 testApplicationUserOverrides:(null)
+	     targetApplicationArguments:
+	   targetApplicationEnvironment:(null)
+	                  reportActivities:YES
+	          testsMustRunOnMainThread:NO
+	            initializeForUITesting:NO
+	            traceCollectionEnabled:(null)
+	 enablePerformanceTestsDiagnostics:(null)
+	 aggregateStatisticsBeforeCrash:
+{
+    XCSuiteRecordsKey =     {
+    };
+}
+	        automationFrameworkPath:/System/Library/PrivateFrameworks/XCTAutomationSupport.framework
+	                     emitOSLogs:NO
+	       systemAttachmentLifetime:deleteOnSuccess
+	         userAttachmentLifetime:deleteOnSuccess
+	   preferredScreenCaptureFormat:screenRecording
+	   gatherLocalizableStringsData:NO
+	          testExecutionOrdering:alphabetical
+	    randomExecutionOrderingSeed:(null)
+	               repetitionPolicy:<XCTRepetitionPolicy: 0x7d5ed8400>
+	            mode:None
+	            maximumIterations:1
+	            repeatInNewRunnerProcess:NO
+
+	       runtimeDiagnosticsPolicy:<XCTRuntimeDiagnosticsPolicy: 0x7d7a77db0>
+	            otherRuntimeIssuesDetectionPolicy:<XCTRuntimeIssueDetectionPolicy: 0x7d5ed8440>
+	            detectionEnabled:YES
+	            severity:warning
+
+	            threadPerformanceCheckerRuntimeIssueDetectionPolicy:<XCTRuntimeIssueDetectionPolicy: 0x7d5ed8440>
+	            detectionEnabled:YES
+	            severity:warning
+
+	            mainThreadCheckerDetectionPolicy:<XCTRuntimeIssueDetectionPolicy: 0x7d5ed8440>
+	            detectionEnabled:YES
+	            severity:warning
+
+	            checkedAllocations:disabled
+
+	            testTimeoutsEnabled:NO
+	              leaksCheckingMode:off
+	 defaultTestExecutionTimeAllowance:600
+	 maximumTestExecutionTimeAllowance:0
+	                IDECapabilities:<XCTCapabilities: 0x7d5ee06d0>: {
+    "XCTIssue capability" = 1;
+    "daemon container sandbox extension" = 1;
+    "delayed attachment transfer" = 1;
+    "expected failure test capability" = 1;
+    "in-process test parallelization capability" = 1;
+    "request diagnostics for specific devices" = 1;
+    "runner plan" = 1;
+    "skipped suite capability" = 1;
+    "skipped test capability" = 1;
+    "test case run configurations" = 1;
+    "test iterations" = 2;
+    "test timeout capability" = 1;
+    traits = 1;
+    "ubiquitous test identifiers" = 1;
+    "unified issue recorded" = 1;
+}
+	        symbolicationImageNames:AutoMLXStudioTests, AutoMLXStudio
+	         applicationBundleInfos:(null)
+
+16:33:25.536 AutoMLXStudio[16582:431747] <XCTWaiter: 0x7d7a764c0> entering wait loop for 600.00s with expectations: `requesting ready for testing`
+16:33:25.536 AutoMLXStudio[16582:431747] Returning result XCTWaiterResultCompleted for synchronous waiter <XCTWaiter: 0x7d7a764c0>
+16:33:25.536 AutoMLXStudio[16582:431747] Wait <XCTWaiterWait: 0x7d5fba980> completed after 0.000s
+16:33:25.536 AutoMLXStudio[16582:431747] cleaning up requesting ready for testing
+16:33:25.536 AutoMLXStudio[16582:431747] <XCTWaiter: 0x7d7eda6a0> entering wait loop for 600.00s with expectations: `IDE proxy`
+16:33:25.536 AutoMLXStudio[16582:431747] Returning result XCTWaiterResultCompleted for synchronous waiter <XCTWaiter: 0x7d7eda6a0>
+16:33:25.536 AutoMLXStudio[16582:431747] Wait <XCTWaiterWait: 0x7d5fbaa40> completed after 0.000s
+16:33:25.536 AutoMLXStudio[16582:431747] cleaning up IDE proxy
+16:33:25.536 AutoMLXStudio[16582:431747] Bypassing UI testing initialization because the test configuration does not request it.
+16:33:25.536 AutoMLXStudio[16582:431747] Loading test suite...
+16:33:25.536 AutoMLXStudio[16582:431747] Finished loading test suite, took 0.000s
+16:33:25.536 AutoMLXStudio[16582:431747] <XCTWaiter: 0x7d7a742d0> entering wait loop for 600.00s with expectations: `preparing execution worker`
+16:33:25.539 AutoMLXStudio[16582:431747] Returning result XCTWaiterResultCompleted for synchronous waiter <XCTWaiter: 0x7d7a742d0>
+16:33:25.539 AutoMLXStudio[16582:431747] Wait <XCTWaiterWait: 0x7d5fbb540> completed after 0.002s
+16:33:25.539 AutoMLXStudio[16582:431747] cleaning up preparing execution worker
+16:33:25.539 xcodebuild[16557:431516] Test runner started executing tests.
+16:33:25.539 AutoMLXStudio[16582:431747] Entering test execution event loop
+16:33:25.539 xcodebuild[16557:431556] XCTHTestOperationStateMachine: Transitioning from state ReportedReady to ExecutingTests
+16:33:25.539 AutoMLXStudio[16582:431747] Setting a new interop record handler: Optional(XCTestCore.XCTestInteropRecordHandler())
+16:33:25.539 AutoMLXStudio[16582:431747] -[XCTRunnerIDESession(_XCTestObservationInternal) testBundleWillStart:]
+16:33:25.539 AutoMLXStudio[16582:431747] Running suite...
+16:33:25.539 AutoMLXStudio[16582:431747] -[XCTRunnerIDESession(_XCTestObservationInternal) testSuiteWillStart:]
+16:33:25.539 xcodebuild[16557:431516] _XCT_testSuiteWithIdentifier:<XCTTestIdentifier container ["Selected tests"]> didStartAt:2026-09-11 14:33:25 +0000 traits:(null)
+16:33:25.540 xcodebuild[16557:431516] Nothing to delete
+Test Suite 'Selected tests' started at 2026-09-11 16:33:25.539.
+16:33:25.539 AutoMLXStudio[16582:431747] -[XCTRunnerIDESession(_XCTestObservationInternal) testSuiteWillStart:]
+16:33:25.540 xcodebuild[16557:431516] _XCT_testSuiteWithIdentifier:<XCTTestIdentifier container []> didStartAt:2026-09-11 14:33:25 +0000 traits:(null)
+16:33:25.540 xcodebuild[16557:431516] Nothing to delete
+16:33:25.539 AutoMLXStudio[16582:431747] -[XCTRunnerIDESession(_XCTestObservationInternal) testSuiteWillStart:]
+16:33:25.540 xcodebuild[16557:431516] _XCT_testSuiteWithIdentifier:<XCTTestIdentifier container, class ["BenchmarkHarnessTests"]> didStartAt:2026-09-11 14:33:25 +0000 traits:(null)
+16:33:25.540 xcodebuild[16557:431516] Nothing to delete
+16:33:25.539 AutoMLXStudio[16582:431747] -[XCTRuntimeIssueDetectionManager runtimeIssueDetectionEnabled] runtimeIssueDetectionEnabled based on XCTDisableRuntimeIssues and runtime diagnostics policies: YES
+16:33:25.540 AutoMLXStudio[16582:431747] -[XCTRunnerIDESession(_XCTestObservationInternal) testCaseWillStart:] AutoMLXStudioTests.BenchmarkHarnessTests testBuiltInSuiteHasThirtyThreeStableCasesAcrossAllCategories
+16:33:25.540 xcodebuild[16557:431516] _XCT_testCaseDidStartWithIdentifier:<XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testBuiltInSuiteHasThirtyThreeStableCasesAcrossAllCategories"]>testCaseRunConfiguration:<XCTestCaseRunConfiguration: 0x859800f60>traits:(null)
+16:33:25.540 xcodebuild[16557:431516] Test case did start: <XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testBuiltInSuiteHasThirtyThreeStableCasesAcrossAllCategories"]>
+16:33:25.540 xcodebuild[16557:431516] Nothing to delete
+16:33:25.540 AutoMLXStudio[16582:431747] <XCTWaiter: 0x7d7da5350> entering indefinite wait loop for expectations: `failable invocation block completion`
+16:33:25.540 AutoMLXStudio[16582:431747] Returning result XCTWaiterResultCompleted for synchronous waiter <XCTWaiter: 0x7d7da5350>
+16:33:25.540 AutoMLXStudio[16582:431747] Wait <XCTWaiterWait: 0x7d5c82b40> completed after 0.000s
+16:33:25.540 AutoMLXStudio[16582:431747] cleaning up failable invocation block completion
+Test Suite 'AutoMLXStudioTests.xctest' started at 2026-09-11 16:33:25.539.
+Test Suite 'BenchmarkHarnessTests' started at 2026-09-11 16:33:25.539.
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testBuiltInSuiteHasThirtyThreeStableCasesAcrossAllCategories]' started.
+16:33:25.540 AutoMLXStudio[16582:431747] _assertObjectsInvalidAfterScope
+16:33:25.541 xcodebuild[16557:431516] Nothing to delete
+16:33:25.541 xcodebuild[16557:431516] Nothing to delete
+16:33:25.541 xcodebuild[16557:431516] Nothing to delete
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testBuiltInSuiteHasThirtyThreeStableCasesAcrossAllCategories]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testCancellationPreservesCompletedResults]' started.
+16:33:25.541 AutoMLXStudio[16582:431747] <XCTWaiter: 0x7d7da7000> entering indefinite wait loop for expectations: `failable invocation block completion`
+16:33:25.541 xcodebuild[16557:431516] Nothing to delete
+16:33:25.541 AutoMLXStudio[16582:431747] Returning result XCTWaiterResultCompleted for synchronous waiter <XCTWaiter: 0x7d7da7000>
+16:33:25.541 AutoMLXStudio[16582:431747] Wait <XCTWaiterWait: 0x7d5d58e40> completed after 0.000s
+16:33:25.541 AutoMLXStudio[16582:431747] cleaning up failable invocation block completion
+16:33:25.541 AutoMLXStudio[16582:431747] -[XCTRunnerIDESession(_XCTestObservationInternal) testCaseDidFinish:]
+16:33:25.541 xcodebuild[16557:431516] Nothing to delete
+16:33:25.541 xcodebuild[16557:431516] _XCT_testCaseWithIdentifier:<XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testBuiltInSuiteHasThirtyThreeStableCasesAcrossAllCategories"]> didFinishWithStatus:passed duration:0.001127958297729492
+16:33:25.541 xcodebuild[16557:431516] Test case (<XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testBuiltInSuiteHasThirtyThreeStableCasesAcrossAllCategories"]>) finished - enqueuing console chunks to delegate.
+16:33:25.541 xcodebuild[16557:431516] Nothing to delete
+16:33:25.541 xcodebuild[16557:431516] Nothing to delete
+16:33:25.541 AutoMLXStudio[16582:431747] -[XCTRuntimeIssueDetectionManager runtimeIssueDetectionEnabled] runtimeIssueDetectionEnabled based on XCTDisableRuntimeIssues and runtime diagnostics policies: YES
+16:33:25.542 xcodebuild[16557:431516] Nothing to delete
+16:33:25.541 AutoMLXStudio[16582:431747] -[XCTRunnerIDESession(_XCTestObservationInternal) testCaseWillStart:] AutoMLXStudioTests.BenchmarkHarnessTests testCancellationPreservesCompletedResults
+16:33:25.542 xcodebuild[16557:431516] _XCT_testCaseDidStartWithIdentifier:<XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testCancellationPreservesCompletedResults"]>testCaseRunConfiguration:<XCTestCaseRunConfiguration: 0x85a53d780>traits:(null)
+16:33:25.542 xcodebuild[16557:431516] Test case did start: <XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testCancellationPreservesCompletedResults"]>
+16:33:25.542 xcodebuild[16557:431516] Nothing to delete
+16:33:25.541 AutoMLXStudio[16582:431747] <XCTWaiter: 0x7d7da6f10> entering indefinite wait loop for expectations: `failable invocation block completion`
+16:33:25.541 AutoMLXStudio[16582:431747] Returning result XCTWaiterResultCompleted for synchronous waiter <XCTWaiter: 0x7d7da6f10>
+16:33:25.541 AutoMLXStudio[16582:431747] Wait <XCTWaiterWait: 0x7d5d59180> completed after 0.000s
+16:33:25.541 AutoMLXStudio[16582:431747] cleaning up failable invocation block completion
+16:33:25.542 xcodebuild[16557:431516] Finishing test with new console chunk Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testBuiltInSuiteHasThirtyThreeStableCasesAcrossAllCategories]' passed (0.001 seconds).
+
+16:33:25.556 xcodebuild[16557:431516] Nothing to delete
+16:33:25.541 AutoMLXStudio[16582:431747] _assertObjectsInvalidAfterScope
+16:33:25.541 AutoMLXStudio[16582:431747] <XCTWaiter: 0x7d7da71b0> entering indefinite wait loop for expectations: `failable invocation block completion`
+16:33:25.557 xcodebuild[16557:431516] Nothing to delete
+16:33:25.557 xcodebuild[16557:431516] Nothing to delete
+16:33:25.588 AutoMLXStudio[16582:431747] Returning result XCTWaiterResultCompleted for synchronous waiter <XCTWaiter: 0x7d7da71b0>
+16:33:25.588 AutoMLXStudio[16582:431747] Wait <XCTWaiterWait: 0x7d5d592c0> completed after 0.047s
+16:33:25.588 AutoMLXStudio[16582:431747] cleaning up failable invocation block completion
+16:33:25.588 AutoMLXStudio[16582:431747] <XCTWaiter: 0x7d7da7030> entering indefinite wait loop for expectations: `failable invocation block completion`
+16:33:25.588 AutoMLXStudio[16582:431747] Returning result XCTWaiterResultCompleted for synchronous waiter <XCTWaiter: 0x7d7da7030>
+16:33:25.588 AutoMLXStudio[16582:431747] Wait <XCTWaiterWait: 0x7d5d59180> completed after 0.000s
+16:33:25.588 AutoMLXStudio[16582:431747] cleaning up failable invocation block completion
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testCancellationPreservesCompletedResults]' passed (0.047 seconds).
+16:33:25.588 AutoMLXStudio[16582:431747] -[XCTRunnerIDESession(_XCTestObservationInternal) testCaseDidFinish:]
+16:33:25.588 xcodebuild[16557:431516] Nothing to delete
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testComparisonAndBestModelByRole]' started.
+16:33:25.588 xcodebuild[16557:431516] _XCT_testCaseWithIdentifier:<XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testCancellationPreservesCompletedResults"]> didFinishWithStatus:passed duration:0.04709398746490479
+16:33:25.589 xcodebuild[16557:431516] Test case (<XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testCancellationPreservesCompletedResults"]>) finished - enqueuing console chunks to delegate.
+16:33:25.589 xcodebuild[16557:431516] Nothing to delete
+16:33:25.588 AutoMLXStudio[16582:431747] -[XCTRuntimeIssueDetectionManager runtimeIssueDetectionEnabled] runtimeIssueDetectionEnabled based on XCTDisableRuntimeIssues and runtime diagnostics policies: YES
+16:33:25.588 AutoMLXStudio[16582:431747] -[XCTRunnerIDESession(_XCTestObservationInternal) testCaseWillStart:] AutoMLXStudioTests.BenchmarkHarnessTests testComparisonAndBestModelByRole
+16:33:25.589 xcodebuild[16557:431516] _XCT_testCaseDidStartWithIdentifier:<XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testComparisonAndBestModelByRole"]>testCaseRunConfiguration:<XCTestCaseRunConfiguration: 0x859800ba0>traits:(null)
+16:33:25.589 xcodebuild[16557:431516] Test case did start: <XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testComparisonAndBestModelByRole"]>
+16:33:25.589 xcodebuild[16557:431516] Nothing to delete
+16:33:25.589 xcodebuild[16557:431516] Finishing test with new console chunk Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testCancellationPreservesCompletedResults]' passed (0.047 seconds).
+
+16:33:25.598 xcodebuild[16557:431516] Nothing to delete
+16:33:25.588 AutoMLXStudio[16582:431747] <XCTWaiter: 0x7d7da6a30> entering indefinite wait loop for expectations: `failable invocation block completion`
+16:33:25.588 AutoMLXStudio[16582:431747] Returning result XCTWaiterResultCompleted for synchronous waiter <XCTWaiter: 0x7d7da6a30>
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testComparisonAndBestModelByRole]' passed (0.005 seconds).
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testContainsAndRegexGraders]' started.
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testContainsAndRegexGraders]' passed (0.000 seconds).
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testCustomSuiteImportPreviewAndExportRoundTrip]' started.
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testCustomSuiteImportPreviewAndExportRoundTrip]' passed (0.002 seconds).
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testDeterministicDemoCompletesAndExportsJSONAndMarkdown]' started.
+16:33:25.588 AutoMLXStudio[16582:431747] Wait <XCTWaiterWait: 0x7d5d591c0> completed after 0.000s
+16:33:25.588 AutoMLXStudio[16582:431747] cleaning up failable invocation block completion
+16:33:25.589 AutoMLXStudio[16582:431747] _assertObjectsInvalidAfterScope
+16:33:25.589 AutoMLXStudio[16582:431747] <XCTWaiter: 0x7d7da7090> entering indefinite wait loop for expectations: `failable invocation block completion`
+16:33:25.593 AutoMLXStudio[16582:431747] Returning result XCTWaiterResultCompleted for synchronous waiter <XCTWaiter: 0x7d7da7090>
+16:33:25.593 AutoMLXStudio[16582:431747] Wait <XCTWaiterWait: 0x7d5d59400> completed after 0.005s
+16:33:25.593 AutoMLXStudio[16582:431747] cleaning up failable invocation block completion
+16:33:25.593 AutoMLXStudio[16582:431747] <XCTWaiter: 0x7d7da68b0> entering indefinite wait loop for expectations: `failable invocation block completion`
+16:33:25.593 AutoMLXStudio[16582:431747] Returning result XCTWaiterResultCompleted for synchronous waiter <XCTWaiter: 0x7d7da68b0>
+16:33:25.593 AutoMLXStudio[16582:431747] Wait <XCTWaiterWait: 0x7d5d591c0> completed after 0.000s
+16:33:25.593 AutoMLXStudio[16582:431747] cleaning up failable invocation block completion
+16:33:25.593 AutoMLXStudio[16582:431747] -[XCTRunnerIDESession(_XCTestObservationInternal) testCaseDidFinish:]
+16:33:25.599 xcodebuild[16557:431516] _XCT_testCaseWithIdentifier:<XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testComparisonAndBestModelByRole"]> didFinishWithStatus:passed duration:0.005279064178466797
+16:33:25.599 xcodebuild[16557:431516] Test case (<XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testComparisonAndBestModelByRole"]>) finished - enqueuing console chunks to delegate.
+16:33:25.599 xcodebuild[16557:431516] Nothing to delete
+16:33:25.594 AutoMLXStudio[16582:431747] -[XCTRuntimeIssueDetectionManager runtimeIssueDetectionEnabled] runtimeIssueDetectionEnabled based on XCTDisableRuntimeIssues and runtime diagnostics policies: YES
+16:33:25.594 AutoMLXStudio[16582:431747] -[XCTRunnerIDESession(_XCTestObservationInternal) testCaseWillStart:] AutoMLXStudioTests.BenchmarkHarnessTests testContainsAndRegexGraders
+16:33:25.599 xcodebuild[16557:431516] _XCT_testCaseDidStartWithIdentifier:<XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testContainsAndRegexGraders"]>testCaseRunConfiguration:<XCTestCaseRunConfiguration: 0x85a4b7e80>traits:(null)
+16:33:25.599 xcodebuild[16557:431516] Test case did start: <XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testContainsAndRegexGraders"]>
+16:33:25.599 xcodebuild[16557:431516] Nothing to delete
+16:33:25.594 AutoMLXStudio[16582:431747] <XCTWaiter: 0x7d7da6f40> entering indefinite wait loop for expectations: `failable invocation block completion`
+16:33:25.594 AutoMLXStudio[16582:431747] Returning result XCTWaiterResultCompleted for synchronous waiter <XCTWaiter: 0x7d7da6f40>
+16:33:25.594 AutoMLXStudio[16582:431747] Wait <XCTWaiterWait: 0x7d5d59200> completed after 0.000s
+16:33:25.594 AutoMLXStudio[16582:431747] cleaning up failable invocation block completion
+16:33:25.594 AutoMLXStudio[16582:431747] _assertObjectsInvalidAfterScope
+16:33:25.594 AutoMLXStudio[16582:431747] <XCTWaiter: 0x7d7da6f10> entering indefinite wait loop for expectations: `failable invocation block completion`
+16:33:25.594 AutoMLXStudio[16582:431747] Returning result XCTWaiterResultCompleted for synchronous waiter <XCTWaiter: 0x7d7da6f10>
+16:33:25.594 AutoMLXStudio[16582:431747] Wait <XCTWaiterWait: 0x7d5d59200> completed after 0.000s
+16:33:25.594 AutoMLXStudio[16582:431747] cleaning up failable invocation block completion
+16:33:25.594 AutoMLXStudio[16582:431747] -[XCTRunnerIDESession(_XCTestObservationInternal) testCaseDidFinish:]
+16:33:25.599 xcodebuild[16557:431516] _XCT_testCaseWithIdentifier:<XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testContainsAndRegexGraders"]> didFinishWithStatus:passed duration:0.0004140138626098633
+16:33:25.599 xcodebuild[16557:431516] Test case (<XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testContainsAndRegexGraders"]>) finished - enqueuing console chunks to delegate.
+16:33:25.599 xcodebuild[16557:431516] Nothing to delete
+16:33:25.594 AutoMLXStudio[16582:431747] -[XCTRuntimeIssueDetectionManager runtimeIssueDetectionEnabled] runtimeIssueDetectionEnabled based on XCTDisableRuntimeIssues and runtime diagnostics policies: YES
+16:33:25.594 AutoMLXStudio[16582:431747] -[XCTRunnerIDESession(_XCTestObservationInternal) testCaseWillStart:] AutoMLXStudioTests.BenchmarkHarnessTests testCustomSuiteImportPreviewAndExportRoundTrip
+16:33:25.599 xcodebuild[16557:431516] _XCT_testCaseDidStartWithIdentifier:<XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testCustomSuiteImportPreviewAndExportRoundTrip"]>testCaseRunConfiguration:<XCTestCaseRunConfiguration: 0x85a4b4100>traits:(null)
+16:33:25.599 xcodebuild[16557:431516] Test case did start: <XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testCustomSuiteImportPreviewAndExportRoundTrip"]>
+16:33:25.599 xcodebuild[16557:431516] Nothing to delete
+16:33:25.594 AutoMLXStudio[16582:431747] <XCTWaiter: 0x7d7da6b50> entering indefinite wait loop for expectations: `failable invocation block completion`
+16:33:25.594 AutoMLXStudio[16582:431747] Returning result XCTWaiterResultCompleted for synchronous waiter <XCTWaiter: 0x7d7da6b50>
+16:33:25.594 AutoMLXStudio[16582:431747] Wait <XCTWaiterWait: 0x7d5d59240> completed after 0.000s
+16:33:25.594 AutoMLXStudio[16582:431747] cleaning up failable invocation block completion
+16:33:25.594 AutoMLXStudio[16582:431747] _assertObjectsInvalidAfterScope
+16:33:25.594 AutoMLXStudio[16582:431747] <XCTWaiter: 0x7d7da52f0> entering indefinite wait loop for expectations: `failable invocation block completion`
+16:33:25.596 AutoMLXStudio[16582:431747] Returning result XCTWaiterResultCompleted for synchronous waiter <XCTWaiter: 0x7d7da52f0>
+16:33:25.596 AutoMLXStudio[16582:431747] Wait <XCTWaiterWait: 0x7d5d59180> completed after 0.002s
+16:33:25.596 AutoMLXStudio[16582:431747] cleaning up failable invocation block completion
+16:33:25.596 AutoMLXStudio[16582:431747] <XCTWaiter: 0x7d7da6f70> entering indefinite wait loop for expectations: `failable invocation block completion`
+16:33:25.596 AutoMLXStudio[16582:431747] Returning result XCTWaiterResultCompleted for synchronous waiter <XCTWaiter: 0x7d7da6f70>
+16:33:25.596 AutoMLXStudio[16582:431747] Wait <XCTWaiterWait: 0x7d5d59240> completed after 0.000s
+16:33:25.596 AutoMLXStudio[16582:431747] cleaning up failable invocation block completion
+16:33:25.596 AutoMLXStudio[16582:431747] <XCTWaiter: 0x7d7da6fa0> entering indefinite wait loop for expectations: `failable invocation block completion`
+16:33:25.597 AutoMLXStudio[16582:431747] Returning result XCTWaiterResultCompleted for synchronous waiter <XCTWaiter: 0x7d7da6fa0>
+16:33:25.597 AutoMLXStudio[16582:431747] Wait <XCTWaiterWait: 0x7d5d59240> completed after 0.000s
+16:33:25.597 AutoMLXStudio[16582:431747] cleaning up failable invocation block completion
+16:33:25.597 AutoMLXStudio[16582:431747] -[XCTRunnerIDESession(_XCTestObservationInternal) testCaseDidFinish:]
+16:33:25.599 xcodebuild[16557:431516] _XCT_testCaseWithIdentifier:<XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testCustomSuiteImportPreviewAndExportRoundTrip"]> didFinishWithStatus:passed duration:0.002412915229797363
+16:33:25.599 xcodebuild[16557:431516] Test case (<XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testCustomSuiteImportPreviewAndExportRoundTrip"]>) finished - enqueuing console chunks to delegate.
+16:33:25.599 xcodebuild[16557:431516] Nothing to delete
+16:33:25.597 AutoMLXStudio[16582:431747] -[XCTRuntimeIssueDetectionManager runtimeIssueDetectionEnabled] runtimeIssueDetectionEnabled based on XCTDisableRuntimeIssues and runtime diagnostics policies: YES
+16:33:25.597 AutoMLXStudio[16582:431747] -[XCTRunnerIDESession(_XCTestObservationInternal) testCaseWillStart:] AutoMLXStudioTests.BenchmarkHarnessTests testDeterministicDemoCompletesAndExportsJSONAndMarkdown
+16:33:25.599 xcodebuild[16557:431516] _XCT_testCaseDidStartWithIdentifier:<XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testDeterministicDemoCompletesAndExportsJSONAndMarkdown"]>testCaseRunConfiguration:<XCTestCaseRunConfiguration: 0x85a4b4a40>traits:(null)
+16:33:25.599 xcodebuild[16557:431516] Test case did start: <XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testDeterministicDemoCompletesAndExportsJSONAndMarkdown"]>
+16:33:25.599 xcodebuild[16557:431516] Nothing to delete
+16:33:25.597 AutoMLXStudio[16582:431747] <XCTWaiter: 0x7d7da7660> entering indefinite wait loop for expectations: `failable invocation block completion`
+16:33:25.597 AutoMLXStudio[16582:431747] Returning result XCTWaiterResultCompleted for synchronous waiter <XCTWaiter: 0x7d7da7660>
+16:33:25.597 AutoMLXStudio[16582:431747] Wait <XCTWaiterWait: 0x7d5d59280> completed after 0.000s
+16:33:25.597 AutoMLXStudio[16582:431747] cleaning up failable invocation block completion
+16:33:25.597 AutoMLXStudio[16582:431747] _assertObjectsInvalidAfterScope
+16:33:25.597 AutoMLXStudio[16582:431747] <XCTWaiter: 0x7d7da7150> entering indefinite wait loop for expectations: `failable invocation block completion`
+16:33:25.599 xcodebuild[16557:431516] Nothing to delete
+16:33:25.599 xcodebuild[16557:431516] Nothing to delete
+16:33:25.599 xcodebuild[16557:431516] Finishing test with new console chunk Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testComparisonAndBestModelByRole]' passed (0.005 seconds).
+
+16:33:25.609 xcodebuild[16557:431516] Nothing to delete
+16:33:25.609 xcodebuild[16557:431516] Nothing to delete
+16:33:25.609 xcodebuild[16557:431516] Finishing test with new console chunk Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testContainsAndRegexGraders]' passed (0.000 seconds).
+
+16:33:25.619 xcodebuild[16557:431516] Nothing to delete
+16:33:25.619 xcodebuild[16557:431516] Nothing to delete
+16:33:25.619 xcodebuild[16557:431516] Finishing test with new console chunk Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testCustomSuiteImportPreviewAndExportRoundTrip]' passed (0.002 seconds).
+
+16:33:25.628 xcodebuild[16557:431516] Nothing to delete
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testDeterministicDemoCompletesAndExportsJSONAndMarkdown]' passed (0.012 seconds).
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testExactAndNormalizedGraders]' started.
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testExactAndNormalizedGraders]' passed (0.000 seconds).
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testNumericGraderRejectsProseAndHonorsTolerance]' started.
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testNumericGraderRejectsProseAndHonorsTolerance]' passed (0.000 seconds).
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testOptionalJudgeStaysSeparatedFromDeterministicScore]' started.
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testOptionalJudgeStaysSeparatedFromDeterministicScore]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testPerCaseTimeoutIsIsolated]' started.
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testPerCaseTimeoutIsIsolated]' passed (0.011 seconds).
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testProgrammaticRegistryRejectsUnknownIdentifiers]' started.
+16:33:25.629 xcodebuild[16557:431516] Nothing to delete
+16:33:25.608 AutoMLXStudio[16582:431747] Returning result XCTWaiterResultCompleted for synchronous waiter <XCTWaiter: 0x7d7da7150>
+16:33:25.608 AutoMLXStudio[16582:431747] Wait <XCTWaiterWait: 0x7d5d591c0> completed after 0.011s
+16:33:25.608 AutoMLXStudio[16582:431747] cleaning up failable invocation block completion
+16:33:25.608 AutoMLXStudio[16582:431747] <XCTWaiter: 0x7d7da74e0> entering indefinite wait loop for expectations: `failable invocation block completion`
+16:33:25.608 AutoMLXStudio[16582:431747] Returning result XCTWaiterResultCompleted for synchronous waiter <XCTWaiter: 0x7d7da74e0>
+16:33:25.608 AutoMLXStudio[16582:431747] Wait <XCTWaiterWait: 0x7d5d59280> completed after 0.000s
+16:33:25.608 AutoMLXStudio[16582:431747] cleaning up failable invocation block completion
+16:33:25.608 AutoMLXStudio[16582:431747] <XCTWaiter: 0x7d7da67f0> entering indefinite wait loop for expectations: `failable invocation block completion`
+16:33:25.608 AutoMLXStudio[16582:431747] Returning result XCTWaiterResultCompleted for synchronous waiter <XCTWaiter: 0x7d7da67f0>
+16:33:25.608 AutoMLXStudio[16582:431747] Wait <XCTWaiterWait: 0x7d5d59280> completed after 0.000s
+16:33:25.608 AutoMLXStudio[16582:431747] cleaning up failable invocation block completion
+16:33:25.608 AutoMLXStudio[16582:431747] <XCTWaiter: 0x7d7da6af0> entering indefinite wait loop for expectations: `failable invocation block completion`
+16:33:25.608 AutoMLXStudio[16582:431747] Returning result XCTWaiterResultCompleted for synchronous waiter <XCTWaiter: 0x7d7da6af0>
+16:33:25.608 AutoMLXStudio[16582:431747] Wait <XCTWaiterWait: 0x7d5d59280> completed after 0.000s
+16:33:25.608 AutoMLXStudio[16582:431747] cleaning up failable invocation block completion
+16:33:25.608 AutoMLXStudio[16582:431747] -[XCTRunnerIDESession(_XCTestObservationInternal) testCaseDidFinish:]
+16:33:25.629 xcodebuild[16557:431516] _XCT_testCaseWithIdentifier:<XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testDeterministicDemoCompletesAndExportsJSONAndMarkdown"]> didFinishWithStatus:passed duration:0.01156795024871826
+16:33:25.629 xcodebuild[16557:431516] Test case (<XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testDeterministicDemoCompletesAndExportsJSONAndMarkdown"]>) finished - enqueuing console chunks to delegate.
+16:33:25.629 xcodebuild[16557:431516] Nothing to delete
+16:33:25.608 AutoMLXStudio[16582:431747] -[XCTRuntimeIssueDetectionManager runtimeIssueDetectionEnabled] runtimeIssueDetectionEnabled based on XCTDisableRuntimeIssues and runtime diagnostics policies: YES
+16:33:25.608 AutoMLXStudio[16582:431747] -[XCTRunnerIDESession(_XCTestObservationInternal) testCaseWillStart:] AutoMLXStudioTests.BenchmarkHarnessTests testExactAndNormalizedGraders
+16:33:25.629 xcodebuild[16557:431516] _XCT_testCaseDidStartWithIdentifier:<XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testExactAndNormalizedGraders"]>testCaseRunConfiguration:<XCTestCaseRunConfiguration: 0x85a3686c0>traits:(null)
+16:33:25.629 xcodebuild[16557:431516] Test case did start: <XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testExactAndNormalizedGraders"]>
+16:33:25.629 xcodebuild[16557:431516] Nothing to delete
+16:33:25.609 AutoMLXStudio[16582:431747] <XCTWaiter: 0x7d7da7540> entering indefinite wait loop for expectations: `failable invocation block completion`
+16:33:25.609 AutoMLXStudio[16582:431747] Returning result XCTWaiterResultCompleted for synchronous waiter <XCTWaiter: 0x7d7da7540>
+16:33:25.629 xcodebuild[16557:431516] Nothing to delete
+16:33:25.609 AutoMLXStudio[16582:431747] Wait <XCTWaiterWait: 0x7d5d59300> completed after 0.000s
+16:33:25.609 AutoMLXStudio[16582:431747] cleaning up failable invocation block completion
+16:33:25.609 AutoMLXStudio[16582:431747] _assertObjectsInvalidAfterScope
+16:33:25.609 AutoMLXStudio[16582:431747] <XCTWaiter: 0x7d7da7660> entering indefinite wait loop for expectations: `failable invocation block completion`
+16:33:25.609 AutoMLXStudio[16582:431747] Returning result XCTWaiterResultCompleted for synchronous waiter <XCTWaiter: 0x7d7da7660>
+16:33:25.629 xcodebuild[16557:431516] Nothing to delete
+16:33:25.609 AutoMLXStudio[16582:431747] Wait <XCTWaiterWait: 0x7d5d59300> completed after 0.000s
+16:33:25.609 AutoMLXStudio[16582:431747] cleaning up failable invocation block completion
+16:33:25.609 AutoMLXStudio[16582:431747] -[XCTRunnerIDESession(_XCTestObservationInternal) testCaseDidFinish:]
+16:33:25.629 xcodebuild[16557:431516] _XCT_testCaseWithIdentifier:<XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testExactAndNormalizedGraders"]> didFinishWithStatus:passed duration:0.0003260374069213867
+16:33:25.629 xcodebuild[16557:431516] Test case (<XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testExactAndNormalizedGraders"]>) finished - enqueuing console chunks to delegate.
+16:33:25.629 xcodebuild[16557:431516] Nothing to delete
+16:33:25.609 AutoMLXStudio[16582:431747] -[XCTRuntimeIssueDetectionManager runtimeIssueDetectionEnabled] runtimeIssueDetectionEnabled based on XCTDisableRuntimeIssues and runtime diagnostics policies: YES
+16:33:25.609 AutoMLXStudio[16582:431747] -[XCTRunnerIDESession(_XCTestObservationInternal) testCaseWillStart:] AutoMLXStudioTests.BenchmarkHarnessTests testNumericGraderRejectsProseAndHonorsTolerance
+16:33:25.629 xcodebuild[16557:431516] _XCT_testCaseDidStartWithIdentifier:<XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testNumericGraderRejectsProseAndHonorsTolerance"]>testCaseRunConfiguration:<XCTestCaseRunConfiguration: 0x85a5bc2c0>traits:(null)
+16:33:25.629 xcodebuild[16557:431516] Test case did start: <XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testNumericGraderRejectsProseAndHonorsTolerance"]>
+16:33:25.629 xcodebuild[16557:431516] Nothing to delete
+16:33:25.609 AutoMLXStudio[16582:431747] <XCTWaiter: 0x7d7da7390> entering indefinite wait loop for expectations: `failable invocation block completion`
+16:33:25.609 AutoMLXStudio[16582:431747] Returning result XCTWaiterResultCompleted for synchronous waiter <XCTWaiter: 0x7d7da7390>
+16:33:25.609 AutoMLXStudio[16582:431747] Wait <XCTWaiterWait: 0x7d5d59440> completed after 0.000s
+16:33:25.609 AutoMLXStudio[16582:431747] cleaning up failable invocation block completion
+16:33:25.609 AutoMLXStudio[16582:431747] _assertObjectsInvalidAfterScope
+16:33:25.609 AutoMLXStudio[16582:431747] <XCTWaiter: 0x7d7da6880> entering indefinite wait loop for expectations: `failable invocation block completion`
+16:33:25.609 AutoMLXStudio[16582:431747] Returning result XCTWaiterResultCompleted for synchronous waiter <XCTWaiter: 0x7d7da6880>
+16:33:25.609 AutoMLXStudio[16582:431747] Wait <XCTWaiterWait: 0x7d5d59440> completed after 0.000s
+16:33:25.609 AutoMLXStudio[16582:431747] cleaning up failable invocation block completion
+16:33:25.609 AutoMLXStudio[16582:431747] -[XCTRunnerIDESession(_XCTestObservationInternal) testCaseDidFinish:]
+16:33:25.629 xcodebuild[16557:431516] _XCT_testCaseWithIdentifier:<XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testNumericGraderRejectsProseAndHonorsTolerance"]> didFinishWithStatus:passed duration:0.0002880096435546875
+16:33:25.629 xcodebuild[16557:431516] Test case (<XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testNumericGraderRejectsProseAndHonorsTolerance"]>) finished - enqueuing console chunks to delegate.
+16:33:25.629 xcodebuild[16557:431516] Nothing to delete
+16:33:25.609 AutoMLXStudio[16582:431747] -[XCTRuntimeIssueDetectionManager runtimeIssueDetectionEnabled] runtimeIssueDetectionEnabled based on XCTDisableRuntimeIssues and runtime diagnostics policies: YES
+16:33:25.609 AutoMLXStudio[16582:431747] -[XCTRunnerIDESession(_XCTestObservationInternal) testCaseWillStart:] AutoMLXStudioTests.BenchmarkHarnessTests testOptionalJudgeStaysSeparatedFromDeterministicScore
+16:33:25.629 xcodebuild[16557:431516] _XCT_testCaseDidStartWithIdentifier:<XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testOptionalJudgeStaysSeparatedFromDeterministicScore"]>testCaseRunConfiguration:<XCTestCaseRunConfiguration: 0x85a5bc220>traits:(null)
+16:33:25.629 xcodebuild[16557:431516] Test case did start: <XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testOptionalJudgeStaysSeparatedFromDeterministicScore"]>
+16:33:25.629 xcodebuild[16557:431516] Nothing to delete
+16:33:25.609 AutoMLXStudio[16582:431747] <XCTWaiter: 0x7d7da6580> entering indefinite wait loop for expectations: `failable invocation block completion`
+16:33:25.609 AutoMLXStudio[16582:431747] Returning result XCTWaiterResultCompleted for synchronous waiter <XCTWaiter: 0x7d7da6580>
+16:33:25.609 AutoMLXStudio[16582:431747] Wait <XCTWaiterWait: 0x7d5d594c0> completed after 0.000s
+16:33:25.609 AutoMLXStudio[16582:431747] cleaning up failable invocation block completion
+16:33:25.609 AutoMLXStudio[16582:431747] _assertObjectsInvalidAfterScope
+16:33:25.610 AutoMLXStudio[16582:431747] <XCTWaiter: 0x7d7da7510> entering indefinite wait loop for expectations: `failable invocation block completion`
+16:33:25.610 AutoMLXStudio[16582:431747] Returning result XCTWaiterResultCompleted for synchronous waiter <XCTWaiter: 0x7d7da7510>
+16:33:25.610 AutoMLXStudio[16582:431747] Wait <XCTWaiterWait: 0x7d5d595c0> completed after 0.000s
+16:33:25.610 AutoMLXStudio[16582:431747] cleaning up failable invocation block completion
+16:33:25.610 AutoMLXStudio[16582:431747] <XCTWaiter: 0x7d7da6cd0> entering indefinite wait loop for expectations: `failable invocation block completion`
+16:33:25.610 AutoMLXStudio[16582:431747] Returning result XCTWaiterResultCompleted for synchronous waiter <XCTWaiter: 0x7d7da6cd0>
+16:33:25.610 AutoMLXStudio[16582:431747] Wait <XCTWaiterWait: 0x7d5d594c0> completed after 0.000s
+16:33:25.610 AutoMLXStudio[16582:431747] cleaning up failable invocation block completion
+16:33:25.610 AutoMLXStudio[16582:431747] -[XCTRunnerIDESession(_XCTestObservationInternal) testCaseDidFinish:]
+16:33:25.629 xcodebuild[16557:431516] _XCT_testCaseWithIdentifier:<XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testOptionalJudgeStaysSeparatedFromDeterministicScore"]> didFinishWithStatus:passed duration:0.000516057014465332
+16:33:25.629 xcodebuild[16557:431516] Test case (<XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testOptionalJudgeStaysSeparatedFromDeterministicScore"]>) finished - enqueuing console chunks to delegate.
+16:33:25.629 xcodebuild[16557:431516] Nothing to delete
+16:33:25.610 AutoMLXStudio[16582:431747] -[XCTRuntimeIssueDetectionManager runtimeIssueDetectionEnabled] runtimeIssueDetectionEnabled based on XCTDisableRuntimeIssues and runtime diagnostics policies: YES
+16:33:25.610 AutoMLXStudio[16582:431747] -[XCTRunnerIDESession(_XCTestObservationInternal) testCaseWillStart:] AutoMLXStudioTests.BenchmarkHarnessTests testPerCaseTimeoutIsIsolated
+16:33:25.629 xcodebuild[16557:431516] _XCT_testCaseDidStartWithIdentifier:<XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testPerCaseTimeoutIsIsolated"]>testCaseRunConfiguration:<XCTestCaseRunConfiguration: 0x85a5bc060>traits:(null)
+16:33:25.629 xcodebuild[16557:431516] Test case did start: <XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testPerCaseTimeoutIsIsolated"]>
+16:33:25.629 xcodebuild[16557:431516] Nothing to delete
+16:33:25.610 AutoMLXStudio[16582:431747] <XCTWaiter: 0x7d7da67c0> entering indefinite wait loop for expectations: `failable invocation block completion`
+16:33:25.610 AutoMLXStudio[16582:431747] Returning result XCTWaiterResultCompleted for synchronous waiter <XCTWaiter: 0x7d7da67c0>
+16:33:25.610 AutoMLXStudio[16582:431747] Wait <XCTWaiterWait: 0x7d5d592c0> completed after 0.000s
+16:33:25.610 AutoMLXStudio[16582:431747] cleaning up failable invocation block completion
+16:33:25.610 AutoMLXStudio[16582:431747] _assertObjectsInvalidAfterScope
+16:33:25.610 AutoMLXStudio[16582:431747] <XCTWaiter: 0x7d7da6610> entering indefinite wait loop for expectations: `failable invocation block completion`
+16:33:25.629 xcodebuild[16557:431516] Nothing to delete
+16:33:25.629 xcodebuild[16557:431516] Nothing to delete
+16:33:25.621 AutoMLXStudio[16582:431747] Returning result XCTWaiterResultCompleted for synchronous waiter <XCTWaiter: 0x7d7da6610>
+16:33:25.621 AutoMLXStudio[16582:431747] Wait <XCTWaiterWait: 0x7d5d59300> completed after 0.011s
+16:33:25.621 AutoMLXStudio[16582:431747] cleaning up failable invocation block completion
+16:33:25.621 AutoMLXStudio[16582:431747] <XCTWaiter: 0x7d7da71b0> entering indefinite wait loop for expectations: `failable invocation block completion`
+16:33:25.621 AutoMLXStudio[16582:431747] Returning result XCTWaiterResultCompleted for synchronous waiter <XCTWaiter: 0x7d7da71b0>
+16:33:25.621 AutoMLXStudio[16582:431747] Wait <XCTWaiterWait: 0x7d5d592c0> completed after 0.000s
+16:33:25.621 AutoMLXStudio[16582:431747] cleaning up failable invocation block completion
+16:33:25.629 xcodebuild[16557:431516] Nothing to delete
+16:33:25.629 xcodebuild[16557:431516] Nothing to delete
+16:33:25.629 xcodebuild[16557:431516] Finishing test with new console chunk Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testDeterministicDemoCompletesAndExportsJSONAndMarkdown]' passed (0.012 seconds).
+
+16:33:25.638 xcodebuild[16557:431516] Nothing to delete
+16:33:25.638 xcodebuild[16557:431516] Nothing to delete
+16:33:25.638 xcodebuild[16557:431516] Finishing test with new console chunk Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testExactAndNormalizedGraders]' passed (0.000 seconds).
+
+16:33:25.645 xcodebuild[16557:431516] Nothing to delete
+16:33:25.646 xcodebuild[16557:431516] Nothing to delete
+16:33:25.646 xcodebuild[16557:431516] Finishing test with new console chunk Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testNumericGraderRejectsProseAndHonorsTolerance]' passed (0.000 seconds).
+
+16:33:25.653 xcodebuild[16557:431516] Nothing to delete
+16:33:25.653 xcodebuild[16557:431516] Nothing to delete
+16:33:25.653 xcodebuild[16557:431516] Finishing test with new console chunk Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testOptionalJudgeStaysSeparatedFromDeterministicScore]' passed (0.001 seconds).
+
+16:33:25.659 xcodebuild[16557:431516] Nothing to delete
+16:33:25.628 AutoMLXStudio[16582:431747] -[XCTRunnerIDESession(_XCTestObservationInternal) testCaseDidFinish:]
+16:33:25.659 xcodebuild[16557:431516] _XCT_testCaseWithIdentifier:<XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testPerCaseTimeoutIsIsolated"]> didFinishWithStatus:passed duration:0.0113520622253418
+16:33:25.659 xcodebuild[16557:431516] Test case (<XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testPerCaseTimeoutIsIsolated"]>) finished - enqueuing console chunks to delegate.
+16:33:25.659 xcodebuild[16557:431516] Nothing to delete
+16:33:25.659 xcodebuild[16557:431516] Nothing to delete
+16:33:25.628 AutoMLXStudio[16582:431747] -[XCTRuntimeIssueDetectionManager runtimeIssueDetectionEnabled] runtimeIssueDetectionEnabled based on XCTDisableRuntimeIssues and runtime diagnostics policies: YES
+16:33:25.628 AutoMLXStudio[16582:431747] -[XCTRunnerIDESession(_XCTestObservationInternal) testCaseWillStart:] AutoMLXStudioTests.BenchmarkHarnessTests testProgrammaticRegistryRejectsUnknownIdentifiers
+16:33:25.659 xcodebuild[16557:431516] Finishing test with new console chunk Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testPerCaseTimeoutIsIsolated]' passed (0.011 seconds).
+
+16:33:25.664 xcodebuild[16557:431516] Nothing to delete
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testProgrammaticRegistryRejectsUnknownIdentifiers]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testSequentialRunnerIsolatesOneFailureAndContinues]' started.
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testSequentialRunnerIsolatesOneFailureAndContinues]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testStrictJSONGraderValidatesNestedTypesAndValues]' started.
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testStrictJSONGraderValidatesNestedTypesAndValues]' passed (0.000 seconds).
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testSummaryUsesAvailableWeightsAndTruthfulMetrics]' started.
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testSummaryUsesAvailableWeightsAndTruthfulMetrics]' passed (0.000 seconds).
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testToolGraderAcceptsNativeAndSimulatedCallsWithoutExecution]' started.
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testToolGraderAcceptsNativeAndSimulatedCallsWithoutExecution]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testVersionedPersistenceSkipsOnlyCorruptRecord]' started.
+16:33:25.664 xcodebuild[16557:431516] _XCT_testCaseDidStartWithIdentifier:<XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testProgrammaticRegistryRejectsUnknownIdentifiers"]>testCaseRunConfiguration:<XCTestCaseRunConfiguration: 0x85a5bd220>traits:(null)
+16:33:25.665 xcodebuild[16557:431516] Test case did start: <XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testProgrammaticRegistryRejectsUnknownIdentifiers"]>
+16:33:25.665 xcodebuild[16557:431516] Nothing to delete
+16:33:25.628 AutoMLXStudio[16582:431747] <XCTWaiter: 0x7d7da5350> entering indefinite wait loop for expectations: `failable invocation block completion`
+16:33:25.629 AutoMLXStudio[16582:431747] Returning result XCTWaiterResultCompleted for synchronous waiter <XCTWaiter: 0x7d7da5350>
+16:33:25.629 AutoMLXStudio[16582:431747] Wait <XCTWaiterWait: 0x7d5d59200> completed after 0.000s
+16:33:25.629 AutoMLXStudio[16582:431747] cleaning up failable invocation block completion
+16:33:25.629 AutoMLXStudio[16582:431747] _assertObjectsInvalidAfterScope
+16:33:25.629 AutoMLXStudio[16582:431747] <XCTWaiter: 0x7d7da6ac0> entering indefinite wait loop for expectations: `failable invocation block completion`
+16:33:25.629 AutoMLXStudio[16582:431747] Returning result XCTWaiterResultCompleted for synchronous waiter <XCTWaiter: 0x7d7da6ac0>
+16:33:25.629 AutoMLXStudio[16582:431747] Wait <XCTWaiterWait: 0x7d5d59200> completed after 0.000s
+16:33:25.629 AutoMLXStudio[16582:431747] cleaning up failable invocation block completion
+16:33:25.629 AutoMLXStudio[16582:431747] -[XCTRunnerIDESession(_XCTestObservationInternal) testCaseDidFinish:]
+16:33:25.665 xcodebuild[16557:431516] _XCT_testCaseWithIdentifier:<XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testProgrammaticRegistryRejectsUnknownIdentifiers"]> didFinishWithStatus:passed duration:0.0005619525909423828
+16:33:25.665 xcodebuild[16557:431516] Test case (<XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testProgrammaticRegistryRejectsUnknownIdentifiers"]>) finished - enqueuing console chunks to delegate.
+16:33:25.665 xcodebuild[16557:431516] Nothing to delete
+16:33:25.629 AutoMLXStudio[16582:431747] -[XCTRuntimeIssueDetectionManager runtimeIssueDetectionEnabled] runtimeIssueDetectionEnabled based on XCTDisableRuntimeIssues and runtime diagnostics policies: YES
+16:33:25.629 AutoMLXStudio[16582:431747] -[XCTRunnerIDESession(_XCTestObservationInternal) testCaseWillStart:] AutoMLXStudioTests.BenchmarkHarnessTests testSequentialRunnerIsolatesOneFailureAndContinues
+16:33:25.665 xcodebuild[16557:431516] _XCT_testCaseDidStartWithIdentifier:<XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testSequentialRunnerIsolatesOneFailureAndContinues"]>testCaseRunConfiguration:<XCTestCaseRunConfiguration: 0x85a5bd9a0>traits:(null)
+16:33:25.665 xcodebuild[16557:431516] Test case did start: <XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testSequentialRunnerIsolatesOneFailureAndContinues"]>
+16:33:25.665 xcodebuild[16557:431516] Nothing to delete
+16:33:25.629 AutoMLXStudio[16582:431747] <XCTWaiter: 0x7d7da52f0> entering indefinite wait loop for expectations: `failable invocation block completion`
+16:33:25.629 AutoMLXStudio[16582:431747] Returning result XCTWaiterResultCompleted for synchronous waiter <XCTWaiter: 0x7d7da52f0>
+16:33:25.629 AutoMLXStudio[16582:431747] Wait <XCTWaiterWait: 0x7d5d59400> completed after 0.000s
+16:33:25.629 AutoMLXStudio[16582:431747] cleaning up failable invocation block completion
+16:33:25.665 xcodebuild[16557:431516] Nothing to delete
+16:33:25.629 AutoMLXStudio[16582:431747] _assertObjectsInvalidAfterScope
+16:33:25.629 AutoMLXStudio[16582:431747] <XCTWaiter: 0x7d7da64c0> entering indefinite wait loop for expectations: `failable invocation block completion`
+16:33:25.630 AutoMLXStudio[16582:431747] Returning result XCTWaiterResultCompleted for synchronous waiter <XCTWaiter: 0x7d7da64c0>
+16:33:25.630 AutoMLXStudio[16582:431747] Wait <XCTWaiterWait: 0x7d5d594c0> completed after 0.000s
+16:33:25.630 AutoMLXStudio[16582:431747] cleaning up failable invocation block completion
+16:33:25.630 AutoMLXStudio[16582:431747] <XCTWaiter: 0x7d7da74e0> entering indefinite wait loop for expectations: `failable invocation block completion`
+16:33:25.630 AutoMLXStudio[16582:431747] Returning result XCTWaiterResultCompleted for synchronous waiter <XCTWaiter: 0x7d7da74e0>
+16:33:25.630 AutoMLXStudio[16582:431747] Wait <XCTWaiterWait: 0x7d5d59400> completed after 0.000s
+16:33:25.630 AutoMLXStudio[16582:431747] cleaning up failable invocation block completion
+16:33:25.630 AutoMLXStudio[16582:431747] -[XCTRunnerIDESession(_XCTestObservationInternal) testCaseDidFinish:]
+16:33:25.665 xcodebuild[16557:431516] _XCT_testCaseWithIdentifier:<XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testSequentialRunnerIsolatesOneFailureAndContinues"]> didFinishWithStatus:passed duration:0.0007489919662475586
+16:33:25.665 xcodebuild[16557:431516] Test case (<XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testSequentialRunnerIsolatesOneFailureAndContinues"]>) finished - enqueuing console chunks to delegate.
+16:33:25.665 xcodebuild[16557:431516] Nothing to delete
+16:33:25.630 AutoMLXStudio[16582:431747] -[XCTRuntimeIssueDetectionManager runtimeIssueDetectionEnabled] runtimeIssueDetectionEnabled based on XCTDisableRuntimeIssues and runtime diagnostics policies: YES
+16:33:25.630 AutoMLXStudio[16582:431747] -[XCTRunnerIDESession(_XCTestObservationInternal) testCaseWillStart:] AutoMLXStudioTests.BenchmarkHarnessTests testStrictJSONGraderValidatesNestedTypesAndValues
+16:33:25.665 xcodebuild[16557:431516] _XCT_testCaseDidStartWithIdentifier:<XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testStrictJSONGraderValidatesNestedTypesAndValues"]>testCaseRunConfiguration:<XCTestCaseRunConfiguration: 0x85a5be0c0>traits:(null)
+16:33:25.665 xcodebuild[16557:431516] Test case did start: <XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testStrictJSONGraderValidatesNestedTypesAndValues"]>
+16:33:25.665 xcodebuild[16557:431516] Nothing to delete
+16:33:25.630 AutoMLXStudio[16582:431747] <XCTWaiter: 0x7d7da72d0> entering indefinite wait loop for expectations: `failable invocation block completion`
+16:33:25.630 AutoMLXStudio[16582:431747] Returning result XCTWaiterResultCompleted for synchronous waiter <XCTWaiter: 0x7d7da72d0>
+16:33:25.630 AutoMLXStudio[16582:431747] Wait <XCTWaiterWait: 0x7d5d59180> completed after 0.000s
+16:33:25.630 AutoMLXStudio[16582:431747] cleaning up failable invocation block completion
+16:33:25.630 AutoMLXStudio[16582:431747] _assertObjectsInvalidAfterScope
+16:33:25.630 AutoMLXStudio[16582:431747] <XCTWaiter: 0x7d7da52f0> entering indefinite wait loop for expectations: `failable invocation block completion`
+16:33:25.630 AutoMLXStudio[16582:431747] Returning result XCTWaiterResultCompleted for synchronous waiter <XCTWaiter: 0x7d7da52f0>
+16:33:25.630 AutoMLXStudio[16582:431747] Wait <XCTWaiterWait: 0x7d5d59180> completed after 0.000s
+16:33:25.630 AutoMLXStudio[16582:431747] cleaning up failable invocation block completion
+16:33:25.630 AutoMLXStudio[16582:431747] -[XCTRunnerIDESession(_XCTestObservationInternal) testCaseDidFinish:]
+16:33:25.665 xcodebuild[16557:431516] _XCT_testCaseWithIdentifier:<XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testStrictJSONGraderValidatesNestedTypesAndValues"]> didFinishWithStatus:passed duration:0.0003809928894042969
+16:33:25.665 xcodebuild[16557:431516] Test case (<XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testStrictJSONGraderValidatesNestedTypesAndValues"]>) finished - enqueuing console chunks to delegate.
+16:33:25.665 xcodebuild[16557:431516] Nothing to delete
+16:33:25.630 AutoMLXStudio[16582:431747] -[XCTRuntimeIssueDetectionManager runtimeIssueDetectionEnabled] runtimeIssueDetectionEnabled based on XCTDisableRuntimeIssues and runtime diagnostics policies: YES
+16:33:25.630 AutoMLXStudio[16582:431747] -[XCTRunnerIDESession(_XCTestObservationInternal) testCaseWillStart:] AutoMLXStudioTests.BenchmarkHarnessTests testSummaryUsesAvailableWeightsAndTruthfulMetrics
+16:33:25.665 xcodebuild[16557:431516] _XCT_testCaseDidStartWithIdentifier:<XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testSummaryUsesAvailableWeightsAndTruthfulMetrics"]>testCaseRunConfiguration:<XCTestCaseRunConfiguration: 0x85a5be120>traits:(null)
+16:33:25.665 xcodebuild[16557:431516] Test case did start: <XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testSummaryUsesAvailableWeightsAndTruthfulMetrics"]>
+16:33:25.665 xcodebuild[16557:431516] Nothing to delete
+16:33:25.630 AutoMLXStudio[16582:431747] <XCTWaiter: 0x7d7da5350> entering indefinite wait loop for expectations: `failable invocation block completion`
+16:33:25.630 AutoMLXStudio[16582:431747] Returning result XCTWaiterResultCompleted for synchronous waiter <XCTWaiter: 0x7d7da5350>
+16:33:25.631 AutoMLXStudio[16582:431747] Wait <XCTWaiterWait: 0x7d5d591c0> completed after 0.000s
+16:33:25.631 AutoMLXStudio[16582:431747] cleaning up failable invocation block completion
+16:33:25.631 AutoMLXStudio[16582:431747] _assertObjectsInvalidAfterScope
+16:33:25.631 AutoMLXStudio[16582:431747] <XCTWaiter: 0x7d7da63a0> entering indefinite wait loop for expectations: `failable invocation block completion`
+16:33:25.631 AutoMLXStudio[16582:431747] Returning result XCTWaiterResultCompleted for synchronous waiter <XCTWaiter: 0x7d7da63a0>
+16:33:25.631 AutoMLXStudio[16582:431747] Wait <XCTWaiterWait: 0x7d5d591c0> completed after 0.000s
+16:33:25.631 AutoMLXStudio[16582:431747] cleaning up failable invocation block completion
+16:33:25.631 AutoMLXStudio[16582:431747] -[XCTRunnerIDESession(_XCTestObservationInternal) testCaseDidFinish:]
+16:33:25.665 xcodebuild[16557:431516] _XCT_testCaseWithIdentifier:<XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testSummaryUsesAvailableWeightsAndTruthfulMetrics"]> didFinishWithStatus:passed duration:0.000374913215637207
+16:33:25.665 xcodebuild[16557:431516] Test case (<XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testSummaryUsesAvailableWeightsAndTruthfulMetrics"]>) finished - enqueuing console chunks to delegate.
+16:33:25.665 xcodebuild[16557:431516] Nothing to delete
+16:33:25.631 AutoMLXStudio[16582:431747] -[XCTRuntimeIssueDetectionManager runtimeIssueDetectionEnabled] runtimeIssueDetectionEnabled based on XCTDisableRuntimeIssues and runtime diagnostics policies: YES
+16:33:25.631 AutoMLXStudio[16582:431747] -[XCTRunnerIDESession(_XCTestObservationInternal) testCaseWillStart:] AutoMLXStudioTests.BenchmarkHarnessTests testToolGraderAcceptsNativeAndSimulatedCallsWithoutExecution
+16:33:25.665 xcodebuild[16557:431516] _XCT_testCaseDidStartWithIdentifier:<XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testToolGraderAcceptsNativeAndSimulatedCallsWithoutExecution"]>testCaseRunConfiguration:<XCTestCaseRunConfiguration: 0x85a5be160>traits:(null)
+16:33:25.665 xcodebuild[16557:431516] Test case did start: <XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testToolGraderAcceptsNativeAndSimulatedCallsWithoutExecution"]>
+16:33:25.665 xcodebuild[16557:431516] Nothing to delete
+16:33:25.631 AutoMLXStudio[16582:431747] <XCTWaiter: 0x7d7da6490> entering indefinite wait loop for expectations: `failable invocation block completion`
+16:33:25.631 AutoMLXStudio[16582:431747] Returning result XCTWaiterResultCompleted for synchronous waiter <XCTWaiter: 0x7d7da6490>
+16:33:25.631 AutoMLXStudio[16582:431747] Wait <XCTWaiterWait: 0x7d5d59440> completed after 0.000s
+16:33:25.631 AutoMLXStudio[16582:431747] cleaning up failable invocation block completion
+16:33:25.631 AutoMLXStudio[16582:431747] _assertObjectsInvalidAfterScope
+16:33:25.631 AutoMLXStudio[16582:431747] <XCTWaiter: 0x7d7da6820> entering indefinite wait loop for expectations: `failable invocation block completion`
+16:33:25.631 AutoMLXStudio[16582:431747] Returning result XCTWaiterResultCompleted for synchronous waiter <XCTWaiter: 0x7d7da6820>
+16:33:25.631 AutoMLXStudio[16582:431747] Wait <XCTWaiterWait: 0x7d5d59440> completed after 0.000s
+16:33:25.631 AutoMLXStudio[16582:431747] cleaning up failable invocation block completion
+16:33:25.665 xcodebuild[16557:431516] Nothing to delete
+16:33:25.665 xcodebuild[16557:431516] Nothing to delete
+16:33:25.665 xcodebuild[16557:431516] Nothing to delete
+16:33:25.665 xcodebuild[16557:431516] Nothing to delete
+16:33:25.665 xcodebuild[16557:431516] Nothing to delete
+16:33:25.665 xcodebuild[16557:431516] Nothing to delete
+16:33:25.665 xcodebuild[16557:431516] Nothing to delete
+16:33:25.665 xcodebuild[16557:431516] Nothing to delete
+16:33:25.665 xcodebuild[16557:431516] Nothing to delete
+16:33:25.664 AutoMLXStudio[16582:431747] -[XCTRunnerIDESession(_XCTestObservationInternal) testCaseDidFinish:]
+16:33:25.665 xcodebuild[16557:431516] _XCT_testCaseWithIdentifier:<XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testToolGraderAcceptsNativeAndSimulatedCallsWithoutExecution"]> didFinishWithStatus:passed duration:0.0005040168762207031
+16:33:25.665 xcodebuild[16557:431516] Test case (<XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testToolGraderAcceptsNativeAndSimulatedCallsWithoutExecution"]>) finished - enqueuing console chunks to delegate.
+16:33:25.665 xcodebuild[16557:431516] Nothing to delete
+16:33:25.664 AutoMLXStudio[16582:431747] -[XCTRuntimeIssueDetectionManager runtimeIssueDetectionEnabled] runtimeIssueDetectionEnabled based on XCTDisableRuntimeIssues and runtime diagnostics policies: YES
+16:33:25.665 xcodebuild[16557:431516] Finishing test with new console chunk Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testProgrammaticRegistryRejectsUnknownIdentifiers]' passed (0.001 seconds).
+
+16:33:25.671 xcodebuild[16557:431516] Nothing to delete
+16:33:25.671 xcodebuild[16557:431516] Nothing to delete
+16:33:25.671 xcodebuild[16557:431516] Finishing test with new console chunk Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testSequentialRunnerIsolatesOneFailureAndContinues]' passed (0.001 seconds).
+
+16:33:25.676 xcodebuild[16557:431516] Nothing to delete
+16:33:25.677 xcodebuild[16557:431516] Nothing to delete
+16:33:25.677 xcodebuild[16557:431516] Finishing test with new console chunk Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testStrictJSONGraderValidatesNestedTypesAndValues]' passed (0.000 seconds).
+
+16:33:25.682 xcodebuild[16557:431516] Nothing to delete
+16:33:25.682 xcodebuild[16557:431516] Nothing to delete
+16:33:25.682 xcodebuild[16557:431516] Finishing test with new console chunk Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testSummaryUsesAvailableWeightsAndTruthfulMetrics]' passed (0.000 seconds).
+
+16:33:25.686 xcodebuild[16557:431516] Nothing to delete
+16:33:25.664 AutoMLXStudio[16582:431747] -[XCTRunnerIDESession(_XCTestObservationInternal) testCaseWillStart:] AutoMLXStudioTests.BenchmarkHarnessTests testVersionedPersistenceSkipsOnlyCorruptRecord
+16:33:25.686 xcodebuild[16557:431516] Nothing to delete
+16:33:25.686 xcodebuild[16557:431516] Finishing test with new console chunk Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testToolGraderAcceptsNativeAndSimulatedCallsWithoutExecution]' passed (0.001 seconds).
+
+16:33:25.691 xcodebuild[16557:431516] Nothing to delete
+16:33:25.691 xcodebuild[16557:431516] _XCT_testCaseDidStartWithIdentifier:<XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testVersionedPersistenceSkipsOnlyCorruptRecord"]>testCaseRunConfiguration:<XCTestCaseRunConfiguration: 0x859801380>traits:(null)
+16:33:25.691 xcodebuild[16557:431516] Test case did start: <XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testVersionedPersistenceSkipsOnlyCorruptRecord"]>
+16:33:25.691 xcodebuild[16557:431516] Nothing to delete
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testVersionedPersistenceSkipsOnlyCorruptRecord]' passed (0.007 seconds).
+Test Suite 'BenchmarkHarnessTests' passed at 2026-09-11 16:33:25.672.
+	 Executed 16 tests, with 0 failures (0 unexpected) in 0.090 (0.132) seconds
+Test Suite 'BenchmarkUIValidationTests' started at 2026-09-11 16:33:25.672.
+Test Case '-[AutoMLXStudioTests.BenchmarkUIValidationTests testBenchmarkIdlePagesRenderAtNormalAndMinimumSizes]' started.
+16:33:25.664 AutoMLXStudio[16582:431747] <XCTWaiter: 0x7d7da6cd0> entering indefinite wait loop for expectations: `failable invocation block completion`
+16:33:25.664 AutoMLXStudio[16582:431747] Returning result XCTWaiterResultCompleted for synchronous waiter <XCTWaiter: 0x7d7da6cd0>
+16:33:25.664 AutoMLXStudio[16582:431747] Wait <XCTWaiterWait: 0x7d5d59700> completed after 0.000s
+16:33:25.664 AutoMLXStudio[16582:431747] cleaning up failable invocation block completion
+16:33:25.664 AutoMLXStudio[16582:431747] _assertObjectsInvalidAfterScope
+16:33:25.664 AutoMLXStudio[16582:431747] <XCTWaiter: 0x7d7da68b0> entering indefinite wait loop for expectations: `failable invocation block completion`
+16:33:25.692 xcodebuild[16557:431516] Nothing to delete
+16:33:25.692 xcodebuild[16557:431516] Nothing to delete
+16:33:25.692 xcodebuild[16557:431516] Nothing to delete
+16:33:25.671 AutoMLXStudio[16582:431747] Returning result XCTWaiterResultCompleted for synchronous waiter <XCTWaiter: 0x7d7da68b0>
+16:33:25.671 AutoMLXStudio[16582:431747] Wait <XCTWaiterWait: 0x7d5d59400> completed after 0.007s
+16:33:25.671 AutoMLXStudio[16582:431747] cleaning up failable invocation block completion
+16:33:25.671 AutoMLXStudio[16582:431747] <XCTWaiter: 0x7d7da6820> entering indefinite wait loop for expectations: `failable invocation block completion`
+16:33:25.671 AutoMLXStudio[16582:431747] Returning result XCTWaiterResultCompleted for synchronous waiter <XCTWaiter: 0x7d7da6820>
+16:33:25.671 AutoMLXStudio[16582:431747] Wait <XCTWaiterWait: 0x7d5d59700> completed after 0.000s
+16:33:25.671 AutoMLXStudio[16582:431747] cleaning up failable invocation block completion
+16:33:25.671 AutoMLXStudio[16582:431747] <XCTWaiter: 0x7d7da72d0> entering indefinite wait loop for expectations: `failable invocation block completion`
+16:33:25.671 AutoMLXStudio[16582:431747] Returning result XCTWaiterResultCompleted for synchronous waiter <XCTWaiter: 0x7d7da72d0>
+16:33:25.671 AutoMLXStudio[16582:431747] Wait <XCTWaiterWait: 0x7d5d59700> completed after 0.000s
+16:33:25.672 AutoMLXStudio[16582:431747] cleaning up failable invocation block completion
+16:33:25.672 AutoMLXStudio[16582:431747] -[XCTRunnerIDESession(_XCTestObservationInternal) testCaseDidFinish:]
+16:33:25.692 xcodebuild[16557:431516] _XCT_testCaseWithIdentifier:<XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testVersionedPersistenceSkipsOnlyCorruptRecord"]> didFinishWithStatus:passed duration:0.007382988929748535
+16:33:25.692 xcodebuild[16557:431516] Test case (<XCTTestIdentifier leaf, method, swift ["BenchmarkHarnessTests", "testVersionedPersistenceSkipsOnlyCorruptRecord"]>) finished - enqueuing console chunks to delegate.
+16:33:25.692 xcodebuild[16557:431516] Nothing to delete
+16:33:25.672 AutoMLXStudio[16582:431747] -[XCTRunnerIDESession(_XCTestObservationInternal) testSuiteDidFinish:]
+16:33:25.692 xcodebuild[16557:431516] _XCT_testSuiteWithIdentifier:<XCTTestIdentifier container, class ["BenchmarkHarnessTests"]> didFinishAt:2026-09-11 14:33:25 +0000 runCount:16 skipCount:0 failureCount:0 expectedFailureCount:0 uncaughtExceptionCount:0 testDuration:0.09033191204071045 totalDuration:0.1323239803314209
+16:33:25.692 xcodebuild[16557:431516] Nothing to delete
+16:33:25.693 xcodebuild[16557:431516] Nothing to delete
+16:33:25.672 AutoMLXStudio[16582:431747] -[XCTRunnerIDESession(_XCTestObservationInternal) testSuiteWillStart:]
+16:33:25.693 xcodebuild[16557:431516] _XCT_testSuiteWithIdentifier:<XCTTestIdentifier container, class ["BenchmarkUIValidationTests"]> didStartAt:2026-09-11 14:33:25 +0000 traits:(null)
+16:33:25.693 xcodebuild[16557:431516] Nothing to delete
+16:33:25.672 AutoMLXStudio[16582:431747] -[XCTRuntimeIssueDetectionManager runtimeIssueDetectionEnabled] runtimeIssueDetectionEnabled based on XCTDisableRuntimeIssues and runtime diagnostics policies: YES
+16:33:25.672 AutoMLXStudio[16582:431747] -[XCTRunnerIDESession(_XCTestObservationInternal) testCaseWillStart:] AutoMLXStudioTests.BenchmarkUIValidationTests testBenchmarkIdlePagesRenderAtNormalAndMinimumSizes
+16:33:25.693 xcodebuild[16557:431516] _XCT_testCaseDidStartWithIdentifier:<XCTTestIdentifier leaf, method, swift ["BenchmarkUIValidationTests", "testBenchmarkIdlePagesRenderAtNormalAndMinimumSizes"]>testCaseRunConfiguration:<XCTestCaseRunConfiguration: 0x85a5bcc80>traits:(null)
+16:33:25.693 xcodebuild[16557:431516] Test case did start: <XCTTestIdentifier leaf, method, swift ["BenchmarkUIValidationTests", "testBenchmarkIdlePagesRenderAtNormalAndMinimumSizes"]>
+16:33:25.693 xcodebuild[16557:431516] Nothing to delete
+16:33:25.672 AutoMLXStudio[16582:431747] <XCTWaiter: 0x7d7da64f0> entering indefinite wait loop for expectations: `failable invocation block completion`
+16:33:25.672 AutoMLXStudio[16582:431747] Returning result XCTWaiterResultCompleted for synchronous waiter <XCTWaiter: 0x7d7da64f0>
+16:33:25.672 AutoMLXStudio[16582:431747] Wait <XCTWaiterWait: 0x7d5d595c0> completed after 0.000s
+16:33:25.672 AutoMLXStudio[16582:431747] cleaning up failable invocation block completion
+16:33:25.672 AutoMLXStudio[16582:431747] _assertObjectsInvalidAfterScope
+16:33:25.672 AutoMLXStudio[16582:431747] <XCTWaiter: 0x7d7da6c70> entering indefinite wait loop for expectations: `failable invocation block completion`
+16:33:25.693 xcodebuild[16557:431516] Nothing to delete
+16:33:25.693 xcodebuild[16557:431516] Nothing to delete
+16:33:25.693 xcodebuild[16557:431516] Nothing to delete
+16:33:25.693 xcodebuild[16557:431516] Nothing to delete
+16:33:25.693 xcodebuild[16557:431516] Nothing to delete
+16:33:25.693 xcodebuild[16557:431516] Nothing to delete
+16:33:25.693 xcodebuild[16557:431516] Nothing to delete
+16:33:25.693 xcodebuild[16557:431516] Finishing test with new console chunk Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testVersionedPersistenceSkipsOnlyCorruptRecord]' passed (0.007 seconds).
+
+16:33:25.701 xcodebuild[16557:431516] Nothing to delete
+16:33:25.701 xcodebuild[16557:431516] Nothing to delete
+16:33:25.701 xcodebuild[16557:431516] Nothing to delete
+16:33:25.701 xcodebuild[16557:431516] Nothing to delete
+16:33:25.701 xcodebuild[16557:431516] Nothing to delete
+16:33:25.701 xcodebuild[16557:431516] Nothing to delete
+16:33:25.701 xcodebuild[16557:431516] Nothing to delete
+16:33:25.801 xcodebuild[16557:431516] Nothing to delete
+16:33:26.222 AutoMLXStudio[16582:431747] Returning result XCTWaiterResultCompleted for synchronous waiter <XCTWaiter: 0x7d7da6c70>
+16:33:26.222 AutoMLXStudio[16582:431747] Wait <XCTWaiterWait: 0x7d5d594c0> completed after 0.550s
+16:33:26.222 AutoMLXStudio[16582:431747] cleaning up failable invocation block completion
+16:33:26.223 AutoMLXStudio[16582:431747] <XCTWaiter: 0x7d8fc80f0> entering indefinite wait loop for expectations: `failable invocation block completion`
+16:33:26.223 AutoMLXStudio[16582:431747] Returning result XCTWaiterResultCompleted for synchronous waiter <XCTWaiter: 0x7d8fc80f0>
+16:33:26.223 AutoMLXStudio[16582:431747] Wait <XCTWaiterWait: 0x7d4674500> completed after 0.000s
+Test Case '-[AutoMLXStudioTests.BenchmarkUIValidationTests testBenchmarkIdlePagesRenderAtNormalAndMinimumSizes]' passed (0.551 seconds).
+16:33:26.223 AutoMLXStudio[16582:431747] cleaning up failable invocation block completion
+16:33:26.223 AutoMLXStudio[16582:431747] -[XCTRunnerIDESession(_XCTestObservationInternal) testCaseDidFinish:]
+16:33:26.223 xcodebuild[16557:431516] _XCT_testCaseWithIdentifier:<XCTTestIdentifier leaf, method, swift ["BenchmarkUIValidationTests", "testBenchmarkIdlePagesRenderAtNormalAndMinimumSizes"]> didFinishWithStatus:passed duration:0.5506960153579712
+16:33:26.223 xcodebuild[16557:431516] Test case (<XCTTestIdentifier leaf, method, swift ["BenchmarkUIValidationTests", "testBenchmarkIdlePagesRenderAtNormalAndMinimumSizes"]>) finished - enqueuing console chunks to delegate.
+16:33:26.223 xcodebuild[16557:431516] Nothing to delete
+Test Case '-[AutoMLXStudioTests.BenchmarkUIValidationTests testBenchmarkRunningResultsComparisonHistoryCaseErrorAndCancelledStatesRender]' started.
+16:33:26.223 AutoMLXStudio[16582:431747] -[XCTRuntimeIssueDetectionManager runtimeIssueDetectionEnabled] runtimeIssueDetectionEnabled based on XCTDisableRuntimeIssues and runtime diagnostics policies: YES
+16:33:26.223 AutoMLXStudio[16582:431747] -[XCTRunnerIDESession(_XCTestObservationInternal) testCaseWillStart:] AutoMLXStudioTests.BenchmarkUIValidationTests testBenchmarkRunningResultsComparisonHistoryCaseErrorAndCancelledStatesRender
+16:33:26.223 xcodebuild[16557:431516] _XCT_testCaseDidStartWithIdentifier:<XCTTestIdentifier leaf, method, swift ["BenchmarkUIValidationTests", "testBenchmarkRunningResultsComparisonHistoryCaseErrorAndCancelledStatesRender"]>testCaseRunConfiguration:<XCTestCaseRunConfiguration: 0x859800760>traits:(null)
+16:33:26.223 xcodebuild[16557:431516] Test case did start: <XCTTestIdentifier leaf, method, swift ["BenchmarkUIValidationTests", "testBenchmarkRunningResultsComparisonHistoryCaseErrorAndCancelledStatesRender"]>
+16:33:26.223 xcodebuild[16557:431516] Nothing to delete
+16:33:26.223 AutoMLXStudio[16582:431747] <XCTWaiter: 0x7d8fc82a0> entering indefinite wait loop for expectations: `failable invocation block completion`
+16:33:26.223 xcodebuild[16557:431516] Finishing test with new console chunk Test Case '-[AutoMLXStudioTests.BenchmarkUIValidationTests testBenchmarkIdlePagesRenderAtNormalAndMinimumSizes]' passed (0.551 seconds).
+
+16:33:26.234 xcodebuild[16557:431516] Nothing to delete
+16:33:26.223 AutoMLXStudio[16582:431747] Returning result XCTWaiterResultCompleted for synchronous waiter <XCTWaiter: 0x7d8fc82a0>
+16:33:26.223 AutoMLXStudio[16582:431747] Wait <XCTWaiterWait: 0x7d4674780> completed after 0.000s
+16:33:26.223 AutoMLXStudio[16582:431747] cleaning up failable invocation block completion
+16:33:26.223 AutoMLXStudio[16582:431747] _assertObjectsInvalidAfterScope
+16:33:26.223 AutoMLXStudio[16582:431747] <XCTWaiter: 0x7d8fc8690> entering indefinite wait loop for expectations: `failable invocation block completion`
+16:33:26.234 xcodebuild[16557:431516] Nothing to delete
+16:33:26.334 xcodebuild[16557:431516] Nothing to delete

@@ -1,0 +1,9 @@
+{
+  "durationMS" : 1498,
+  "finishReason" : "stop",
+  "model" : "qwen\/qwen3-4b-2507",
+  "text" : "I cannot write 8000 numbered lines about prime numbers as that would exceed the token limit and would be impractical. Please let me know if you'd like a shorter, focused explanation or a different type of response.",
+  "toolCalls" : [
+
+  ]
+}

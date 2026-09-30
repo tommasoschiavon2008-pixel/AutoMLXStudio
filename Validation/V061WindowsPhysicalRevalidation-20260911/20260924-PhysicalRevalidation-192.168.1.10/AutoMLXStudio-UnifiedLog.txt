@@ -1,0 +1,586 @@
+Timestamp               Ty Process[PID:TID]
+2026-09-24 17:16:26.790 Df AutoMLXStudio[51751:11db71] [com.apple.AppKit:StateRestoration] -[NSPersistentUIManager flushAllChanges]
+2026-09-24 17:16:26.790 Df AutoMLXStudio[51751:11db71] [com.apple.AppKit:StateRestoration] -[NSPersistentUIManager flushAllChanges] finishing enqueued operations
+2026-09-24 17:16:26.790 Df AutoMLXStudio[51751:11e3b1] [com.apple.AppKit:StateRestoration] -[NSPersistentUIManager flushAllChanges]_block_invoke asyncing to main queue
+2026-09-24 17:16:26.790 Df AutoMLXStudio[51751:11e3b1] [com.apple.AppKit:StateRestoration] -[NSPersistentUIManager flushAllChanges]_block_invoke writing records
+2026-09-24 17:16:31.435 Df AutoMLXStudio[51751:11e3b1] [com.apple.xpc:connection] [0x7ab6a21f40] activating connection: mach=false listener=false peer=false name=com.apple.TextInputUI.xpc.CursorUIViewService
+2026-09-24 17:16:31.435 Df AutoMLXStudio[51751:11e3b2] [com.apple.xpc:connection] [0x7ab6a21f40] invalidated after the last release of the connection object
+2026-09-24 17:16:31.435 Df AutoMLXStudio[51751:11db71] [com.apple.xpc:connection] [0x7ab6a22f80] invalidated because the current process cancelled the connection by calling xpc_connection_cancel()
+2026-09-24 17:16:31.435 Df AutoMLXStudio[51751:11db71] [com.apple.xpc:connection] [0x7ab6a77980] invalidated because the current process cancelled the connection by calling xpc_connection_cancel()
+2026-09-24 17:16:31.435 E  AutoMLXStudio[51751:11db71] [com.apple.AppKit:Menu] Connection with remote prompt field terminated: The operation couldn’t be completed. (com.apple.ViewBridge.error error 18.)
+2026-09-24 17:16:31.437 Df AutoMLXStudio[51751:11db71] [com.apple.xpc:connection] [0x7ab6a20140] activating connection: mach=false listener=false peer=false name=(anonymous)
+2026-09-24 17:16:31.437 Df AutoMLXStudio[51751:11db71] [com.apple.xpc:connection] [0x7ab6a22f80] activating connection: mach=false listener=false peer=false name=(anonymous)
+2026-09-24 17:16:31.437 A  AutoMLXStudio[51751:11db71] (AppKit) perform action for menu item
+2026-09-24 17:16:31.437 A  AutoMLXStudio[51751:11db71] (AppKit) sendAction:
+2026-09-24 17:16:31.437 Df AutoMLXStudio[51751:11db71] [com.apple.AppKit:Pasteboard] NSPasteboard (name: Apple CFPasteboard general): data requested for type public.utf8-plain-text at index 0
+2026-09-24 17:16:31.438 Df AutoMLXStudio[51751:11db71] [com.apple.TextInputUI:CursorUI] -[TUINSCursorUIController scheduleUpdateCursorLocation]
+2026-09-24 17:16:31.448 Df AutoMLXStudio[51751:11e3b1] [com.apple.xpc:connection] [0x7ab6a21f40] activating connection: mach=true listener=false peer=false name=com.apple.proactive.app-client.donation
+2026-09-24 17:16:31.493 Df AutoMLXStudio[51751:11db71] [com.apple.TextInputUI:CursorUI] -[TUINSCursorUIController activate:]_block_invoke: Create CursorUIViewService: TUINSRemoteViewController
+2026-09-24 17:16:31.494 Df AutoMLXStudio[51751:11db71] [com.apple.xpc:connection] [0x7ab6a74640] invalidated because the current process cancelled the connection by calling xpc_connection_cancel()
+2026-09-24 17:16:31.494 Df AutoMLXStudio[51751:11db71] [com.apple.xpc:connection] [0x7ab6a75900] invalidated because the current process cancelled the connection by calling xpc_connection_cancel()
+2026-09-24 17:16:31.569 Df AutoMLXStudio[51751:11db71] [com.apple.AppKit:CampoLightweightUI] Tearing down remote view connection if it existed.
+2026-09-24 17:16:31.681 A  AutoMLXStudio[51751:11e3b2] (CoreSpotlight) end-index-batch
+2026-09-24 17:16:31.682 A  AutoMLXStudio[51751:11e3b2] (CoreSpotlight) index-items
+2026-09-24 17:16:31.683 Df AutoMLXStudio[51751:11e3b2] [com.apple.corespotlight:index] Submitting donation: <private> (738 bytes with 0 enqueued)
+2026-09-24 17:16:31.683 Df AutoMLXStudio[51751:11e3ac] [com.apple.corespotlight:index] Performing donation: <private>
+2026-09-24 17:16:31.683 Df AutoMLXStudio[51751:11e3ac] [com.apple.xpc:connection] [0x7ab6a22580] activating connection: mach=false listener=false peer=false name=com.apple.SetStoreUpdateService
+2026-09-24 17:16:31.683 Df AutoMLXStudio[51751:11e3ac] [com.apple.Biome:BiomeCascade] Requesting new set donation <private>
+2026-09-24 17:16:31.683 Df AutoMLXStudio[51751:11e3b1] [com.apple.corespotlight:index] Submitting donation: <private> (738 bytes with 738 enqueued)
+2026-09-24 17:16:31.684 Df AutoMLXStudio[51751:11e3b1] [com.apple.xpc:connection] [0x7ab6a22580] Re-initialization successful; calling out to event handler with XPC_ERROR_CONNECTION_INTERRUPTED
+2026-09-24 17:16:31.684 Df AutoMLXStudio[51751:11e3b1] [com.apple.xpc:connection] [0x7ab6a22580] invalidated because the current process cancelled the connection by calling xpc_connection_cancel()
+2026-09-24 17:16:31.684 Df AutoMLXStudio[51751:11e3ac] [com.apple.Biome:BiomeCascade] Service responded to request for new donation <private> with None
+2026-09-24 17:16:31.684 Df AutoMLXStudio[51751:11e3ac] [com.apple.corespotlight:index] Completed donation: <private> result: Error Domain=CSIndexErrorDomain Code=-1000 "Failed to request donation" UserInfo={NSDebugDescription=Failed to request donation, NSUnderlyingError=0x7ab996ad90 {Error Domain=NSCocoaErrorDomain Code=4099 UserInfo={NSDebugDescription=<private>}}}
+2026-09-24 17:16:31.684 Df AutoMLXStudio[51751:11e3ac] [com.apple.corespotlight:index] Performing donation: <private>
+2026-09-24 17:16:31.684 Df AutoMLXStudio[51751:11e3ac] [com.apple.xpc:connection] [0x7ab6a22580] activating connection: mach=false listener=false peer=false name=com.apple.SetStoreUpdateService
+2026-09-24 17:16:31.684 Df AutoMLXStudio[51751:11e3ac] [com.apple.Biome:BiomeCascade] Requesting new set donation <private>
+2026-09-24 17:16:31.685 Df AutoMLXStudio[51751:11e3b2] [com.apple.xpc:connection] [0x7ab6a22580] Re-initialization successful; calling out to event handler with XPC_ERROR_CONNECTION_INTERRUPTED
+2026-09-24 17:16:31.685 Df AutoMLXStudio[51751:11e3b2] [com.apple.xpc:connection] [0x7ab6a22580] invalidated because the current process cancelled the connection by calling xpc_connection_cancel()
+2026-09-24 17:16:31.685 Df AutoMLXStudio[51751:11e3ac] [com.apple.Biome:BiomeCascade] Service responded to request for new donation <private> with None
+2026-09-24 17:16:31.685 Df AutoMLXStudio[51751:11e3ac] [com.apple.corespotlight:index] Completed donation: <private> result: Error Domain=CSIndexErrorDomain Code=-1000 "Failed to request donation" UserInfo={NSDebugDescription=Failed to request donation, NSUnderlyingError=0x7ab996a850 {Error Domain=NSCocoaErrorDomain Code=4099 UserInfo={NSDebugDescription=<private>}}}
+2026-09-24 17:16:46.439 Df AutoMLXStudio[51751:11db71] [com.apple.AppKit:StateRestoration] -[NSPersistentUIManager flushAllChanges]
+2026-09-24 17:16:46.439 Df AutoMLXStudio[51751:11db71] [com.apple.AppKit:StateRestoration] -[NSPersistentUIManager flushAllChanges] finishing enqueued operations
+2026-09-24 17:16:46.439 Df AutoMLXStudio[51751:11e3b2] [com.apple.AppKit:StateRestoration] -[NSPersistentUIManager flushAllChanges]_block_invoke asyncing to main queue
+2026-09-24 17:16:46.439 Df AutoMLXStudio[51751:11e3b2] [com.apple.AppKit:StateRestoration] -[NSPersistentUIManager flushAllChanges]_block_invoke writing records
+2026-09-24 17:16:46.971 A  AutoMLXStudio[51751:11db71] (AppKit) sendAction:
+2026-09-24 17:16:46.971 A  AutoMLXStudio[51751:11db71] (AppKit) sendAction:
+2026-09-24 17:16:46.971 A  AutoMLXStudio[51751:11db71] (AppKit) sendAction:
+2026-09-24 17:16:46.971 A  AutoMLXStudio[51751:11db71] (AppKit) sendAction:
+2026-09-24 17:16:46.971 A  AutoMLXStudio[51751:11db71] (AppKit) sendAction:
+2026-09-24 17:16:46.971 A  AutoMLXStudio[51751:11db71] (AppKit) sendAction:
+2026-09-24 17:16:46.978 A  AutoMLXStudio[51751:11e3b2] (Security) SecItemDelete
+2026-09-24 17:16:46.978 A  AutoMLXStudio[51751:11e3b2] (Security) SecItemDelete_ios
+2026-09-24 17:16:46.978 Df AutoMLXStudio[51751:11e3b2] [com.apple.securityd:secitemratelimit] Not internal release, disabling SIRL
+2026-09-24 17:16:46.978 Df AutoMLXStudio[51751:11e3b2] [com.apple.securityd:thread-local-client-debug] SecSecurityClientGet new thread!
+2026-09-24 17:16:46.978 Df AutoMLXStudio[51751:11e3b2] [com.apple.securityd:keychain] Enabling System Keychain Always due to platform
+2026-09-24 17:16:46.978 Df AutoMLXStudio[51751:11e3b2] [com.apple.xpc:connection] [0x7ab6a22580] activating connection: mach=true listener=false peer=false name=com.apple.securityd.xpc
+2026-09-24 17:16:46.978 A  AutoMLXStudio[51751:11e3b2] (CoreFoundation) Loading Preferences From System CFPrefsD
+2026-09-24 17:16:46.979 Df AutoMLXStudio[51751:11e3b2] [com.apple.securityd:MDSStaticDatabase] [updateDataBases]: Databases already exist; Nothing to Update
+2026-09-24 17:16:47.017 Df AutoMLXStudio[51751:11e3b2] [com.apple.inputAnalytics.client:IASignalAnalytics] channel:<private> signal:<private> sessionID:<private> timestamp:<private> payload:<private>
+2026-09-24 17:16:47.018 Df AutoMLXStudio[51751:11e3b2] [com.apple.inputAnalytics.client:IASignalAnalytics] channel:<private> signal:<private> sessionID:<private> timestamp:<private> payload:<private>
+2026-09-24 17:16:47.018 Df AutoMLXStudio[51751:11e3b2] [com.apple.inputAnalytics.client:IASignalAnalytics] channel:<private> signal:<private> sessionID:<private> timestamp:<private> payload:<private>
+2026-09-24 17:16:47.370 A  AutoMLXStudio[51751:11e68a] (CoreSpotlight) end-index-batch
+2026-09-24 17:16:47.370 A  AutoMLXStudio[51751:11e68a] (CoreSpotlight) index-items
+2026-09-24 17:16:47.370 Df AutoMLXStudio[51751:11e68a] [com.apple.corespotlight:index] Submitting donation: <private> (738 bytes with 0 enqueued)
+2026-09-24 17:16:47.370 Df AutoMLXStudio[51751:11e3b2] [com.apple.corespotlight:index] Performing donation: <private>
+2026-09-24 17:16:47.370 Df AutoMLXStudio[51751:11e3b2] [com.apple.xpc:connection] [0x7ab6a212c0] activating connection: mach=false listener=false peer=false name=com.apple.SetStoreUpdateService
+2026-09-24 17:16:47.370 Df AutoMLXStudio[51751:11e3b2] [com.apple.Biome:BiomeCascade] Requesting new set donation <private>
+2026-09-24 17:16:47.370 Df AutoMLXStudio[51751:11e689] [com.apple.corespotlight:index] Submitting donation: <private> (738 bytes with 738 enqueued)
+2026-09-24 17:16:47.370 Df AutoMLXStudio[51751:11e68a] [com.apple.xpc:connection] [0x7ab6a212c0] Re-initialization successful; calling out to event handler with XPC_ERROR_CONNECTION_INTERRUPTED
+2026-09-24 17:16:47.370 Df AutoMLXStudio[51751:11e68a] [com.apple.xpc:connection] [0x7ab6a212c0] invalidated because the current process cancelled the connection by calling xpc_connection_cancel()
+2026-09-24 17:16:47.370 Df AutoMLXStudio[51751:11e3b2] [com.apple.Biome:BiomeCascade] Service responded to request for new donation <private> with None
+2026-09-24 17:16:47.370 Df AutoMLXStudio[51751:11e3b2] [com.apple.corespotlight:index] Completed donation: <private> result: Error Domain=CSIndexErrorDomain Code=-1000 "Failed to request donation" UserInfo={NSDebugDescription=Failed to request donation, NSUnderlyingError=0x7ab704a460 {Error Domain=NSCocoaErrorDomain Code=4099 UserInfo={NSDebugDescription=<private>}}}
+2026-09-24 17:16:47.370 Df AutoMLXStudio[51751:11e3b2] [com.apple.corespotlight:index] Performing donation: <private>
+2026-09-24 17:16:47.370 Df AutoMLXStudio[51751:11e3b2] [com.apple.xpc:connection] [0x7ab6a212c0] activating connection: mach=false listener=false peer=false name=com.apple.SetStoreUpdateService
+2026-09-24 17:16:47.370 Df AutoMLXStudio[51751:11e3b2] [com.apple.Biome:BiomeCascade] Requesting new set donation <private>
+2026-09-24 17:16:47.371 Df AutoMLXStudio[51751:11e68a] [com.apple.xpc:connection] [0x7ab6a212c0] Re-initialization successful; calling out to event handler with XPC_ERROR_CONNECTION_INTERRUPTED
+2026-09-24 17:16:47.371 Df AutoMLXStudio[51751:11e68a] [com.apple.xpc:connection] [0x7ab6a212c0] invalidated because the current process cancelled the connection by calling xpc_connection_cancel()
+2026-09-24 17:16:47.371 Df AutoMLXStudio[51751:11e3b2] [com.apple.Biome:BiomeCascade] Service responded to request for new donation <private> with None
+2026-09-24 17:16:47.371 Df AutoMLXStudio[51751:11e3b2] [com.apple.corespotlight:index] Completed donation: <private> result: Error Domain=CSIndexErrorDomain Code=-1000 "Failed to request donation" UserInfo={NSDebugDescription=Failed to request donation, NSUnderlyingError=0x7ab704bba0 {Error Domain=NSCocoaErrorDomain Code=4099 UserInfo={NSDebugDescription=<private>}}}
+2026-09-24 17:17:02.309 Df AutoMLXStudio[51751:11db71] [com.apple.AppKit:StateRestoration] -[NSPersistentUIManager flushAllChanges]
+2026-09-24 17:17:02.318 Df AutoMLXStudio[51751:11db71] [com.apple.AppKit:StateRestoration] -[NSPersistentUIManager flushAllChanges] finishing enqueued operations
+2026-09-24 17:17:02.318 Df AutoMLXStudio[51751:11e687] [com.apple.AppKit:StateRestoration] -[NSPersistentUIManager flushAllChanges]_block_invoke asyncing to main queue
+2026-09-24 17:17:02.318 Df AutoMLXStudio[51751:11e3b2] [com.apple.AppKit:StateRestoration] -[NSPersistentUIManager flushAllChanges]_block_invoke writing records
+2026-09-24 17:17:04.655 A  AutoMLXStudio[51751:11db71] (AppKit) sendAction:
+2026-09-24 17:17:04.655 A  AutoMLXStudio[51751:11db71] (AppKit) sendAction:
+2026-09-24 17:17:04.655 A  AutoMLXStudio[51751:11db71] (AppKit) sendAction:
+2026-09-24 17:17:04.655 A  AutoMLXStudio[51751:11db71] (AppKit) sendAction:
+2026-09-24 17:17:04.655 A  AutoMLXStudio[51751:11db71] (AppKit) sendAction:
+2026-09-24 17:17:04.655 A  AutoMLXStudio[51751:11db71] (AppKit) sendAction:
+2026-09-24 17:17:04.660 Df AutoMLXStudio[51751:11e686] [com.apple.CFNetwork:Default] Task <C465C107-3FD5-407B-95E1-4E35BE9B1E3F>.<1> resuming, timeouts(10.0, 604800.0) qos(0x19) voucher(<private>) activity(00000000-0000-0000-0000-000000000000)
+2026-09-24 17:17:04.660 A  AutoMLXStudio[51751:11e686] (CoreFoundation) Loading Preferences From User CFPrefsD
+2026-09-24 17:17:04.660 Df AutoMLXStudio[51751:11e687] [com.apple.AppSSO:SOConfigurationClient] -[SOConfigurationClient init]  on <private>
+2026-09-24 17:17:04.661 Df AutoMLXStudio[51751:11e687] [com.apple.xpc:connection] [0x7ab6a212c0] activating connection: mach=true listener=false peer=false name=com.apple.AppSSO.service-xpc
+2026-09-24 17:17:04.661 Df AutoMLXStudio[51751:11e687] [com.apple.AppSSO:SOServiceConnection] <SOServiceConnection: 0x7ab8425740>: new XPC connection
+2026-09-24 17:17:04.662 A  AutoMLXStudio[51751:11e687] (Security) SecTrustReportNetworkingAnalytics
+2026-09-24 17:17:04.662 Df AutoMLXStudio[51751:11e687] [com.apple.xpc:connection] [0x7ab6a20780] activating connection: mach=true listener=false peer=false name=com.apple.trustd.agent
+2026-09-24 17:17:04.664 Df AutoMLXStudio[51751:11e3b2] [com.apple.CFNetwork:Default] Initializing NSHTTPCookieStorage singleton
+2026-09-24 17:17:04.664 Df AutoMLXStudio[51751:11e3b2] [com.apple.CFNetwork:Default] Initializing CFHTTPCookieStorage singleton
+2026-09-24 17:17:04.664 Df AutoMLXStudio[51751:11e3b2] [com.apple.CFNetwork:Default] Creating default cookie storage with process/bundle identifier
+2026-09-24 17:17:04.664 Df AutoMLXStudio[51751:11e3b2] [com.apple.CFNetwork:Default] OOM symptoms: checking process 0
+2026-09-24 17:17:04.664 Df AutoMLXStudio[51751:11e3b2] [com.apple.CFNetwork:Default] Initializing AlternativeServices Storage singleton
+2026-09-24 17:17:04.667 Df AutoMLXStudio[51751:11e687] [com.apple.CFNetwork:Default] Garbage collection for alternative services
+2026-09-24 17:17:04.667 Df AutoMLXStudio[51751:11e3b2] [com.apple.CFNetwork:Default] Connection 1: starting, TC(0x0)
+2026-09-24 17:17:04.667 Df AutoMLXStudio[51751:11e3b2] [com.apple.network:connection] [C1 F5DA0215-8B05-432D-9418-2C7F4EECB3DE IPv4#9892aee6:1234 tcp, url hash: d8a56499, definite, attribution: developer, context: com.apple.CFNetwork.NSURLSession.{1D145F77-771F-40C8-B6C6-EC30E8CB774E}{(null)}{Y}{2}{0x0} (private), proc: 42C715BE-56FC-3057-B0AD-624995F8E8C2, delegated upid: 0] start
+2026-09-24 17:17:04.667 Df AutoMLXStudio[51751:11e3b2] [com.apple.network:connection] [C1 IPv4#9892aee6:1234 initial parent-flow ((null))] event: path:start @0.000s
+2026-09-24 17:17:04.668 Df AutoMLXStudio[51751:11e3b2] [com.apple.network:connection] [C1 IPv4#9892aee6:1234 waiting parent-flow (unsatisfied (Local network prohibited), interface: en7, ipv4)] event: path:unsatisfied @0.000s, uuid: B658AF86-CA4E-4A8F-BDB0-24B5E62A4CA3
+2026-09-24 17:17:04.668 Df AutoMLXStudio[51751:11e3b2] [com.apple.network:connection] nw_connection_report_state_with_handler_on_nw_queue [C1] reporting state waiting
+2026-09-24 17:17:04.668 Df AutoMLXStudio[51751:11e3b2] [com.apple.network:connection] [C1 IPv4#9892aee6:1234 in_progress parent-flow (unsatisfied (Local network prohibited), interface: en7, ipv4)] event: flow:start_connect @0.000s
+2026-09-24 17:17:04.668 Df AutoMLXStudio[51751:11e3b2] [com.apple.network:connection] nw_connection_report_state_with_handler_on_nw_queue [C1] reporting state preparing
+2026-09-24 17:17:04.668 Df AutoMLXStudio[51751:11e3b2] [com.apple.network:connection] [C1 IPv4#9892aee6:1234 in_progress parent-flow (unsatisfied (Local network prohibited), interface: en7, ipv4)] event: flow:start_child @0.000s
+2026-09-24 17:17:04.668 Df AutoMLXStudio[51751:11e3b2] [com.apple.network:connection] [C1.1 IPv4#9892aee6:1234 initial path ((null))] event: path:start @0.000s
+2026-09-24 17:17:04.668 Df AutoMLXStudio[51751:11e3b2] [com.apple.network:connection] [C1.1 IPv4#9892aee6:1234 waiting path (unsatisfied (Local network prohibited), interface: en7, ipv4)] event: path:unsatisfied @0.000s, uuid: B658AF86-CA4E-4A8F-BDB0-24B5E62A4CA3
+2026-09-24 17:17:04.668 Df AutoMLXStudio[51751:11e3b2] [com.apple.network:connection] [C1.1 IPv4#9892aee6:1234 in_progress resolver (unsatisfied (Local network prohibited), interface: en7, ipv4)] event: resolver:start_dns @0.000s
+2026-09-24 17:17:04.668 Df AutoMLXStudio[51751:11e3b2] [com.apple.CFNetwork:Default] Task <C465C107-3FD5-407B-95E1-4E35BE9B1E3F>.<1> setting up Connection 1
+2026-09-24 17:17:04.668 Df AutoMLXStudio[51751:11e3b2] [com.apple.CFNetwork:Default] Connection 1: is waiting to connect, reason -1
+2026-09-24 17:17:04.668 Df AutoMLXStudio[51751:11e3b2] [com.apple.network:connection] nw_endpoint_resolver_update [C1.1 IPv4#9892aee6:1234 in_progress resolver (unsatisfied (Local network prohibited), interface: en7, ipv4)] Adding endpoint handler for IPv4#9892aee6:1234
+2026-09-24 17:17:04.668 Df AutoMLXStudio[51751:11e3b2] [com.apple.network:connection] [C1.1 IPv4#9892aee6:1234 in_progress resolver (unsatisfied (Local network prohibited), interface: en7, ipv4)] event: resolver:receive_dns @0.001s
+2026-09-24 17:17:04.668 Df AutoMLXStudio[51751:11e3b2] [com.apple.network:connection] [C1.1.1 IPv4#9892aee6:1234 initial path ((null))] event: path:start @0.001s
+2026-09-24 17:17:04.669 Df AutoMLXStudio[51751:11e3b2] [com.apple.network:connection] [C1.1.1 IPv4#9892aee6:1234 waiting path (unsatisfied (Local network prohibited), interface: en7, ipv4)] event: path:unsatisfied @0.001s, uuid: 8B711878-1EDC-4557-93F8-22CAEE6E3653
+2026-09-24 17:17:04.669 Df AutoMLXStudio[51751:11e3b2] [com.apple.network:connection] [C1.1.1 IPv4#9892aee6:1234 failed path (unsatisfied (Local network prohibited), interface: en7, ipv4)] event: null:null @0.001s
+2026-09-24 17:17:04.669 Df AutoMLXStudio[51751:11e3b2] [com.apple.network:connection] [C1.1 IPv4#9892aee6:1234 in_progress resolver (unsatisfied (Local network prohibited), interface: en7, ipv4)] event: resolver:children_stall @0.001s
+2026-09-24 17:17:04.669 Df AutoMLXStudio[51751:11e3b2] [com.apple.network:connection] [C1.1 IPv4#9892aee6:1234 failed resolver (unsatisfied (Local network prohibited), interface: en7, ipv4)] event: resolver:children_failed @0.001s
+2026-09-24 17:17:04.669 Df AutoMLXStudio[51751:11e3b2] [com.apple.network:connection] [C1 IPv4#9892aee6:1234 failed parent-flow (unsatisfied (Local network prohibited), interface: en7, ipv4)] event: flow:child_failed @0.001s
+2026-09-24 17:17:04.669 Df AutoMLXStudio[51751:11e3b2] [com.apple.network:connection] nw_connection_report_state_with_handler_on_nw_queue [C1] reporting state failed error Network is down
+2026-09-24 17:17:04.669 E  AutoMLXStudio[51751:11e3b2] [com.apple.CFNetwork:Default] Connection 1: received failure notification
+2026-09-24 17:17:04.669 E  AutoMLXStudio[51751:11e3b2] [com.apple.CFNetwork:Default] Connection 1: failed to connect 1:50, reason -1
+2026-09-24 17:17:04.669 E  AutoMLXStudio[51751:11e3b2] [com.apple.CFNetwork:Default] Connection 1: encountered error(1:50)
+2026-09-24 17:17:04.669 Df AutoMLXStudio[51751:11e3b2] [com.apple.CFNetwork:Default] Connection 1: cleaning up
+2026-09-24 17:17:04.669 Df AutoMLXStudio[51751:11e3b2] [com.apple.CFNetwork:Summary] Connection 1: summary for unused connection {protocol="(null)", domain_lookup_duration_ms=0, connect_duration_ms=0, secure_connection_duration_ms=0, private_relay=false, idle_duration_ms=0}
+2026-09-24 17:17:04.669 Df AutoMLXStudio[51751:11e3b2] [com.apple.network:connection] [C1 F5DA0215-8B05-432D-9418-2C7F4EECB3DE IPv4#9892aee6:1234 tcp, url hash: d8a56499, definite, attribution: developer] cancel
+2026-09-24 17:17:04.669 Df AutoMLXStudio[51751:11e3b2] [com.apple.network:connection] [C1 IPv4#9892aee6:1234 tcp, url hash: d8a56499, definite, attribution: developer] cancelled
+2026-09-24 17:17:04.669 Df AutoMLXStudio[51751:11e3b2] [com.apple.network:connection] nw_connection_report_state_with_handler_on_nw_queue [C1] reporting state cancelled
+2026-09-24 17:17:04.669 Df AutoMLXStudio[51751:11e3b2] [com.apple.CFNetwork:Default] Task <C465C107-3FD5-407B-95E1-4E35BE9B1E3F>.<1> can retry(N) with reason(2) for error [1:50]
+2026-09-24 17:17:04.669 A  AutoMLXStudio[51751:11e687] (Security) SecTrustReportNetworkingAnalytics
+2026-09-24 17:17:04.669 E  AutoMLXStudio[51751:11e3b2] [com.apple.CFNetwork:Default] Task <C465C107-3FD5-407B-95E1-4E35BE9B1E3F>.<1> HTTP load failed, 0/0 bytes (error code: -1009 [1:50])
+2026-09-24 17:17:04.670 Df AutoMLXStudio[51751:11e3b2] [com.apple.CFNetwork:Summary] Task <C465C107-3FD5-407B-95E1-4E35BE9B1E3F>.<1> summary for task failure {transaction_duration_ms=7, response_status=-1, connection=1, reused=1, reused_after_ms=0, request_start_ms=0, request_duration_ms=0, response_start_ms=0, response_duration_ms=0, request_bytes=0, request_throughput_kbps=0, response_bytes=0, response_throughput_kbps=0, cache_hit=false}
+2026-09-24 17:17:04.670 E  AutoMLXStudio[51751:11e3b2] [com.apple.CFNetwork:Default] Task <C465C107-3FD5-407B-95E1-4E35BE9B1E3F>.<1> finished with error [-1009] Error Domain=NSURLErrorDomain Code=-1009 UserInfo={_kCFStreamErrorCodeKey=50, NSUnderlyingError=0x7ab704aa90 {Error Domain=kCFErrorDomainCFNetwork Code=-1009 UserInfo={_NSURLErrorNWPathKey=<private>, _kCFStreamErrorCodeKey=50, _kCFStreamErrorDomainKey=1}}, _NSURLErrorFailingURLSessionTaskErrorKey=<private>, _NSURLErrorRelatedURLSessionTaskErrorKey=<private>, NSLocalizedDescription=<private>, NSErrorFailingURLStringKey=<private>, NSErrorFailingURLKey=<private>, _kCFStreamErrorDomainKey=1}
+2026-09-24 17:17:04.841 A  AutoMLXStudio[51751:11e79e] (RunningBoardServices) didChangeInheritances
+2026-09-24 17:17:04.845 Df AutoMLXStudio[51751:11db71] [com.apple.AppKit:StateRestoration] -[NSPersistentUIManager flushAllChanges]
+2026-09-24 17:17:04.845 Df AutoMLXStudio[51751:11db71] [com.apple.AppKit:StateRestoration] -[NSPersistentUIManager flushAllChanges] finishing enqueued operations
+2026-09-24 17:17:04.845 Df AutoMLXStudio[51751:11e79e] [com.apple.AppKit:StateRestoration] -[NSPersistentUIManager flushAllChanges]_block_invoke asyncing to main queue
+2026-09-24 17:17:04.845 Df AutoMLXStudio[51751:11e79e] [com.apple.AppKit:StateRestoration] -[NSPersistentUIManager flushAllChanges]_block_invoke writing records
+2026-09-24 17:17:26.444 A  AutoMLXStudio[51751:11e79e] (RunningBoardServices) didChangeInheritances
+2026-09-24 17:17:26.515 A  AutoMLXStudio[51751:11e686] (CoreSpotlight) end-index-batch
+2026-09-24 17:17:26.516 A  AutoMLXStudio[51751:11e686] (CoreSpotlight) index-items
+2026-09-24 17:17:26.516 Df AutoMLXStudio[51751:11e686] [com.apple.corespotlight:index] Submitting donation: <private> (738 bytes with 0 enqueued)
+2026-09-24 17:17:26.516 Df AutoMLXStudio[51751:11e79e] [com.apple.corespotlight:index] Performing donation: <private>
+2026-09-24 17:17:26.516 Df AutoMLXStudio[51751:11e79e] [com.apple.xpc:connection] [0x7ab6a208c0] activating connection: mach=false listener=false peer=false name=com.apple.SetStoreUpdateService
+2026-09-24 17:17:26.516 Df AutoMLXStudio[51751:11e79e] [com.apple.Biome:BiomeCascade] Requesting new set donation <private>
+2026-09-24 17:17:26.516 Df AutoMLXStudio[51751:11e79f] [com.apple.corespotlight:index] Submitting donation: <private> (738 bytes with 738 enqueued)
+2026-09-24 17:17:26.516 Df AutoMLXStudio[51751:11e686] [com.apple.xpc:connection] [0x7ab6a208c0] Re-initialization successful; calling out to event handler with XPC_ERROR_CONNECTION_INTERRUPTED
+2026-09-24 17:17:26.517 Df AutoMLXStudio[51751:11e686] [com.apple.xpc:connection] [0x7ab6a208c0] invalidated because the current process cancelled the connection by calling xpc_connection_cancel()
+2026-09-24 17:17:26.517 Df AutoMLXStudio[51751:11e79e] [com.apple.Biome:BiomeCascade] Service responded to request for new donation <private> with None
+2026-09-24 17:17:26.517 Df AutoMLXStudio[51751:11e79e] [com.apple.corespotlight:index] Completed donation: <private> result: Error Domain=CSIndexErrorDomain Code=-1000 "Failed to request donation" UserInfo={NSDebugDescription=Failed to request donation, NSUnderlyingError=0x7ab9969e90 {Error Domain=NSCocoaErrorDomain Code=4099 UserInfo={NSDebugDescription=<private>}}}
+2026-09-24 17:17:26.517 Df AutoMLXStudio[51751:11e79e] [com.apple.corespotlight:index] Performing donation: <private>
+2026-09-24 17:17:26.517 Df AutoMLXStudio[51751:11e79e] [com.apple.xpc:connection] [0x7ab6a208c0] activating connection: mach=false listener=false peer=false name=com.apple.SetStoreUpdateService
+2026-09-24 17:17:26.517 Df AutoMLXStudio[51751:11e79e] [com.apple.Biome:BiomeCascade] Requesting new set donation <private>
+2026-09-24 17:17:26.517 Df AutoMLXStudio[51751:11e7a2] [com.apple.xpc:connection] [0x7ab6a208c0] Re-initialization successful; calling out to event handler with XPC_ERROR_CONNECTION_INTERRUPTED
+2026-09-24 17:17:26.517 Df AutoMLXStudio[51751:11e7a2] [com.apple.xpc:connection] [0x7ab6a208c0] invalidated because the current process cancelled the connection by calling xpc_connection_cancel()
+2026-09-24 17:17:26.517 Df AutoMLXStudio[51751:11e79e] [com.apple.Biome:BiomeCascade] Service responded to request for new donation <private> with None
+2026-09-24 17:17:26.517 Df AutoMLXStudio[51751:11e79e] [com.apple.corespotlight:index] Completed donation: <private> result: Error Domain=CSIndexErrorDomain Code=-1000 "Failed to request donation" UserInfo={NSDebugDescription=Failed to request donation, NSUnderlyingError=0x7ab996acd0 {Error Domain=NSCocoaErrorDomain Code=4099 UserInfo={NSDebugDescription=<private>}}}
+2026-09-24 17:17:43.872 A  AutoMLXStudio[51751:11db71] (AppKit) sendAction:
+2026-09-24 17:17:43.872 A  AutoMLXStudio[51751:11db71] (AppKit) sendAction:
+2026-09-24 17:17:43.872 A  AutoMLXStudio[51751:11db71] (AppKit) sendAction:
+2026-09-24 17:17:43.872 A  AutoMLXStudio[51751:11db71] (AppKit) sendAction:
+2026-09-24 17:17:43.872 A  AutoMLXStudio[51751:11db71] (AppKit) sendAction:
+2026-09-24 17:17:43.872 A  AutoMLXStudio[51751:11db71] (AppKit) sendAction:
+2026-09-24 17:17:43.875 Df AutoMLXStudio[51751:11e7a2] [com.apple.CFNetwork:Default] Task <E4C5B073-7FFC-4D47-9FE1-D9F743161104>.<2> resuming, timeouts(10.0, 604800.0) qos(0x19) voucher(<private>) activity(00000000-0000-0000-0000-000000000000)
+2026-09-24 17:17:43.875 A  AutoMLXStudio[51751:11e79e] (Security) SecTrustReportNetworkingAnalytics
+2026-09-24 17:17:43.876 Df AutoMLXStudio[51751:11e7a2] [com.apple.CFNetwork:Default] Connection 2: starting, TC(0x0)
+2026-09-24 17:17:43.876 Df AutoMLXStudio[51751:11e7a2] [com.apple.network:connection] [C2 F9B32F74-C0B1-4881-8B66-CAF3C83AE3D6 IPv4#9892aee6:1234 tcp, url hash: d8a56499, definite, attribution: developer, context: com.apple.CFNetwork.NSURLSession.{1D145F77-771F-40C8-B6C6-EC30E8CB774E}{(null)}{Y}{2}{0x0} (private), proc: 42C715BE-56FC-3057-B0AD-624995F8E8C2, delegated upid: 0] start
+2026-09-24 17:17:43.876 Df AutoMLXStudio[51751:11e7a2] [com.apple.network:connection] [C2 IPv4#9892aee6:1234 initial parent-flow ((null))] event: path:start @0.000s
+2026-09-24 17:17:43.876 Df AutoMLXStudio[51751:11e7a2] [com.apple.network:connection] [C2 IPv4#9892aee6:1234 waiting parent-flow (unsatisfied (Local network prohibited), interface: en7, ipv4)] event: path:unsatisfied @0.000s, uuid: 55B240A7-58A2-4D33-AC1C-5FD63D431E0E
+2026-09-24 17:17:43.876 Df AutoMLXStudio[51751:11e7a2] [com.apple.network:connection] nw_connection_report_state_with_handler_on_nw_queue [C2] reporting state waiting
+2026-09-24 17:17:43.876 Df AutoMLXStudio[51751:11e7a2] [com.apple.network:connection] [C2 IPv4#9892aee6:1234 in_progress parent-flow (unsatisfied (Local network prohibited), interface: en7, ipv4)] event: flow:start_connect @0.000s
+2026-09-24 17:17:43.876 Df AutoMLXStudio[51751:11e7a2] [com.apple.network:connection] nw_connection_report_state_with_handler_on_nw_queue [C2] reporting state preparing
+2026-09-24 17:17:43.876 Df AutoMLXStudio[51751:11e7a2] [com.apple.network:connection] [C2 IPv4#9892aee6:1234 in_progress parent-flow (unsatisfied (Local network prohibited), interface: en7, ipv4)] event: flow:start_child @0.000s
+2026-09-24 17:17:43.876 Df AutoMLXStudio[51751:11e7a2] [com.apple.network:connection] [C2.1 IPv4#9892aee6:1234 initial path ((null))] event: path:start @0.000s
+2026-09-24 17:17:43.876 Df AutoMLXStudio[51751:11e7a2] [com.apple.network:connection] [C2.1 IPv4#9892aee6:1234 waiting path (unsatisfied (Local network prohibited), interface: en7, ipv4)] event: path:unsatisfied @0.000s, uuid: 55B240A7-58A2-4D33-AC1C-5FD63D431E0E
+2026-09-24 17:17:43.876 Df AutoMLXStudio[51751:11e7a2] [com.apple.network:connection] [C2.1 IPv4#9892aee6:1234 in_progress resolver (unsatisfied (Local network prohibited), interface: en7, ipv4)] event: resolver:start_dns @0.000s
+2026-09-24 17:17:43.876 Df AutoMLXStudio[51751:11e7a2] [com.apple.CFNetwork:Default] Task <E4C5B073-7FFC-4D47-9FE1-D9F743161104>.<2> setting up Connection 2
+2026-09-24 17:17:43.876 Df AutoMLXStudio[51751:11e7a2] [com.apple.CFNetwork:Default] Connection 2: is waiting to connect, reason -1
+2026-09-24 17:17:43.876 Df AutoMLXStudio[51751:11e7a2] [com.apple.network:connection] nw_endpoint_resolver_update [C2.1 IPv4#9892aee6:1234 in_progress resolver (unsatisfied (Local network prohibited), interface: en7, ipv4)] Adding endpoint handler for IPv4#9892aee6:1234
+2026-09-24 17:17:43.876 Df AutoMLXStudio[51751:11e7a2] [com.apple.network:connection] [C2.1 IPv4#9892aee6:1234 in_progress resolver (unsatisfied (Local network prohibited), interface: en7, ipv4)] event: resolver:receive_dns @0.000s
+2026-09-24 17:17:43.876 Df AutoMLXStudio[51751:11e7a2] [com.apple.network:connection] [C2.1.1 IPv4#9892aee6:1234 initial path ((null))] event: path:start @0.000s
+2026-09-24 17:17:43.876 Df AutoMLXStudio[51751:11e7a2] [com.apple.network:connection] [C2.1.1 IPv4#9892aee6:1234 waiting path (unsatisfied (Local network prohibited), interface: en7, ipv4)] event: path:unsatisfied @0.000s, uuid: 4F44B859-A0FB-4E3A-B64C-883794B1AB0A
+2026-09-24 17:17:43.876 Df AutoMLXStudio[51751:11e7a2] [com.apple.network:connection] [C2.1.1 IPv4#9892aee6:1234 failed path (unsatisfied (Local network prohibited), interface: en7, ipv4)] event: null:null @0.000s
+2026-09-24 17:17:43.876 Df AutoMLXStudio[51751:11e7a2] [com.apple.network:connection] [C2.1 IPv4#9892aee6:1234 in_progress resolver (unsatisfied (Local network prohibited), interface: en7, ipv4)] event: resolver:children_stall @0.000s
+2026-09-24 17:17:43.876 Df AutoMLXStudio[51751:11e7a2] [com.apple.network:connection] [C2.1 IPv4#9892aee6:1234 failed resolver (unsatisfied (Local network prohibited), interface: en7, ipv4)] event: resolver:children_failed @0.000s
+2026-09-24 17:17:43.876 Df AutoMLXStudio[51751:11e7a2] [com.apple.network:connection] [C2 IPv4#9892aee6:1234 failed parent-flow (unsatisfied (Local network prohibited), interface: en7, ipv4)] event: flow:child_failed @0.000s
+2026-09-24 17:17:43.876 Df AutoMLXStudio[51751:11e7a2] [com.apple.network:connection] nw_connection_report_state_with_handler_on_nw_queue [C2] reporting state failed error Network is down
+2026-09-24 17:17:43.876 E  AutoMLXStudio[51751:11e7a2] [com.apple.CFNetwork:Default] Connection 2: received failure notification
+2026-09-24 17:17:43.876 E  AutoMLXStudio[51751:11e7a2] [com.apple.CFNetwork:Default] Connection 2: failed to connect 1:50, reason -1
+2026-09-24 17:17:43.876 E  AutoMLXStudio[51751:11e7a2] [com.apple.CFNetwork:Default] Connection 2: encountered error(1:50)
+2026-09-24 17:17:43.876 Df AutoMLXStudio[51751:11e7a2] [com.apple.CFNetwork:Default] Connection 2: cleaning up
+2026-09-24 17:17:43.876 Df AutoMLXStudio[51751:11e7a2] [com.apple.CFNetwork:Summary] Connection 2: summary for unused connection {protocol="(null)", domain_lookup_duration_ms=0, connect_duration_ms=0, secure_connection_duration_ms=0, private_relay=false, idle_duration_ms=0}
+2026-09-24 17:17:43.876 Df AutoMLXStudio[51751:11e7a2] [com.apple.network:connection] [C2 F9B32F74-C0B1-4881-8B66-CAF3C83AE3D6 IPv4#9892aee6:1234 tcp, url hash: d8a56499, definite, attribution: developer] cancel
+2026-09-24 17:17:43.876 Df AutoMLXStudio[51751:11e7a2] [com.apple.network:connection] [C2 IPv4#9892aee6:1234 tcp, url hash: d8a56499, definite, attribution: developer] cancelled
+2026-09-24 17:17:43.876 Df AutoMLXStudio[51751:11e7a2] [com.apple.network:connection] nw_connection_report_state_with_handler_on_nw_queue [C2] reporting state cancelled
+2026-09-24 17:17:43.876 Df AutoMLXStudio[51751:11e7a2] [com.apple.CFNetwork:Default] Task <E4C5B073-7FFC-4D47-9FE1-D9F743161104>.<2> can retry(N) with reason(2) for error [1:50]
+2026-09-24 17:17:43.876 A  AutoMLXStudio[51751:11e79e] (Security) SecTrustReportNetworkingAnalytics
+2026-09-24 17:17:43.876 E  AutoMLXStudio[51751:11e7a2] [com.apple.CFNetwork:Default] Task <E4C5B073-7FFC-4D47-9FE1-D9F743161104>.<2> HTTP load failed, 0/0 bytes (error code: -1009 [1:50])
+2026-09-24 17:17:43.876 Df AutoMLXStudio[51751:11e9f2] [com.apple.CFNetwork:Summary] Task <E4C5B073-7FFC-4D47-9FE1-D9F743161104>.<2> summary for task failure {transaction_duration_ms=1, response_status=-1, connection=2, reused=1, reused_after_ms=0, request_start_ms=0, request_duration_ms=0, response_start_ms=0, response_duration_ms=0, request_bytes=0, request_throughput_kbps=0, response_bytes=0, response_throughput_kbps=0, cache_hit=false}
+2026-09-24 17:17:43.876 E  AutoMLXStudio[51751:11e9f2] [com.apple.CFNetwork:Default] Task <E4C5B073-7FFC-4D47-9FE1-D9F743161104>.<2> finished with error [-1009] Error Domain=NSURLErrorDomain Code=-1009 UserInfo={_kCFStreamErrorCodeKey=50, NSUnderlyingError=0x7ab84f42d0 {Error Domain=kCFErrorDomainCFNetwork Code=-1009 UserInfo={_NSURLErrorNWPathKey=<private>, _kCFStreamErrorCodeKey=50, _kCFStreamErrorDomainKey=1}}, _NSURLErrorFailingURLSessionTaskErrorKey=<private>, _NSURLErrorRelatedURLSessionTaskErrorKey=<private>, NSLocalizedDescription=<private>, NSErrorFailingURLStringKey=<private>, NSErrorFailingURLKey=<private>, _kCFStreamErrorDomainKey=1}
+2026-09-24 17:18:09.437 A  AutoMLXStudio[51751:11db71] (AppKit) sendAction:
+2026-09-24 17:18:09.437 A  AutoMLXStudio[51751:11db71] (AppKit) sendAction:
+2026-09-24 17:18:09.437 A  AutoMLXStudio[51751:11db71] (AppKit) sendAction:
+2026-09-24 17:18:09.445 A  AutoMLXStudio[51751:11db71] (AppKit) sendAction:
+2026-09-24 17:18:09.445 A  AutoMLXStudio[51751:11db71] (AppKit) sendAction:
+2026-09-24 17:18:09.445 A  AutoMLXStudio[51751:11db71] (AppKit) sendAction:
+2026-09-24 17:18:09.445 Df AutoMLXStudio[51751:11e7a2] [com.apple.CFNetwork:Default] Task <F54523EF-BE2E-4C46-8A6A-43FE24EB5AE1>.<3> resuming, timeouts(10.0, 604800.0) qos(0x19) voucher(<private>) activity(00000000-0000-0000-0000-000000000000)
+2026-09-24 17:18:09.446 A  AutoMLXStudio[51751:11e7a2] (Security) SecTrustReportNetworkingAnalytics
+2026-09-24 17:18:09.446 Df AutoMLXStudio[51751:11e79e] [com.apple.CFNetwork:Default] Connection 3: starting, TC(0x0)
+2026-09-24 17:18:09.446 Df AutoMLXStudio[51751:11e79e] [com.apple.network:connection] [C3 9E0049C4-E502-457E-8B7C-D81531410137 IPv4#9892aee6:1234 tcp, url hash: d8a56499, definite, attribution: developer, context: com.apple.CFNetwork.NSURLSession.{1D145F77-771F-40C8-B6C6-EC30E8CB774E}{(null)}{Y}{2}{0x0} (private), proc: 42C715BE-56FC-3057-B0AD-624995F8E8C2, delegated upid: 0] start
+2026-09-24 17:18:09.446 Df AutoMLXStudio[51751:11e79e] [com.apple.network:connection] [C3 IPv4#9892aee6:1234 initial parent-flow ((null))] event: path:start @0.000s
+2026-09-24 17:18:09.446 Df AutoMLXStudio[51751:11e79e] [com.apple.network:connection] [C3 IPv4#9892aee6:1234 waiting parent-flow (unsatisfied (Local network prohibited), interface: en7, ipv4)] event: path:unsatisfied @0.000s, uuid: FA000F10-2C88-408C-80D4-91DCF777331B
+2026-09-24 17:18:09.446 Df AutoMLXStudio[51751:11e79e] [com.apple.network:connection] nw_connection_report_state_with_handler_on_nw_queue [C3] reporting state waiting
+2026-09-24 17:18:09.446 Df AutoMLXStudio[51751:11e79e] [com.apple.network:connection] [C3 IPv4#9892aee6:1234 in_progress parent-flow (unsatisfied (Local network prohibited), interface: en7, ipv4)] event: flow:start_connect @0.000s
+2026-09-24 17:18:09.446 Df AutoMLXStudio[51751:11e79e] [com.apple.network:connection] nw_connection_report_state_with_handler_on_nw_queue [C3] reporting state preparing
+2026-09-24 17:18:09.447 Df AutoMLXStudio[51751:11e79e] [com.apple.network:connection] [C3 IPv4#9892aee6:1234 in_progress parent-flow (unsatisfied (Local network prohibited), interface: en7, ipv4)] event: flow:start_child @0.000s
+2026-09-24 17:18:09.447 Df AutoMLXStudio[51751:11e79e] [com.apple.network:connection] [C3.1 IPv4#9892aee6:1234 initial path ((null))] event: path:start @0.000s
+2026-09-24 17:18:09.447 Df AutoMLXStudio[51751:11e79e] [com.apple.network:connection] [C3.1 IPv4#9892aee6:1234 waiting path (unsatisfied (Local network prohibited), interface: en7, ipv4)] event: path:unsatisfied @0.000s, uuid: FA000F10-2C88-408C-80D4-91DCF777331B
+2026-09-24 17:18:09.447 Df AutoMLXStudio[51751:11e79e] [com.apple.network:connection] [C3.1 IPv4#9892aee6:1234 in_progress resolver (unsatisfied (Local network prohibited), interface: en7, ipv4)] event: resolver:start_dns @0.000s
+2026-09-24 17:18:09.447 Df AutoMLXStudio[51751:11e79e] [com.apple.CFNetwork:Default] Task <F54523EF-BE2E-4C46-8A6A-43FE24EB5AE1>.<3> setting up Connection 3
+2026-09-24 17:18:09.447 Df AutoMLXStudio[51751:11e79e] [com.apple.CFNetwork:Default] Connection 3: is waiting to connect, reason -1
+2026-09-24 17:18:09.447 Df AutoMLXStudio[51751:11e79e] [com.apple.network:connection] nw_endpoint_resolver_update [C3.1 IPv4#9892aee6:1234 in_progress resolver (unsatisfied (Local network prohibited), interface: en7, ipv4)] Adding endpoint handler for IPv4#9892aee6:1234
+2026-09-24 17:18:09.447 Df AutoMLXStudio[51751:11e79e] [com.apple.network:connection] [C3.1 IPv4#9892aee6:1234 in_progress resolver (unsatisfied (Local network prohibited), interface: en7, ipv4)] event: resolver:receive_dns @0.000s
+2026-09-24 17:18:09.447 Df AutoMLXStudio[51751:11e79e] [com.apple.network:connection] [C3.1.1 IPv4#9892aee6:1234 initial path ((null))] event: path:start @0.000s
+2026-09-24 17:18:09.447 Df AutoMLXStudio[51751:11e79e] [com.apple.network:connection] [C3.1.1 IPv4#9892aee6:1234 waiting path (unsatisfied (Local network prohibited), interface: en7, ipv4)] event: path:unsatisfied @0.001s, uuid: E843CFC8-DD68-4654-AB16-9EF99112B2C4
+2026-09-24 17:18:09.447 Df AutoMLXStudio[51751:11e79e] [com.apple.network:connection] [C3.1.1 IPv4#9892aee6:1234 failed path (unsatisfied (Local network prohibited), interface: en7, ipv4)] event: null:null @0.001s
+2026-09-24 17:18:09.447 Df AutoMLXStudio[51751:11e79e] [com.apple.network:connection] [C3.1 IPv4#9892aee6:1234 in_progress resolver (unsatisfied (Local network prohibited), interface: en7, ipv4)] event: resolver:children_stall @0.001s
+2026-09-24 17:18:09.447 Df AutoMLXStudio[51751:11e79e] [com.apple.network:connection] [C3.1 IPv4#9892aee6:1234 failed resolver (unsatisfied (Local network prohibited), interface: en7, ipv4)] event: resolver:children_failed @0.001s
+2026-09-24 17:18:09.447 Df AutoMLXStudio[51751:11e79e] [com.apple.network:connection] [C3 IPv4#9892aee6:1234 failed parent-flow (unsatisfied (Local network prohibited), interface: en7, ipv4)] event: flow:child_failed @0.001s
+2026-09-24 17:18:09.447 Df AutoMLXStudio[51751:11e79e] [com.apple.network:connection] nw_connection_report_state_with_handler_on_nw_queue [C3] reporting state failed error Network is down
+2026-09-24 17:18:09.448 E  AutoMLXStudio[51751:11e79e] [com.apple.CFNetwork:Default] Connection 3: received failure notification
+2026-09-24 17:18:09.448 E  AutoMLXStudio[51751:11e79e] [com.apple.CFNetwork:Default] Connection 3: failed to connect 1:50, reason -1
+2026-09-24 17:18:09.448 E  AutoMLXStudio[51751:11e79e] [com.apple.CFNetwork:Default] Connection 3: encountered error(1:50)
+2026-09-24 17:18:09.448 Df AutoMLXStudio[51751:11e79e] [com.apple.CFNetwork:Default] Connection 3: cleaning up
+2026-09-24 17:18:09.448 Df AutoMLXStudio[51751:11e79e] [com.apple.CFNetwork:Summary] Connection 3: summary for unused connection {protocol="(null)", domain_lookup_duration_ms=0, connect_duration_ms=0, secure_connection_duration_ms=0, private_relay=false, idle_duration_ms=0}
+2026-09-24 17:18:09.448 Df AutoMLXStudio[51751:11e79e] [com.apple.network:connection] [C3 9E0049C4-E502-457E-8B7C-D81531410137 IPv4#9892aee6:1234 tcp, url hash: d8a56499, definite, attribution: developer] cancel
+2026-09-24 17:18:09.448 Df AutoMLXStudio[51751:11e79e] [com.apple.network:connection] [C3 IPv4#9892aee6:1234 tcp, url hash: d8a56499, definite, attribution: developer] cancelled
+2026-09-24 17:18:09.448 Df AutoMLXStudio[51751:11e79e] [com.apple.network:connection] nw_connection_report_state_with_handler_on_nw_queue [C3] reporting state cancelled
+2026-09-24 17:18:09.448 A  AutoMLXStudio[51751:11e7a2] (Security) SecTrustReportNetworkingAnalytics
+2026-09-24 17:18:09.448 Df AutoMLXStudio[51751:11e79e] [com.apple.CFNetwork:Default] Task <F54523EF-BE2E-4C46-8A6A-43FE24EB5AE1>.<3> can retry(N) with reason(2) for error [1:50]
+2026-09-24 17:18:09.448 E  AutoMLXStudio[51751:11e79e] [com.apple.CFNetwork:Default] Task <F54523EF-BE2E-4C46-8A6A-43FE24EB5AE1>.<3> HTTP load failed, 0/0 bytes (error code: -1009 [1:50])
+2026-09-24 17:18:09.448 Df AutoMLXStudio[51751:11e9f5] [com.apple.CFNetwork:Summary] Task <F54523EF-BE2E-4C46-8A6A-43FE24EB5AE1>.<3> summary for task failure {transaction_duration_ms=2, response_status=-1, connection=3, reused=1, reused_after_ms=0, request_start_ms=0, request_duration_ms=0, response_start_ms=0, response_duration_ms=0, request_bytes=0, request_throughput_kbps=0, response_bytes=0, response_throughput_kbps=0, cache_hit=false}
+2026-09-24 17:18:09.448 E  AutoMLXStudio[51751:11e9f5] [com.apple.CFNetwork:Default] Task <F54523EF-BE2E-4C46-8A6A-43FE24EB5AE1>.<3> finished with error [-1009] Error Domain=NSURLErrorDomain Code=-1009 UserInfo={_kCFStreamErrorCodeKey=50, NSUnderlyingError=0x7ab996a6d0 {Error Domain=kCFErrorDomainCFNetwork Code=-1009 UserInfo={_NSURLErrorNWPathKey=<private>, _kCFStreamErrorCodeKey=50, _kCFStreamErrorDomainKey=1}}, _NSURLErrorFailingURLSessionTaskErrorKey=<private>, _NSURLErrorRelatedURLSessionTaskErrorKey=<private>, NSLocalizedDescription=<private>, NSErrorFailingURLStringKey=<private>, NSErrorFailingURLKey=<private>, _kCFStreamErrorDomainKey=1}
+2026-09-24 17:18:38.740 A  AutoMLXStudio[51751:11eb39] (CoreSpotlight) end-index-batch
+2026-09-24 17:18:38.741 A  AutoMLXStudio[51751:11eb39] (CoreSpotlight) index-items
+2026-09-24 17:18:38.741 Df AutoMLXStudio[51751:11eb39] [com.apple.corespotlight:index] Submitting donation: <private> (738 bytes with 0 enqueued)
+2026-09-24 17:18:38.741 Df AutoMLXStudio[51751:11e9f5] [com.apple.corespotlight:index] Performing donation: <private>
+2026-09-24 17:18:38.741 Df AutoMLXStudio[51751:11e9f5] [com.apple.xpc:connection] [0x7ab6a23c00] activating connection: mach=false listener=false peer=false name=com.apple.SetStoreUpdateService
+2026-09-24 17:18:38.741 Df AutoMLXStudio[51751:11e9f5] [com.apple.Biome:BiomeCascade] Requesting new set donation <private>
+2026-09-24 17:18:38.741 Df AutoMLXStudio[51751:11e7a2] [com.apple.corespotlight:index] Submitting donation: <private> (738 bytes with 738 enqueued)
+2026-09-24 17:18:38.741 Df AutoMLXStudio[51751:11eb39] [com.apple.xpc:connection] [0x7ab6a23c00] Re-initialization successful; calling out to event handler with XPC_ERROR_CONNECTION_INTERRUPTED
+2026-09-24 17:18:38.741 Df AutoMLXStudio[51751:11eb39] [com.apple.xpc:connection] [0x7ab6a23c00] invalidated because the current process cancelled the connection by calling xpc_connection_cancel()
+2026-09-24 17:18:38.741 Df AutoMLXStudio[51751:11e9f5] [com.apple.Biome:BiomeCascade] Service responded to request for new donation <private> with None
+2026-09-24 17:18:38.741 Df AutoMLXStudio[51751:11e9f5] [com.apple.corespotlight:index] Completed donation: <private> result: Error Domain=CSIndexErrorDomain Code=-1000 "Failed to request donation" UserInfo={NSDebugDescription=Failed to request donation, NSUnderlyingError=0x7ab996a400 {Error Domain=NSCocoaErrorDomain Code=4099 UserInfo={NSDebugDescription=<private>}}}
+2026-09-24 17:18:38.741 Df AutoMLXStudio[51751:11e9f5] [com.apple.corespotlight:index] Performing donation: <private>
+2026-09-24 17:18:38.741 Df AutoMLXStudio[51751:11e9f5] [com.apple.xpc:connection] [0x7ab6a23c00] activating connection: mach=false listener=false peer=false name=com.apple.SetStoreUpdateService
+2026-09-24 17:18:38.742 Df AutoMLXStudio[51751:11e9f5] [com.apple.Biome:BiomeCascade] Requesting new set donation <private>
+2026-09-24 17:18:38.742 Df AutoMLXStudio[51751:11eb39] [com.apple.xpc:connection] [0x7ab6a23c00] Re-initialization successful; calling out to event handler with XPC_ERROR_CONNECTION_INTERRUPTED
+2026-09-24 17:18:38.742 Df AutoMLXStudio[51751:11eb39] [com.apple.xpc:connection] [0x7ab6a23c00] invalidated because the current process cancelled the connection by calling xpc_connection_cancel()
+2026-09-24 17:18:38.742 Df AutoMLXStudio[51751:11e9f5] [com.apple.Biome:BiomeCascade] Service responded to request for new donation <private> with None
+2026-09-24 17:18:38.742 Df AutoMLXStudio[51751:11e9f5] [com.apple.corespotlight:index] Completed donation: <private> result: Error Domain=CSIndexErrorDomain Code=-1000 "Failed to request donation" UserInfo={NSDebugDescription=Failed to request donation, NSUnderlyingError=0x7ab996ac10 {Error Domain=NSCocoaErrorDomain Code=4099 UserInfo={NSDebugDescription=<private>}}}
+2026-09-24 17:18:54.186 A  AutoMLXStudio[51751:11db71] (AppKit) perform action for menu item
+2026-09-24 17:18:54.186 A  AutoMLXStudio[51751:11db71] (AppKit) sendAction:
+2026-09-24 17:18:54.186 Df AutoMLXStudio[51751:11db71] [com.apple.AppKit:Application] terminate:
+2026-09-24 17:18:54.186 Df AutoMLXStudio[51751:11db71] [com.apple.AppKit:AutomaticTermination] void _NSDisableAutomaticTerminationAndLog(NSString *) Terminating
+2026-09-24 17:18:54.186 Df AutoMLXStudio[51751:11db71] [com.apple.AppKit:Application] -[NSApplication _setShouldRestoreStateOnNextLaunch:] shouldRestore=0
+2026-09-24 17:18:54.186 Df AutoMLXStudio[51751:11db71] [com.apple.AppKit:StateRestoration] -[NSApplication _pushPersistentStateTerminationGeneration] sPersistentStateTerminateStackHeight -> 1
+2026-09-24 17:18:54.186 Df AutoMLXStudio[51751:11db71] [com.apple.AppKit:StateRestoration] -[NSPersistentUIManager discardAllPersistentStateAndClose]
+2026-09-24 17:18:54.186 Df AutoMLXStudio[51751:11db71] [com.apple.AppKit:StateRestoration] -[NSPersistentUIManager _waitForPendingChangesToFinish] finishing pending changes
+2026-09-24 17:18:54.186 Df AutoMLXStudio[51751:11db71] [com.apple.AppKit:StateRestoration] -[NSPersistentUIManager _finishEncodingImmediatelyWithCompletionHandler:] _encodingQueue=0x7ab7591440
+2026-09-24 17:18:54.186 Df AutoMLXStudio[51751:11db71] [com.apple.AppKit:StateRestoration] -[NSPersistentUIManager _waitForPendingChangesToFinish] observer=0x7ab9216440
+2026-09-24 17:18:54.186 Df AutoMLXStudio[51751:11db71] [com.apple.libsystem.libdispatch:] DEPRECATED USE in libdispatch client: Setting timer interval to 0 requests a 1ns timer, did you mean FOREVER (a one-shot timer)?; set a breakpoint on _dispatch_bug_deprecated to debug
+2026-09-24 17:18:54.186 Df AutoMLXStudio[51751:11e9f5] [com.apple.AppKit:StateRestoration] -[NSPersistentUIManager _waitForPendingChangesToFinish]_block_invoke asyncing to main runloop
+2026-09-24 17:18:54.186 Df AutoMLXStudio[51751:11db71] [com.apple.AppKit:StateRestoration] -[NSPersistentUIManager _waitForPendingChangesToFinish] spinning the runloop
+2026-09-24 17:18:54.186 Df AutoMLXStudio[51751:11db71] [com.apple.AppKit:StateRestoration] -[NSPersistentUIManager _waitForPendingChangesToFinish]_block_invoke observer=0x7ab9216440 activity=1 depth=0 finished=0
+2026-09-24 17:18:54.186 Df AutoMLXStudio[51751:11db71] [com.apple.AppKit:StateRestoration] -[NSPersistentUIManager _waitForPendingChangesToFinish]_block_invoke finished=YES
+2026-09-24 17:18:54.186 Df AutoMLXStudio[51751:11db71] [com.apple.AppKit:StateRestoration] -[NSPersistentUIManager _waitForPendingChangesToFinish]_block_invoke observer=0x7ab9216440 activity=128 depth=1 finished=1
+2026-09-24 17:18:54.186 Df AutoMLXStudio[51751:11db71] [com.apple.AppKit:StateRestoration] -[NSPersistentUIManager _waitForPendingChangesToFinish] completed spinning the runloop
+2026-09-24 17:18:54.186 Df AutoMLXStudio[51751:11db71] [com.apple.AppKit:StateRestoration] -[NSPersistentUIManager _waitForPendingChangesToFinish] finished waiting
+2026-09-24 17:18:54.186 Df AutoMLXStudio[51751:11db71] [com.apple.AppKit:StateRestoration] -[NSPersistentUIManager _flushPendingPostEncodingChangesSynchronously] workQueue=0x7ab7cdf080
+2026-09-24 17:18:54.186 Df AutoMLXStudio[51751:11db71] [com.apple.AppKit:StateRestoration] -[NSPersistentUIManager _flushPendingPostEncodingChangesSynchronously]_block_invoke _windowSnapshotter=0x7ab68ba440
+2026-09-24 17:18:54.186 Df AutoMLXStudio[51751:11db71] [com.apple.AppKit:StateRestoration] -[NSPersistentUIWindowSnapshotter flushPendingSnapshotsSynchronously] _workQueue=0x7ab7cdf100
+2026-09-24 17:18:54.186 Df AutoMLXStudio[51751:11db71] [com.apple.AppKit:StateRestoration] -[NSPersistentUIWindowSnapshotter flushPendingSnapshotsSynchronously]_block_invoke flushing synchronously; snapshottingSuppressed=0
+2026-09-24 17:18:54.186 Df AutoMLXStudio[51751:11db71] [com.apple.AppKit:StateRestoration] -[NSPersistentUIManager _flushPendingPostEncodingChangesSynchronously]_block_invoke _store=0x7ab7db82d0
+2026-09-24 17:18:54.187 Df AutoMLXStudio[51751:11db71] [com.apple.AppKit:StateRestoration] -[NSPersistentUIManager _waitForPendingChangesToFinish] finished flushing
+2026-09-24 17:18:54.187 Df AutoMLXStudio[51751:11db71] [com.apple.AppKit:Application] Attempting sudden termination (1st attempt)
+2026-09-24 17:18:54.187 Df AutoMLXStudio[51751:11db71] [com.apple.AppKit:Application] Checking whether app should terminate
+2026-09-24 17:18:54.187 Df AutoMLXStudio[51751:11db71] [com.apple.AppKit:Application] Asking app delegate whether applicationShouldTerminate:
+2026-09-24 17:18:54.190 Df AutoMLXStudio[51751:11db71] [com.apple.AppKit:Application] applicationShouldTerminate: NSTerminateNow
+2026-09-24 17:18:54.190 Df AutoMLXStudio[51751:11db71] [com.apple.AppKit:Application] replyToApplicationShouldTerminate:YES
+2026-09-24 17:18:54.190 Df AutoMLXStudio[51751:11db71] [com.apple.AppKit:Application] App termination approved
+2026-09-24 17:18:54.190 Df AutoMLXStudio[51751:11db71] [com.apple.AppKit:Application] Termination commencing
+2026-09-24 17:18:54.190 Df AutoMLXStudio[51751:11db71] [com.apple.AppKit:Application] Attempting sudden termination (2nd attempt)
+2026-09-24 17:18:54.195 Df AutoMLXStudio[51751:11ed6a] [com.apple.xpc:connection] [0x7ab6843c00] invalidated because the current process cancelled the connection by calling xpc_connection_cancel()
+2026-09-24 17:18:54.195 Df AutoMLXStudio[51751:11ed6a] [com.apple.xpc:session] [0x7ab60d4690] Session canceled.
+2026-09-24 17:18:54.195 Df AutoMLXStudio[51751:11eb39] [com.apple.UIIntelligenceSupport:xpc] agent connection cancelled (details: Session manually canceled)
+2026-09-24 17:18:54.195 Df AutoMLXStudio[51751:11eb39] [com.apple.xpc:session] [0x7ab60d4690] Disposing of session
+2026-09-24 17:18:54.195 Df AutoMLXStudio[51751:11db71] [com.apple.AppKit:Application] Termination complete. Exiting without sudden termination.
+2026-09-24 17:18:54.196 Df AutoMLXStudio[51751:11db71] [com.apple.CoreAnalytics:client] Entering exit handler.
+2026-09-24 17:18:54.196 Df AutoMLXStudio[51751:11db71] [com.apple.CoreAnalytics:client] Queueing exit procedure onto XPC queue. Any further messages sent will be discarded. activeSendTransactions=0
+2026-09-24 17:18:54.196 Df AutoMLXStudio[51751:11eb39] [com.apple.xpc:connection] [0x7ab6a21cc0] activating connection: mach=true listener=false peer=false name=com.apple.powerlog.plxpclogger.xpc
+2026-09-24 17:18:54.196 Df AutoMLXStudio[51751:11e9f5] [com.apple.CoreAnalytics:client] Cancelling XPC connection. Any further reply handler invocations will not retry messages
+2026-09-24 17:18:54.196 Df AutoMLXStudio[51751:11e9f5] [com.apple.xpc:connection] [0x7ab6840640] invalidated because the current process cancelled the connection by calling xpc_connection_cancel()
+2026-09-24 17:18:54.196 Df AutoMLXStudio[51751:11db71] [com.apple.CoreAnalytics:client] Exiting exit handler.
+2026-09-24 17:18:54.196 Df AutoMLXStudio[51751:11e9f5] [com.apple.CoreAnalytics:client] XPC connection invalidated (daemon unloaded/disabled)
+2026-09-24 17:22:41.263 A  AutoMLXStudio[52303:120121] (libsystem_info.dylib) Retrieve User by ID
+2026-09-24 17:22:41.264 Df AutoMLXStudio[52303:120121] [com.apple.xpc:connection] [0x1051f8ca0] activating connection: mach=true listener=false peer=false name=com.apple.cfprefsd.daemon
+2026-09-24 17:22:41.264 Df AutoMLXStudio[52303:120134] [com.apple.xpc:connection] [0x1051f8e20] activating connection: mach=true listener=false peer=false name=com.apple.cfprefsd.agent
+2026-09-24 17:22:41.266 Df AutoMLXStudio[52303:120121] [com.apple.xpc:connection] [0x7ba4c68000] activating connection: mach=true listener=false peer=false name=com.apple.distributed_notifications@Uv3
+2026-09-24 17:22:41.266 Df AutoMLXStudio[52303:120121] [com.apple.xpc:connection] [0x7ba4c68140] activating connection: mach=true listener=false peer=false name=com.apple.pasteboard.1
+2026-09-24 17:22:41.268 Df AutoMLXStudio[52303:120121] [com.apple.AppKit:AutomaticTermination] void _NSDisableAutomaticTerminationAndLog(NSString *) No windows open yet
+2026-09-24 17:22:41.269 A  AutoMLXStudio[52303:120121] (TCC) TCCAccessRequest() IPC
+2026-09-24 17:22:41.269 Df AutoMLXStudio[52303:120121] [com.apple.xpc:connection] [0x7ba4c68280] activating connection: mach=true listener=false peer=false name=com.apple.tccd.system
+2026-09-24 17:22:41.275 Df AutoMLXStudio[52303:120121] [com.apple.xpc:connection] [0x7ba4c68280] invalidated after the last release of the connection object
+2026-09-24 17:22:41.275 Df AutoMLXStudio[52303:120121] [com.apple.SkyLight:default] server port 0x0000300f, session port 0x0000300f
+2026-09-24 17:22:41.280 Df AutoMLXStudio[52303:120121] [com.apple.xpc:connection] [0x7ba4c68280] activating connection: mach=true listener=false peer=false name=com.apple.coreservices.launchservicesd
+2026-09-24 17:22:41.282 Df AutoMLXStudio[52303:120121] [com.apple.SkyLight:default] New connection 0x4c5cf main
+2026-09-24 17:22:41.283 Df AutoMLXStudio[52303:120121] [com.apple.processmanager:front-35286506] CHECKIN: pid=52303 coalition=5727
+2026-09-24 17:22:41.286 Df AutoMLXStudio[52303:120121] [com.apple.processmanager:front-35286506] CHECKEDIN: pid=52303 asn=0x0-0xc10c1 foreground=1
+2026-09-24 17:22:41.286 Df AutoMLXStudio[52303:120121] [com.apple.xpc:connection] [0x7ba4c683c0] activating connection: mach=false listener=true peer=false name=(anonymous)
+2026-09-24 17:22:41.286 Df AutoMLXStudio[52303:120121] [com.apple.xpc:connection] [0x7ba4c683c0] Connection returned listener port: 0x5403
+2026-09-24 17:22:41.286 Df AutoMLXStudio[52303:120134] [com.apple.xpc:connection] [0x7ba4c68640] activating connection: mach=false listener=false peer=true name=com.apple.xpc.anonymous.0x7ba4c683c0.peer[599].0x7ba4c68640
+2026-09-24 17:22:41.287 Df AutoMLXStudio[52303:120121] [com.apple.processmanager:front-35286506] FRONTLOGGING: version 1
+2026-09-24 17:22:41.287 Df AutoMLXStudio[52303:120121] [com.apple.processmanager:front-35286506] Registered, pid=52303 ASN=0x0,0xc10c1
+2026-09-24 17:22:41.287 Df AutoMLXStudio[52303:120121] [com.apple.xpc:connection] [0x7ba4c68500] activating connection: mach=true listener=false peer=false name=com.apple.analyticsd
+2026-09-24 17:22:41.287 Df AutoMLXStudio[52303:120121] [com.apple.xpc:connection] [0x7ba4c683c0] Connection returned listener port: 0x5403
+2026-09-24 17:22:41.287 Df AutoMLXStudio[52303:120121] [com.apple.processmanager:front-35286506] BringForward: pid=52303 asn=0x0-0xc10c1 bringForward=1 foreground=1 uiElement=0 launchedByLS=1 modifiersCount=1 allDisabled=0
+2026-09-24 17:22:41.287 Df AutoMLXStudio[52303:120121] [com.apple.processmanager:front-35286506] BringFrontModifier: pid=52303 asn=0x0-0xc10c1 Modifier 0 hideAfter=0 hideOthers=0 dontMakeFrontmost=0 mouseDown=0/0 seed=0/0
+2026-09-24 17:22:41.287 Df AutoMLXStudio[52303:120121] [com.apple.processmanager:front-35286506] BringForward: pid=52303 asn=0x0-0xc10c1
+2026-09-24 17:22:41.287 Df AutoMLXStudio[52303:120121] [com.apple.processmanager:front-35286506] SetFrontProcess: asn=0x0-0xc10c1 options=0
+2026-09-24 17:22:41.292 Df AutoMLXStudio[52303:120121] [com.apple.AppKit:Appearance] Current system appearance, (HLTB: 2), (SLS: 1)
+2026-09-24 17:22:41.294 Df AutoMLXStudio[52303:120121] (libMobileGestalt.dylib) No persisted cache on this platform.
+2026-09-24 17:22:41.295 Df AutoMLXStudio[52303:120121] [com.apple.AppKit:Appearance] Current system appearance, (HLTB: 2), (SLS: 1)
+2026-09-24 17:22:41.295 Df AutoMLXStudio[52303:120121] [com.apple.AppKit:Appearance] Post-registration system appearance: (HLTB: 2)
+2026-09-24 17:22:41.297 Df AutoMLXStudio[52303:120170] [com.apple.CoreAnalytics:client] Received configuration update from daemon (initial)
+2026-09-24 17:22:41.315 Df AutoMLXStudio[52303:120134] [com.apple.xpc:connection] [0x7ba4c68780] activating connection: mach=true listener=false peer=false name=com.apple.lsd.mapdb
+2026-09-24 17:22:41.321 Df AutoMLXStudio[52303:120121] [com.apple.runningboard:connection] Initializing connection
+2026-09-24 17:22:41.321 Df AutoMLXStudio[52303:120121] [com.apple.runningboard:process] Removing all cached process handles
+2026-09-24 17:22:41.321 Df AutoMLXStudio[52303:120121] [com.apple.BoardServices:Injection] activating monitor for service com.apple.frontboard.workspace-service
+2026-09-24 17:22:41.321 Df AutoMLXStudio[52303:120134] [com.apple.runningboard:connection] Sending handshake request attempt #1 to server
+2026-09-24 17:22:41.321 Df AutoMLXStudio[52303:120134] [com.apple.runningboard:connection] Creating connection to com.apple.runningboard
+2026-09-24 17:22:41.321 Df AutoMLXStudio[52303:120134] [com.apple.xpc:connection] [0x7ba4c688c0] activating connection: mach=true listener=false peer=false name=com.apple.runningboard
+2026-09-24 17:22:41.321 Df AutoMLXStudio[52303:120121] [com.apple.FrontBoard:Common] FBSWorkspace: default shell endpoint is disabled.
+2026-09-24 17:22:41.322 A  AutoMLXStudio[52303:120170] (RunningBoardServices) didChangeInheritances
+2026-09-24 17:22:41.322 Df AutoMLXStudio[52303:120121] [com.apple.xpc:connection] [0x7ba4c683c0] Connection returned listener port: 0x5403
+2026-09-24 17:22:41.322 Df AutoMLXStudio[52303:120134] [com.apple.runningboard:connection] Handshake succeeded
+2026-09-24 17:22:41.322 Df AutoMLXStudio[52303:120134] [com.apple.runningboard:connection] Identity resolved as app<application.com.tommaso.AutoMLXStudio.1785.543884(501)>
+2026-09-24 17:22:41.329 Df AutoMLXStudio[52303:120121] [com.apple.xpc:connection] [0x7ba4c683c0] Connection returned listener port: 0x5403
+2026-09-24 17:22:41.329 Df AutoMLXStudio[52303:120121] [com.apple.xpc:connection] [0x7ba4c68a00] activating connection: mach=true listener=false peer=false name=com.apple.tccd
+2026-09-24 17:22:41.330 A  AutoMLXStudio[52303:120121] (TCC) TCCAccessLaunchDisclosurePromptIfNeeded() IPC
+2026-09-24 17:22:41.345 A  AutoMLXStudio[52303:120170] (RunningBoardServices) didChangeInheritances
+2026-09-24 17:22:41.350 Df AutoMLXStudio[52303:120121] [com.apple.xpc:connection] [0x7ba4c68a00] invalidated after the last release of the connection object
+2026-09-24 17:22:41.352 A  AutoMLXStudio[52303:120170] (AppIntents) appintents:register process
+2026-09-24 17:22:41.353 Df AutoMLXStudio[52303:120170] [com.apple.appintents:Connection] Created a new Process Instance Registry XPC connection (inactive)
+2026-09-24 17:22:41.353 Df AutoMLXStudio[52303:120170] [com.apple.xpc:connection] [0x7ba4c68a00] activating connection: mach=true listener=false peer=false name=com.apple.linkd.autoShortcut
+2026-09-24 17:22:41.353 Df AutoMLXStudio[52303:120170] [com.apple.appintents:Connection] Activated connection to linkd (ApplicationService)
+2026-09-24 17:22:41.353 Df AutoMLXStudio[52303:120170] [com.apple.xpc:connection] [0x7ba4c68b40] activating connection: mach=false listener=true peer=false name=(anonymous)
+2026-09-24 17:22:41.353 Df AutoMLXStudio[52303:120170] [com.apple.xpc:connection] [0x7ba4c68b40] Connection returned listener port: 0x5a1b
+2026-09-24 17:22:41.354 A  AutoMLXStudio[52303:120134] (CoreFoundation) Loading Preferences From User CFPrefsD
+2026-09-24 17:22:41.354 Df AutoMLXStudio[52303:120134] [com.apple.xpc:connection] [0x7ba4c68a00] Re-initialization successful; calling out to event handler with XPC_ERROR_CONNECTION_INTERRUPTED
+2026-09-24 17:22:41.354 Df AutoMLXStudio[52303:120121] [com.apple.dt.xctest:Default] Registering for test daemon availability notify post.
+2026-09-24 17:22:41.354 Df AutoMLXStudio[52303:120134] [com.apple.appintents:Connection] Process Instance Registry XPC connection has been interrupted
+2026-09-24 17:22:41.354 E  AutoMLXStudio[52303:120170] [com.apple.appintents:Connection] Unable to get synchronousRemoteObjectProxy, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-09-24 17:22:41.354 E  AutoMLXStudio[52303:120170] [com.apple.AppKit:Application] Error registering app with intents framework: Error Domain=NSCocoaErrorDomain Code=4097 UserInfo={NSDebugDescription=<private>}
+2026-09-24 17:22:41.354 Df AutoMLXStudio[52303:120121] [com.apple.dt.xctest:Default] notify_get_state check indicated test daemon not ready.
+2026-09-24 17:22:41.354 Df AutoMLXStudio[52303:120135] [com.apple.appintents:Connection] Created a new Process Instance Registry XPC connection (inactive)
+2026-09-24 17:22:41.354 A  AutoMLXStudio[52303:120135] (AppIntents) appintents:register process
+2026-09-24 17:22:41.354 Df AutoMLXStudio[52303:120121] [com.apple.dt.xctest:Default] notify_get_state check indicated test daemon not ready.
+2026-09-24 17:22:41.354 Df AutoMLXStudio[52303:120135] [com.apple.appintents:Connection] Created a new Process Instance Registry XPC connection (inactive)
+2026-09-24 17:22:41.354 Df AutoMLXStudio[52303:120135] [com.apple.xpc:connection] [0x7ba4c68dc0] activating connection: mach=true listener=false peer=false name=com.apple.linkd.autoShortcut
+2026-09-24 17:22:41.355 Df AutoMLXStudio[52303:120135] [com.apple.appintents:Connection] Activated connection to linkd (ApplicationService)
+2026-09-24 17:22:41.355 Df AutoMLXStudio[52303:120135] [com.apple.xpc:connection] [0x7ba4c68b40] Connection returned listener port: 0x5a1b
+2026-09-24 17:22:41.355 Df AutoMLXStudio[52303:120121] [com.apple.dt.xctest:Default] notify_get_state check indicated test daemon not ready.
+2026-09-24 17:22:41.355 Df AutoMLXStudio[52303:120170] [com.apple.xpc:connection] [0x7ba4c68dc0] Re-initialization successful; calling out to event handler with XPC_ERROR_CONNECTION_INTERRUPTED
+2026-09-24 17:22:41.355 Df AutoMLXStudio[52303:120170] [com.apple.appintents:Connection] Process Instance Registry XPC connection has been interrupted
+2026-09-24 17:22:41.355 E  AutoMLXStudio[52303:120135] [com.apple.appintents:Connection] Unable to get synchronousRemoteObjectProxy, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-09-24 17:22:41.355 E  AutoMLXStudio[52303:120135] [com.apple.appintents:Connection] Unable to re-register with Process Instance Registry, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-09-24 17:22:41.355 Df AutoMLXStudio[52303:120134] [com.apple.appintents:Connection] Created a new Process Instance Registry XPC connection (inactive)
+2026-09-24 17:22:41.355 A  AutoMLXStudio[52303:120134] (AppIntents) appintents:register process
+2026-09-24 17:22:41.355 Df AutoMLXStudio[52303:120134] [com.apple.appintents:Connection] Created a new Process Instance Registry XPC connection (inactive)
+2026-09-24 17:22:41.355 Df AutoMLXStudio[52303:120134] [com.apple.xpc:connection] [0x7ba4c69040] activating connection: mach=true listener=false peer=false name=com.apple.linkd.autoShortcut
+2026-09-24 17:22:41.355 Df AutoMLXStudio[52303:120134] [com.apple.appintents:Connection] Activated connection to linkd (ApplicationService)
+2026-09-24 17:22:41.355 Df AutoMLXStudio[52303:120134] [com.apple.xpc:connection] [0x7ba4c68b40] Connection returned listener port: 0x5a1b
+2026-09-24 17:22:41.356 Df AutoMLXStudio[52303:120135] [com.apple.xpc:connection] [0x7ba4c69040] Re-initialization successful; calling out to event handler with XPC_ERROR_CONNECTION_INTERRUPTED
+2026-09-24 17:22:41.356 Df AutoMLXStudio[52303:120135] [com.apple.appintents:Connection] Process Instance Registry XPC connection has been interrupted
+2026-09-24 17:22:41.356 E  AutoMLXStudio[52303:120134] [com.apple.appintents:Connection] Unable to get synchronousRemoteObjectProxy, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-09-24 17:22:41.356 E  AutoMLXStudio[52303:120134] [com.apple.appintents:Connection] Unable to re-register with Process Instance Registry, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-09-24 17:22:41.356 Df AutoMLXStudio[52303:120135] [com.apple.appintents:Connection] Created a new Process Instance Registry XPC connection (inactive)
+2026-09-24 17:22:41.356 A  AutoMLXStudio[52303:120135] (AppIntents) appintents:register process
+2026-09-24 17:22:41.356 Df AutoMLXStudio[52303:120135] [com.apple.appintents:Connection] Created a new Process Instance Registry XPC connection (inactive)
+2026-09-24 17:22:41.356 Df AutoMLXStudio[52303:120135] [com.apple.xpc:connection] [0x7ba4c692c0] activating connection: mach=true listener=false peer=false name=com.apple.linkd.autoShortcut
+2026-09-24 17:22:41.356 Df AutoMLXStudio[52303:120135] [com.apple.appintents:Connection] Activated connection to linkd (ApplicationService)
+2026-09-24 17:22:41.356 Df AutoMLXStudio[52303:120135] [com.apple.xpc:connection] [0x7ba4c68b40] Connection returned listener port: 0x5a1b
+2026-09-24 17:22:41.356 Df AutoMLXStudio[52303:120134] [com.apple.xpc:connection] [0x7ba4c692c0] Re-initialization successful; calling out to event handler with XPC_ERROR_CONNECTION_INTERRUPTED
+2026-09-24 17:22:41.356 Df AutoMLXStudio[52303:120134] [com.apple.appintents:Connection] Process Instance Registry XPC connection has been interrupted
+2026-09-24 17:22:41.356 E  AutoMLXStudio[52303:120134] [com.apple.appintents:Connection] Will NOT re-try to establish the connection
+2026-09-24 17:22:41.356 E  AutoMLXStudio[52303:120135] [com.apple.appintents:Connection] Unable to get synchronousRemoteObjectProxy, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-09-24 17:22:41.356 E  AutoMLXStudio[52303:120135] [com.apple.appintents:Connection] Unable to re-register with Process Instance Registry, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-09-24 17:22:41.389 A  AutoMLXStudio[52303:120121] (libsystem_info.dylib) Retrieve Group by ID
+2026-09-24 17:22:41.441 A  AutoMLXStudio[52303:120121] (CoreFoundation) Loading Preferences From System CFPrefsD
+2026-09-24 17:22:41.451 Df AutoMLXStudio[52303:120121] (libMobileGestalt.dylib) couldn't load support library
+2026-09-24 17:22:41.451 Df AutoMLXStudio[52303:120121] (libMobileGestalt.dylib) called dummy function!
+2026-09-24 17:22:41.451 Df AutoMLXStudio[52303:120121] [com.apple.GenerativeModels:availability] UserDefaults(com.apple.gms.availability, 501
+2026-09-24 17:22:41.452 Df AutoMLXStudio[52303:120121] [com.apple.WritingTools:Default] isEnhancedSiriAvailable value changed: true
+2026-09-24 17:22:41.452 Df AutoMLXStudio[52303:120121] [com.apple.WritingTools:Default] isAvailable value changed: isMDMAllowed = true, gmAvailable (current) = true
+2026-09-24 17:22:41.455 A  AutoMLXStudio[52303:120121] (CoreFoundation) Loading Preferences From User CFPrefsD
+2026-09-24 17:22:41.460 Df AutoMLXStudio[52303:120135] [com.apple.xpc:connection] [0x7ba4bbe800] activating connection: mach=false listener=false peer=false name=(anonymous)
+2026-09-24 17:22:41.460 Df AutoMLXStudio[52303:120135] [com.apple.menubar:menu-xpc-client] Attempting to activate session
+2026-09-24 17:22:41.460 Df AutoMLXStudio[52303:120135] [com.apple.menubar:menu-xpc-client] Session activated
+2026-09-24 17:22:41.461 Df AutoMLXStudio[52303:120121] [com.apple.AppKit:Appearance] NSApp cache appearance:
+-NSRequiresAquaSystemAppearance: 0
+-appearance: (null)
+-effectiveAppearance: <NSCompositeAppearance: 0x7ba4c51040
+ (
+    "<NSDarkAquaAppearance: 0x7ba4c51b80>",
+    "<NSSystemAppearance: 0x7ba4c50fa0>"
+)>
+2026-09-24 17:22:41.464 A  AutoMLXStudio[52303:120121] (CoreFoundation) Loading Preferences From User CFPrefsD
+2026-09-24 17:22:41.464 A  AutoMLXStudio[52303:120121] (CoreFoundation) Loading Preferences From User CFPrefsD
+2026-09-24 17:22:41.470 A  AutoMLXStudio[52303:120135] (libsystem_info.dylib) Membership API: translate identifier
+2026-09-24 17:22:41.475 Df AutoMLXStudio[52303:120135] [com.apple.xpc:connection] [0x7ba4bbee40] activating connection: mach=true listener=false peer=false name=com.apple.dock.fullscreen
+2026-09-24 17:22:41.478 Df AutoMLXStudio[52303:120121] [com.apple.xpc:connection] [0x7ba4bbed00] activating connection: mach=true listener=false peer=false name=com.apple.fonts
+2026-09-24 17:22:41.481 Df AutoMLXStudio[52303:120121] [com.apple.xpc:connection] [0x7ba4bbebc0] activating connection: mach=true listener=false peer=false name=com.apple.appkit.restoration_storage
+2026-09-24 17:22:41.485 Df AutoMLXStudio[52303:120121] [com.apple.xpc:connection] [0x7ba4bbea80] activating connection: mach=true listener=false peer=false name=com.apple.coreservices.appleevents
+2026-09-24 17:22:41.485 Df AutoMLXStudio[52303:120121] [com.apple.xpc:connection] [0x7ba4c683c0] Connection returned listener port: 0x5403
+2026-09-24 17:22:41.485 Df AutoMLXStudio[52303:120121] [com.apple.processmanager:front-35286506] SignalReady: pid=52303 asn=0x0-0xc10c1
+2026-09-24 17:22:41.485 Df AutoMLXStudio[52303:120121] [com.apple.processmanager:front-35286506] SIGNAL: pid=52303 asn=0x0x-0xc10c1
+2026-09-24 17:22:41.486 A  AutoMLXStudio[52303:120121] (CoreFoundation) Loading Preferences From System CFPrefsD
+2026-09-24 17:22:41.490 Df AutoMLXStudio[52303:120121] [com.apple.xpc:connection] [0x7ba4bbf340] activating connection: mach=false listener=false peer=false name=com.apple.ViewBridgeAuxiliary
+2026-09-24 17:22:41.497 Df AutoMLXStudio[52303:120121] [com.apple.xpc:connection] [0x7ba4bbf200] activating connection: mach=false listener=false peer=false name=(anonymous)
+2026-09-24 17:22:41.497 Df AutoMLXStudio[52303:120121] [com.apple.xpc:connection] [0x7ba4bbf480] activating connection: mach=false listener=true peer=false name=(anonymous)
+2026-09-24 17:22:41.497 Df AutoMLXStudio[52303:120121] [com.apple.xpc:connection] [0x7ba4bbf480] Connection returned listener port: 0xeb03
+2026-09-24 17:22:41.497 Df AutoMLXStudio[52303:120121] [com.apple.xpc:connection] [0x7ba4bbf340] invalidated after the last release of the connection object
+2026-09-24 17:22:41.499 Df AutoMLXStudio[52303:120121] [com.apple.GenerativeModels:availability] registering darwin observer for name: com.apple.gms.availability.notification
+2026-09-24 17:22:41.499 Df AutoMLXStudio[52303:120121] [com.apple.GenerativeModels:availability] registering darwin observer for name: com.apple.os-eligibility-domain.change.greymatter
+2026-09-24 17:22:41.499 Df AutoMLXStudio[52303:120121] [com.apple.GenerativeModels:availability] registering darwin observer for name: com.apple.language.changed
+2026-09-24 17:22:41.499 Df AutoMLXStudio[52303:120121] [com.apple.GenerativeModels:availability] registering darwin observer for name: com.apple.gms.availability.notification
+2026-09-24 17:22:41.499 Df AutoMLXStudio[52303:120121] [com.apple.GenerativeModels:availability] registering darwin observer for name: com.apple.os-eligibility-domain.change.greymatter
+2026-09-24 17:22:41.499 Df AutoMLXStudio[52303:120121] [com.apple.GenerativeModels:availability] registering darwin observer for name: com.apple.language.changed
+2026-09-24 17:22:41.502 Df AutoMLXStudio[52303:120121] [com.apple.AppKit:AutomaticTermination] void _NSDisableAutomaticTerminationAndLog(NSString *) Restoring windows
+2026-09-24 17:22:41.502 Df AutoMLXStudio[52303:120121] [com.apple.AppKit:StateRestoration] -[NSApplication _reopenWindowsAsNecessaryIncludingRestorableState:withFullFidelity:completionHandler:] shouldRestoreState=1 hasPersistentStateToRestore=0 shouldStillRestoreStateAfterPrompting=0
+2026-09-24 17:22:41.502 Df AutoMLXStudio[52303:120121] [com.apple.xpc:connection] [0x7ba4bbfc00] activating connection: mach=true listener=false peer=false name=com.apple.window_proxies
+2026-09-24 17:22:41.502 Df AutoMLXStudio[52303:120121] [com.apple.xpc:connection] [0x7ba4bbfc00] invalidated because the current process cancelled the connection by calling xpc_connection_cancel()
+2026-09-24 17:22:41.505 A  AutoMLXStudio[52303:120121] (CoreFoundation) Loading Preferences From User CFPrefsD
+2026-09-24 17:22:41.512 Df AutoMLXStudio[52303:120121] [com.apple.xpc:connection] [0x7ba4bbf980] activating connection: mach=false listener=false peer=false name=(anonymous)
+2026-09-24 17:22:41.524 Df AutoMLXStudio[52303:120135] [com.apple.corespotlight:index] (<private>) deleteSearchableItemsWithDomainIdentifiers, protectionClass:(null), domainIdentifiers number:1
+2026-09-24 17:22:41.524 A  AutoMLXStudio[52303:120135] (CoreSpotlight) delete-domains
+2026-09-24 17:22:41.524 Df AutoMLXStudio[52303:120135] [com.apple.corespotlight:index] Submitting donation: <private> (0 bytes with 0 enqueued)
+2026-09-24 17:22:41.524 Df AutoMLXStudio[52303:120135] (CoreSpotlight) sConnectionName: com.apple.spotlight.IndexAgent
+2026-09-24 17:22:41.524 Df AutoMLXStudio[52303:120135] (CoreSpotlight) Start mach service name com.apple.spotlight.IndexAgent
+2026-09-24 17:22:41.524 Df AutoMLXStudio[52303:120135] [com.apple.xpc:connection] [0x7ba4bbf700] activating connection: mach=true listener=false peer=false name=com.apple.spotlight.IndexAgent
+2026-09-24 17:22:41.524 Df AutoMLXStudio[52303:120134] [com.apple.corespotlight:index] Performing donation: <private>
+2026-09-24 17:22:41.524 Df AutoMLXStudio[52303:120134] [com.apple.xpc:connection] [0x7ba4bbf5c0] activating connection: mach=false listener=false peer=false name=com.apple.SetStoreUpdateService
+2026-09-24 17:22:41.524 Df AutoMLXStudio[52303:120134] [com.apple.Biome:BiomeCascade] Requesting new set donation <private>
+2026-09-24 17:22:41.549 Df AutoMLXStudio[52303:120135] [com.apple.xpc:connection] [0x7ba4bbf5c0] Re-initialization successful; calling out to event handler with XPC_ERROR_CONNECTION_INTERRUPTED
+2026-09-24 17:22:41.549 Df AutoMLXStudio[52303:120135] [com.apple.xpc:connection] [0x7ba4bbf5c0] invalidated because the current process cancelled the connection by calling xpc_connection_cancel()
+2026-09-24 17:22:41.549 Df AutoMLXStudio[52303:120134] [com.apple.Biome:BiomeCascade] Service responded to request for new donation <private> with None
+2026-09-24 17:22:41.549 Df AutoMLXStudio[52303:120134] [com.apple.corespotlight:index] Completed donation: <private> result: Error Domain=CSIndexErrorDomain Code=-1000 "Failed to request donation" UserInfo={NSDebugDescription=Failed to request donation, NSUnderlyingError=0x7ba5f4b7e0 {Error Domain=NSCocoaErrorDomain Code=4099 UserInfo={NSDebugDescription=<private>}}}
+2026-09-24 17:22:41.575 A  AutoMLXStudio[52303:120121] (CoreFoundation) Updating Key-Value Observers Of Preferences
+2026-09-24 17:22:41.613 Df AutoMLXStudio[52303:120121] [com.apple.AppKit:AutomaticTermination] void _NSEnableAutomaticTerminationAndLog(NSString *) No windows open yet
+2026-09-24 17:22:41.613 Df AutoMLXStudio[52303:120134] [com.apple.UIIntelligenceSupport:xpc] establishing connection to agent
+2026-09-24 17:22:41.613 Df AutoMLXStudio[52303:120134] [com.apple.xpc:session] [0x7ba4082b20] Session created.
+2026-09-24 17:22:41.613 Df AutoMLXStudio[52303:120134] [com.apple.xpc:session] [0x7ba4082b20] Session created from connection [0x7ba4c6bc00]
+2026-09-24 17:22:41.613 Df AutoMLXStudio[52303:120134] [com.apple.xpc:connection] [0x7ba4c6bc00] activating connection: mach=true listener=false peer=false name=com.apple.uiintelligencesupport.agent
+2026-09-24 17:22:41.613 Df AutoMLXStudio[52303:120134] [com.apple.xpc:session] [0x7ba4082b20] Session activated
+2026-09-24 17:22:41.614 Df AutoMLXStudio[52303:120135] [com.apple.UIIntelligenceSupport:xpc] Connection established with agent PID: 1088
+2026-09-24 17:22:41.629 Df AutoMLXStudio[52303:120121] [com.apple.AppKit:AutomaticTermination] void _NSEnableAutomaticTerminationAndLog(NSString *) Restoring windows
+2026-09-24 17:22:41.663 A  AutoMLXStudio[52303:1201c7] (CoreFoundation) Loading Preferences From User CFPrefsD
+2026-09-24 17:22:41.664 Df AutoMLXStudio[52303:120121] [com.apple.network:] networkd_settings_read_from_file_locked initialized networkd settings by reading plist directly
+2026-09-24 17:22:41.664 Df AutoMLXStudio[52303:120121] [com.apple.network:] networkd_settings_read_from_file_locked initialized networkd settings by reading plist directly
+2026-09-24 17:22:41.695 A  AutoMLXStudio[52303:1201c7] (RunningBoardServices) didChangeInheritances
+2026-09-24 17:22:41.881 Df AutoMLXStudio[52303:120121] [com.apple.xpc:connection] [0x7ba4b11540] activating connection: mach=false listener=false peer=false name=com.apple.hiservices-xpcservice
+2026-09-24 17:22:41.886 Df AutoMLXStudio[52303:120121] [com.apple.inputmethodkitClient:Client] +[IMKClient subclass]: chose IMKClient_Modern
+2026-09-24 17:22:41.886 Df AutoMLXStudio[52303:120121] [com.apple.inputmethodkitClient:Client] +[IMKInputSession subclass]: chose IMKInputSession_Modern
+2026-09-24 17:22:41.894 Df AutoMLXStudio[52303:120121] [com.apple.xpc:connection] [0x7ba4b117c0] activating connection: mach=true listener=false peer=false name=com.apple.inputmethodkit.getxpcendpoint
+2026-09-24 17:22:41.895 Df AutoMLXStudio[52303:120121] [com.apple.xpc:connection] [0x7ba4b11680] activating connection: mach=false listener=false peer=false name=(anonymous)
+2026-09-24 17:22:41.962 A  AutoMLXStudio[52303:120135] (CoreSpotlight) end-index-batch
+2026-09-24 17:22:41.962 Df AutoMLXStudio[52303:120135] [com.apple.corespotlight:index] *warn* MailCS ======%%% _setMailMessageAttributes skip:1
+2026-09-24 17:22:41.963 Df AutoMLXStudio[52303:120135] (CoreSpotlight) Start mach service name com.apple.spotlightknowledged
+2026-09-24 17:22:41.963 Df AutoMLXStudio[52303:120135] (SpotlightEmbeddingCore) SPEmbeddingProvider: Registered provider SPEmbeddingModel
+2026-09-24 17:22:41.963 Df AutoMLXStudio[52303:120135] [com.apple.corespotlight:default] [GMS] availability notification token 79
+2026-09-24 17:22:41.965 A  AutoMLXStudio[52303:120135] (CoreSpotlight) index-items
+2026-09-24 17:22:41.966 Df AutoMLXStudio[52303:120135] [com.apple.corespotlight:index] Submitting donation: <private> (782 bytes with 0 enqueued)
+2026-09-24 17:22:41.966 Df AutoMLXStudio[52303:1201c7] [com.apple.corespotlight:index] Performing donation: <private>
+2026-09-24 17:22:41.966 Df AutoMLXStudio[52303:1201c7] [com.apple.xpc:connection] [0x7ba4b11900] activating connection: mach=false listener=false peer=false name=com.apple.SetStoreUpdateService
+2026-09-24 17:22:41.966 Df AutoMLXStudio[52303:1201c7] [com.apple.Biome:BiomeCascade] Requesting new set donation <private>
+2026-09-24 17:22:41.966 Df AutoMLXStudio[52303:120170] [com.apple.corespotlight:index] Submitting donation: <private> (782 bytes with 782 enqueued)
+2026-09-24 17:22:41.966 Df AutoMLXStudio[52303:120135] [com.apple.xpc:connection] [0x7ba4b11900] Re-initialization successful; calling out to event handler with XPC_ERROR_CONNECTION_INTERRUPTED
+2026-09-24 17:22:41.966 Df AutoMLXStudio[52303:120135] [com.apple.xpc:connection] [0x7ba4b11900] invalidated because the current process cancelled the connection by calling xpc_connection_cancel()
+2026-09-24 17:22:41.966 Df AutoMLXStudio[52303:1201c7] [com.apple.Biome:BiomeCascade] Service responded to request for new donation <private> with None
+2026-09-24 17:22:41.966 Df AutoMLXStudio[52303:1201c7] [com.apple.corespotlight:index] Completed donation: <private> result: Error Domain=CSIndexErrorDomain Code=-1000 "Failed to request donation" UserInfo={NSDebugDescription=Failed to request donation, NSUnderlyingError=0x7ba500ac40 {Error Domain=NSCocoaErrorDomain Code=4099 UserInfo={NSDebugDescription=<private>}}}
+2026-09-24 17:22:41.966 Df AutoMLXStudio[52303:1201c7] [com.apple.corespotlight:index] Performing donation: <private>
+2026-09-24 17:22:41.966 Df AutoMLXStudio[52303:1201c7] [com.apple.xpc:connection] [0x7ba4b11900] activating connection: mach=false listener=false peer=false name=com.apple.SetStoreUpdateService
+2026-09-24 17:22:41.966 Df AutoMLXStudio[52303:1201c7] [com.apple.Biome:BiomeCascade] Requesting new set donation <private>
+2026-09-24 17:22:41.967 Df AutoMLXStudio[52303:120170] [com.apple.xpc:connection] [0x7ba4b11900] Re-initialization successful; calling out to event handler with XPC_ERROR_CONNECTION_INTERRUPTED
+2026-09-24 17:22:41.967 Df AutoMLXStudio[52303:120170] [com.apple.xpc:connection] [0x7ba4b11900] invalidated because the current process cancelled the connection by calling xpc_connection_cancel()
+2026-09-24 17:22:41.967 Df AutoMLXStudio[52303:1201c7] [com.apple.Biome:BiomeCascade] Service responded to request for new donation <private> with None
+2026-09-24 17:22:41.967 Df AutoMLXStudio[52303:1201c7] [com.apple.corespotlight:index] Completed donation: <private> result: Error Domain=CSIndexErrorDomain Code=-1000 "Failed to request donation" UserInfo={NSDebugDescription=Failed to request donation, NSUnderlyingError=0x7ba500b150 {Error Domain=NSCocoaErrorDomain Code=4099 UserInfo={NSDebugDescription=<private>}}}
+2026-09-24 17:22:46.473 Df AutoMLXStudio[52303:120121] [com.apple.AppKit:AutomaticTermination] void _updateToReflectAutomaticTerminationState(void) Setting _kLSApplicationWouldBeTerminatedByTALKey=0
+2026-09-24 17:22:52.464 Df AutoMLXStudio[52303:120170] [com.apple.launchservices:default] LSExceptions idle-timer fired, invalidating shared instance.
+2026-09-24 17:22:56.911 Df AutoMLXStudio[52303:120121] [com.apple.AppKit:StateRestoration] -[NSPersistentUIManager flushAllChanges]
+2026-09-24 17:22:56.911 Df AutoMLXStudio[52303:120121] [com.apple.AppKit:StateRestoration] -[NSPersistentUIManager flushAllChanges] Emptying for initial flush.
+2026-09-24 17:22:56.921 Df AutoMLXStudio[52303:120121] [com.apple.AppKit:StateRestoration] -[NSPersistentUIManager flushAllChanges] finishing enqueued operations
+2026-09-24 17:22:56.921 Df AutoMLXStudio[52303:1202b6] [com.apple.AppKit:StateRestoration] -[NSPersistentUIManager flushAllChanges]_block_invoke asyncing to main queue
+2026-09-24 17:22:56.921 Df AutoMLXStudio[52303:120134] [com.apple.AppKit:StateRestoration] -[NSPersistentUIManager flushAllChanges]_block_invoke writing records
+2026-09-24 17:23:04.781 A  AutoMLXStudio[52303:120121] (AppKit) sendAction:
+2026-09-24 17:23:04.782 F  AutoMLXStudio[52303:120121] [com.apple.runtime-issues:SwiftUI] Publishing changes from within view updates is not allowed, this will cause undefined behavior.
+2026-09-24 17:23:04.782 A  AutoMLXStudio[52303:120121] (libsystem_trace.dylib) Activity for state dumps
+2026-09-24 17:23:04.782 F  AutoMLXStudio[52303:120121] [com.apple.runtime-issues:SwiftUI] Publishing changes from within view updates is not allowed, this will cause undefined behavior.
+2026-09-24 17:23:04.782 A  AutoMLXStudio[52303:120121] (libsystem_trace.dylib) Activity for state dumps
+2026-09-24 17:23:04.782 F  AutoMLXStudio[52303:120121] [com.apple.runtime-issues:SwiftUI] Publishing changes from within view updates is not allowed, this will cause undefined behavior.
+2026-09-24 17:23:04.782 A  AutoMLXStudio[52303:120121] (libsystem_trace.dylib) Activity for state dumps
+2026-09-24 17:23:04.782 F  AutoMLXStudio[52303:120121] [com.apple.runtime-issues:SwiftUI] Publishing changes from within view updates is not allowed, this will cause undefined behavior.
+2026-09-24 17:23:04.782 A  AutoMLXStudio[52303:120121] (libsystem_trace.dylib) Activity for state dumps
+2026-09-24 17:23:04.782 A  AutoMLXStudio[52303:120121] (AppKit) sendAction:
+2026-09-24 17:23:19.907 Df AutoMLXStudio[52303:120121] [com.apple.AppKit:StateRestoration] -[NSPersistentUIManager flushAllChanges]
+2026-09-24 17:23:19.914 Df AutoMLXStudio[52303:120121] [com.apple.AppKit:StateRestoration] -[NSPersistentUIManager flushAllChanges] finishing enqueued operations
+2026-09-24 17:23:19.914 Df AutoMLXStudio[52303:120390] [com.apple.AppKit:StateRestoration] -[NSPersistentUIManager flushAllChanges]_block_invoke asyncing to main queue
+2026-09-24 17:23:19.914 Df AutoMLXStudio[52303:1201d6] [com.apple.AppKit:StateRestoration] -[NSPersistentUIManager flushAllChanges]_block_invoke writing records
+2026-09-24 17:23:22.381 A  AutoMLXStudio[52303:120121] (AppKit) sendAction:
+2026-09-24 17:23:22.381 A  AutoMLXStudio[52303:120121] (AppKit) sendAction:
+2026-09-24 17:23:22.381 A  AutoMLXStudio[52303:120121] (AppKit) sendAction:
+2026-09-24 17:23:22.385 A  AutoMLXStudio[52303:120121] (AppKit) sendAction:
+2026-09-24 17:23:22.385 A  AutoMLXStudio[52303:120121] (AppKit) sendAction:
+2026-09-24 17:23:22.385 A  AutoMLXStudio[52303:120121] (AppKit) sendAction:
+2026-09-24 17:23:22.388 Df AutoMLXStudio[52303:120391] [com.apple.CFNetwork:Default] Task <51B51DF2-0805-4B4B-8640-76B71567EB08>.<1> resuming, timeouts(10.0, 604800.0) qos(0x19) voucher(<private>) activity(00000000-0000-0000-0000-000000000000)
+2026-09-24 17:23:22.388 A  AutoMLXStudio[52303:120391] (CoreFoundation) Loading Preferences From User CFPrefsD
+2026-09-24 17:23:22.389 Df AutoMLXStudio[52303:120390] [com.apple.AppSSO:SOConfigurationClient] -[SOConfigurationClient init]  on <private>
+2026-09-24 17:23:22.389 Df AutoMLXStudio[52303:120390] [com.apple.xpc:connection] [0x7ba4c6abc0] activating connection: mach=true listener=false peer=false name=com.apple.AppSSO.service-xpc
+2026-09-24 17:23:22.389 Df AutoMLXStudio[52303:120390] [com.apple.AppSSO:SOServiceConnection] <SOServiceConnection: 0x7ba63b8dc0>: new XPC connection
+2026-09-24 17:23:22.390 A  AutoMLXStudio[52303:1201d6] (Security) SecTrustReportNetworkingAnalytics
+2026-09-24 17:23:22.390 Df AutoMLXStudio[52303:1201d6] [com.apple.securityd:keychain] Enabling System Keychain Always due to platform
+2026-09-24 17:23:22.390 Df AutoMLXStudio[52303:1201d6] [com.apple.xpc:connection] [0x7ba4c6b0c0] activating connection: mach=true listener=false peer=false name=com.apple.trustd.agent
+2026-09-24 17:23:22.393 Df AutoMLXStudio[52303:120390] [com.apple.CFNetwork:Default] Initializing NSHTTPCookieStorage singleton
+2026-09-24 17:23:22.393 Df AutoMLXStudio[52303:120390] [com.apple.CFNetwork:Default] Initializing CFHTTPCookieStorage singleton
+2026-09-24 17:23:22.393 Df AutoMLXStudio[52303:120390] [com.apple.CFNetwork:Default] Creating default cookie storage with process/bundle identifier
+2026-09-24 17:23:22.393 Df AutoMLXStudio[52303:120390] [com.apple.CFNetwork:Default] OOM symptoms: checking process 0
+2026-09-24 17:23:22.393 Df AutoMLXStudio[52303:120390] [com.apple.CFNetwork:Default] Initializing AlternativeServices Storage singleton
+2026-09-24 17:23:22.395 Df AutoMLXStudio[52303:120391] [com.apple.CFNetwork:Default] Garbage collection for alternative services
+2026-09-24 17:23:22.396 Df AutoMLXStudio[52303:120390] [com.apple.CFNetwork:Default] Connection 1: starting, TC(0x0)
+2026-09-24 17:23:22.396 Df AutoMLXStudio[52303:120390] [com.apple.network:connection] [C1 4BABF86B-287F-41D0-8AD8-034ECFCABF74 IPv4#46ee5f06:1234 tcp, url hash: df82484b, definite, attribution: developer, context: com.apple.CFNetwork.NSURLSession.{2BCE7C33-EAB0-4232-B2B9-2A61DF3CEF92}{(null)}{Y}{2}{0x0} (private), proc: 42C715BE-56FC-3057-B0AD-624995F8E8C2, delegated upid: 0] start
+2026-09-24 17:23:22.396 Df AutoMLXStudio[52303:120390] [com.apple.network:connection] [C1 IPv4#46ee5f06:1234 initial parent-flow ((null))] event: path:start @0.000s
+2026-09-24 17:23:22.396 Df AutoMLXStudio[52303:120390] [com.apple.network:connection] [C1 IPv4#46ee5f06:1234 waiting parent-flow (unsatisfied (Local network prohibited), interface: en7, ipv4)] event: path:unsatisfied @0.000s, uuid: 9A8A0857-E744-499C-853C-9A4FAE2B2042
+2026-09-24 17:23:22.396 Df AutoMLXStudio[52303:120390] [com.apple.network:connection] nw_connection_report_state_with_handler_on_nw_queue [C1] reporting state waiting
+2026-09-24 17:23:22.396 Df AutoMLXStudio[52303:120390] [com.apple.network:connection] [C1 IPv4#46ee5f06:1234 in_progress parent-flow (unsatisfied (Local network prohibited), interface: en7, ipv4)] event: flow:start_connect @0.000s
+2026-09-24 17:23:22.396 Df AutoMLXStudio[52303:120390] [com.apple.network:connection] nw_connection_report_state_with_handler_on_nw_queue [C1] reporting state preparing
+2026-09-24 17:23:22.396 Df AutoMLXStudio[52303:120390] [com.apple.network:connection] [C1 IPv4#46ee5f06:1234 in_progress parent-flow (unsatisfied (Local network prohibited), interface: en7, ipv4)] event: flow:start_child @0.000s
+2026-09-24 17:23:22.396 Df AutoMLXStudio[52303:120390] [com.apple.network:connection] [C1.1 IPv4#46ee5f06:1234 initial path ((null))] event: path:start @0.000s
+2026-09-24 17:23:22.396 Df AutoMLXStudio[52303:120390] [com.apple.network:connection] [C1.1 IPv4#46ee5f06:1234 waiting path (unsatisfied (Local network prohibited), interface: en7, ipv4)] event: path:unsatisfied @0.000s, uuid: 9A8A0857-E744-499C-853C-9A4FAE2B2042
+2026-09-24 17:23:22.396 Df AutoMLXStudio[52303:120390] [com.apple.network:connection] [C1.1 IPv4#46ee5f06:1234 in_progress resolver (unsatisfied (Local network prohibited), interface: en7, ipv4)] event: resolver:start_dns @0.000s
+2026-09-24 17:23:22.397 Df AutoMLXStudio[52303:120390] [com.apple.CFNetwork:Default] Task <51B51DF2-0805-4B4B-8640-76B71567EB08>.<1> setting up Connection 1
+2026-09-24 17:23:22.397 Df AutoMLXStudio[52303:120390] [com.apple.CFNetwork:Default] Connection 1: is waiting to connect, reason -1
+2026-09-24 17:23:22.397 Df AutoMLXStudio[52303:120390] [com.apple.network:connection] nw_endpoint_resolver_update [C1.1 IPv4#46ee5f06:1234 in_progress resolver (unsatisfied (Local network prohibited), interface: en7, ipv4)] Adding endpoint handler for IPv4#46ee5f06:1234
+2026-09-24 17:23:22.397 Df AutoMLXStudio[52303:120390] [com.apple.network:connection] [C1.1 IPv4#46ee5f06:1234 in_progress resolver (unsatisfied (Local network prohibited), interface: en7, ipv4)] event: resolver:receive_dns @0.000s
+2026-09-24 17:23:22.397 Df AutoMLXStudio[52303:120390] [com.apple.network:connection] [C1.1.1 IPv4#46ee5f06:1234 initial path ((null))] event: path:start @0.000s
+2026-09-24 17:23:22.397 Df AutoMLXStudio[52303:120390] [com.apple.network:connection] [C1.1.1 IPv4#46ee5f06:1234 waiting path (unsatisfied (Local network prohibited), interface: en7, ipv4)] event: path:unsatisfied @0.000s, uuid: 6E34CEE2-D2B7-4EFB-9E48-53AF241E32AD
+2026-09-24 17:23:22.397 Df AutoMLXStudio[52303:120390] [com.apple.network:connection] [C1.1.1 IPv4#46ee5f06:1234 failed path (unsatisfied (Local network prohibited), interface: en7, ipv4)] event: null:null @0.000s
+2026-09-24 17:23:22.397 Df AutoMLXStudio[52303:120390] [com.apple.network:connection] [C1.1 IPv4#46ee5f06:1234 in_progress resolver (unsatisfied (Local network prohibited), interface: en7, ipv4)] event: resolver:children_stall @0.000s
+2026-09-24 17:23:22.397 Df AutoMLXStudio[52303:120390] [com.apple.network:connection] [C1.1 IPv4#46ee5f06:1234 failed resolver (unsatisfied (Local network prohibited), interface: en7, ipv4)] event: resolver:children_failed @0.000s
+2026-09-24 17:23:22.397 Df AutoMLXStudio[52303:120390] [com.apple.network:connection] [C1 IPv4#46ee5f06:1234 failed parent-flow (unsatisfied (Local network prohibited), interface: en7, ipv4)] event: flow:child_failed @0.000s
+2026-09-24 17:23:22.397 Df AutoMLXStudio[52303:120390] [com.apple.network:connection] nw_connection_report_state_with_handler_on_nw_queue [C1] reporting state failed error Network is down
+2026-09-24 17:23:22.397 E  AutoMLXStudio[52303:120390] [com.apple.CFNetwork:Default] Connection 1: received failure notification
+2026-09-24 17:23:22.397 E  AutoMLXStudio[52303:120390] [com.apple.CFNetwork:Default] Connection 1: failed to connect 1:50, reason -1
+2026-09-24 17:23:22.397 E  AutoMLXStudio[52303:120390] [com.apple.CFNetwork:Default] Connection 1: encountered error(1:50)
+2026-09-24 17:23:22.397 Df AutoMLXStudio[52303:120390] [com.apple.CFNetwork:Default] Connection 1: cleaning up
+2026-09-24 17:23:22.397 Df AutoMLXStudio[52303:120390] [com.apple.CFNetwork:Summary] Connection 1: summary for unused connection {protocol="(null)", domain_lookup_duration_ms=0, connect_duration_ms=0, secure_connection_duration_ms=0, private_relay=false, idle_duration_ms=0}
+2026-09-24 17:23:22.397 Df AutoMLXStudio[52303:120390] [com.apple.network:connection] [C1 4BABF86B-287F-41D0-8AD8-034ECFCABF74 IPv4#46ee5f06:1234 tcp, url hash: df82484b, definite, attribution: developer] cancel
+2026-09-24 17:23:22.397 Df AutoMLXStudio[52303:120390] [com.apple.network:connection] [C1 IPv4#46ee5f06:1234 tcp, url hash: df82484b, definite, attribution: developer] cancelled
+2026-09-24 17:23:22.397 Df AutoMLXStudio[52303:120390] [com.apple.network:connection] nw_connection_report_state_with_handler_on_nw_queue [C1] reporting state cancelled
+2026-09-24 17:23:22.397 A  AutoMLXStudio[52303:120391] (Security) SecTrustReportNetworkingAnalytics
+2026-09-24 17:23:22.397 Df AutoMLXStudio[52303:120390] [com.apple.CFNetwork:Default] Task <51B51DF2-0805-4B4B-8640-76B71567EB08>.<1> can retry(N) with reason(2) for error [1:50]
+2026-09-24 17:23:22.397 E  AutoMLXStudio[52303:120390] [com.apple.CFNetwork:Default] Task <51B51DF2-0805-4B4B-8640-76B71567EB08>.<1> HTTP load failed, 0/0 bytes (error code: -1009 [1:50])
+2026-09-24 17:23:22.398 Df AutoMLXStudio[52303:120390] [com.apple.CFNetwork:Summary] Task <51B51DF2-0805-4B4B-8640-76B71567EB08>.<1> summary for task failure {transaction_duration_ms=8, response_status=-1, connection=1, reused=1, reused_after_ms=0, request_start_ms=0, request_duration_ms=0, response_start_ms=0, response_duration_ms=0, request_bytes=0, request_throughput_kbps=0, response_bytes=0, response_throughput_kbps=0, cache_hit=false}
+2026-09-24 17:23:22.398 E  AutoMLXStudio[52303:120390] [com.apple.CFNetwork:Default] Task <51B51DF2-0805-4B4B-8640-76B71567EB08>.<1> finished with error [-1009] Error Domain=NSURLErrorDomain Code=-1009 UserInfo={_kCFStreamErrorCodeKey=50, NSUnderlyingError=0x7ba62b3630 {Error Domain=kCFErrorDomainCFNetwork Code=-1009 UserInfo={_NSURLErrorNWPathKey=<private>, _kCFStreamErrorCodeKey=50, _kCFStreamErrorDomainKey=1}}, _NSURLErrorFailingURLSessionTaskErrorKey=<private>, _NSURLErrorRelatedURLSessionTaskErrorKey=<private>, NSLocalizedDescription=<private>, NSErrorFailingURLStringKey=<private>, NSErrorFailingURLKey=<private>, _kCFStreamErrorDomainKey=1}
+2026-09-24 17:23:37.421 Df AutoMLXStudio[52303:120121] [com.apple.AppKit:StateRestoration] -[NSPersistentUIManager flushAllChanges]
+2026-09-24 17:23:37.422 Df AutoMLXStudio[52303:120121] [com.apple.AppKit:StateRestoration] -[NSPersistentUIManager flushAllChanges] finishing enqueued operations
+2026-09-24 17:23:37.422 Df AutoMLXStudio[52303:1204ab] [com.apple.AppKit:StateRestoration] -[NSPersistentUIManager flushAllChanges]_block_invoke asyncing to main queue
+2026-09-24 17:23:37.422 Df AutoMLXStudio[52303:1204ab] [com.apple.AppKit:StateRestoration] -[NSPersistentUIManager flushAllChanges]_block_invoke writing records
+2026-09-24 17:24:53.314 A  AutoMLXStudio[52303:1204ab] (RunningBoardServices) didChangeInheritances
+2026-09-24 17:24:53.393 Df AutoMLXStudio[52303:120121] [com.apple.AppKit:StateRestoration] -[NSPersistentUIManager flushAllChanges]
+2026-09-24 17:24:53.393 Df AutoMLXStudio[52303:120121] [com.apple.AppKit:StateRestoration] -[NSPersistentUIManager flushAllChanges] finishing enqueued operations
+2026-09-24 17:24:53.393 Df AutoMLXStudio[52303:120ac3] [com.apple.AppKit:StateRestoration] -[NSPersistentUIManager flushAllChanges]_block_invoke asyncing to main queue
+2026-09-24 17:24:53.393 Df AutoMLXStudio[52303:120ac3] [com.apple.AppKit:StateRestoration] -[NSPersistentUIManager flushAllChanges]_block_invoke writing records

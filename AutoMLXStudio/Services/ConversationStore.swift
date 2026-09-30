@@ -60,13 +60,14 @@ actor ConversationStore { // Serializes selection-independent conversation reads
         return conversation // Returns the exact durable value.
     } // Ends identity-based lookup.
 
-    func createConversation(id: UUID = UUID(), projectID: UUID? = nil, title: String? = nil, messages: [ChatMessage] = [], useProjectMemory: Bool? = nil, qualityOverride: AgentExecutionQuality? = nil, now: Date = Date()) throws -> Conversation { // Creates and immediately persists one complete conversation.
+    func createConversation(id: UUID = UUID(), projectID: UUID? = nil, title: String? = nil, messages: [ChatMessage] = [], useProjectMemory: Bool? = nil, qualityOverride: AgentExecutionQuality? = nil, selectedModelTarget: ModelGenerationTarget? = nil, now: Date = Date()) throws -> Conversation { // Creates and immediately persists one complete conversation.
         var snapshot = try loadSnapshot() // Reads the current transaction before checking identity uniqueness.
         guard !snapshot.conversations.contains(where: { $0.id == id }) else { throw ConversationStoreError.conversationAlreadyExists(id) } // Prevents accidental replacement when an explicit UUID is reused.
         try Self.validateVisibleMessages(messages) // Rejects internal system or reasoning-role records at the persistence boundary.
+        try Self.validateModelTarget(selectedModelTarget) // Rejects malformed backend and location combinations before persistence.
         let requestedTitle = title.map(Conversation.normalizedTitleText) ?? Conversation.derivedTitle(from: messages) // Uses a normalized explicit title or deterministic first-user-message derivation.
         let validTitle = try Self.validatedTitle(requestedTitle) // Enforces the shared non-empty bounded title contract.
-        let conversation = Conversation(id: id, projectID: projectID, title: validTitle, messages: messages, createdAt: now, updatedAt: now, useProjectMemory: useProjectMemory, qualityOverride: qualityOverride, titleWasEdited: title != nil) // Applies documented memory defaults and preserves whether title replacement remains automatic.
+        let conversation = Conversation(id: id, projectID: projectID, title: validTitle, messages: messages, createdAt: now, updatedAt: now, useProjectMemory: useProjectMemory, qualityOverride: qualityOverride, selectedModelTarget: selectedModelTarget, titleWasEdited: title != nil) // Applies documented defaults and preserves the exact optional Chat target.
         snapshot.conversations.append(conversation) // Adds the new stable identity to the in-memory transaction.
         try save(snapshot) // Atomically commits the complete updated collection before returning success.
         return conversation // Returns exactly the persisted conversation.
@@ -77,10 +78,11 @@ actor ConversationStore { // Serializes selection-independent conversation reads
         guard let index = snapshot.conversations.firstIndex(where: { $0.id == candidate.id }) else { throw ConversationStoreError.conversationNotFound(candidate.id) } // Requires an existing durable identity.
         let current = snapshot.conversations[index] // Captures immutable creation metadata and current title ownership.
         try Self.validateVisibleMessages(candidate.messages) // Prevents full-value updates from persisting internal roles.
+        try Self.validateModelTarget(candidate.selectedModelTarget) // Prevents full-value updates from introducing an invalid target.
         let validTitle = try Self.validatedTitle(candidate.title) // Normalizes and validates the edited visible title.
         let titleWasEdited = candidate.titleWasEdited || validTitle != current.title // Treats a direct title change as an explicit edit even if the caller omitted the flag.
         let updatedAt = max(now, current.updatedAt) // Keeps activity time monotonic if a caller supplies an earlier clock value.
-        let updated = Conversation(id: current.id, projectID: candidate.projectID, title: validTitle, messages: candidate.messages, createdAt: current.createdAt, updatedAt: updatedAt, useProjectMemory: candidate.useProjectMemory, qualityOverride: candidate.qualityOverride, titleWasEdited: titleWasEdited) // Rebuilds the durable value while ignoring attempts to replace identity or creation time.
+        let updated = Conversation(id: current.id, projectID: candidate.projectID, title: validTitle, messages: candidate.messages, createdAt: current.createdAt, updatedAt: updatedAt, useProjectMemory: candidate.useProjectMemory, qualityOverride: candidate.qualityOverride, selectedModelTarget: candidate.selectedModelTarget, titleWasEdited: titleWasEdited) // Rebuilds the durable value while ignoring attempts to replace identity or creation time.
         snapshot.conversations[index] = updated // Replaces only the matching stable UUID.
         try save(snapshot) // Atomically commits the complete transaction.
         return updated // Returns the normalized persisted value.
@@ -128,6 +130,25 @@ actor ConversationStore { // Serializes selection-independent conversation reads
         try save(snapshot) // Atomically commits the quality preference.
         return snapshot.conversations[index] // Returns the updated durable record.
     } // Ends quality-preference update.
+
+    func setExecutionMode(_ mode: ChatExecutionMode, conversationID: UUID, now: Date = Date()) throws -> Conversation { // Persists the user-selected agent/direct route without changing model assignments.
+        var snapshot = try loadSnapshot() // Opens the current durable conversation transaction.
+        guard let index = snapshot.conversations.firstIndex(where: { $0.id == conversationID }) else { throw ConversationStoreError.conversationNotFound(conversationID) } // Requires the exact selected conversation.
+        snapshot.conversations[index].executionMode = mode // Changes only the explicit execution-mode preference.
+        snapshot.conversations[index].updatedAt = max(now, snapshot.conversations[index].updatedAt) // Records monotonic configuration activity.
+        try save(snapshot) // Atomically persists the new route choice.
+        return snapshot.conversations[index] // Returns the actual committed value for UI publication.
+    } // Ends execution-mode preference update.
+
+    func setSelectedModelTarget(_ target: ModelGenerationTarget?, conversationID: UUID, now: Date = Date()) throws -> Conversation { // Persists one exact Chat inference selection independently of current UI selection.
+        try Self.validateModelTarget(target) // Rejects malformed model identities and backend-location mismatches before loading the transaction.
+        var snapshot = try loadSnapshot() // Reads the current durable conversation collection.
+        guard let index = snapshot.conversations.firstIndex(where: { $0.id == conversationID }) else { throw ConversationStoreError.conversationNotFound(conversationID) } // Requires the exact stable conversation identity.
+        snapshot.conversations[index].selectedModelTarget = target // Stores the exact backend-qualified choice or nil for deterministic local default selection.
+        snapshot.conversations[index].updatedAt = max(now, snapshot.conversations[index].updatedAt) // Records monotonic preference activity.
+        try save(snapshot) // Atomically commits the selection without changing messages or credentials.
+        return snapshot.conversations[index] // Returns the complete normalized persisted conversation.
+    } // Ends Chat model-selection persistence.
 
     @discardableResult func deleteConversation(id: UUID) throws -> Conversation { // Deletes only one app-owned conversation record and returns the removed value for caller confirmation.
         var snapshot = try loadSnapshot() // Reads the current durable collection.
@@ -190,6 +211,7 @@ actor ConversationStore { // Serializes selection-independent conversation reads
         for conversation in snapshot.conversations { // Validates every record in the atomic transaction.
             _ = try validatedTitle(conversation.title) // Enforces one-line non-empty bounded visible titles.
             try validateVisibleMessages(conversation.messages) // Enforces the no-hidden-system-message persistence boundary.
+            try validateModelTarget(conversation.selectedModelTarget) // Enforces backend-qualified model identity integrity.
         } // Ends transaction record validation.
     } // Ends mutation-snapshot validation.
 
@@ -199,6 +221,18 @@ actor ConversationStore { // Serializes selection-independent conversation reads
             guard role == "user" || role == "assistant" else { throw ConversationStoreError.invalidMessageRole(bounded(message.role.isEmpty ? "an empty role" : message.role)) } // Rejects system, developer, tool, reasoning, and unknown internal roles.
         } // Ends visible-role validation.
     } // Ends hidden-message persistence protection.
+
+    private static func validateModelTarget(_ target: ModelGenerationTarget?) throws { // Enforces structural selection integrity without requiring transient discovery state.
+        guard let target else { return } // Accepts nil as the documented legacy-compatible deterministic local default.
+        let modelID = target.modelID.trimmingCharacters(in: .whitespacesAndNewlines) // Normalizes only for validation while preserving the provider identity verbatim.
+        guard !modelID.isEmpty else { throw ConversationStoreError.invalidModelSelection("the model identifier is empty.") } // Rejects an unusable empty model identity.
+        guard modelID.count <= 1_024 else { throw ConversationStoreError.invalidModelSelection("the model identifier exceeds 1024 characters.") } // Bounds corrupted or malicious persisted identities.
+        switch (target.backendID, target.location) { // Validates the only implemented local and remote location combinations.
+        case (.localMLX, .local): return // Accepts local MLX only on this Mac.
+        case (.remoteOpenAICompatible, .remote), (.remoteOllama, .remote): return // Accepts remote adapters only with one explicit server UUID.
+        default: throw ConversationStoreError.invalidModelSelection("the backend does not match its execution location.") // Rejects local-over-remote and remote-over-local ambiguity.
+        } // Ends backend-location validation.
+    } // Ends structural Chat target validation.
 
     private static func validatedTitle(_ value: String) throws -> String { // Normalizes and enforces the single shared editable-title contract.
         let normalized = Conversation.normalizedTitleText(value) // Collapses surrounding and repeated whitespace into one visible line.

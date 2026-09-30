@@ -1,0 +1,15 @@
+UTC 2026-09-24T15:13:28Z
+MAC_HOSTNAME:
+MacBook-Pro-di-Tommaso.local
+MAC_OS:
+ProductName:		macOS
+ProductVersion:		27.0
+BuildVersion:		26A428
+ENDPOINT: http://192.168.1.10:1234/v1/models
+CURL_RC=0
+MODEL_IDS:
+"id": "qwen/qwen3-4b-2507"
+"id": "mistral-small-3.1-24b-instruct-2503"
+"id": "deepseek/deepseek-r1-0528-qwen3-8b"
+"id": "qwen/qwen3-vl-8b"
+"id": "text-embedding-nomic-embed-text-v1.5"

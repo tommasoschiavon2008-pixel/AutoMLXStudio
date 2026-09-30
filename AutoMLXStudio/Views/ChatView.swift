@@ -28,6 +28,7 @@ struct ChatView: View {
             } // Ends the main Chat surface.
         } // Ends conversation-history split view.
         .background(Color(nsColor: .windowBackgroundColor))
+        .task { await appState.remoteModelsController.load() } // Restores non-secret server profiles for Chat even when Remote Models was never opened.
         .onDisappear { appState.voiceController.stopPlayback() } // Stops and cleans only app-owned generated audio when the Chat surface closes.
         .alert("Rename Conversation", isPresented: Binding(get: { conversationToRename != nil }, set: { if !$0 { conversationToRename = nil } })) { // Uses a native focused rename confirmation.
             TextField("Conversation title", text: $editedConversationTitle) // Edits only visible deterministic metadata and never invokes a model.
@@ -71,6 +72,7 @@ struct ChatView: View {
                             conversationLabel(conversation) // Shows title, project identity, and recent activity compactly.
                         } // Ends conversation row button label.
                         .buttonStyle(.plain) // Lets the List own row selection appearance.
+                        .disabled(appState.isGenerating) // Freezes the response destination while a local or remote generation owns the request.
                         .listRowBackground(appState.workspace.selectedConversationID == conversation.id ? Color.accentColor.opacity(0.14) : Color.clear) // Makes current durable selection visible without a second binding authority.
                         .contextMenu { // Exposes secondary history operations without permanent clutter.
                             Button("Rename…") { beginRename(conversation) } // Opens the native bounded title editor.
@@ -111,8 +113,9 @@ struct ChatView: View {
     } // Ends conversation row construction.
 
     private var header: some View { // Shows actual durable conversation association and active execution controls.
-        HStack(spacing: 14) { // Keeps identity, preferences, and runtime actions on one restrained toolbar.
-            VStack(alignment: .leading, spacing: 3) { // Gives the selected conversation clear primary identity.
+        VStack(alignment: .leading, spacing: 10) { // Uses two native toolbar rows so long model and project names do not clip at minimum width.
+            HStack(spacing: 12) { // Keeps conversation identity and terminal actions on the primary row.
+                VStack(alignment: .leading, spacing: 3) { // Gives the selected conversation clear primary identity.
                 Text(appState.workspace.selectedConversation?.title ?? "Chat") // Shows real persisted title or a first-load fallback.
                     .font(.title2.bold()) // Preserves the established page-title hierarchy.
                     .lineLimit(1) // Prevents an edited title from crowding controls.
@@ -129,9 +132,36 @@ struct ChatView: View {
                 .font(.caption) // Keeps metadata subordinate to conversation title.
                 .foregroundStyle(.secondary) // Uses native secondary hierarchy.
                 .lineLimit(1) // Keeps the toolbar compact.
-            } // Ends selected conversation identity.
-            Spacer() // Pushes preference and runtime controls to the trailing edge.
-            if let conversation = appState.workspace.selectedConversation { // Shows preferences only for a durable selected destination.
+                } // Ends selected conversation identity.
+                Spacer(minLength: 8) // Protects the title before trailing runtime actions.
+                statusPill // Shows local runtime or current remote configuration evidence.
+                if appState.isGenerating { // Replaces server lifecycle controls with exact request cancellation while work is active.
+                    Button("Stop") { appState.cancelGeneration() } // Cancels only the current app-owned local or remote task.
+                        .buttonStyle(.borderedProminent) // Makes the time-sensitive action easy to find.
+                        .tint(.red) // Uses semantic destructive color for stopping in-flight work.
+                        .keyboardShortcut(.cancelAction) // Supports Escape cancellation.
+                        .help("Stop the current generation (Esc)") // States exact scope and shortcut.
+                } else if selectedTargetIsLocal, appState.serverRunning { // Offers local runtime release only for a local selected target.
+                    Button("Stop Server") { appState.stopServer() } // Stops only the exact MLX process retained by this application.
+                        .buttonStyle(.bordered) // Keeps server lifecycle secondary to conversation work.
+                        .disabled(appState.activeProcessDescription != nil) // Avoids racing another owned runtime operation.
+                } else if selectedTargetIsLocal { // Offers optional local startup while a local target is selected.
+                    Button("Start Server") { appState.startServer() } // Starts the configured managed local fallback model.
+                        .buttonStyle(.bordered) // Keeps manual warm-up secondary because Send can load the selected local model.
+                        .disabled(appState.activeProcessDescription != nil) // Avoids duplicate or racing starts.
+                } // Ends target-aware runtime actions.
+            } // Ends primary Chat header row.
+            HStack(spacing: 12) { // Keeps model and conversation preferences on a separately scalable row.
+                if appState.workspace.selectedConversation?.executionMode == .direct { chatModelPicker } // Shows the exact physical model only when that picker actually controls the next generation.
+                else { Label("Agent model assignments", systemImage: "point.3.connected.trianglepath.dotted").font(.callout).help("Local Agents mode selects compatible models per role in Agents; switch to Direct for one exact Chat model.") } // Describes the real role-specific local selection policy without a misleading inactive picker.
+                Spacer(minLength: 8) // Keeps preferences aligned without stretching the model label unboundedly.
+                if let conversation = appState.workspace.selectedConversation { // Shows preferences only for a durable selected destination.
+                Picker("Execution", selection: executionModeBinding) { // Lets the user choose actual single-model or multi-agent execution explicitly.
+                    ForEach(ChatExecutionMode.allCases) { mode in Text(mode.displayName).tag(mode) } // Lists only modes implemented by the backend.
+                } // Ends execution-mode selection.
+                .frame(width: 150) // Keeps the native control compact beside other conversation preferences.
+                .disabled(appState.isGenerating) // Freezes routing for the active request.
+                .help("Direct uses the selected model; Agents uses role-specific model assignments and workflow stages.") // Explains the operational difference without implementation jargon.
                 Toggle("Use Project Memory", isOn: memoryPreferenceBinding) // Controls actual retrieval eligibility persisted on the conversation.
                     .toggleStyle(.switch) // Uses the native macOS compact switch.
                     .controlSize(.small) // Keeps the toolbar from becoming crowded.
@@ -145,36 +175,46 @@ struct ChatView: View {
                 .frame(width: 126) // Prevents the picker from expanding with long metadata.
                 .disabled(appState.isGenerating) // Freezes the plan policy for the active request.
                 .help("Agent execution quality for this conversation") // Distinguishes this control from model-switching policy.
-            } // Ends durable conversation preferences.
-            statusPill // Shows actual managed server readiness and port.
-            if appState.isGenerating { // Replaces server lifecycle controls with exact request cancellation while work is active.
-                Button("Stop") { appState.cancelGeneration() } // Cancels only the current app-owned workflow task.
-                    .buttonStyle(.borderedProminent) // Makes the time-sensitive action easy to find.
-                    .tint(.red) // Uses semantic destructive color for stopping in-flight work.
-                    .keyboardShortcut(.cancelAction) // Supports the requested Escape cancellation workflow.
-                    .help("Stop the current workflow (Esc)") // States exact scope and shortcut.
-            } else if appState.serverRunning { // Offers managed server release only when no workflow is using it.
-                Button("Stop Server") { appState.stopServer() } // Stops only the exact MLX process retained by this application.
-                    .buttonStyle(.bordered) // Keeps server lifecycle secondary to conversation work.
-                    .disabled(appState.activeProcessDescription != nil) // Avoids racing another owned runtime operation.
-            } else { // Offers explicit local server startup while offline.
-                Button("Start Server") { appState.startServer() } // Starts the configured managed local fallback model.
-                    .buttonStyle(.borderedProminent) // Preserves the existing primary offline recovery action.
-                    .disabled(appState.activeProcessDescription != nil) // Avoids duplicate or racing starts.
-            } // Ends runtime action selection.
-        } // Ends Chat header row.
+                } // Ends durable conversation preferences.
+            } // Ends preference row.
+        } // Ends responsive Chat header stack.
         .padding(.horizontal, 20) // Preserves established toolbar inset.
-        .frame(minHeight: 74) // Preserves the prior height while permitting accessibility text expansion.
+        .padding(.vertical, 12) // Gives both control rows native breathing room at normal and accessibility sizes.
+        .frame(minHeight: 96) // Prevents controls from clipping when long names or larger text require two rows.
     } // Ends actual Chat header.
+
+    private var chatModelPicker: some View { // Presents one backend-neutral selector grouped by execution location and server.
+        Picker("Model", selection: chatModelTargetBinding) { // Persists the exact selected target rather than a provider model string.
+            ForEach(chatModelGroups) { group in // Renders local models and each remote server as distinct named sections.
+                Section(group.name) { // Uses native menu grouping for clear execution ownership.
+                    ForEach(group.choices) { choice in // Renders every collision-safe target once.
+                        Text(choice.displayName) // Shows only model identity while the section supplies location or server context.
+                            .tag(Optional(choice.target)) // Binds backend, server UUID, and provider model as one value.
+                            .disabled(!choice.isSelectable) // Retains known-invalid saved selections visibly without allowing new work.
+                    } // Ends group model iteration.
+                } // Ends one location or server section.
+            } // Ends model-group iteration.
+            if let saved = appState.workspace.selectedConversation?.selectedModelTarget, ChatModelCatalog.choice(for: saved, in: appState.chatModelChoices) == nil { // Retains a selection whose server was removed instead of silently replacing it.
+                Section("Unavailable") { // Makes removed configuration state explicit.
+                    Text(saved.modelID).tag(Optional(saved)).disabled(true) // Shows the persisted model identity without endpoint details.
+                } // Ends unavailable selection section.
+            } // Ends removed target preservation.
+        } // Ends backend-neutral model picker.
+        .frame(minWidth: 190, idealWidth: 260, maxWidth: 320) // Allows long model names while protecting adjacent controls at minimum window width.
+        .disabled(appState.isGenerating || appState.workspace.selectedConversation == nil) // Freezes the target for the complete active request.
+        .help("Chat model — grouped by this Mac or configured remote server") // Explains grouping and scope accessibly.
+        .accessibilityLabel("Chat model") // Supplies a concise VoiceOver control name independently from the selected long value.
+    } // Ends grouped Chat model picker.
 
     private var statusPill: some View {
         HStack(spacing: 6) {
             Circle()
-                .fill(appState.serverRunning ? Color.green : Color.secondary)
+                .fill(chatStatusColor)
                 .frame(width: 7, height: 7)
 
-            Text(appState.serverRunning ? "Running · \(appState.serverPort)" : "Offline")
+            Text(chatStatusText)
                 .font(.caption.weight(.medium))
+                .lineLimit(1)
         }
         .padding(.horizontal, 10)
         .padding(.vertical, 6)
@@ -183,9 +223,54 @@ struct ChatView: View {
     }
 
     private var chatModelStatus: String { // Produces concise multi-model runtime copy for the Chat header.
-        guard let activeModelID = appState.activeModelID else { return "Multi-model routing · \(appState.modelSwitchPolicy.displayName)" } // Shows policy while the managed server is offline.
-        return appState.modelRegistry.model(id: activeModelID)?.displayName ?? activeModelID // Shows the exact physical model currently loaded.
+        guard let choice = appState.effectiveChatModelChoice else { return "No usable model selected" } // Reports the unavailable migration state without inventing routing.
+        return "\(choice.groupName) · \(choice.displayName)" // Shows the exact persisted or deterministic target and its execution owner.
     } // Ends Chat model status access.
+
+    private var selectedTargetIsLocal: Bool { // Reports whether local server controls apply to the current exact target.
+        appState.effectiveChatModelChoice?.target.backendID == .localMLX // Keeps remote Chat independent from local MLX server state.
+    } // Ends local-target classification.
+
+    private var chatStatusText: String { // Produces honest target-aware status without performing a network check.
+        guard let choice = appState.effectiveChatModelChoice else { return "Selection unavailable" } // Handles removed server or missing local configuration.
+        if choice.target.backendID == .localMLX { return appState.serverRunning ? "Local ready · \(appState.serverPort)" : "Local loads on send" } // States that Send can prepare MLX even when not prewarmed.
+        guard case .remote(let serverID) = choice.target.location else { return "Selection unavailable" } // Rejects an impossible remote-backend/local-location UI state.
+        switch appState.remoteModelsController.health(for: serverID)?.status { // Uses only explicit API observations from Remote Models.
+        case .healthy: return "Remote healthy" // Reports a successful compatible API check.
+        case .degraded: return "Remote degraded" // Reports actual compatible-but-degraded observation.
+        case .unavailable: return "Remote unavailable" // Reports explicit configuration or API unavailability.
+        case .serverOffline: return "Remote offline" // Reports a real failed connection observation.
+        case .unknown, nil: return "Remote not checked" // Avoids treating missing evidence as online or offline.
+        } // Ends remote health rendering.
+    } // Ends target-aware status text.
+
+    private var chatStatusColor: Color { // Adds restrained redundant visual state evidence.
+        if selectedTargetIsLocal { return appState.serverRunning ? .green : .secondary } // Uses actual local resource-manager readiness.
+        guard let choice = appState.effectiveChatModelChoice, case .remote(let serverID) = choice.target.location else { return .red } // Marks missing selection as invalid.
+        switch appState.remoteModelsController.health(for: serverID)?.status { // Maps only actual remote observations.
+        case .healthy: return .green // Marks proven compatible health.
+        case .degraded: return .orange // Marks proven degraded health.
+        case .unavailable, .serverOffline: return .red // Marks actual unusable observations.
+        case .unknown, nil: return .secondary // Leaves unobserved configuration neutral.
+        } // Ends remote health color selection.
+    } // Ends target-aware status color.
+
+    private var chatModelGroups: [ChatModelGroup] { // Preserves catalog order while grouping adjacent local and same-server choices.
+        var groups: [ChatModelGroup] = [] // Starts with no visible sections.
+        for choice in appState.chatModelChoices { // Walks the deterministic local-then-remote catalog.
+            if let index = groups.firstIndex(where: { $0.name == choice.groupName }) { groups[index].choices.append(choice) } // Adds a model to its existing server section.
+            else { groups.append(ChatModelGroup(name: choice.groupName, choices: [choice])) } // Creates the section at its first catalog appearance.
+        } // Ends deterministic grouping.
+        return groups // Returns stable groups suitable for native Picker sections.
+    } // Ends model picker grouping.
+
+    private var chatModelTargetBinding: Binding<ModelGenerationTarget?> { // Bridges durable asynchronous selection into the native Picker.
+        Binding(get: { appState.workspace.selectedConversation?.selectedModelTarget ?? appState.effectiveChatModelChoice?.target }, set: { target in guard let target else { return }; Task { await appState.setChatModelTarget(target) } }) // Reads the persisted or migration default and saves every exact user selection.
+    } // Ends Chat model binding.
+
+    private var executionModeBinding: Binding<ChatExecutionMode> { // Bridges one durable user-selected execution mode into the native picker.
+        Binding(get: { appState.workspace.selectedConversation?.executionMode ?? .direct }, set: { mode in Task { do { try await appState.workspace.setExecutionMode(mode) } catch { appState.workspace.errorMessage = error.localizedDescription } } }) // Publishes only the successfully persisted value and surfaces storage failures.
+    } // Ends execution-mode binding.
 
     private var memoryPreferenceBinding: Binding<Bool> { // Bridges the persisted asynchronous conversation preference into a native Toggle.
         Binding(get: { appState.workspace.selectedConversation?.useProjectMemory ?? false }, set: { enabled in Task { do { try await appState.workspace.setUseProjectMemory(enabled) } catch { appState.workspace.errorMessage = error.localizedDescription } } }) // Reads the actual selected value and atomically persists every user change.
@@ -252,8 +337,9 @@ struct ChatView: View {
                             Text("Start a conversation")
                                 .font(.title3.weight(.semibold))
 
-                            Text("Everything is generated locally through MLX.")
+                            Text(emptyConversationDescription) // States the actual selected local or remote execution location.
                                 .foregroundStyle(.secondary)
+                                .multilineTextAlignment(.center) // Keeps longer remote state copy readable at minimum width.
                         }
                         .frame(maxWidth: .infinity)
                         .padding(.top, 110)
@@ -285,6 +371,7 @@ struct ChatView: View {
                 VStack(alignment: .leading, spacing: 6) { // Keeps workflow metadata attached to its actual assistant response.
                     messageBubble(message, isUser: false) // Preserves the existing readable assistant bubble.
                     if !message.citations.isEmpty { sourcesDisclosure(for: message) } // Shows source inspection only for responses with exact injected Project Memory excerpts.
+                    if let metadata = message.generationMetadata { generationMetadataView(metadata) } // Shows only usage and timing actually reported by the selected backend.
                     if let trace = appState.workflowTrace(id: message.workflowTraceID) { // Shows metadata only for real orchestrated messages.
                         workflowDisclosure(trace) // Adds a compact expandable workflow line without cluttering the conversation.
                     } // Ends trace metadata availability handling.
@@ -314,6 +401,11 @@ struct ChatView: View {
             Text(message.content) // Shows the visible user or assistant text.
                 .textSelection(.enabled) // Preserves copy support.
                 .font(.body) // Preserves the established chat typography.
+            if !isUser, message.generationStatus != .complete { // Makes cancelled and failed terminal states explicit without relying on color.
+                Label(message.generationStatus == .cancelled ? "Cancelled" : "Failed", systemImage: message.generationStatus == .cancelled ? "stop.circle" : "exclamationmark.triangle") // Uses native semantic labels for non-success responses.
+                    .font(.caption.weight(.medium)) // Keeps terminal state subordinate to the message text.
+                    .foregroundStyle(message.generationStatus == .cancelled ? Color.secondary : Color.red) // Adds restrained redundant color evidence.
+            } // Ends non-success state rendering.
         } // Ends message content stack.
         .padding(.horizontal, 14) // Preserves existing bubble inset.
         .padding(.vertical, 11) // Preserves existing bubble inset.
@@ -404,6 +496,21 @@ struct ChatView: View {
         } // Ends the workflow disclosure stack.
     } // Ends workflow disclosure rendering.
 
+    private func generationMetadataView(_ metadata: ChatGenerationMetadata) -> some View { // Renders only truthful provider-neutral normal Chat operational facts.
+        HStack(spacing: 6) { // Keeps model location, duration, and optional usage compact beneath the answer.
+            Label(metadata.target.backendID == .localMLX ? "Local" : "Remote", systemImage: metadata.target.backendID == .localMLX ? "desktopcomputer" : "network") // States the actual backend family without endpoint data.
+            Text("·") // Separates metadata values accessibly.
+            Text("\(metadata.durationMilliseconds) ms") // Shows the backend-measured end-to-end duration.
+                .monospacedDigit() // Keeps numeric timing stable.
+            if let total = metadata.usage?.totalTokens { Text("· \(total) tokens").monospacedDigit() } // Shows total usage only when the provider supplied it.
+            else if let output = metadata.usage?.outputTokens { Text("· \(output) output tokens").monospacedDigit() } // Falls back to reported output usage without inventing a total.
+            if let ttft = metadata.timeToFirstTokenMilliseconds { Text("· TTFT \(ttft) ms").monospacedDigit() } // Shows TTFT only after genuine streaming measurement exists.
+        } // Ends operational metadata row.
+        .font(.caption2) // Keeps timing and usage subordinate to answer content.
+        .foregroundStyle(.secondary) // Preserves native hierarchy.
+        .accessibilityElement(children: .combine) // Reads the complete factual summary as one VoiceOver element.
+    } // Ends normal Chat generation metadata rendering.
+
     private var composer: some View {
         VStack(alignment: .leading, spacing: 8) { // Adds attachment and validation state without changing the established composer hierarchy.
             if !attachments.isEmpty { // Shows validated images before submission.
@@ -414,6 +521,12 @@ struct ChatView: View {
                     .font(.caption) // Keeps diagnostic subordinate to the composer.
                     .foregroundStyle(.orange) // Uses semantic warning color with a symbol and text.
             } // Ends attachment error display.
+            if let modelSelectionIssue { // Displays removed, disabled, missing, or attachment-incompatible selection state adjacent to Send.
+                Label(modelSelectionIssue, systemImage: "exclamationmark.triangle") // Communicates why generation is unavailable without clearing the saved target.
+                    .font(.caption) // Keeps corrective state subordinate to the transcript.
+                    .foregroundStyle(.orange) // Uses semantic warning color with redundant text and symbol.
+                    .textSelection(.enabled) // Lets users copy a long model identifier when repairing configuration.
+            } // Ends model selection issue display.
             HStack(alignment: .bottom, spacing: 10) { // Keeps picker, microphone, text, and send actions aligned.
             Button { chooseImages() } label: { // Opens the native multi-selection image picker.
                 Image(systemName: "photo.badge.plus") // Uses a familiar native attachment affordance.
@@ -421,7 +534,7 @@ struct ChatView: View {
             } // Ends image-picker action.
             .buttonStyle(.borderless) // Keeps the utility action visually secondary.
             .help("Attach PNG, JPEG, or HEIC images") // States the exact supported formats.
-            .disabled(sending) // Prevents composer mutation during submission.
+            .disabled(sending || !selectedTargetIsLocal) // Prevents unverified attachment submission to a remote backend.
 
             VoiceComposerControl(controller: appState.voiceController) { transcript in // Observes service state independently from AppState publication.
                 let composerText = appState.consumeVoiceDraftForComposer() ?? transcript // Consumes trace evidence and resolves the actual composer transcript once.
@@ -430,7 +543,7 @@ struct ChatView: View {
             } // Ends Voice service control.
 
             TextField(
-                attachments.isEmpty ? "Message your local models…" : "Ask about the attached image…",
+                attachments.isEmpty ? "Message the selected model…" : "Ask about the attached image…",
                 text: $prompt,
                 axis: .vertical
             )
@@ -490,8 +603,22 @@ struct ChatView: View {
     }
 
     private var canSend: Bool {
-        !sending && !appState.isGenerating && (!prompt.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || !attachments.isEmpty) // Allows image-only requests while preventing empty or overlapping workflows.
+        !sending && !appState.isGenerating && modelSelectionIssue == nil && appState.effectiveChatModelChoice?.isSelectable == true && (!prompt.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || !attachments.isEmpty) // Requires a usable exact target while preventing empty or overlapping work.
     }
+
+    private var modelSelectionIssue: String? { // Explains every known state that blocks a new generation without mutating selection or history.
+        if !attachments.isEmpty, !selectedTargetIsLocal { return "Remote image input is not enabled for the selected backend. Remove the attachment or choose a local model." } // Prevents unverified remote attachment transmission.
+        if let saved = appState.workspace.selectedConversation?.selectedModelTarget, ChatModelCatalog.choice(for: saved, in: appState.chatModelChoices) == nil { return "The saved server or model is no longer configured. Choose another model or repair it in Remote Models." } // Handles removed server configuration explicitly.
+        guard let choice = appState.effectiveChatModelChoice else { return "No installed, enabled Chat model is available." } // Handles a first-run local catalog with no usable choice.
+        if case .unavailable(let reason) = choice.state { return reason } // Shows disabled-server, missing-discovery-model, or unavailable-local evidence.
+        return nil // Allows known-available and explicitly saved unknown remote targets.
+    } // Ends model-selection validation message.
+
+    private var emptyConversationDescription: String { // Teaches the current execution boundary without hardcoded provider or server identity.
+        guard let choice = appState.effectiveChatModelChoice else { return "Choose an available local or remote model to begin." } // Handles missing or removed configuration.
+        if choice.target.backendID == .localMLX { return "Responses use the selected model on this Mac." } // States local execution accurately.
+        return "Responses use \(choice.displayName) through the configured \(choice.groupName) server. Delivery is non-streaming." // States selected remote ownership and honest current response delivery.
+    } // Ends dynamic empty-state guidance.
 
     private func send() {
         guard canSend else { return }
@@ -603,6 +730,12 @@ struct ChatView: View {
         } // Ends horizontal preview scrolling.
     } // Ends attachment preview rendering.
 }
+
+private struct ChatModelGroup: Identifiable { // Supplies stable native Picker sections without leaking endpoint or credential data.
+    let name: String // Stores the local group label or configured non-secret server display name.
+    var choices: [ChatModelChoice] // Stores exact backend-qualified choices in deterministic catalog order.
+    var id: String { name } // Uses the displayed group name as stable identity within the already validated profile list.
+} // Ends Chat model Picker group.
 
 private struct VoiceComposerControl: View { // Keeps the Chat microphone control subscribed directly to Voice service state.
     @ObservedObject var controller: VoiceConversationController // Observes permission, recording, transcribing, ready, and failed transitions.

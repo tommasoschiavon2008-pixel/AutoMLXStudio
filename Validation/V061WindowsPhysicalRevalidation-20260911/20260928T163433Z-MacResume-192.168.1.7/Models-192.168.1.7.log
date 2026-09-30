@@ -1,0 +1,57 @@
+UTC 2026-09-28T16:34:46Z
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0*   Trying 192.168.1.7:1234...
+* Connected to 192.168.1.7 (192.168.1.7) port 1234
+> GET /v1/models HTTP/1.1
+> Host: 192.168.1.7:1234
+> User-Agent: curl/8.7.1
+> Accept: */*
+> 
+* Request completely sent off
+< HTTP/1.1 200 OK
+< X-Powered-By: Express
+< Content-Type: application/json; charset=utf-8
+< Content-Length: 642
+< ETag: W/"282-zE+zQfC7Ml2ZeQPPRHe3KzQjm/w"
+< Date: Mon, 28 Sep 2026 16:34:55 GMT
+< Connection: keep-alive
+< Keep-Alive: timeout=5
+< 
+{ [642 bytes data]
+100   642  100   642    0     0  73784      0 --:--:-- --:--:-- --:--:-- 80250
+* Connection #0 to host 192.168.1.7 left intact
+http_status=200
+curl_exit_marker=completed
+curl_exit=0
+models_payload:
+{
+  "data": [
+    {
+      "id": "qwen/qwen3-4b-2507",
+      "object": "model",
+      "owned_by": "organization_owner"
+    },
+    {
+      "id": "mistral-small-3.1-24b-instruct-2503",
+      "object": "model",
+      "owned_by": "organization_owner"
+    },
+    {
+      "id": "deepseek/deepseek-r1-0528-qwen3-8b",
+      "object": "model",
+      "owned_by": "organization_owner"
+    },
+    {
+      "id": "qwen/qwen3-vl-8b",
+      "object": "model",
+      "owned_by": "organization_owner"
+    },
+    {
+      "id": "text-embedding-nomic-embed-text-v1.5",
+      "object": "model",
+      "owned_by": "organization_owner"
+    }
+  ],
+  "object": "list"
+}required_model_present=yes

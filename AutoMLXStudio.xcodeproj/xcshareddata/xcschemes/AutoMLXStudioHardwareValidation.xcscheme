@@ -69,6 +69,11 @@
       </CommandLineArguments>
       <EnvironmentVariables>
          <EnvironmentVariable
+            key = "RUN_AUTOMLX_PHYSICAL_BOUNDARY"
+            value = "1"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
             key = "RUN_MLX_AUDIO_HARDWARE_TESTS"
             value = "1"
             isEnabled = "YES">

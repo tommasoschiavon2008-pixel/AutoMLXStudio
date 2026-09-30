@@ -1,0 +1,51 @@
+2026-09-11 16:33:25.315682+0200 AutoMLXStudio[16582:431824] [Connection] Unable to get synchronousRemoteObjectProxy, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-09-11 16:33:25.316192+0200 AutoMLXStudio[16582:431824] [Application] Error registering app with intents framework: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-09-11 16:33:25.317214+0200 AutoMLXStudio[16582:431773] [Connection] Unable to get synchronousRemoteObjectProxy, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-09-11 16:33:25.317234+0200 AutoMLXStudio[16582:431773] [Connection] Unable to re-register with Process Instance Registry, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-09-11 16:33:25.318376+0200 AutoMLXStudio[16582:431774] [Connection] Unable to get synchronousRemoteObjectProxy, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-09-11 16:33:25.318391+0200 AutoMLXStudio[16582:431774] [Connection] Unable to re-register with Process Instance Registry, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-09-11 16:33:25.319515+0200 AutoMLXStudio[16582:431774] [Connection] Will NOT re-try to establish the connection
+2026-09-11 16:33:25.319546+0200 AutoMLXStudio[16582:431824] [Connection] Unable to get synchronousRemoteObjectProxy, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-09-11 16:33:25.319563+0200 AutoMLXStudio[16582:431824] [Connection] Unable to re-register with Process Instance Registry, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-09-11 16:33:25.356571+0200 AutoMLXStudio[16582:431747] ApplePersistenceIgnoreState: Existing state will not be touched. New state will be written to /var/folders/2g/q2qk1gk540d5ygkzr28n20ym0000gn/T/com.tommaso.AutoMLXStudio.savedState
+Test Suite 'Selected tests' started at 2026-09-11 16:33:25.539.
+Test Suite 'AutoMLXStudioTests.xctest' started at 2026-09-11 16:33:25.539.
+Test Suite 'BenchmarkHarnessTests' started at 2026-09-11 16:33:25.539.
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testBuiltInSuiteHasThirtyThreeStableCasesAcrossAllCategories]' started.
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testBuiltInSuiteHasThirtyThreeStableCasesAcrossAllCategories]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testCancellationPreservesCompletedResults]' started.
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testCancellationPreservesCompletedResults]' passed (0.047 seconds).
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testComparisonAndBestModelByRole]' started.
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testComparisonAndBestModelByRole]' passed (0.005 seconds).
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testContainsAndRegexGraders]' started.
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testContainsAndRegexGraders]' passed (0.000 seconds).
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testCustomSuiteImportPreviewAndExportRoundTrip]' started.
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testCustomSuiteImportPreviewAndExportRoundTrip]' passed (0.002 seconds).
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testDeterministicDemoCompletesAndExportsJSONAndMarkdown]' started.
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testDeterministicDemoCompletesAndExportsJSONAndMarkdown]' passed (0.012 seconds).
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testExactAndNormalizedGraders]' started.
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testExactAndNormalizedGraders]' passed (0.000 seconds).
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testNumericGraderRejectsProseAndHonorsTolerance]' started.
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testNumericGraderRejectsProseAndHonorsTolerance]' passed (0.000 seconds).
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testOptionalJudgeStaysSeparatedFromDeterministicScore]' started.
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testOptionalJudgeStaysSeparatedFromDeterministicScore]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testPerCaseTimeoutIsIsolated]' started.
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testPerCaseTimeoutIsIsolated]' passed (0.011 seconds).
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testProgrammaticRegistryRejectsUnknownIdentifiers]' started.
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testProgrammaticRegistryRejectsUnknownIdentifiers]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testSequentialRunnerIsolatesOneFailureAndContinues]' started.
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testSequentialRunnerIsolatesOneFailureAndContinues]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testStrictJSONGraderValidatesNestedTypesAndValues]' started.
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testStrictJSONGraderValidatesNestedTypesAndValues]' passed (0.000 seconds).
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testSummaryUsesAvailableWeightsAndTruthfulMetrics]' started.
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testSummaryUsesAvailableWeightsAndTruthfulMetrics]' passed (0.000 seconds).
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testToolGraderAcceptsNativeAndSimulatedCallsWithoutExecution]' started.
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testToolGraderAcceptsNativeAndSimulatedCallsWithoutExecution]' passed (0.001 seconds).
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testVersionedPersistenceSkipsOnlyCorruptRecord]' started.
+Test Case '-[AutoMLXStudioTests.BenchmarkHarnessTests testVersionedPersistenceSkipsOnlyCorruptRecord]' passed (0.007 seconds).
+Test Suite 'BenchmarkHarnessTests' passed at 2026-09-11 16:33:25.672.
+	 Executed 16 tests, with 0 failures (0 unexpected) in 0.090 (0.132) seconds
+Test Suite 'BenchmarkUIValidationTests' started at 2026-09-11 16:33:25.672.
+Test Case '-[AutoMLXStudioTests.BenchmarkUIValidationTests testBenchmarkIdlePagesRenderAtNormalAndMinimumSizes]' started.
+Test Case '-[AutoMLXStudioTests.BenchmarkUIValidationTests testBenchmarkIdlePagesRenderAtNormalAndMinimumSizes]' passed (0.551 seconds).
+Test Case '-[AutoMLXStudioTests.BenchmarkUIValidationTests testBenchmarkRunningResultsComparisonHistoryCaseErrorAndCancelledStatesRender]' started.

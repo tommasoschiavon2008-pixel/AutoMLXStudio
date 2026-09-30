@@ -131,10 +131,14 @@ final class WorkspaceController: ObservableObject { // Coordinates project and c
 
     func appendMessage(_ message: ChatMessage) async throws { // Atomically persists a visible message before publishing it in selected Chat history.
         let conversationID = try requireSelectedConversationID() // Requires a durable destination rather than an in-memory orphan.
+        try await appendMessage(message, to: conversationID) // Delegates to the identity-safe overload used by asynchronous generations.
+    } // Ends selected-conversation message append.
+
+    func appendMessage(_ message: ChatMessage, to conversationID: UUID) async throws { // Persists to an immutable captured destination even if the user later navigates elsewhere.
         let updated = try await conversationStore.append(message, to: conversationID) // Applies visible-role validation, title derivation, and atomic save.
-        messages = updated.messages // Publishes exactly the committed visible history.
+        if selectedConversationID == conversationID { messages = updated.messages } // Updates the transcript only when the committed destination is still visible.
         await refreshConversations(preservingMessages: true) // Updates title and activity ordering without replacing current messages again.
-    } // Ends visible message append.
+    } // Ends identity-safe visible message append.
 
     func setUseProjectMemory(_ enabled: Bool) async throws { // Persists the selected conversation's actual retrieval eligibility control.
         let conversationID = try requireSelectedConversationID() // Requires a durable selected chat.
@@ -147,6 +151,20 @@ final class WorkspaceController: ObservableObject { // Coordinates project and c
         let updated = try await conversationStore.setQualityOverride(quality, conversationID: conversationID) // Atomically stores Fast, Balanced, Thorough, or inheritance.
         replaceConversation(updated) // Publishes exact persisted policy.
     } // Ends per-conversation quality update.
+
+    func setExecutionMode(_ mode: ChatExecutionMode) async throws { // Persists the selected conversation's agent/direct execution policy.
+        let conversationID = try requireSelectedConversationID() // Requires an actual durable Chat destination.
+        let updated = try await conversationStore.setExecutionMode(mode, conversationID: conversationID) // Changes only this conversation's mode atomically.
+        replaceConversation(updated) // Publishes the committed route choice to Chat and app state.
+    } // Ends execution-mode update.
+
+    func setSelectedModelTarget(_ target: ModelGenerationTarget?, conversationID: UUID? = nil) async throws { // Persists an exact backend-qualified model for one explicit or currently selected conversation.
+        let destination: UUID // Captures a stable destination before awaiting actor-isolated persistence.
+        if let conversationID { destination = conversationID } // Uses the caller's explicit identity when supplied.
+        else { destination = try requireSelectedConversationID() } // Otherwise requires the current durable Chat selection.
+        let updated = try await conversationStore.setSelectedModelTarget(target, conversationID: destination) // Atomically stores only non-secret model identity.
+        replaceConversation(updated) // Publishes the exact committed preference when the conversation remains visible.
+    } // Ends per-conversation Chat target update.
 
     func renameConversation(id: UUID, title: String) async throws { // Renames one visible chat without invoking an LLM.
         let updated = try await conversationStore.renameConversation(id: id, title: title) // Applies normalized bounded title validation atomically.

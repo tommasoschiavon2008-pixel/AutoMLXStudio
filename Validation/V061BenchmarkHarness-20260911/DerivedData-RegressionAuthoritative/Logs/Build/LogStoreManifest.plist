@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>12</integer>
+	<key>logs</key>
+	<dict>
+		<key>DE215E99-EBD8-4DEC-AC67-81CF14F32E84</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>DE215E99-EBD8-4DEC-AC67-81CF14F32E84.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+				<key>totalNumberOfAnalyzerIssues</key>
+				<integer>0</integer>
+				<key>totalNumberOfErrors</key>
+				<integer>0</integer>
+				<key>totalNumberOfTestFailures</key>
+				<integer>0</integer>
+				<key>totalNumberOfWarnings</key>
+				<integer>0</integer>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>AutoMLXStudio project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>AutoMLXStudio</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Testing project AutoMLXStudio with scheme AutoMLXStudio</string>
+			<key>timeStartedRecording</key>
+			<real>810829128.20610595</real>
+			<key>timeStoppedRecording</key>
+			<real>810829196.94094002</real>
+			<key>title</key>
+			<string>Testing project AutoMLXStudio with scheme AutoMLXStudio</string>
+			<key>uniqueIdentifier</key>
+			<string>DE215E99-EBD8-4DEC-AC67-81CF14F32E84</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,7 @@
+{
+  "cancelAndRecoveryMS" : 224,
+  "cancelled" : true,
+  "recoveryResponse" : "AUTOMLX_WINDOWS_OK",
+  "scope" : "Production request cancellation; Engineering Stop checked separately",
+  "wasActive" : true
+}
